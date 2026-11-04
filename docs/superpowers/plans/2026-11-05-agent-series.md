@@ -11,4 +11,7 @@
 - [x] 结构：追加各系列至现有book.json，新增guide.html进阶路线页连接主题、误区与系列，所有旧slug保留。
 - [x] 调研：官方文档/原论文/GitHub核验机制，按许可原创整合，GraphRAG及记忆/Skills相关项目补入技术栈；Star无法取得则明确未获取。
 - [x] 审稿：独立规格/事实审查、纠正分支图与概念层次；验证例子与失败边界。
-- [ ] 验证发布：构建、目录覆盖/链接/图表/前置无环、JS和浏览器搜索与手机；提交推送并确认线上成功。
+- [x] 验证发布：构建、目录覆盖/链接/图表/前置无环、JS和浏览器搜索与手机；提交推送并确认线上成功。
+
+发布确认：GitHub Actions #4 build/deploy成功（3a89bed）。线上路线、目录、技术栈、MCP/Skills/GraphRAG/AgenticRAG/Harness文章及附图与本地构建字节一致。
+https://github.com/laihuannran/ai-knowledge/actions/runs/41883820183

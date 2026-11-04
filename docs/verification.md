@@ -60,3 +60,6 @@ https://github.com/laihuannran/ai-knowledge/actions/runs/41869653890
 - HTTP来源清单180项：126返回200，其余为执行网络超时或拒绝，和人工概念/规范核验分开记录。
 
 协议内容明确适用规范版本与产品差异，Skills实验性字段不被当成授权机制；七层图仅为教学视角。
+
+Agent进阶版已发布：Actions #4成功；线上9个关键页面/图文件与本地构建逐字节一致。
+https://github.com/laihuannran/ai-knowledge/actions/runs/41883820183
