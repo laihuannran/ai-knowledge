@@ -1,0 +1,268 @@
+[
+  {
+    "url": "https://agentskills.io/what-are-skills",
+    "status": "200",
+    "final_url": "https://agentskills.io/home",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://developers.openai.com/api/docs/guides/evaluation-best-practices",
+    "status": "200",
+    "final_url": "https://developers.openai.com/api/docs/guides/evaluation-best-practices",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://docs.dify.ai/",
+    "status": "200",
+    "final_url": "https://docs.dify.ai/en/home",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://docs.langchain.com/",
+    "status": "200",
+    "final_url": "https://docs.langchain.com/",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://docs.langchain.com/oss/python/langchain/retrieval",
+    "status": "200",
+    "final_url": "https://docs.langchain.com/oss/python/deepagents/retrieval",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://docs.litellm.ai/docs/",
+    "status": "200",
+    "final_url": "https://docs.litellm.ai/docs/",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://docs.litellm.ai/docs/routing",
+    "status": "200",
+    "final_url": "https://docs.litellm.ai/docs/routing",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://docs.sglang.ai/",
+    "status": "200",
+    "final_url": "https://docs.sglang.io/",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://docs.vllm.ai/en/latest/design/metrics/",
+    "status": "200",
+    "final_url": "https://docs.vllm.ai/en/latest/design/metrics/",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://docs.vllm.ai/en/latest/design/paged_attention/",
+    "status": "200",
+    "final_url": "https://docs.vllm.ai/en/latest/design/paged_attention/",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://docs.vllm.ai/en/latest/features/automatic_prefix_caching/",
+    "status": "200",
+    "final_url": "https://docs.vllm.ai/en/latest/features/automatic_prefix_caching/",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://docs.vllm.ai/en/latest/features/disagg_prefill/",
+    "status": "200",
+    "final_url": "https://docs.vllm.ai/en/latest/features/disagg_prefill/",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://docs.vllm.ai/en/latest/serving/parallelism_scaling/",
+    "status": "200",
+    "final_url": "https://docs.vllm.ai/en/latest/serving/parallelism_scaling/",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+    "status": "200",
+    "final_url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://github.com/EleutherAI/lm-evaluation-harness",
+    "status": "200",
+    "final_url": "https://github.com/EleutherAI/lm-evaluation-harness",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://github.com/pgvector/pgvector",
+    "status": "200",
+    "final_url": "https://github.com/pgvector/pgvector",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://github.com/vllm-project/vllm",
+    "status": "200",
+    "final_url": "https://github.com/vllm-project/vllm",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://huggingface.co/docs",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs",
+    "checked_on": "2026-11-04",
+    "note": "This execution environment could not reach the URL within timeout. Not classified as a broken source. Some core Hugging Face references were independently readable through web browsing."
+  },
+  {
+    "url": "https://huggingface.co/docs/hub/model-cards",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/hub/model-cards",
+    "checked_on": "2026-11-04",
+    "note": "This execution environment could not reach the URL within timeout. Not classified as a broken source. Some core Hugging Face references were independently readable through web browsing."
+  },
+  {
+    "url": "https://huggingface.co/docs/peft/index",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/peft/index",
+    "checked_on": "2026-11-04",
+    "note": "This execution environment could not reach the URL within timeout. Not classified as a broken source. Some core Hugging Face references were independently readable through web browsing."
+  },
+  {
+    "url": "https://huggingface.co/docs/peft/main/en/conceptual_guides/lora",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/peft/main/en/conceptual_guides/lora",
+    "checked_on": "2026-11-04",
+    "note": "This execution environment could not reach the URL within timeout. Not classified as a broken source. Some core Hugging Face references were independently readable through web browsing."
+  },
+  {
+    "url": "https://huggingface.co/docs/tokenizers/index",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/tokenizers/index",
+    "checked_on": "2026-11-04",
+    "note": "This execution environment could not reach the URL within timeout. Not classified as a broken source. Some core Hugging Face references were independently readable through web browsing."
+  },
+  {
+    "url": "https://huggingface.co/docs/transformers/chat_templating_multimodal",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/transformers/chat_templating_multimodal",
+    "checked_on": "2026-11-04",
+    "note": "This execution environment could not reach the URL within timeout. Not classified as a broken source. Some core Hugging Face references were independently readable through web browsing."
+  },
+  {
+    "url": "https://huggingface.co/docs/transformers/llm_tutorial",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/transformers/llm_tutorial",
+    "checked_on": "2026-11-04",
+    "note": "This execution environment could not reach the URL within timeout. Not classified as a broken source. Some core Hugging Face references were independently readable through web browsing."
+  },
+  {
+    "url": "https://huggingface.co/docs/transformers/model_doc/mixtral",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/transformers/model_doc/mixtral",
+    "checked_on": "2026-11-04",
+    "note": "This execution environment could not reach the URL within timeout. Not classified as a broken source. Some core Hugging Face references were independently readable through web browsing."
+  },
+  {
+    "url": "https://huggingface.co/docs/transformers/quantization/overview",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/transformers/quantization/overview",
+    "checked_on": "2026-11-04",
+    "note": "This execution environment could not reach the URL within timeout. Not classified as a broken source. Some core Hugging Face references were independently readable through web browsing."
+  },
+  {
+    "url": "https://huggingface.co/learn/llm-course/chapter1/1",
+    "status": "000",
+    "final_url": "https://huggingface.co/learn/llm-course/chapter1/1",
+    "checked_on": "2026-11-04",
+    "note": "This execution environment could not reach the URL within timeout. Not classified as a broken source. Some core Hugging Face references were independently readable through web browsing."
+  },
+  {
+    "url": "https://huggingface.co/learn/llm-course/chapter1/4",
+    "status": "000",
+    "final_url": "https://huggingface.co/learn/llm-course/chapter1/4",
+    "checked_on": "2026-11-04",
+    "note": "This execution environment could not reach the URL within timeout. Not classified as a broken source. Some core Hugging Face references were independently readable through web browsing."
+  },
+  {
+    "url": "https://kubernetes.io/docs/concepts/overview/",
+    "status": "200",
+    "final_url": "https://kubernetes.io/docs/concepts/overview/",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://langfuse.com/docs",
+    "status": "200",
+    "final_url": "https://langfuse.com/docs",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://milvus.io/docs",
+    "status": "403",
+    "final_url": "https://milvus.io/docs",
+    "checked_on": "2026-11-04",
+    "note": "Server denied this automated request; link validity could not be established by curl."
+  },
+  {
+    "url": "https://mlflow.org/docs/latest/",
+    "status": "200",
+    "final_url": "https://mlflow.org/docs/latest/",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://modelcontextprotocol.io/docs/getting-started/intro",
+    "status": "200",
+    "final_url": "https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://opentelemetry.io/docs/what-is-opentelemetry/",
+    "status": "200",
+    "final_url": "https://opentelemetry.io/docs/what-is-opentelemetry/",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview",
+    "status": "200",
+    "final_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://prometheus.io/docs/practices/histograms/",
+    "status": "200",
+    "final_url": "https://prometheus.io/docs/practices/histograms/",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://www.anthropic.com/engineering/building-effective-agents",
+    "status": "200",
+    "final_url": "https://www.anthropic.com/research/building-effective-agents",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://www.sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html",
+    "status": "200",
+    "final_url": "https://www.sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; manually reviewed core references separately."
+  }
+]
