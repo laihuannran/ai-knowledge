@@ -111,4 +111,8 @@ https://github.com/laihuannran/ai-knowledge/actions/runs/41891047260
 - 来源检查233条，170个HTTP200，其余57个网络未取得结果、6个403；无新增404，不把HTTP可达等同技术结论已证实。
 - 桌面1440导览与移动390短期记忆文章抽查，内容无整页横向溢出，3张图均加载。窄屏图在独立容器横向阅读。
 
-发布结果待推送后记录。
+发布提交 `719543d`，Actions #7 成功，总耗时39秒；build 10秒、deploy 21秒。
+
+https://github.com/laihuannran/ai-knowledge/actions/runs/41899241358
+
+线上6篇新文章、18张新图及导览、目录、首页、技术栈、术语与检索共30个文件逐字节匹配本地成品。
