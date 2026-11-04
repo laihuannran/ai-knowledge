@@ -393,6 +393,44 @@
       ]
     },
     {
+      "id": "model-apis",
+      "title": "模型 API 与协议兼容",
+      "subtitle": "读懂各家模型接入契约",
+      "description": "分清模型、产品、接口族与兼容层，再沿请求、流式事件、工具循环和云端接入理解适配边界。",
+      "chapters": [
+        {
+          "id": "model-api-contracts",
+          "title": "模型 API 契约与消息结构",
+          "summary": "从地图进入 Chat Completions、Responses、Messages 与 Gemini 原生格式。",
+          "slugs": [
+            "api-protocol-map",
+            "api-openai-chat",
+            "api-openai-responses",
+            "api-claude-messages",
+            "api-gemini-native"
+          ]
+        },
+        {
+          "id": "model-api-cloud",
+          "title": "云平台与客户端接线",
+          "summary": "认识 Bedrock 接口族，以及 Kiro 的 ACP、MCP 与模型接入分工。",
+          "slugs": [
+            "api-bedrock-families",
+            "api-kiro-boundaries"
+          ]
+        },
+        {
+          "id": "model-api-adaptation",
+          "title": "流式转换与兼容性验收",
+          "summary": "保留调用标识、内容块和终态，建立可复查的兼容能力矩阵。",
+          "slugs": [
+            "api-stream-translation",
+            "api-compatibility-testing"
+          ]
+        }
+      ]
+    },
+    {
       "id": "gateway",
       "title": "请求怎样进入模型平台",
       "subtitle": "网关、预算与智能路由",

@@ -108,3 +108,15 @@ for (const button of projectButtons) button.addEventListener('click', () => { pr
 for (const link of document.querySelectorAll('[data-role-shortcut]')) {
   link.addEventListener('click', () => { projectRole = link.dataset.roleShortcut; filterProjects(); });
 }
+
+// API atlas search filters reference rows and detail cards together.
+const apiInput = document.querySelector('#api-search');
+apiInput?.addEventListener('input', () => {
+  const query = apiInput.value.trim().toLocaleLowerCase();
+  for (const item of document.querySelectorAll('[data-api-search]')) {
+    item.hidden = !item.dataset.apiSearch.includes(query);
+  }
+  const count = [...document.querySelectorAll('.api-profile')].filter(item => !item.hidden).length;
+  document.querySelector('#api-results').textContent = `共 ${count} 种接入形态，按职责对照`;
+  document.querySelector('#api-empty').hidden = count !== 0;
+});

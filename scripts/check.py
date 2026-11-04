@@ -146,7 +146,7 @@ for path in svg_paths:
     if root.find('s:title', ns) is None or root.find('s:desc', ns) is None:
         errors.append(f'Missing accessible diagram description: {path}')
 expected_diagrams = sum(1 + len(a.get('diagrams', [])) for a in ARTICLES)
-if len(docs) != len(ARTICLES) + 8 or len(svg_paths) != expected_diagrams:
+if len(docs) != len(ARTICLES) + 9 or len(svg_paths) != expected_diagrams:
     errors.append('Generated page/diagram inventory differs from content inventory')
 if docs[(D / 'library.html').resolve()].cards != len(ARTICLES):
     errors.append('Article library inventory differs from content')
@@ -196,6 +196,24 @@ for item in projects:
     for field in ('role','mechanism','why_learn','when_use','limits','alternatives'):
         if not item.get(field):
             errors.append(f'Project missing {field}: {item["id"]}')
+
+# The protocol atlas is editorial data; ensure every card leads to a real chapter.
+atlas = read_json('content/api_protocols.json', {'profiles': [], 'extensions': []})
+identifiers = [item['id'] for item in atlas['profiles']]
+if len(identifiers) != len(set(identifiers)):
+    errors.append('Duplicate API profile id')
+for item in atlas['profiles']:
+    if item.get('chapter') not in slugs or item.get('kind') not in {'model','cloud','agent'}:
+        errors.append(f'Invalid API profile reference: {item.get("id")}')
+    for field in ('name','endpoint','input','output','stream','tools','state','auth','limit','sources'):
+        if not item.get(field):
+            errors.append(f'Missing API profile {field}: {item.get("id")}')
+    for source in item['sources']:
+        if not source.get('url','').startswith('https://'):
+            errors.append(f'Invalid API source: {item["id"]}')
+for item in atlas['extensions']:
+    if not item.get('url','').startswith('https://') or not item.get('note'):
+        errors.append('Invalid API extension source')
 
 if errors:
     raise SystemExit('\n'.join(errors))

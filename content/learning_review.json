@@ -2,6 +2,30 @@
   "date": "2026-11-05",
   "themes": [
     {
+      "id": "model-apis",
+      "title": "模型 API：请求、事件与兼容适配",
+      "status": "补齐独立协议系列",
+      "question": "换一个地址和模型名，为什么仍然不能兼容？",
+      "summary": "从接口地图进入 OpenAI、Anthropic、Gemini、Bedrock 与 Kiro，再理解流式转换和兼容验收。",
+      "correction": "这些名称处于不同层次：Messages在此指Anthropic接口；Kiro是产品，ACP不是模型REST格式；OpenAI-compatible也不代表所有参数、工具、多模态和状态能力都等价。",
+      "existing": [
+        "protocol-landscape",
+        "gateway",
+        "streaming-events"
+      ],
+      "lessons": [
+        "api-protocol-map",
+        "api-openai-chat",
+        "api-openai-responses",
+        "api-claude-messages",
+        "api-gemini-native",
+        "api-bedrock-families",
+        "api-kiro-boundaries",
+        "api-stream-translation",
+        "api-compatibility-testing"
+      ]
+    },
+    {
       "id": "ml-foundations",
       "title": "AI 基础：任务、泛化与神经网络",
       "status": "补齐基础版图",

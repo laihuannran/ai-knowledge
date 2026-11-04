@@ -1,0 +1,212 @@
+{
+  "date": "2026-11-05",
+  "profiles": [
+    {
+      "id": "openai-chat",
+      "name": "OpenAI Chat Completions",
+      "kind": "model",
+      "endpoint": "POST /v1/chat/completions",
+      "input": "messages；角色、content 与工具定义",
+      "output": "choices 中的 message；流中使用 delta",
+      "stream": "SSE；选择索引、delta、finish_reason 与结束标记分别处理",
+      "tools": "tool_calls 与对应 tool_call_id；宿主完成客户端工具执行",
+      "state": "常见多轮由应用组织消息；保存记录不等于自动传入全部历史",
+      "auth": "OpenAI API 凭据；兼容服务使用自己的凭据与端点",
+      "limit": "模型与参数能力须逐项确认；不能当作所有 OpenAI 功能的共同最小格式。",
+      "chapter": "api-openai-chat",
+      "sources": [
+        {
+          "title": "官方接口与能力说明",
+          "url": "https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create"
+        }
+      ]
+    },
+    {
+      "id": "openai-responses",
+      "name": "OpenAI Responses",
+      "kind": "model",
+      "endpoint": "POST /v1/responses",
+      "input": "input、instructions 与类型化输入项",
+      "output": "output 类型化 items；SDK output_text 是便利读取入口",
+      "stream": "SSE 类型化事件；完成、失败、不完整分别处理",
+      "tools": "function_call 与 function_call_output 通过 call_id 关联",
+      "state": "可手动传历史，或按契约使用 previous_response_id / Conversations",
+      "auth": "OpenAI API 凭据；状态资源仍受账号和服务约束",
+      "limit": "message 只是 item 类型之一；不可把 output 全部压成文本或直接读取 choices。",
+      "chapter": "api-openai-responses",
+      "sources": [
+        {
+          "title": "官方接口与能力说明",
+          "url": "https://developers.openai.com/api/docs/guides/migrate-to-responses"
+        }
+      ]
+    },
+    {
+      "id": "claude-messages",
+      "name": "Anthropic Messages",
+      "kind": "model",
+      "endpoint": "POST /v1/messages",
+      "input": "messages 的 content blocks；system 等按原生契约组织",
+      "output": "assistant message 的 content blocks、stop_reason 与 usage",
+      "stream": "SSE；message 与 content block 事件各有边界",
+      "tools": "tool_use 与 tool_result 通过调用标识关联；客户端工具需回传结果",
+      "state": "原生消息链按实际接口组织；不能把 Messages 名称当作永久用户记忆",
+      "auth": "原生 API 的认证与版本头；云托管路径需另核对",
+      "limit": "OpenAI messages 数组与 Anthropic Messages API 不是同一个契约；兼容层也有参数限制。",
+      "chapter": "api-claude-messages",
+      "sources": [
+        {
+          "title": "官方接口与能力说明",
+          "url": "https://platform.claude.com/docs/en/build-with-claude/streaming"
+        }
+      ]
+    },
+    {
+      "id": "gemini-generate",
+      "name": "Gemini generateContent",
+      "kind": "model",
+      "endpoint": "POST /v1beta/models/{model}:generateContent；流式使用 :streamGenerateContent",
+      "input": "contents / parts；systemInstruction 与生成配置",
+      "output": "candidates / content / parts；finishReason 与 usageMetadata",
+      "stream": "流式返回生成响应片段；多种 part 与结束状态分别解释",
+      "tools": "functionCall / functionResponse；保留该模式要求的元数据",
+      "state": "应用或SDK组织历史；不要把SDK聊天对象误认为服务端永久存储",
+      "auth": "Gemini Developer API 的凭据；Vertex AI 路线另核验",
+      "limit": "当前官方称其 legacy 但仍 fully supported；thought signature 规则不要混用 Interactions。",
+      "chapter": "api-gemini-native",
+      "sources": [
+        {
+          "title": "官方接口与能力说明",
+          "url": "https://ai.google.dev/api/generate-content"
+        }
+      ]
+    },
+    {
+      "id": "gemini-interactions",
+      "name": "Gemini Interactions",
+      "kind": "model",
+      "endpoint": "Interactions 资源创建与读取接口；按所选版本核对路径",
+      "input": "input、模型或代理选择及交互配置",
+      "output": "steps 组织执行；create 返回模型步骤，get 可读已保存的完整步骤",
+      "stream": "类型化交互事件；不要复用 candidates 专用解析器",
+      "tools": "function_call / function_result 等步骤；内建与客户端工具边界不同",
+      "state": "可用 previous_interaction_id；store 模式与保留政策需确认",
+      "auth": "Gemini Developer API 的对应凭据与资源范围",
+      "limit": "官方于2026年6月宣布GA并推荐新项目；不把 steps、parts、SDK helper 混作一种REST结构。",
+      "chapter": "api-gemini-native",
+      "sources": [
+        {
+          "title": "官方接口与能力说明",
+          "url": "https://ai.google.dev/gemini-api/docs/interactions"
+        }
+      ]
+    },
+    {
+      "id": "bedrock-converse",
+      "name": "Bedrock Converse / ConverseStream",
+      "kind": "cloud",
+      "endpoint": "POST /model/{modelId}/converse 或 /converse-stream",
+      "input": "messages、system、inferenceConfig、toolConfig 等原生统一结构",
+      "output": "output.message、stopReason、usage；流式为对应事件",
+      "stream": "AWS 原生 EventStream；SDK可能已解码，区别于SSE兼容路径",
+      "tools": "toolUse / toolResult；需模型支持并保持调用关联",
+      "state": "调用方提供所需消息；模型、配置和外部记忆分别管理",
+      "auth": "bedrock-runtime 支持SigV4 / Bedrock API key；IAM权限需另核验",
+      "limit": "统一结构不代表所有模型支持所有模态、工具或参数；区域与推理配置仍有约束。",
+      "chapter": "api-bedrock-families",
+      "sources": [
+        {
+          "title": "官方接口与能力说明",
+          "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html"
+        }
+      ]
+    },
+    {
+      "id": "bedrock-invoke",
+      "name": "Bedrock InvokeModel 系列",
+      "kind": "cloud",
+      "endpoint": "/model/{modelId}/invoke 或 /invoke-with-response-stream",
+      "input": "body 取决于目标提供商与模型的原生格式",
+      "output": "响应内容按模型契约解释",
+      "stream": "原生流式使用AWS EventStream封装；其中负载需按模型解释",
+      "tools": "并非统一的 tools 对象；遵循对应模型格式和能力",
+      "state": "是否有状态不能由Invoke这个方法名推断",
+      "auth": "bedrock-runtime 的鉴权与资源授权；不要套用原厂公共API凭据",
+      "limit": "不应把任意模型的原生body当成另一模型可接受的输入；信封相同不等于内容相同。",
+      "chapter": "api-bedrock-families",
+      "sources": [
+        {
+          "title": "官方接口与能力说明",
+          "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/apis.html"
+        }
+      ]
+    },
+    {
+      "id": "bedrock-compatible",
+      "name": "Bedrock 兼容接口族",
+      "kind": "cloud",
+      "endpoint": "Chat Completions / Responses / Messages 等路径，依端点与模型核对",
+      "input": "形状随选定接口族变化；不是另一份统一Bedrock消息体",
+      "output": "随接口族与服务支持范围变化",
+      "stream": "原生与兼容路径分别核对；不能给整个平台统一标记SSE",
+      "tools": "客户端工具、服务端工具和后台能力依实际端点与API确认",
+      "state": "不能把原厂响应或会话ID直接迁往Bedrock",
+      "auth": "runtime / mantle 均有SigV4与API key路径；IAM操作与资源范围不同",
+      "limit": "runtime 与 mantle 的推荐路线和能力不同，必须查当前模型兼容矩阵；兼容不等于全部能力复制。",
+      "chapter": "api-bedrock-families",
+      "sources": [
+        {
+          "title": "官方接口与能力说明",
+          "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/models-api-compatibility.html"
+        }
+      ]
+    },
+    {
+      "id": "kiro-acp",
+      "name": "Kiro 产品与 ACP 接线",
+      "kind": "agent",
+      "endpoint": "官方ACP连接编辑器或应用与Kiro agent；不是一条统一模型REST路径",
+      "input": "代理会话、提示与编辑器交互，遵循ACP与产品能力",
+      "output": "代理更新、工具交互与任务状态；不是模型choices或candidates",
+      "stream": "按ACP的传输与会话契约处理，不套用模型SSE处理器",
+      "tools": "ACP承接客户端交互；MCP可连接代理工具；模型接口是另一层",
+      "state": "代理会话与产品授权需分别核对；社区适配名称不是稳定官方格式",
+      "auth": "Kiro产品授权与代理接入约定，不等于直接获得原厂模型API权限",
+      "limit": "若项目使用Kiro适配器或社区转换器，应标项目、版本与证据；本页不发布未公开内部wire格式。",
+      "chapter": "api-kiro-boundaries",
+      "sources": [
+        {
+          "title": "官方接口与能力说明",
+          "url": "https://kiro.dev/docs/acp/"
+        }
+      ]
+    }
+  ],
+  "extensions": [
+    {
+      "name": "Azure OpenAI / Microsoft Foundry",
+      "note": "同为模型托管接入，还需核对资源端点、部署、版本与API key / Entra ID等认证路线；不能把旧版URL规则当作全部当前接口。",
+      "url": "https://learn.microsoft.com/en-us/azure/foundry/openai/api-version-lifecycle"
+    },
+    {
+      "name": "DeepSeek 兼容接入",
+      "note": "官方提供与OpenAI及Anthropic格式兼容的接入说明；端点、模型特有字段、支持范围与凭据依其文档确认。",
+      "url": "https://api-docs.deepseek.com/"
+    },
+    {
+      "name": "阿里云 Model Studio / Qwen",
+      "note": "有OpenAI-compatible接入，区域、工作空间端点及模型功能需核对；不能由某个模型支持推断所有模型和模态都支持。",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/compatibility-of-openai-with-dashscope"
+    },
+    {
+      "name": "Gemini Live / 实时音频",
+      "note": "实时双向媒体会话应单独学习，不等于streamGenerateContent或逐字文本输出；先阅读实时语音系列建立运行时认识。",
+      "url": "https://ai.google.dev/gemini-api/docs/live"
+    },
+    {
+      "name": "MCP / A2A / Agent Client Protocol",
+      "note": "分别学习工具连接、跨代理协作和客户端到代理的通信；它们与模型生成接口可组合，不能互相当作别名。",
+      "url": "https://a2a-protocol.org/latest/topics/a2a-and-mcp/"
+    }
+  ]
+}

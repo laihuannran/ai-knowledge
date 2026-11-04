@@ -74,6 +74,7 @@ class BookEdition:
         self.series_count = len({slug for t in self.learning_review['themes'] for slug in t['lessons']})
         self.projects = read_json('content/research/projects.json', [])
         self.resources = read_json('content/research/resources.json', [])
+        self.api_protocols = read_json('content/api_protocols.json', {'date': '', 'profiles': [], 'extensions': []})
         self.membership = {}
         for pi, part in enumerate(self.parts):
             for ci, chapter in enumerate(part['chapters']):
@@ -124,7 +125,7 @@ class BookEdition:
         toc += '</div></section>'
         stack = f'''<section class="stack-teaser"><p class="eyebrow">A MAP OF THE AI ECOSYSTEM</p><h2>不只认识名词，<br>还要知道工具放在哪里。</h2><p>研究 {len(self.projects)} 个项目，按机器学习、训练、Agent、生成、数据、网关、推理与评测分类。<br>每项都解释职责、机制、适用场景、限制和许可；GitHub 关注度附采集日期。</p><div class="stack-name-row"><span>LangChain</span><span>LangGraph</span><span>Spring AI</span><span>Codex</span><span>vLLM</span><span>Redis</span></div><a class="primary-link" href="stack.html">查看技术栈与比较 <span>→</span></a></section>'''
         note = f'''<section class="reading-note"><span>这是一份怎样的教程？</span><p>{len(self.articles)} 节内容区分概念入门与机制案例。长章节沿着同一条任务链解释细节，配原创图表和原始资料。已有短文作为查阅入口，核心专题继续向深入系列展开。</p><a href="resources.html">查看参考书架与资料来源 →</a></section>'''
-        guide = f'<section class="learning-callout"><div><small>NEW SERIES / 把陌生名词连成机制</small><h2>Context 与长短期记忆，怎样分清？</h2><p>本轮新增6篇机制与案例：组装、压缩、评测，以及短期状态、长期写入和召回。</p></div><a href="guide.html#learn-context-memory">打开上下文与记忆系列 →</a></section>'
+        guide = f'<section class="learning-callout"><div><small>NEW SERIES / 把陌生名词连成机制</small><h2>各家模型 API，究竟兼容到哪一层？</h2><p>Chat Completions、Responses、Messages、Gemini、Bedrock 与 Kiro：先查对照页，再读九篇深入章节。</p></div><a href="api.html">打开模型 API 对照 →</a></section>'
         return hero + guide + routes + toc + stack + note
 
     def contents(self):
@@ -175,3 +176,21 @@ class BookEdition:
             out += f'<details><summary>{E(q["question"])}</summary><p>{E(q["answer"])}</p><a href="articles/{q["slug"]}.html">阅读对应章节 →</a></details>'
         sources = ' · '.join(f'<a href="{E(s["url"])}">{E(s["title"])} ↗</a>' for s in review['sources'])
         return out + f'</section><section class="reading-note"><span>从概览走向可核查的机制</span><p>本页整理学习关系，长章节给出案例、图表与具体来源。图中的层次和案例属于教学组织，实际系统按任务与约束选择组件。</p><p>{sources}</p><a href="map.html">返回全书目录 →</a></section>'
+
+
+    def api_reference(self):
+        data = self.api_protocols
+        labels = {'model': '模型 API', 'cloud': '云平台接入', 'agent': '代理与客户端接线'}
+        rows, cards, jumps = [], [], []
+        for item in data['profiles']:
+            key = E(item['id'])
+            terms = E(' '.join(str(item[k]) for k in ('name','kind','endpoint','input','output','stream','tools','state','auth','limit')).lower())
+            jumps.append(f'<a href="#api-{key}" data-api-search="{terms}">{E(item["name"])}</a>')
+            cols = [f'<a href="#api-{key}">{E(item["name"])}</a><small>{E(labels[item["kind"]])}</small>']
+            cols += [E(item[k]) for k in ('input','output','stream','tools','state')]
+            rows.append(f'<tr data-api-search="{terms}">' + ''.join(f'<td>{value}</td>' for value in cols) + '</tr>')
+            source_links = ' · '.join(f'<a href="{E(source["url"])}">{E(source["title"])} ↗</a>' for source in item['sources'])
+            fields = ''.join(f'<dt>{label}</dt><dd>{E(item[field])}</dd>' for label,field in [('输入','input'),('输出','output'),('流式交付','stream'),('工具循环','tools'),('会话与状态','state'),('鉴权与范围','auth')])
+            cards.append(f'<article class="api-profile" id="api-{key}" data-api-search="{terms}"><div class="project-meta"><span>{E(labels[item["kind"]])}</span><span>核对 {E(data["date"])}</span></div><h2>{E(item["name"])}</h2><p class="api-endpoint"><code>{E(item["endpoint"])}</code></p><dl>{fields}</dl><div class="concept-boundary"><b>适配时保留的边界</b><p>{E(item["limit"])}</p></div><p class="api-sources">{source_links}</p><a class="api-read" href="articles/{E(item["chapter"])}.html">阅读机制与案例 →</a></article>')
+        extensions = ''.join(f'<article><h3><a href="{E(item["url"])}">{E(item["name"])} ↗</a></h3><p>{E(item["note"])}</p></article>' for item in data['extensions'])
+        return f'''<header class="page-heading"><p class="eyebrow">MODEL API ATLAS / CONTRACTS AND COMPATIBILITY</p><h1>同样在调用模型，<br>契约未必相同。</h1><p>把接口、模型、平台与客户端分开，按请求、事件、工具和状态核对。资料核对日期：{E(data['date'])}。以下是概念对照与文档研究，未进行付费调用或线上兼容性实测。</p></header><section class="guide-intro"><h2>先分三类，再看字段</h2><div class="guide-role-grid"><a href="articles/api-protocol-map.html"><b>模型 API</b><span>Chat、Responses、Messages 与 Gemini</span></a><a href="articles/api-bedrock-families.html"><b>云接入</b><span>Bedrock 的端点、鉴权和接口族</span></a><a href="articles/api-kiro-boundaries.html"><b>代理接线</b><span>Kiro 产品、ACP、MCP 与模型接口</span></a></div><p>本页所说“协议”包含厂商 API 契约，并不表示它们都是开放行业标准。OpenAI-compatible 表示具体范围内的兼容；SDK能连接、文本能返回，都不能证明工具、多模态、状态与参数完全等价。</p><a class="primary-link" href="guide.html#learn-model-apis">按顺序阅读九篇协议教程 →</a></section><nav class="guide-jumps" aria-label="接口快速定位">{''.join(jumps)}</nav><div class="section-head"><h2>按能力与字段查阅</h2><label class="search"><span>⌕</span><input id="api-search" type="search" placeholder="例如 Responses、SSE、工具、SigV4…" aria-label="搜索模型 API 对照"></label></div><p id="api-results" class="result-count" aria-live="polite">共 {len(data['profiles'])} 种接入形态，按职责对照</p><div class="table-scroll api-table" role="region" aria-label="API契约比较，可左右滚动" tabindex="0"><table><thead><tr><th scope="col">接入形态</th><th scope="col">输入</th><th scope="col">输出</th><th scope="col">流式</th><th scope="col">工具</th><th scope="col">状态</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div><p id="api-empty" hidden>没有找到对应项，可尝试厂商名称、字段名或能力关键词。</p><div class="api-profile-grid">{''.join(cards)}</div><section class="api-extensions"><p class="eyebrow">RELATED ACCESS PATHS</p><h2>还会遇到的接入形态</h2><p>这些入口继续按自己的提供商文档核对，不由某条兼容路径推断整个生态。</p><div>{extensions}</div></section><section class="reading-note"><span>比较的是语义，不只是改字段名</span><p>能力矩阵应区分文档声明、离线回放、线上实测与业务验收。不支持的能力要明确拒绝或说明降级，不能静默删除。原始调用身份、不透明状态、模态与结束原因都可能影响后续行为。</p><a href="articles/api-compatibility-testing.html">阅读兼容性验收 →</a></section>'''

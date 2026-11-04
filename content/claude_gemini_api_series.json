@@ -1,0 +1,292 @@
+[
+  {
+    "slug": "api-claude-messages",
+    "category": "接入平台",
+    "title": "Claude Messages：从内容块读懂工具与流式状态",
+    "summary": "掌握顶层 system、内容块、工具回执与 SSE 结束语义，识别文字已经出现却流程尚未完成的情况。",
+    "analogy": "像一份带编号附件的交接单：正文、执行请求与回执各有位置，不能只抄第一段。",
+    "prerequisites": [
+      "api-protocol-map",
+      "context-assembly"
+    ],
+    "requires": "建议先读：模型 API 地图、上下文装配",
+    "nodes": [
+      "设置系统要求",
+      "装入内容块",
+      "接收类型事件",
+      "核验停止原因"
+    ],
+    "diagram_type": "flow",
+    "sections": [
+      {
+        "title": "Messages 是有类型的交接单",
+        "text": "Claude Messages 的名字容易令人误以为，只要把另一个平台的 messages 数组原样发送就能接入。实际上，Messages 是一套完整的请求、内容块、停止原因和工具回执协议。顶层 system 承载系统要求，messages 主要使用 user 与 assistant 角色；不能照搬 OpenAI 风格的 system 消息。鉴权、版本头和模型参数也属于请求契约，平台界面里的聊天行为不能作为接口字段说明。\n\n阅读一份调用记录时，先区分请求配置与对话材料，再查看各条消息中的 content。纯文本可以使用简写，但多模态输入、工具往返和思考相关内容需要按对应类型理解。验收重点不是页面有没有出现汉字，而是结构中的目标、限制、证据和执行结果有没有落在正确的位置。"
+      },
+      {
+        "title": "content 不是唯一一段回答",
+        "text": "返回消息的 content 是内容块序列，可能同时含有文字、tool_use 或特定能力产生的其他块。只读取第一个 text 块，会漏掉后续说明或工具请求；把全部块转换成一段字符串，又会丢失类型与关联信息。界面可以只展示用户需要的文字，但供下一轮继续使用的记录应保留协议所需结构。\n\n例如一次查询先给出“我需要核对库存”，再产生查询工具块。第一段文字只是解释，不能据此标记查询完成。审阅者需要看到块类型、排列顺序以及每个块属于哪次消息。遇到不认识的新类型，应按明确策略保留或报告不支持，而不是默默删除之后宣称兼容。"
+      },
+      {
+        "title": "工具调用通过标识闭合",
+        "text": "客户端工具由应用执行。Claude 在 assistant 的 content 中给出 tool_use，包含 id、名称和输入；应用检查权限与参数后执行，并在紧接着的 user 消息中返回 tool_result，通过 tool_use_id 指向原调用。它不是额外增加一个通用 tool 角色，也不能只回一句“执行成功”来代替关联。\n\n同一轮可能请求多个工具，应完整收集并按规则回传对应结果，避免在工具请求与回执之间插入无关消息。失败应明确表达为失败回执，不能伪装成业务查询的空结果。调用标识解决的是结果对应关系，并不自动提供外部写入的幂等性；付款、发信等动作仍需独立防重与授权核对。"
+      },
+      {
+        "title": "stop_reason 决定下一步",
+        "text": "收到返回对象后，还要检查 stop_reason。end_turn 表示本轮自然结束，tool_use 表示等待工具往返，max_tokens 表示达到输出限制；这些含义不能统一映射成“回答成功”。其他能力可能引入不同停止原因，应依据所用版本和功能文档解释，不能凭最后一句文字推断流程状态。\n\n假设回答在一段看起来完整的句号后达到限制，也可能遗漏后续重要内容；反过来，模型请求工具时尚未提供最终答案，并不意味着接口失败。产品需要把正常结束、等待外部结果、截断与异常区分开，再决定是否展示继续按钮、执行工具或提示结果不完整。停止原因是控制信息，不是装饰性的日志字段。"
+      },
+      {
+        "title": "流式接收依赖事件层级",
+        "text": "Messages 流通常从 message_start 开始，随后按索引出现 content_block_start、content_block_delta 和 content_block_stop，再由 message_delta 更新消息级信息，最终以 message_stop 结束。期间可能出现 ping 或错误事件。文字片段、工具输入片段和思考相关片段有不同类型，不应全部追加到用户可见文本中。\n\n一个工具输入可能分成多段 JSON 字符串到达，单段无法解析并不说明调用损坏。应按块索引积累，在具备完整结构且满足执行条件后处理；内容块停止也不等于整条消息停止。网络断开更不能充当 message_stop：此时应记录未完成状态，保留已收到内容并依据恢复策略处理，避免把半条指令当作可靠动作。"
+      },
+      {
+        "title": "usage 必须按字段语义记账",
+        "text": "流中 usage 的位置和含义需要分别阅读。message_start 可以提供初始输入统计，后续 message_delta 的输出统计通常是累计值，不能把每次看到的 output_tokens 相加，否则一条消息会被重复计费式地放大。缓存相关计数字段也应按文档分类保留，而不是混成一个自定义总数。\n\n排错时可以保留最终可确认的统计及其来源，并将中断流与正常完成流分开。若 SDK 提供最终消息聚合结果，可以使用其正式统计对象，同时核对异常路径是否真的形成了最终消息。界面字符数、收到的数据包数和模型令牌数不是同一种单位，不能互相替代；本文也不把任何字段推导成固定价格。"
+      },
+      {
+        "title": "思考块与签名需要结构保留",
+        "text": "启用相应思考能力时，返回中可能包含 thinking、签名或经过遮蔽的内容。签名用于协议完整性和后续处理，并不是要求应用解密内部推理。需要在后续请求中保留的思考相关块，应遵循当前功能文档整体原样回传；不能修改文本、拼接伪造签名，或把遮蔽内容替换成自己编写的解释。\n\n用户界面展示的可公开摘要与协议记录承担不同责任。为了界面简洁隐藏某个块，不等于可以在工具循环历史中删除它；为了压缩上下文重新整理消息，也必须先核对该模式允许的转换。不能要求服务返回隐藏思维链来修复兼容问题。若中间代理只能保留文字，应承认对应功能存在结构缺失。"
+      },
+      {
+        "title": "用纸面轨迹验收接入",
+        "text": "不调用真实模型也能检查协议理解：准备一份用户问题、一条带文字与两个工具请求的 assistant 消息、两个对应回执，以及最后的正常结束消息，再分别标注角色、块类型、调用标识与停止原因。流式版本另外标出块开始、片段和消息结束位置，观察界面显示与流程状态是否一致。\n\n验收应覆盖断线、输出截断、工具失败和未知块，确认不会把它们都展示成成功。官方 SDK 可以减少事件聚合工作，却不能替应用决定权限与业务完成标准。本文讨论的是原生 Messages；托管平台可能采用不同鉴权与版本安排，迁移时还要核对入口合同。所有示例都是教学轨迹，没有发起模型调用或读取任何凭据。"
+      }
+    ],
+    "example": "库存查询返回两个 tool_use 后，应用分别核验并回传带 tool_use_id 的 user 内容块，再等待最终回答结束。",
+    "pitfall": "把文本出现当作整个消息完成，或把累计 usage 逐事件相加。",
+    "question": "为什么 tool_result 不能只是一句未带标识的成功说明？",
+    "answer": "模型需要通过 tool_use_id 将结果对应到具体工具请求；文字成功既缺关联，也不能说明实际执行范围。",
+    "sources": [
+      {
+        "title": "Claude Messages",
+        "url": "https://platform.claude.com/docs/en/api/messages"
+      },
+      {
+        "title": "流式消息",
+        "url": "https://platform.claude.com/docs/en/build-with-claude/streaming"
+      },
+      {
+        "title": "工具回执",
+        "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/handle-tool-calls"
+      },
+      {
+        "title": "扩展思考",
+        "url": "https://platform.claude.com/docs/en/build-with-claude/extended-thinking"
+      }
+    ],
+    "tags": [
+      "Messages API",
+      "content blocks",
+      "tool_use",
+      "stop_reason",
+      "SSE"
+    ],
+    "related": [
+      "api-openai-chat",
+      "api-openai-responses",
+      "api-stream-translation"
+    ],
+    "date": "2026-11-05",
+    "level": "深入",
+    "diagrams": [
+      {
+        "title": "工具回执闭环",
+        "diagram_type": "cycle",
+        "nodes": [
+          "收到工具请求",
+          "核验执行权限",
+          "生成关联回执",
+          "继续模型回答"
+        ],
+        "caption": "继续回答可以提出下一批工具请求，形成可追溯的往返。"
+      },
+      {
+        "title": "结束状态分流",
+        "diagram_type": "branch",
+        "nodes": [
+          "读取停止原因",
+          "处理自然结束",
+          "处理待执行工具",
+          "记录本轮状态"
+        ],
+        "caption": "正常结束与等待工具两条路径都要更新状态，不能统一记为已完成。"
+      }
+    ],
+    "comparison": {
+      "headers": [
+        "观察对象",
+        "原生表示",
+        "验收重点"
+      ],
+      "rows": [
+        [
+          "系统要求",
+          "顶层 system",
+          "与对话消息分开"
+        ],
+        [
+          "工具结果",
+          "user 内 tool_result",
+          "关联 tool_use_id"
+        ],
+        [
+          "流式完成",
+          "message_stop",
+          "断线不替代完成事件"
+        ]
+      ]
+    }
+  },
+  {
+    "slug": "api-gemini-native",
+    "category": "接入平台",
+    "title": "Gemini 原生接口：区分生成内容与交互状态",
+    "summary": "同时理解 Generate Content 和 Interactions，守住多 parts、函数回执、思考签名与服务端状态的边界。",
+    "analogy": "像两种工作台账：一种每次递交材料包，另一种按交互编号连接步骤；附件和回执仍须准确归档。",
+    "prerequisites": [
+      "api-protocol-map",
+      "context-assembly"
+    ],
+    "requires": "建议先读：模型 API 地图、上下文装配",
+    "nodes": [
+      "选择原生接口",
+      "确定状态模式",
+      "核对结构回执",
+      "确认交互结果"
+    ],
+    "diagram_type": "flow",
+    "sections": [
+      {
+        "title": "先辨认两代原生接口",
+        "text": "当前 Gemini 原生能力不能只用 contents 一个字段概括。官方已经推荐新项目考虑 Interactions，同时明确 Generate Content 继续受到支持。Interactions 用 input 与步骤表示交互，并可通过 previous_interaction_id 连接服务端保存的交互；Generate Content 则以 contents、parts 和 candidates 组织请求与响应。两者属于不同接口契约，不能把一个接口的返回直接当作另一个的历史。\n\n选择入口时，先确认现有系统依赖的是无状态生成、SDK 聊天封装，还是服务端管理的交互。文档中的推荐不会自动迁移已有应用，也不保证每个模型、地区和托管平台同时支持同一能力。先记录接口、版本、功能与状态模式，后续讨论字段才有确定含义。"
+      },
+      {
+        "title": "contents 里面装的是轮次和 parts",
+        "text": "在 Generate Content 中，contents 是对话内容序列，每项 Content 通过 role 与 parts 表达来源和材料。模型一侧通常使用 model 角色，不能直接照搬 assistant；systemInstruction 是单独的系统配置概念，也不是把任意 system 消息塞进 contents。SDK 命名可能采用语言习惯的形式，审阅原始协议时应核对对应字段。\n\nparts 可以表示文字及受到支持的图像、音频、文件引用或函数内容，具体组合受模型与模式限制。一轮内容可以有多个 parts；把它们压成单段文字会失去媒体与函数的边界。图片引用存在于历史记录，也不代表文件仍有效或访问仍获授权，应把材料可用性与消息格式分别核验。"
+      },
+      {
+        "title": "完整读取 candidates 与结束原因",
+        "text": "Generate Content 响应中的 candidates 是候选集合，每个候选可含 content.parts、finishReason 等信息。只读 candidates 第一项的第一个 text，可能漏掉同轮后续文本、函数请求或其他输出。选择某个候选作为产品回答是一项明确策略，不能借此假定未选内容不存在，更不能把不同候选的 parts 混成同一轮。\n\nfinishReason 需要结合安全反馈与返回内容解释。达到限制、正常停止与被阻断是不同状态，缺少可见文字也不必然是网络故障。应先核对候选是否存在、结构是否完整，再决定展示回答、等待工具或提示无法生成。请求成功和业务任务完成是两层判断，单凭 HTTP 成功状态不能作出后者结论。"
+      },
+      {
+        "title": "functionCall 与 functionResponse 配对",
+        "text": "函数声明告诉模型可以提出哪些调用；实际执行仍由应用承担。在 Generate Content 中，模型可以通过 part 的 functionCall 提供名称和参数，应用执行后用 functionResponse 回传结构化结果，并保留相应的模型调用内容。回传格式应遵循当前接口示例，调用标识在该模式要求时也必须保留，不能只用一句自然语言结果替代。\n\n同一轮可能出现多个函数 parts，顺序或并行执行必须结合函数依赖和权限判断。查库存与查门店时间可以独立，支付与取消订单则涉及外部状态，不能因它们在同一响应中就盲目并发。自动函数调用是特定 SDK 的执行便利，不表示远端模型拥有本地函数，也不能替代用户授权和参数校验。"
+      },
+      {
+        "title": "Interactions 用步骤记录过程",
+        "text": "Interactions 的 input 可以承载用户输入及允许的结构化步骤，交互结果以 steps 描述过程。user_input、model_output、function_call、function_result 等类型说明谁提供材料、模型输出什么、请求了什么函数以及执行返回什么。不能把 function_result 改名为 Generate Content 的 functionResponse 后就宣称等价，因为交互标识、步骤关联与状态管理也需要对应。\n\n使用 previous_interaction_id 时，应确认前一个交互已按服务要求保存且仍可引用，并保留当前轮额外输入与工具回执。服务端知道部分历史不意味着它知道企业数据库中的最新状态；变更的订单事实仍需重新提供证据。若选择无状态交互，则应按该模式要求提交完整必要步骤，不能混用有状态模式的省略假设。\n\n还需区分读取方式：interactions.create 的返回只包含模型生成的步骤；通过 interactions.get 读取已保存资源时，才能看到包括 user_input 在内的完整交互步骤。不能把两种返回体当作同一份固定字段列表。"
+      },
+      {
+        "title": "SDK 聊天对象不是服务端记忆",
+        "text": "Generate Content 的 SDK 聊天封装可以替应用收集历史并在后续调用中发送，这种方便的会话对象不能证明服务端保存了一个可以永久续接的聊天。进程重启、历史裁剪和工具往返都可能改变实际输入，因此需要检查 SDK 最终提交的内容，而不是只看产品界面还显示旧对话。\n\nInteractions 的服务端状态连接提供另一种管理方式，也有保存策略、有效期和接口要求。两者都不能免除上下文预算与版本管理。业务上可以记录订单编号、核对时间和已授权动作，让后续轮次理解进度；这些可审查状态不是隐藏思维链，也不要求把模型的内部推理复制到企业日志。"
+      },
+      {
+        "title": "thought signatures 按接口保留",
+        "text": "思考签名是模型产生的不可随意改写的协议数据，不是供人解码的推理说明。在 Generate Content 中，签名可以作为 part 的元数据出现；手工维护历史时，应依官方针对该模型和调用模式的规则原样保留关联 part、签名与顺序，不能随便合并带签名和不带签名的 parts，也不能从别轮复制签名凑数。\n\n当前 Interactions 对思考采用独立步骤表示，签名处理与 Generate Content 不同；有状态模式可以由服务端管理，无状态模式须保留该模式要求的思考步骤及相关签名。官方 SDK 的自动处理只对相应调用路径成立，经过自定义代理后仍要验证完整性。签名不是要求公开隐藏思维链，应用也不应编造一段推理代替签名。"
+      },
+      {
+        "title": "流式生成与 Live 不是同义词",
+        "text": "streamGenerateContent 是 Generate Content 的流式生成方法，分批返回生成内容；应用仍需按候选、parts 与结束信息理解各段。它不等于 Gemini Live。Live 面向实时双向交互，有独立会话、消息与媒体约束，不能因为两者都边生成边接收，就共用同一套结束判断和重连假设。\n\n流中某次没有 text，可能是在提供其他结构或统计，不能立即视为失败。连接关闭也不能自动证明所有业务结果已完成。验收时应分别检查正常结束、用户取消、网络中断和安全终止，保存已经确认的结果及不确定状态。对于多个片段里的统计，先核对字段是累计还是增量，不能按收到片段数量直接相加。"
+      },
+      {
+        "title": "Developer API 与 Vertex AI 分开核对",
+        "text": "Gemini Developer API 与 Vertex AI 是不同接入环境。前者常见 API 密钥入口，后者通常结合 Google Cloud 项目、位置与 IAM 身份授权；具体支持的鉴权形式应以所选入口当前文档为准。模型标识、版本、区域可用性、配额和功能推出节奏也可能不同，不能拿一个环境的成功截图证明另一个已可用。\n\nOpenAI compatibility 又是一个兼容入口，其 messages、choices 等外形有利于已有客户端迁移，但不等于原生协议的所有模式都能无损表达。思考控制、签名、工具和多模态能力需要逐项核对官方映射与限制。选择兼容层时，应写清实际使用的功能集合；不要把“改了地址可以返回文字”扩大成“所有原生能力完全支持”。"
+      },
+      {
+        "title": "用双轨账本检查迁移",
+        "text": "准备同一个查库存案例，分别记录 Generate Content 的用户 contents、模型函数 part、函数回执和最终候选，以及 Interactions 的输入、函数步骤、结果步骤和后续交互引用。比较的是业务含义是否连续，而不是字段名字是否看起来相似；同一笔工具结果应始终能追溯到正确调用。\n\n再加入多 parts、工具失败、签名保留和中断四类情况，检查迁移后是否仍能解释完整轨迹。文档会随平台演进，本文以核对日期的官方页面为依据，特别区分继续受支持的 Generate Content 与当前推荐的 Interactions。所有例子只描述观察与验收，不发起模型请求、不接触密钥，也不以模型名称或价格代替协议判断。"
+      }
+    ],
+    "example": "同一次库存查询在 Generate Content 中保留函数 part 和回执，在 Interactions 中保留调用步骤、结果步骤与可用的交互引用。",
+    "pitfall": "把 SDK 保存的聊天历史误认为服务端持久会话，或混用两种接口的签名位置。",
+    "question": "为什么只读取第一个 text 不能证明 Gemini 原生接入正确？",
+    "answer": "一个候选或交互可能含多个文本、函数和其他结构；只读首段会漏掉控制信息，无法确认回执关系和最终状态。",
+    "sources": [
+      {
+        "title": "Generate Content 参考",
+        "url": "https://ai.google.dev/api/generate-content"
+      },
+      {
+        "title": "函数调用",
+        "url": "https://aistudio.google.com/docs/function-calling?generate-content=true"
+      },
+      {
+        "title": "生成内容中的思考",
+        "url": "https://ai.google.dev/gemini-api/docs/generate-content/thinking"
+      },
+      {
+        "title": "Interactions 概览",
+        "url": "https://aistudio.google.com/docs/interactions-overview"
+      },
+      {
+        "title": "当前思考说明",
+        "url": "https://aistudio.google.com/docs/thinking"
+      },
+      {
+        "title": "OpenAI 兼容",
+        "url": "https://ai.google.dev/gemini-api/docs/openai"
+      }
+    ],
+    "tags": [
+      "Generate Content",
+      "Interactions",
+      "parts",
+      "functionCall",
+      "thought signatures"
+    ],
+    "related": [
+      "api-openai-chat",
+      "api-openai-responses",
+      "api-stream-translation"
+    ],
+    "date": "2026-11-05",
+    "level": "深入",
+    "diagrams": [
+      {
+        "title": "两种原生组织法",
+        "diagram_type": "comparison",
+        "nodes": [
+          "生成内容包",
+          "候选与分片",
+          "交互步骤流",
+          "服务端引用"
+        ],
+        "caption": "上排两项描述 Generate Content，下排两项描述 Interactions；并列观察不表示字段可以直接互换。"
+      },
+      {
+        "title": "函数处理循环",
+        "diagram_type": "cycle",
+        "nodes": [
+          "读取函数步骤",
+          "核验参数权限",
+          "回传执行结果",
+          "继续交互生成"
+        ],
+        "caption": "继续生成可再次请求函数，循环中的每次执行都必须有独立关联。"
+      }
+    ],
+    "comparison": {
+      "headers": [
+        "观察对象",
+        "原生表示",
+        "验收重点"
+      ],
+      "rows": [
+        [
+          "Generate Content",
+          "contents / parts / candidates",
+          "保留多分片与结束原因"
+        ],
+        [
+          "Interactions",
+          "input / steps / previous_interaction_id",
+          "核对状态模式与步骤关联"
+        ],
+        [
+          "兼容入口",
+          "messages / choices",
+          "逐项验证功能映射"
+        ]
+      ]
+    }
+  }
+]

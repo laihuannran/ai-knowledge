@@ -9,7 +9,12 @@ from catalog import ROOT, load_articles
 
 DEST = ROOT / 'content' / 'source-checks.json'
 old = {row['url']: row for row in json.loads(DEST.read_text())} if DEST.exists() else {}
-urls = sorted({s['url'] for a in load_articles() for s in a['sources']})
+article_urls = {s['url'] for a in load_articles() for s in a['sources']}
+atlas_file = ROOT / 'content' / 'api_protocols.json'
+atlas = json.loads(atlas_file.read_text()) if atlas_file.exists() else {'profiles': [], 'extensions': []}
+article_urls.update(s['url'] for item in atlas['profiles'] for s in item['sources'])
+article_urls.update(item['url'] for item in atlas['extensions'])
+urls = sorted(article_urls)
 today = datetime.now(ZoneInfo('Asia/Shanghai')).strftime('%Y-%m-%d')
 
 def check(url):

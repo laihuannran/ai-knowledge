@@ -1,5 +1,6 @@
 """Build the bilingual-term, Chinese reading site using the Python standard library."""
 import html
+import hashlib
 import math
 import shutil
 from pathlib import Path
@@ -25,6 +26,8 @@ if D.exists():
 (D / 'articles').mkdir(parents=True)
 (D / 'diagrams').mkdir()
 shutil.copytree(ROOT / 'assets', D / 'assets')
+ASSET_VERSIONS = {name: hashlib.sha256((ROOT / 'assets' / name).read_bytes()).hexdigest()[:12]
+                  for name in ('style.css', 'app.js')}
 
 
 def page(title, body, sub=False):
@@ -35,11 +38,11 @@ def page(title, body, sub=False):
 <meta name="description" content="面向零基础的 AI 图解知识库。从机器学习基础、模型训练与推理，到 RAG、Agent、多模态、推理平台与模型评测。">
 <meta name="color-scheme" content="light"><title>{E(title)} · AI 慢慢懂</title>
 <link rel="icon" href="{p}assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="{p}assets/style.css"><script src="{p}assets/app.js" defer></script>
+<link rel="stylesheet" href="{p}assets/style.css?v={ASSET_VERSIONS['style.css']}"><script src="{p}assets/app.js?v={ASSET_VERSIONS['app.js']}" defer></script>
 </head><body><a class="skip" href="#main">跳到正文</a>
 <aside class="sidebar" id="site-sidebar"><a class="brand" href="{p}index.html"><span class="brand-symbol">知</span><span>AI 慢慢懂<small>HUANRAN’S FIELD NOTES</small></span></a>
 <p class="sidebar-intro">把陌生的技术，<br>变成能理解的知识。</p>
-<nav aria-label="主导航"><a href="{p}index.html">教程首页 <span>↗</span></a><a href="{p}map.html">全书目录 <span>{len(BOOK.parts)} 篇</span></a><a href="{p}guide.html">专题学习路线 <span>↗</span></a><a href="{p}stack.html">技术栈图谱 <span>{len(BOOK.projects)}</span></a><a href="{p}library.html">文章检索 <span>{N}</span></a><a href="{p}resources.html">参考书架 <span>↗</span></a></nav>
+<nav aria-label="主导航"><a href="{p}index.html">教程首页 <span>↗</span></a><a href="{p}map.html">全书目录 <span>{len(BOOK.parts)} 篇</span></a><a href="{p}guide.html">专题学习路线 <span>↗</span></a><a href="{p}api.html">模型 API 对照 <span>↗</span></a><a href="{p}stack.html">技术栈图谱 <span>{len(BOOK.projects)}</span></a><a href="{p}library.html">文章检索 <span>{N}</span></a><a href="{p}resources.html">参考书架 <span>↗</span></a></nav>
 {BOOK.sidebar(p)}
 <div class="side-note"><span class="tiny-label">阅读方式</span><p>不赶进度，不写代码。<br>从一个好奇的问题开始。</p></div>
 <a class="github" href="{REPO}">GitHub 源码 ↗</a><small class="sidebar-bottom">书籍版 · {BOOK.book["date"]}<br>中文图解 · 随时翻阅</small></aside>
@@ -75,6 +78,7 @@ library = f'''<header class="page-heading"><p class="eyebrow">SEARCH THE WHOLE B
 (D / 'stack.html').write_text(page('技术栈图谱', BOOK.stack()))
 (D / 'resources.html').write_text(page('参考书架', BOOK.resources_page()))
 (D / 'guide.html').write_text(page('专题学习路线', BOOK.learning_guide()))
+(D / 'api.html').write_text(page('模型 API 与协议对照', BOOK.api_reference()))
 
 
 def article_links(slugs):
