@@ -6,7 +6,7 @@
 
 ## 书籍版（2026-11-05）
 
-12篇、39章、104节。其中44篇为新增深入章节，每篇8–11个正文小节，结合具体机制、连贯案例、比较表与多张原创概念图。其余短文保留作为概念入口。合计192张SVG图、61张比较表与327个术语入口。
+13篇、42章、112节。其中52篇为新增深入章节，每篇8–11个正文小节，结合具体机制、连贯案例、比较表与多张原创概念图。其余短文保留作为概念入口。合计216张SVG图、69张比较表；术语入口随正文标签生成。
 
 1. **先建立AI的世界地图**：概念边界、够用的数学直觉。
 2. **模型怎样读懂和生成**：Transformer、QKV、MoE与一次完整计算。
@@ -20,18 +20,19 @@
 10. **怎样知道系统真的变好**：评测集、裁判校准、线上实验、运行与发布。
 11. **文字之外的AI**：视觉、声音、视频与完整多模态链路。
 12. **把技术栈装成一套系统**：Java组件类比、场景组合和架构取舍。
+13. **自我改进与递归进化研究**：改进对象、进化循环、AlphaEvolve/DGM/OpenEvolve与证据审查。
 
 ## 技术栈与资料研究
 
-`content/research/projects.json`记录49个项目，覆盖LangChain、LangGraph、LlamaIndex、Haystack、Spring AI、LangChain4j、主流Agent框架、Dify/n8n/Flowise、Codex、Claude Code、Ollama/llama.cpp、vLLM/SGLang、LiteLLM、向量与检索数据库、Redis/Kafka、评测工具和React/AI SDK。每项说明职责、机制、适用场景、限制、对照项目、许可与来源。
+`content/research/projects.json`记录51个项目，覆盖LangChain、LangGraph、LlamaIndex、Haystack、Spring AI、LangChain4j、主流Agent框架、Dify/n8n/Flowise、Codex、Claude Code、Ollama/llama.cpp、vLLM/SGLang、LiteLLM、向量与检索数据库、Redis/Kafka、评测工具和React/AI SDK。每项说明职责、机制、适用场景、限制、对照项目、许可与来源。
 
-GitHub Star来自2026-11-04的实时元数据快照，附来源、方法及抓取时间；无法获取明确保留空值。关注度不是品质排名。AutoGen已按官方状态标注为归档历史参考，另列接替项目。产品、源码仓库、模型权重和托管服务的授权边界分开记录。
+GitHub Star来自2026-11-04至2026-11-05的元数据快照（逐项标明日期），附来源、方法及抓取时间；无法获取明确保留空值。关注度不是品质排名。AutoGen已按官方状态标注为归档历史参考，另列接替项目。产品、源码仓库、模型权重和托管服务的授权边界分开记录。
 
 `content/research/resources.json`包含10项学习资源，包括可核验的GitHub课程及官方课程入口。课程代码许可不自动授权复制书籍文字或图片；本站以原文链接、中文导读和原创教学整合为主，不整篇搬运不明许可内容。
 
 ## 阅读与维护
 
-网站有可搜索、展开/收起的分篇目录；长文有本章阅读顺序、前置知识与相关章节。原有60篇URL保留。全文检索包含正文和比较表；图表可在手机容器内左右滑动。
+网站有可搜索、展开/收起的分篇目录；长文有本章阅读顺序、前置知识与相关章节。原有全部104篇URL保留。全文检索包含正文和比较表；图表可在手机容器内左右滑动。
 
 仅依赖Python 3标准库：
 
@@ -44,6 +45,7 @@ python3 -m http.server 8765 --directory dist
 - `content/book.json`：完整篇章结构与阅读顺序。
 - `content/articles.json`、`expansion.json`、`supplement.json`：既有概念文章。
 - `content/stack_chapters.json`、`deep_chapters.json`：书籍版长章节。
+- `content/protocol_landscape.json`、`a2a_series.json`、`rsi_series.json`：协议地图、A2A与递归自我改进系列。
 - `content/protocol_series.json`、`retrieval_series.json`、`agent_series.json`：MCP/Skills、进阶RAG、Agent运行系列。
 - `content/learning_review.json`：Agent进阶路线与概念边界。
 - `content/*.md`：构建生成的GitHub阅读版文章。

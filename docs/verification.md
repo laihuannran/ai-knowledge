@@ -63,3 +63,17 @@ https://github.com/laihuannran/ai-knowledge/actions/runs/41869653890
 
 Agent进阶版已发布：Actions #4成功；线上9个关键页面/图文件与本地构建逐字节一致。
 https://github.com/laihuannran/ai-knowledge/actions/runs/41883820183
+
+
+## 2026-11-05 协议与 RSI 扩展
+
+新增8篇：协议地图1篇、A2A3篇、RSI4篇；新增24张原创SVG、8张比较表，保留原104篇链接。当前13篇42章112节，其中52篇深入章节。技术栈增加DGM/OpenEvolve，51个项目的关注度各自保留采集日期。
+
+- `python3 scripts/build.py`：112篇、120个HTML；`python3 scripts/check.py`通过216张SVG、344术语及全部本地链接、锚点、前置依赖与Markdown检查。
+- `git diff --check`通过。
+- 官方A2A规范核验1.0.0发行版与1.0请求版本；状态正文声明语义简称，不冒充JSON枚举。
+- 跨篇内容审阅删除重复填充、改写图表与摘要；RSI案例补DGM v3日期与各自基准结果，明确有限设置和工程建议。
+- 浏览器1440像素桌面A2A文章、390像素移动路线与RSI文章检查：页面无整体横向溢出，图表在独立容器滑动，图片可加载。
+- HTTP来源检查193条中139条返回200；旧记录中的403/网络不可达不等同于链接失效，未声称所有外链均通过。
+
+发布结果在推送后核验。

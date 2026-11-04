@@ -1967,9 +1967,10 @@
     "why_learn": "区分代理间委派与 MCP 的工具、资源访问。",
     "mechanism": "通过代理能力描述和任务生命周期交换消息，让独立代理服务协作。",
     "when_use": "跨团队或跨框架代理需要传递任务并跟踪结果。",
-    "limits": "互操作协议不能保证对方代理可靠；任务取消、超时和信任仍需约定。",
+    "limits": "需要业务语义、身份授权与任务治理配合；与 MCP 职责互补，不应视为可直接互换的替代品。取消请求也不等于撤销已发生的业务副作用。",
     "alternatives": [
-      "MCP Python SDK"
+      "自定义 HTTP 任务接口",
+      "框架内部协作（适用边界不同）"
     ],
     "license": {
       "name": "Apache-2.0",
@@ -1984,7 +1985,7 @@
       "method": "GitHub REST repos.stargazers_count",
       "retrieved_at": "2026-11-04T14:40:50.362665+00:00"
     },
-    "verified_on": "2026-11-04",
+    "verified_on": "2026-11-05",
     "sources": [
       {
         "title": "官方仓库与 README",
@@ -1997,6 +1998,10 @@
       {
         "title": "官方许可证入口",
         "url": "https://github.com/a2aproject/A2A"
+      },
+      {
+        "title": "A2A 官方规范",
+        "url": "https://a2a-protocol.org/latest/specification/"
       }
     ],
     "status": {
@@ -2509,5 +2514,99 @@
         "url": "https://api.github.com/repos/neo4j/neo4j"
       }
     ]
+  },
+  {
+    "id": "jennyzzt-dgm",
+    "name": "Darwin Gödel Machine",
+    "category": "agents",
+    "repo": "jennyzzt/dgm",
+    "github_url": "https://github.com/jennyzzt/dgm",
+    "docs_url": "https://github.com/jennyzzt/dgm#readme",
+    "role": "代理代码的自我修改与开放式探索",
+    "why_learn": "观察代理如何修改自身代码，并用外部基准筛选候选。",
+    "mechanism": "基础模型提出代码变化，归档不同代理版本，采样父代并评测后代。",
+    "when_use": "研究代理工具与执行策略的自动改进时。",
+    "limits": "论文中的有限基准实验，不代表基础模型权重自主训练，也不证明无限递归改进。",
+    "alternatives": [
+      "OpenEvolve",
+      "固定代理基线"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/jennyzzt/dgm",
+      "note": "许可依据 GitHub 元数据；使用时核对对应版本 LICENSE 与目录例外。本站原创讲解，仅链接原项目。"
+    },
+    "stars": {
+      "count": 2483,
+      "label": "2483",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/jennyzzt/dgm",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T18:19:25.652263+00:00"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "项目官方仓库",
+        "url": "https://github.com/jennyzzt/dgm"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/jennyzzt/dgm"
+      }
+    ],
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2025-08-13T10:40:14Z",
+      "source": "https://api.github.com/repos/jennyzzt/dgm"
+    }
+  },
+  {
+    "id": "algorithmicsuperintelligence-openevolve",
+    "name": "OpenEvolve",
+    "category": "agents",
+    "repo": "algorithmicsuperintelligence/openevolve",
+    "github_url": "https://github.com/algorithmicsuperintelligence/openevolve",
+    "docs_url": "https://github.com/algorithmicsuperintelligence/openevolve#readme",
+    "role": "可执行目标程序的进化搜索框架",
+    "why_learn": "理解自动评测器、候选数据库与进化搜索如何协作。",
+    "mechanism": "使用模型生成程序变体，交由用户定义评测器检验，再从候选群体中选择下一轮搜索上下文。",
+    "when_use": "目标可编码、质量能自动验证且愿意支付搜索成本时。",
+    "limits": "这是独立开源实现；不是 Google DeepMind 官方开源 AlphaEvolve，也不等于自动改进模型或搜索器自身。",
+    "alternatives": [
+      "Darwin Gödel Machine",
+      "人工算法优化"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/algorithmicsuperintelligence/openevolve",
+      "note": "许可依据 GitHub 元数据；使用时核对对应版本 LICENSE 与目录例外。本站原创讲解，仅链接原项目。"
+    },
+    "stars": {
+      "count": 7710,
+      "label": "7710",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/algorithmicsuperintelligence/openevolve",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T18:19:25.517900+00:00"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "项目官方仓库",
+        "url": "https://github.com/algorithmicsuperintelligence/openevolve"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/algorithmicsuperintelligence/openevolve"
+      }
+    ],
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-11-02T06:35:07Z",
+      "source": "https://api.github.com/repos/algorithmicsuperintelligence/openevolve"
+    }
   }
 ]

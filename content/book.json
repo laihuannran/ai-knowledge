@@ -275,6 +275,17 @@
           ]
         },
         {
+          "id": "tools-a2a-series",
+          "title": "协作协议地图与 A2A",
+          "summary": "分清传输、事件、授权与应用协议，再沿发现、任务和信任边界理解代理协作。",
+          "slugs": [
+            "protocol-landscape",
+            "a2a-discovery",
+            "a2a-task-lifecycle",
+            "a2a-trust-boundaries"
+          ]
+        },
+        {
           "id": "tools-mcp-series",
           "title": "MCP 请求、契约与授权系列",
           "summary": "从协议角色和版本，进入工具发现、契约与真正的授权边界。",
@@ -472,6 +483,32 @@
           "summary": "通过可追溯客户复盘案例检查工具、证据、草稿、审核与回执。",
           "slugs": [
             "enterprise-agent-case"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "self-improvement",
+      "title": "自我改进与递归进化研究",
+      "subtitle": "从反馈走向可验证的改进",
+      "description": "辨别反思、进化搜索、自改代码和递归自我改进，沿研究实例核查改进对象与证据边界。",
+      "chapters": [
+        {
+          "id": "rsi-mechanisms",
+          "title": "自我改进的对象与机制",
+          "summary": "先辨别改进什么，再理解候选、评测、选择与归档。",
+          "slugs": [
+            "rsi-concepts",
+            "rsi-evolution-loop"
+          ]
+        },
+        {
+          "id": "rsi-evidence",
+          "title": "代表研究与证据审查",
+          "summary": "读懂 AlphaEvolve、DGM 和 OpenEvolve，再检查评测是否支持结论。",
+          "slugs": [
+            "rsi-research-cases",
+            "rsi-evaluation"
           ]
         }
       ]

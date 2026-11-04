@@ -7,9 +7,37 @@
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
+    "url": "https://a2a-protocol.org/latest/specification",
+    "status": "200",
+    "final_url": "https://a2a-protocol.org/latest/specification/",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://a2a-protocol.org/latest/specification/",
+    "status": "200",
+    "final_url": "https://a2a-protocol.org/latest/specification/",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://a2a-protocol.org/latest/topics/life-of-a-task/",
+    "status": "200",
+    "final_url": "https://a2a-protocol.org/latest/topics/life-of-a-task/",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://adk.dev/",
     "status": "200",
     "final_url": "https://adk.dev/",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://agentclientprotocol.com/get-started/introduction",
+    "status": "200",
+    "final_url": "https://agentclientprotocol.com/get-started/introduction",
     "checked_on": "2026-11-05",
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
@@ -154,6 +182,13 @@
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
+    "url": "https://arxiv.org/abs/2505.22954",
+    "status": "200",
+    "final_url": "https://arxiv.org/abs/2505.22954",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/",
     "status": "200",
     "final_url": "https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/",
@@ -185,6 +220,13 @@
     "url": "https://code.claude.com/docs/en/skills",
     "status": "200",
     "final_url": "https://code.claude.com/docs/en/skills",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/",
+    "status": "200",
+    "final_url": "https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/",
     "checked_on": "2026-11-05",
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
@@ -574,6 +616,20 @@
     "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
   },
   {
+    "url": "https://github.com/ag-ui-protocol/ag-ui",
+    "status": "200",
+    "final_url": "https://github.com/ag-ui-protocol/ag-ui",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/algorithmicsuperintelligence/openevolve",
+    "status": "200",
+    "final_url": "https://github.com/algorithmicsuperintelligence/openevolve",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://github.com/deepset-ai/haystack",
     "status": "000",
     "final_url": "https://github.com/deepset-ai/haystack",
@@ -698,6 +754,13 @@
     "final_url": "https://github.com/vllm-project/vllm/blob/main/vllm/distributed/kv_transfer/README.md",
     "checked_on": "2026-11-05",
     "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
+  },
+  {
+    "url": "https://html.spec.whatwg.org/multipage/server-sent-events.html",
+    "status": "200",
+    "final_url": "https://html.spec.whatwg.org/multipage/server-sent-events.html",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
     "url": "https://huggingface.co/docs",
@@ -1176,6 +1239,13 @@
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
+    "url": "https://www.anthropic.com/institute/recursive-self-improvement",
+    "status": "200",
+    "final_url": "https://www.anthropic.com/institute/recursive-self-improvement",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://www.elastic.co/docs/deploy-manage/users-roles/cluster-or-deployment-auth/controlling-access-at-document-field-level",
     "status": "200",
     "final_url": "https://www.elastic.co/docs/deploy-manage/users-roles/cluster-or-deployment-auth/controlling-access-at-document-field-level",
@@ -1218,6 +1288,13 @@
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
+    "url": "https://www.jsonrpc.org/specification",
+    "status": "200",
+    "final_url": "https://www.jsonrpc.org/specification",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://www.librechat.ai/docs",
     "status": "200",
     "final_url": "https://www.librechat.ai/docs",
@@ -1229,6 +1306,20 @@
     "status": "200",
     "final_url": "https://www.microsoft.com/en-us/research/group/experimentation-platform-exp/",
     "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://www.rfc-editor.org/rfc/rfc6749",
+    "status": "200",
+    "final_url": "https://www.rfc-editor.org/info/rfc6749/",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://www.rfc-editor.org/rfc/rfc9110",
+    "status": "200",
+    "final_url": "https://www.rfc-editor.org/info/rfc9110/",
+    "checked_on": "2026-11-05",
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {

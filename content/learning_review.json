@@ -131,6 +131,42 @@
       "lessons": [
         "enterprise-agent-case"
       ]
+    },
+    {
+      "id": "a2a",
+      "title": "协议与 A2A：从能力发现到跨代理交付",
+      "status": "补齐独立系列",
+      "question": "MCP 已经能调工具，为什么还需要 A2A？",
+      "summary": "从协议层次开始，理解独立代理之间的发现、异步任务、交付产物与授权边界。",
+      "correction": "A2A 标准化代理间协作消息，不替你实现规划、业务语义或自动授予下游权限；AgentCard 中的 skill 也不等于 Agent Skills 的 SKILL.md。",
+      "existing": [
+        "stack-protocols",
+        "mcp"
+      ],
+      "lessons": [
+        "protocol-landscape",
+        "a2a-discovery",
+        "a2a-task-lifecycle",
+        "a2a-trust-boundaries"
+      ]
+    },
+    {
+      "id": "rsi",
+      "title": "RSI：从反馈优化到递归自我改进",
+      "status": "补齐前沿研究系列",
+      "question": "会反思、会改代码，就已经能无限进化了吗？",
+      "summary": "区分答案、记忆、提示词、代理代码与模型权重的改进，结合研究实例审视跨代收益。",
+      "correction": "外部算法优化、更多采样或固定基准涨分，不能单独证明改进器持续变强；递归自我改进也不保证无限增长。",
+      "existing": [
+        "agent",
+        "harness-runtime"
+      ],
+      "lessons": [
+        "rsi-concepts",
+        "rsi-evolution-loop",
+        "rsi-research-cases",
+        "rsi-evaluation"
+      ]
     }
   ],
   "questions": [
