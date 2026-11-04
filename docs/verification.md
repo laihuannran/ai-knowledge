@@ -131,4 +131,8 @@ https://github.com/laihuannran/ai-knowledge/actions/runs/41899241358
 - HTTP来源检查268条，191返回200、66未取到结果、11返回403，无404；包括矩阵扩展来源。自动可达性不等于线上能力验证。
 - 本次仅浏览文档和制作离线教学内容，未执行真实模型调用、未读账号凭据、未抓私有流量。
 
-发布结果待推送后记录。
+发布提交 `9cc9937`，Actions #8 成功，总耗时33秒，build 12秒、deploy 14秒。
+
+https://github.com/laihuannran/ai-knowledge/actions/runs/41902379313
+
+线上API对照、导览等7页、9篇新文章、27张新图、2个资源文件及5篇旧文章，共50文件逐字节匹配本地。线上手机页面搜索Bedrock正确显示3种接入形态，版本化脚本正常，无整页横向溢出。
