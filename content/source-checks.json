@@ -196,6 +196,13 @@
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
+    "url": "https://arxiv.org/abs/2307.03172",
+    "status": "200",
+    "final_url": "https://arxiv.org/abs/2307.03172",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://arxiv.org/abs/2309.15217",
     "status": "200",
     "final_url": "https://arxiv.org/abs/2309.15217",
@@ -469,6 +476,13 @@
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
+    "url": "https://docs.letta.com/agent-sdk/memory",
+    "status": "200",
+    "final_url": "https://docs.letta.com/agent-sdk/memory",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://docs.litellm.ai/docs/",
     "status": "200",
     "final_url": "https://docs.litellm.ai/docs/",
@@ -507,6 +521,13 @@
     "url": "https://docs.livekit.io/agents/logic/turns/",
     "status": "200",
     "final_url": "https://docs.livekit.io/agents/logic/turns/",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://docs.mem0.ai/core-concepts/memory-operations/add",
+    "status": "200",
+    "final_url": "https://docs.mem0.ai/core-concepts/memory-operations/add",
     "checked_on": "2026-11-05",
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
@@ -887,6 +908,13 @@
     "final_url": "https://github.com/vllm-project/vllm/blob/main/vllm/distributed/kv_transfer/README.md",
     "checked_on": "2026-11-05",
     "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
+  },
+  {
+    "url": "https://help.getzep.com/graphiti/getting-started/welcome",
+    "status": "200",
+    "final_url": "https://help.getzep.com/graphiti/getting-started/welcome",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
     "url": "https://html.spec.whatwg.org/multipage/server-sent-events.html",
@@ -1480,6 +1508,13 @@
     "url": "https://www.anthropic.com/institute/recursive-self-improvement",
     "status": "200",
     "final_url": "https://www.anthropic.com/institute/recursive-self-improvement",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+    "status": "200",
+    "final_url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
     "checked_on": "2026-11-05",
     "note": "HTTP reachability only; not a review of every claim on this page."
   },

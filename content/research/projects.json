@@ -2217,10 +2217,10 @@
     "github_url": "https://github.com/getzep/graphiti",
     "docs_url": "https://github.com/getzep/graphiti",
     "role": "面向Agent的时序知识图谱组件",
-    "mechanism": "把事件与事实组织成图关系，并记录时间相关信息，支持跨来源关系检索和更新。",
+    "mechanism": "把来源事件、实体与事实组织成时序上下文图，记录事实有效窗口并用混合检索查找关系。",
     "when_use": "任务需要区分何时发生、何时生效以及事实如何变化，而非只有静态文档相似度。",
     "why_learn": "通过时间与来源的关联，理解关系更新、记忆冲突和事实有效期的工程问题。",
-    "limits": "写入图中的关系仍可能来自不准确抽取；图数据库和检索服务的运维、消歧与删除策略也有成本。",
+    "limits": "写入图中的关系仍可能来自不准确抽取；图数据库和检索服务的运维、消歧与删除策略也有成本。 它是需要自行组织服务、租户隔离与运维的图构建框架，不等于开箱即用的完整用户记忆产品；事实失效也不等于物理删除。",
     "alternatives": [
       "Mem0",
       "Letta"
@@ -2268,7 +2268,7 @@
     "github_url": "https://github.com/mem0ai/mem0",
     "docs_url": "https://docs.mem0.ai/",
     "role": "可跨会话维护的记忆层",
-    "mechanism": "从交互中提取候选记忆，执行写入、更新与召回，并与Agent工作上下文组合。",
+    "mechanism": "从交互中提取候选信息并组织存储与召回。当前 Add 文档说明追加写入，不自动覆盖或删除既有事实；纠错与冲突策略需要单独核验。",
     "when_use": "应用确实需要长期偏好或历史事实，希望将记忆管理与模型调用分层。",
     "why_learn": "比较记忆提取与原始消息存储：学会区分写什么、何时更新、向谁召回和什么时候忘记。",
     "limits": "长期保留会放大错误记忆及隐私影响；不能把向量召回命中当作当前用户授权或事实时效的证明。",
@@ -2308,6 +2308,10 @@
       {
         "title": "GitHub仓库元数据",
         "url": "https://api.github.com/repos/mem0ai/mem0"
+      },
+      {
+        "title": "当前 Add 写入语义",
+        "url": "https://docs.mem0.ai/core-concepts/memory-operations/add"
       }
     ]
   },
@@ -2317,12 +2321,12 @@
     "category": "agents",
     "repo": "letta-ai/letta",
     "github_url": "https://github.com/letta-ai/letta",
-    "docs_url": "https://docs.letta.com/",
+    "docs_url": "https://docs.letta.com/agent-sdk/memory",
     "role": "围绕持久状态与记忆组织Agent的平台",
     "mechanism": "把持久化的Agent状态、工具能力和记忆机制纳入运行环境，使多轮任务能够继续使用选定信息。",
     "when_use": "需要研究长任务状态和跨会话连续性，且愿意承担运行平台的部署维护。",
     "why_learn": "用它对照只拼接聊天记录的简单循环，理解上下文内信息与外部持久状态的分工。",
-    "limits": "“记住”并不代表永远准确；应独立验证记忆冲突、权限变更、数据删除和副作用恢复。",
+    "limits": "“记住”并不代表永远准确；应独立验证记忆冲突、权限变更、数据删除和副作用恢复。 当前 SDK 与 legacy V1 的记忆接口不同，不应把旧示例当作所有版本的统一机制。",
     "alternatives": [
       "LangGraph",
       "Mem0"
@@ -2359,6 +2363,10 @@
       {
         "title": "GitHub仓库元数据",
         "url": "https://api.github.com/repos/letta-ai/letta"
+      },
+      {
+        "title": "当前 Agent SDK Memory（区别于 legacy V1）",
+        "url": "https://docs.letta.com/agent-sdk/memory"
       }
     ]
   },

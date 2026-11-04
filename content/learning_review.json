@@ -159,11 +159,11 @@
     },
     {
       "id": "context-memory",
-      "title": "上下文工程与记忆生命周期",
+      "title": "Context：上下文组装、压缩与有效利用",
       "status": "深化已有主题",
       "question": "聊天记录还在，为什么模型仍然忘了限制？",
-      "summary": "区分当前工作窗口、任务状态与长期记忆，解释压缩、召回、合并、失效与删除。",
-      "correction": "上下文有容量边界，保存聊天记录不等于每轮全部送入模型；跨会话记忆也需要筛选、更新与访问控制。",
+      "summary": "从一轮输入的组装，走向长任务压缩、按需读取与长上下文评测。",
+      "correction": "窗口容量是上限，不是模型有效利用全部材料的保证；上下文压缩会丢失细节，缓存命中也不等于记住用户。",
       "existing": [
         "tokens-context",
         "agent-memory",
@@ -171,6 +171,27 @@
       ],
       "lessons": [
         "context-engineering",
+        "context-assembly",
+        "context-compaction",
+        "context-evaluation"
+      ]
+    },
+    {
+      "id": "memory-systems",
+      "title": "记忆系统：短期状态与跨会话长期记忆",
+      "status": "补齐独立机制系列",
+      "question": "数据已经保存，为什么下一次仍可能记错、忘记或用错？",
+      "summary": "先理解线程状态与检查点，再沿长期记忆的写入、召回、纠错与删除建立完整机制。",
+      "correction": "短期与长期在此按会话或任务作用域区分，而非RAM与磁盘；跨会话可用也不等于跨用户共享，长期记忆不等于权重更新。",
+      "existing": [
+        "agent-memory",
+        "deep-agent-state",
+        "context-engineering"
+      ],
+      "lessons": [
+        "short-term-memory",
+        "long-term-memory-write",
+        "long-term-memory-recall",
         "memory-lifecycle"
       ]
     },
@@ -260,6 +281,16 @@
     }
   ],
   "questions": [
+    {
+      "question": "短期记忆写入数据库，就变成长期记忆了吗？",
+      "answer": "不是。这里的短期通常指当前线程或任务的作用域；数据库只是保存介质。跨会话记忆还需定义主体、用途、写入、召回、更新与权限。",
+      "slug": "short-term-memory"
+    },
+    {
+      "question": "聊天历史、长期记忆和KV Cache是不是同一件事？",
+      "answer": "历史是保存的互动记录，长期记忆是有选择维护的跨会话信息，KV Cache是可复用的计算状态。只有本轮被选入的材料才进入当前上下文，三者的命中和存在都不能直接证明模型正确使用。",
+      "slug": "context-assembly"
+    },
     {
       "question": "训练分数很高，为何还可能无法用于下一天？",
       "answer": "需要检查预测时点、测试隔离与分布变化；历史表中的事后字段可能泄漏答案，反复根据留出结果调参也会削弱独立性。",

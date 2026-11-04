@@ -10,7 +10,7 @@ CATEGORY_ORDER = [
 
 def load_articles():
     articles = []
-    for name in ('articles.json', 'expansion.json', 'supplement.json', 'stack_chapters.json', 'deep_chapters.json', 'protocol_series.json', 'retrieval_series.json', 'agent_series.json', 'protocol_landscape.json', 'a2a_series.json', 'rsi_series.json', 'foundation_series.json', 'reasoning_series.json', 'data_training_series.json', 'interactive_multimodal_series.json'):
+    for name in ('articles.json', 'expansion.json', 'supplement.json', 'stack_chapters.json', 'deep_chapters.json', 'protocol_series.json', 'retrieval_series.json', 'agent_series.json', 'protocol_landscape.json', 'a2a_series.json', 'rsi_series.json', 'foundation_series.json', 'reasoning_series.json', 'data_training_series.json', 'interactive_multimodal_series.json', 'context_series.json', 'memory_series.json'):
         path = ROOT / 'content' / name
         if path.exists():
             articles.extend(json.loads(path.read_text()))

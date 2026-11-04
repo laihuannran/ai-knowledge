@@ -6,13 +6,13 @@
 
 ## 书籍版（2026-11-05）
 
-13篇、49章、128节。其中68篇为新增深入章节，每篇8–11个正文小节，结合具体机制、连贯案例、比较表与多张原创概念图。其余短文保留作为概念入口。合计264张SVG图、85张比较表与428个术语入口。
+13篇、50章、134节。其中74篇为新增深入章节，每篇8–11个正文小节，结合具体机制、连贯案例、比较表与多张原创概念图。其余短文保留作为概念入口。合计282张SVG图、91张比较表与454个术语入口。
 
 1. **先建立AI的世界地图**：任务版图、泛化与泄漏、够用的数学、神经网络学习。
 2. **模型怎样读懂和生成**：Transformer、QKV、MoE、推理模型与测试时计算。
 3. **模型怎样被训练出来**：数据生产、合成数据、SFT、LoRA、PPO/DPO/GRPO、训练框架、分布式训练与压缩。
 4. **让回答有资料可依**：资料入库、混合检索、索引、重排、证据与拒答。
-5. **从回答到执行任务**：ReAct、规划、状态、记忆、可靠执行和协作。
+5. **从回答到执行任务**：ReAct、规划、上下文组装/压缩/评测、短期状态与长期记忆写入/召回/遗忘、可靠执行和协作。
 6. **主流应用框架怎么选**：LangChain/LangGraph系列、Agent/RAG框架、低代码与Java生态。
 7. **工具协议与桌面Agent**：MCP/A2A/Skills、Codex、Claude Desktop/Code、浏览器操作与可靠执行、本地工具链。
 8. **请求怎样进入模型平台**：网关、配额预算、流式事件、路由与可靠性。
@@ -32,7 +32,7 @@ GitHub Star来自2026-11-04至2026-11-05的元数据快照（逐项标明日期�
 
 ## 阅读与维护
 
-网站有可搜索、展开/收起的分篇目录；长文有本章阅读顺序、前置知识与相关章节。原有全部112篇URL保留。全文检索包含正文和比较表；图表可在手机容器内左右滑动。
+网站有可搜索、展开/收起的分篇目录；长文有本章阅读顺序、前置知识与相关章节。原有全部128篇URL保留。全文检索包含正文和比较表；图表可在手机容器内左右滑动。
 
 仅依赖Python 3标准库：
 
@@ -45,6 +45,7 @@ python3 -m http.server 8765 --directory dist
 - `content/book.json`：完整篇章结构与阅读顺序。
 - `content/articles.json`、`expansion.json`、`supplement.json`：既有概念文章。
 - `content/stack_chapters.json`、`deep_chapters.json`：书籍版长章节。
+- `content/context_series.json`、`memory_series.json`：上下文组装/压缩/评测、短期状态与长期记忆写入/召回。
 - `content/foundation_series.json`、`reasoning_series.json`、`data_training_series.json`、`interactive_multimodal_series.json`：基础、推理强化学习、数据训练、浏览器与生成交互系列。
 - `content/protocol_landscape.json`、`a2a_series.json`、`rsi_series.json`：协议地图、A2A与递归自我改进系列。
 - `content/protocol_series.json`、`retrieval_series.json`、`agent_series.json`：MCP/Skills、进阶RAG、Agent运行系列。

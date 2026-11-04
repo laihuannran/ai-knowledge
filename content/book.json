@@ -233,19 +233,32 @@
         },
         {
           "id": "agents-context-series",
-          "title": "上下文工程与长期记忆",
-          "summary": "工作窗口怎样装配，经验怎样写入、合并和删除。",
+          "title": "上下文的组装、压缩与评测",
+          "summary": "区分存储与实际输入，在有限预算中保留约束、证据与可恢复信息。",
           "slugs": [
             "context-engineering",
+            "context-assembly",
+            "context-compaction",
+            "context-evaluation"
+          ]
+        },
+        {
+          "id": "agents-memory-series",
+          "title": "短期状态与长期记忆系统",
+          "summary": "从线程恢复到跨会话写入、召回、更新与遗忘，解释记忆如何进入当前工作窗口。",
+          "slugs": [
+            "agent-memory",
+            "short-term-memory",
+            "long-term-memory-write",
+            "long-term-memory-recall",
             "memory-lifecycle"
           ]
         },
         {
           "id": "agents-2",
-          "title": "状态、记忆与可靠执行",
+          "title": "任务可靠执行与恢复",
           "summary": "让长期任务能恢复、能停下，也能解释结果。",
           "slugs": [
-            "agent-memory",
             "agent-tool-reliability",
             "deep-agent-reliability"
           ]
