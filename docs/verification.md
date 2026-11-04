@@ -94,4 +94,8 @@ https://github.com/laihuannran/ai-knowledge/actions/runs/41887421270
 - 浏览器1440桌面/390移动检查专题导览；移动卡片标题字号调整后完整显示，无整页横向溢出。
 - 目录检索GRPO显示概念入口与深入章；技术栈“学习与训练”筛选返回7个对应项目。所有旧导览URL与锚点保留，导航名称改为专题学习路线。
 
-发布结果待推送后记录。
+发布提交 `9bbd2db`；Actions #6 成功，总耗时25秒，build 9秒、deploy 9秒。
+
+https://github.com/laihuannran/ai-knowledge/actions/runs/41891047260
+
+线上16篇新文章、48张新图及导览、目录、技术栈、首页、术语、检索、样式共71个文件逐字节匹配本地成品。
