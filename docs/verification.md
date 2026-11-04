@@ -76,4 +76,8 @@ https://github.com/laihuannran/ai-knowledge/actions/runs/41883820183
 - 浏览器1440像素桌面A2A文章、390像素移动路线与RSI文章检查：页面无整体横向溢出，图表在独立容器滑动，图片可加载。
 - HTTP来源检查193条中139条返回200；旧记录中的403/网络不可达不等同于链接失效，未声称所有外链均通过。
 
-发布结果在推送后核验。
+发布提交 `fd92c60`；GitHub Actions #5 成功，build 9秒、deploy 13秒。
+
+https://github.com/laihuannran/ai-knowledge/actions/runs/41887421270
+
+线上8篇新文章、24张新图及目录/路线/首页/技术栈共36个文件逐字节匹配本地成品；104篇原有文章路径均保留。
