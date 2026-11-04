@@ -137,6 +137,25 @@
             "rag-evidence",
             "deep-rag-evidence"
           ]
+        },
+        {
+          "id": "rag-graph-series",
+          "title": "GraphRAG 关系索引与查询系列",
+          "summary": "看懂实体、证据、社区报告与不同查询策略的取舍。",
+          "slugs": [
+            "graphrag-indexing",
+            "graphrag-querying"
+          ]
+        },
+        {
+          "id": "rag-agentic-series",
+          "title": "Agentic RAG、深度研究与排障",
+          "summary": "动态补证据、多源研究与逐层错误定位。",
+          "slugs": [
+            "agentic-rag-routing",
+            "deep-research-evidence",
+            "rag-debug-playbook"
+          ]
         }
       ]
     },
@@ -158,6 +177,24 @@
           ]
         },
         {
+          "id": "agents-pattern-series",
+          "title": "意图、约束与设计模式",
+          "summary": "从用户想做什么走到可检查的计划和可停止的行动循环。",
+          "slugs": [
+            "agent-design-patterns",
+            "agent-intent-planning"
+          ]
+        },
+        {
+          "id": "agents-context-series",
+          "title": "上下文工程与长期记忆",
+          "summary": "工作窗口怎样装配，经验怎样写入、合并和删除。",
+          "slugs": [
+            "context-engineering",
+            "memory-lifecycle"
+          ]
+        },
+        {
           "id": "agents-2",
           "title": "状态、记忆与可靠执行",
           "summary": "让长期任务能恢复、能停下，也能解释结果。",
@@ -165,6 +202,15 @@
             "agent-memory",
             "agent-tool-reliability",
             "deep-agent-reliability"
+          ]
+        },
+        {
+          "id": "agents-harness-series",
+          "title": "Harness 与执行边界",
+          "summary": "把上下文、调度、恢复、预算和执行权限落到运行环境。",
+          "slugs": [
+            "harness-runtime",
+            "agent-security-boundaries"
           ]
         },
         {
@@ -226,6 +272,26 @@
           "slugs": [
             "mcp",
             "stack-protocols"
+          ]
+        },
+        {
+          "id": "tools-mcp-series",
+          "title": "MCP 请求、契约与授权系列",
+          "summary": "从协议角色和版本，进入工具发现、契约与真正的授权边界。",
+          "slugs": [
+            "mcp-session-lifecycle",
+            "mcp-tools-contract",
+            "mcp-auth-governance"
+          ]
+        },
+        {
+          "id": "tools-skills-series",
+          "title": "Skills 加载、组合与验收系列",
+          "summary": "技能何时加载、怎样与工具组合、如何检查触发与执行。",
+          "slugs": [
+            "skills-loading",
+            "skills-composition",
+            "skills-evaluation"
           ]
         },
         {
@@ -398,6 +464,14 @@
           "summary": "Spring Boot、数据库、ES、Redis 和 Kafka 如何与 AI 框架共存。",
           "slugs": [
             "deep-stack-architecture"
+          ]
+        },
+        {
+          "id": "architecture-enterprise-series",
+          "title": "企业 Agent：从需求到真实交付",
+          "summary": "通过可追溯客户复盘案例检查工具、证据、草稿、审核与回执。",
+          "slugs": [
+            "enterprise-agent-case"
           ]
         }
       ]

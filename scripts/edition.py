@@ -34,6 +34,10 @@ PROJECT_CHAPTERS = {
     'lm-evaluation-harness': 'deep-eval-design', 'React': 'stack-java-ai',
     'Vercel AI SDK': 'stack-java-ai', 'MCP Python SDK': 'stack-protocols',
     'A2A': 'stack-protocols',
+    'Microsoft GraphRAG': 'graphrag-indexing', 'LightRAG': 'graphrag-querying',
+    'Graphiti': 'memory-lifecycle', 'Mem0': 'memory-lifecycle', 'Letta': 'memory-lifecycle',
+    'Anthropic Skills 示例': 'skills-loading', 'Agent Skills 规范': 'skills-loading',
+    'Neo4j': 'graphrag-indexing',
 }
 
 
@@ -58,6 +62,8 @@ class BookEdition:
         self.by_slug = {a['slug']: a for a in articles}
         self.book = read_json('content/book.json', {'parts': []})
         self.parts = self.book['parts']
+        self.learning_review = read_json('content/learning_review.json', {'themes': [], 'questions': [], 'sources': []})
+        self.series_count = len({slug for t in self.learning_review['themes'] for slug in t['lessons']})
         self.projects = read_json('content/research/projects.json', [])
         self.resources = read_json('content/research/resources.json', [])
         self.membership = {}
@@ -110,7 +116,8 @@ class BookEdition:
         toc += '</div></section>'
         stack = f'''<section class="stack-teaser"><p class="eyebrow">A MAP OF THE AI ECOSYSTEM</p><h2>不只认识名词，<br>还要知道工具放在哪里。</h2><p>研究 {len(self.projects)} 个项目，按框架、Agent、数据、网关、推理与评测分类。<br>每项都解释职责、机制、适用场景、限制和许可；GitHub 关注度附采集日期。</p><div class="stack-name-row"><span>LangChain</span><span>LangGraph</span><span>Spring AI</span><span>Codex</span><span>vLLM</span><span>Redis</span></div><a class="primary-link" href="stack.html">查看技术栈与比较 <span>→</span></a></section>'''
         note = f'''<section class="reading-note"><span>这是一份怎样的教程？</span><p>{len(self.articles)} 节内容区分概念入门与机制案例。长章节沿着同一条任务链解释细节，配原创图表和原始资料。已有短文作为查阅入口，核心专题继续向深入系列展开。</p><a href="resources.html">查看参考书架与资料来源 →</a></section>'''
-        return hero + routes + toc + stack + note
+        guide = f'<section class="learning-callout"><div><small>NEW SERIES / 把陌生名词连成机制</small><h2>MCP、Skills、GraphRAG，接下来读什么？</h2><p>从概念入口进入{self.series_count}篇独立长章节，再用企业执行问题检验理解。</p></div><a href="guide.html">打开 Agent 进阶路线 →</a></section>'
+        return hero + guide + routes + toc + stack + note
 
     def contents(self):
         out = f'''<header class="page-heading"><p class="eyebrow">TABLE OF CONTENTS / READ LIKE A BOOK</p><h1>从第一篇，<br>读到一套完整架构。</h1><p>{len(self.parts)} 篇 · {sum(len(p['chapters']) for p in self.parts)} 章 · {len(self.articles)} 节。概念入门建立直觉，机制与案例帮助深入理解。</p></header><div class="contents-tools"><label class="search"><span>⌕</span><input id="book-search" type="search" placeholder="在目录中找 LangGraph、RAG、PD…" aria-label="搜索全书目录"></label><button id="expand-toc" type="button">展开全部篇章</button><button id="collapse-toc" type="button">收起全部篇章</button></div><p id="book-results" class="result-count" aria-live="polite">所有章节按理解顺序排列</p><div class="book-contents">'''
@@ -124,7 +131,7 @@ class BookEdition:
 
     def stack(self):
         categories = list(dict.fromkeys(p['category'] for p in self.projects))
-        intro = f'''<header class="page-heading"><p class="eyebrow">THE AI STACK ATLAS / RESEARCH SNAPSHOT 2026.11.04</p><h1>优秀工具很多，<br>先看它们各管哪一层。</h1><p>{len(self.projects)} 个项目的职责、机制与取舍。GitHub Star 是关注度快照，不代表本教程的品质排名。</p></header><section class="architecture-strip" aria-label="技术栈分层"><a href="#project-list" data-role-shortcut="frontend,client">交互与客户端</a><span>→</span><a href="#project-list" data-role-shortcut="appframeworks,agents,lowcode">应用与 Agent</a><span>→</span><a href="#project-list" data-role-shortcut="data">数据与检索</a><span>→</span><a href="#project-list" data-role-shortcut="gateway,serving">网关与推理</a><span>↔</span><a href="#project-list" data-role-shortcut="eval">评测与运行</a></section><div class="stack-guide"><p>先用技术栈专章理解架构，再查项目细节：<a href="articles/stack-langchain.html">LangChain</a> · <a href="articles/stack-langgraph-state.html">LangGraph</a> · <a href="articles/stack-agent-frameworks.html">Agent 框架比较</a> · <a href="articles/stack-codex.html">Codex</a> · <a href="articles/stack-claude.html">Claude</a> · <a href="articles/deep-stack-architecture.html">完整技术栈案例</a></p></div><div class="section-head" id="project-list"><h2>按职责找工具</h2><label class="search"><span>⌕</span><input id="project-search" type="search" placeholder="查找项目、机制、适用场景…" aria-label="搜索技术项目"></label></div><div class="project-filters filters"><button class="active" data-project-filter="all" aria-pressed="true">全部项目</button>'''
+        intro = f'''<header class="page-heading"><p class="eyebrow">THE AI STACK ATLAS / DATED GITHUB SNAPSHOTS</p><h1>优秀工具很多，<br>先看它们各管哪一层。</h1><p>{len(self.projects)} 个项目的职责、机制与取舍。GitHub Star 是关注度快照，逐项标注采集日期，不代表本教程的品质排名。</p></header><section class="architecture-strip" aria-label="技术栈分层"><a href="#project-list" data-role-shortcut="frontend,client">交互与客户端</a><span>→</span><a href="#project-list" data-role-shortcut="appframeworks,agents,lowcode">应用与 Agent</a><span>→</span><a href="#project-list" data-role-shortcut="data">数据与检索</a><span>→</span><a href="#project-list" data-role-shortcut="gateway,serving">网关与推理</a><span>↔</span><a href="#project-list" data-role-shortcut="eval">评测与运行</a></section><div class="stack-guide"><p>先用技术栈专章理解架构，再查项目细节：<a href="articles/stack-langchain.html">LangChain</a> · <a href="articles/stack-langgraph-state.html">LangGraph</a> · <a href="articles/stack-agent-frameworks.html">Agent 框架比较</a> · <a href="articles/stack-codex.html">Codex</a> · <a href="articles/stack-claude.html">Claude</a> · <a href="articles/deep-stack-architecture.html">完整技术栈案例</a></p></div><div class="section-head" id="project-list"><h2>按职责找工具</h2><label class="search"><span>⌕</span><input id="project-search" type="search" placeholder="查找项目、机制、适用场景…" aria-label="搜索技术项目"></label></div><div class="project-filters filters"><button class="active" data-project-filter="all" aria-pressed="true">全部项目</button>'''
         intro += ''.join(f'<button data-project-filter="{E(c)}" aria-pressed="false">{E(PROJECT_CATEGORIES.get(c,c))}</button>' for c in categories)
         intro += f'</div><p class="result-count" id="project-results" aria-live="polite">共 {len(self.projects)} 个项目，按技术职责组织</p><div class="project-grid">'
         for p in self.projects:
@@ -145,3 +152,18 @@ class BookEdition:
         for i,r in enumerate(self.resources):
             out += f'''<article class="resource-card" id="{E(r['id'])}"><div class="project-meta"><span>REFERENCE {i+1:02d}</span>{stars_html(r['stars'])}</div><h2><a href="{E(r['url'])}">{E(r['title'])} ↗</a></h2><div class="resource-labels"><span>{E(r['level'])}</span><span>{E(r['language'])}</span></div><p>{E(r['what_to_learn'])}</p><h3>在这本书里怎样参考</h3><p>{E(r['how_we_use'])}</p><details><summary>来源、许可与访问日期</summary><p><a href="{E(r['license']['source'])}">{E(r['license']['name'])} ↗</a></p><p>{E(r['license']['note'])}</p><p>核对日期：{E(r['verified_on'])}</p></details></article>'''
         return out + '</div><section class="reading-note"><span>阅读的顺序由问题决定</span><p>入门读者不必从头啃完英文课程或源码。先在本站目录建立结构，遇到需要更细机制的问题，再进入对应官方章节。</p><a href="map.html">返回全书目录 →</a></section>'
+
+    def learning_guide(self):
+        review = self.learning_review
+        out = '''<header class="page-heading"><p class="eyebrow">AGENT FIELD GUIDE / FROM OVERVIEW TO MECHANISMS</p><h1>从一个名词，<br>读懂一套机制。</h1><p>沿 MCP、Skills、GraphRAG、ReAct 与 Harness，把概念、方法和真实执行连成深入系列。</p></header><section class="guide-intro"><h2>先分清职责，再看怎样组合</h2><div class="guide-role-grid"><a href="articles/agentic-rag-routing.html"><b>RAG</b><span>查找并组织回答依据</span></a><a href="articles/mcp-session-lifecycle.html"><b>MCP</b><span>连接有明确契约的能力</span></a><a href="articles/skills-loading.html"><b>Skills</b><span>组织可复用的任务方法</span></a><a href="articles/harness-runtime.html"><b>Harness</b><span>承载上下文与执行闭环</span></a></div><p>ReAct 是组织行动与观察的模式；上下文是当前可用信息，长期记忆需要另行管理。分层图有助于认识职责，但不是每个 Agent 都必须堆齐所有组件。</p><p>还不熟悉基础概念？先读 <a href="articles/tokens-context.html">Token 与上下文</a>、<a href="articles/prompt.html">提示词</a> 和 <a href="articles/agent.html">Agent 入门</a>，再进入下面的系列。</p></section><nav class="guide-jumps" aria-label="进阶系列快速定位">'''
+        out += ''.join(f'<a href="#learn-{E(t["id"])}">{E(t["title"].split("：")[0])}</a>' for t in review['themes'])
+        out += '</nav><div class="learning-series">'
+        for index, topic in enumerate(review['themes']):
+            existing = ' · '.join(f'<a href="articles/{slug}.html">{E(self.by_slug[slug]["title"].split("：")[0])}</a>' for slug in topic['existing'])
+            lessons = ''.join(f'<li><span>{i+1:02d}</span><div><a href="articles/{slug}.html">{E(self.by_slug[slug]["title"])}</a><p>{E(self.by_slug[slug]["summary"])}</p></div></li>' for i,slug in enumerate(topic['lessons']))
+            out += f'''<section class="learning-topic" id="learn-{E(topic['id'])}"><div class="learning-topic-head"><span class="part-number">{index+1:02d}</span><div><small>{E(topic['status'])}</small><h2>{E(topic['title'])}</h2><p>{E(topic['question'])}</p></div></div><p>{E(topic['summary'])}</p><div class="concept-boundary"><b>把边界讲清楚</b><p>{E(topic['correction'])}</p></div><div class="learning-prereqs"><span>已有基础</span><p>{existing}</p></div><ol class="learning-lessons">{lessons}</ol></section>'''
+        out += '</div><section class="guide-questions"><p class="eyebrow">QUESTIONS THAT CONNECT THE CHAPTERS</p><h2>用八个问题，检查理解是否连起来</h2>'
+        for q in review['questions']:
+            out += f'<details><summary>{E(q["question"])}</summary><p>{E(q["answer"])}</p><a href="articles/{q["slug"]}.html">阅读对应章节 →</a></details>'
+        sources = ' · '.join(f'<a href="{E(s["url"])}">{E(s["title"])} ↗</a>' for s in review['sources'])
+        return out + f'</section><section class="reading-note"><span>从概览走向可核查的机制</span><p>本页整理学习关系，长章节给出案例、图表与具体来源。图中的层次和案例属于教学组织，实际系统按任务与约束选择组件。</p><p>{sources}</p><a href="map.html">返回全书目录 →</a></section>'

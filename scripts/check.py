@@ -146,7 +146,7 @@ for path in svg_paths:
     if root.find('s:title', ns) is None or root.find('s:desc', ns) is None:
         errors.append(f'Missing accessible diagram description: {path}')
 expected_diagrams = sum(1 + len(a.get('diagrams', [])) for a in ARTICLES)
-if len(docs) != len(ARTICLES) + 7 or len(svg_paths) != expected_diagrams:
+if len(docs) != len(ARTICLES) + 8 or len(svg_paths) != expected_diagrams:
     errors.append('Generated page/diagram inventory differs from content inventory')
 if docs[(D / 'library.html').resolve()].cards != len(ARTICLES):
     errors.append('Article library inventory differs from content')
@@ -168,6 +168,14 @@ for article in ARTICLES:
             errors.append(f'Invalid detail diagram: {article["slug"]}')
         if detail.get('diagram_type') not in {'flow', 'comparison', 'branch', 'cycle', 'timeline'}:
             errors.append(f'Unknown detail diagram type: {article["slug"]}')
+review = read_json('content/learning_review.json', {'themes': [], 'questions': []})
+for topic in review['themes']:
+    for slug in topic['existing'] + topic['lessons']:
+        if slug not in slugs:
+            errors.append(f'Learning route references missing article: {slug}')
+for question in review['questions']:
+    if question['slug'] not in slugs:
+        errors.append(f'Learning question references missing article: {question["slug"]}')
 projects = read_json('content/research/projects.json', [])
 resources = read_json('content/research/resources.json', [])
 if len(projects) < 30 or len(resources) < 8:

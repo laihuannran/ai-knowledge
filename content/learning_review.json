@@ -1,0 +1,196 @@
+{
+  "date": "2026-11-05",
+  "themes": [
+    {
+      "id": "mcp",
+      "title": "MCP：从接通工具到请求契约",
+      "status": "深化已有主题",
+      "question": "为什么连上服务，仍然不能完成任务？",
+      "summary": "把角色、版本、能力发现、工具契约和授权放进一次真实请求。",
+      "correction": "统一协议减少重复接线，但需要已经存在的服务、兼容实现与正确授权；连接成功不等于业务操作成功。",
+      "existing": [
+        "mcp",
+        "stack-protocols"
+      ],
+      "lessons": [
+        "mcp-session-lifecycle",
+        "mcp-tools-contract",
+        "mcp-auth-governance"
+      ]
+    },
+    {
+      "id": "skills",
+      "title": "Skills：从说明文件到可复用方法",
+      "status": "补齐独立系列",
+      "question": "技能装好以后，为什么还可能不触发、不会用？",
+      "summary": "解释渐进加载、任务适配、与MCP/工作流的组合，以及触发和执行的分层验收。",
+      "correction": "Skills组织任务知识、步骤和可选资源，不是给模型训练新权重，也不自动授予业务权限或保证结果。",
+      "existing": [
+        "stack-protocols"
+      ],
+      "lessons": [
+        "skills-loading",
+        "skills-composition",
+        "skills-evaluation"
+      ]
+    },
+    {
+      "id": "graphrag",
+      "title": "GraphRAG：从文本片段到关系与社区",
+      "status": "补齐新主题",
+      "question": "向量RAG已经能找资料，为什么还要图？",
+      "summary": "理解实体、关系、来源、社区报告，以及Local/Global/DRIFT等查询的适用问题。",
+      "correction": "Microsoft GraphRAG是具体实现；图增强检索是一类方法。建图不保证事实真实，也不保证比普通检索更省资源。",
+      "existing": [
+        "rag",
+        "deep-rag-retrieval"
+      ],
+      "lessons": [
+        "graphrag-indexing",
+        "graphrag-querying"
+      ]
+    },
+    {
+      "id": "agentic-rag",
+      "title": "Agentic RAG 与深度研究",
+      "status": "补齐进阶检索系列",
+      "question": "什么时候需要改写、追问、多跳和多源核验？",
+      "summary": "从固定两步RAG进入动态检索，把证据缺口、独立来源、预算和停止条件讲清楚。",
+      "correction": "检索更多轮不代表证据更可靠；转载同一原始来源的多个页面，也不能算多份独立证据。",
+      "existing": [
+        "rag",
+        "deep-rag-evidence"
+      ],
+      "lessons": [
+        "agentic-rag-routing",
+        "deep-research-evidence",
+        "rag-debug-playbook"
+      ]
+    },
+    {
+      "id": "context-memory",
+      "title": "上下文工程与记忆生命周期",
+      "status": "深化已有主题",
+      "question": "聊天记录还在，为什么模型仍然忘了限制？",
+      "summary": "区分当前工作窗口、任务状态与长期记忆，解释压缩、召回、合并、失效与删除。",
+      "correction": "上下文有容量边界，保存聊天记录不等于每轮全部送入模型；跨会话记忆也需要筛选、更新与访问控制。",
+      "existing": [
+        "tokens-context",
+        "agent-memory",
+        "deep-agent-state"
+      ],
+      "lessons": [
+        "context-engineering",
+        "memory-lifecycle"
+      ]
+    },
+    {
+      "id": "react-patterns",
+      "title": "ReAct、意图识别与设计模式",
+      "status": "深化已有主题",
+      "question": "模型怎样决定下一步，又怎样知道该停？",
+      "summary": "把观察、行动、反馈与任务约束连接起来，比较规划、路由、并行和评价修订。",
+      "correction": "ReAct是组织推理与行动的模式，与React前端框架不同；模式没有统一的固定总数，反思也不等于自动训练模型。",
+      "existing": [
+        "stack-react-pattern",
+        "agent-planning"
+      ],
+      "lessons": [
+        "agent-design-patterns",
+        "agent-intent-planning"
+      ]
+    },
+    {
+      "id": "harness",
+      "title": "Harness 与执行安全边界",
+      "status": "补齐独立运行时系列",
+      "question": "模型很聪明，为什么任务仍会重复执行或越界？",
+      "summary": "从上下文装配、工具调度、状态恢复和预算，走到隔离、授权、真实回执与注入防御。",
+      "correction": "Harness不只是一层内容过滤或合规防火墙；可见工具轨迹能帮助检查执行，不要求公开模型隐藏思维链。",
+      "existing": [
+        "stack-codex",
+        "deep-agent-reliability"
+      ],
+      "lessons": [
+        "harness-runtime",
+        "agent-security-boundaries"
+      ]
+    },
+    {
+      "id": "enterprise",
+      "title": "企业 Agent 的完整业务闭环",
+      "status": "深化完整案例",
+      "question": "怎样从一次演示走到可验收的业务过程？",
+      "summary": "用客户复盘案例串起CRM、表格、文档、核验、可审阅草稿和授权交付。",
+      "correction": "七层图适合帮助分工，但不是所有Agent都必须照搬的标准；增加组件数量不自动增加业务价值。",
+      "existing": [
+        "deep-stack-architecture",
+        "deep-eval-design",
+        "deep-eval-production"
+      ],
+      "lessons": [
+        "enterprise-agent-case"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "question": "Agent 怎样判断调用哪个工具？",
+      "answer": "先识别实体、动作与约束，再从当前允许的工具中选择；参数结构、对象权限和真实返回仍需应用验证。",
+      "slug": "agent-intent-planning"
+    },
+    {
+      "question": "工具超时后能不能直接重试？",
+      "answer": "先区分只读与写入，并检查上一次是否已产生副作用。未知结果通常需要查询状态或按受控幂等策略处理。",
+      "slug": "deep-agent-reliability"
+    },
+    {
+      "question": "RAG 命中了错误文档怎样排查？",
+      "answer": "保存原问题、身份、资料与索引版本，沿解析、过滤、召回、重排、提示拼装和生成逐层定位，不要一次改所有参数。",
+      "slug": "rag-debug-playbook"
+    },
+    {
+      "question": "如何为 Agent 设计评测集？",
+      "answer": "覆盖正常任务、缺信息、权限不足、工具失败与副作用重复等情况，分别检查答案、工具轨迹和业务结果。",
+      "slug": "deep-eval-design"
+    },
+    {
+      "question": "提示注入怎样防范？",
+      "answer": "区分外部数据与指令，限制可执行动作与数据出口，并在业务服务端验证权限；提示词或内容过滤不能独自构成完整边界。",
+      "slug": "agent-security-boundaries"
+    },
+    {
+      "question": "Agent 为什么会陷入循环？",
+      "answer": "可能重复获得无增益观察、缺少进度判断，或没有失败和预算出口。停止条件应基于任务状态与约束，而非只等模型说完成。",
+      "slug": "agent-design-patterns"
+    },
+    {
+      "question": "上下文太长怎样处理？",
+      "answer": "先明确必须保留的限制与状态，再选择窗口、摘要、检索或外部保存；压缩后要检查关键条件是否被丢掉。",
+      "slug": "context-engineering"
+    },
+    {
+      "question": "怎样控制延迟与成本？",
+      "answer": "按检索、模型、工具、重试与收尾拆开预算，观察成功任务成本；再用真实质量门槛比较路由和缓存策略。",
+      "slug": "deep-routing-policy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "MCP 官方架构",
+      "url": "https://modelcontextprotocol.io/docs/learn/architecture"
+    },
+    {
+      "title": "Agent Skills 官方规范",
+      "url": "https://agentskills.io/specification"
+    },
+    {
+      "title": "Microsoft GraphRAG 查询概览",
+      "url": "https://microsoft.github.io/graphrag/query/overview/"
+    },
+    {
+      "title": "Anthropic · 构建有效智能体",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents"
+    }
+  ]
+}

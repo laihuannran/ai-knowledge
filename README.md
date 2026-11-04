@@ -6,7 +6,7 @@
 
 ## 书籍版（2026-11-05）
 
-12篇、31章、86节。其中26篇为新增深入章节，每篇8–11个正文小节，结合具体机制、连贯案例、比较表与多张原创概念图。其余短文保留作为概念入口。合计138张SVG图、43张比较表与292个术语入口。
+12篇、39章、104节。其中44篇为新增深入章节，每篇8–11个正文小节，结合具体机制、连贯案例、比较表与多张原创概念图。其余短文保留作为概念入口。合计192张SVG图、61张比较表与327个术语入口。
 
 1. **先建立AI的世界地图**：概念边界、够用的数学直觉。
 2. **模型怎样读懂和生成**：Transformer、QKV、MoE与一次完整计算。
@@ -23,7 +23,7 @@
 
 ## 技术栈与资料研究
 
-`content/research/projects.json`记录41个项目，覆盖LangChain、LangGraph、LlamaIndex、Haystack、Spring AI、LangChain4j、主流Agent框架、Dify/n8n/Flowise、Codex、Claude Code、Ollama/llama.cpp、vLLM/SGLang、LiteLLM、向量与检索数据库、Redis/Kafka、评测工具和React/AI SDK。每项说明职责、机制、适用场景、限制、对照项目、许可与来源。
+`content/research/projects.json`记录49个项目，覆盖LangChain、LangGraph、LlamaIndex、Haystack、Spring AI、LangChain4j、主流Agent框架、Dify/n8n/Flowise、Codex、Claude Code、Ollama/llama.cpp、vLLM/SGLang、LiteLLM、向量与检索数据库、Redis/Kafka、评测工具和React/AI SDK。每项说明职责、机制、适用场景、限制、对照项目、许可与来源。
 
 GitHub Star来自2026-11-04的实时元数据快照，附来源、方法及抓取时间；无法获取明确保留空值。关注度不是品质排名。AutoGen已按官方状态标注为归档历史参考，另列接替项目。产品、源码仓库、模型权重和托管服务的授权边界分开记录。
 
@@ -43,7 +43,9 @@ python3 -m http.server 8765 --directory dist
 
 - `content/book.json`：完整篇章结构与阅读顺序。
 - `content/articles.json`、`expansion.json`、`supplement.json`：既有概念文章。
-- `content/stack_chapters.json`、`deep_chapters.json`：新增长章节。
+- `content/stack_chapters.json`、`deep_chapters.json`：书籍版长章节。
+- `content/protocol_series.json`、`retrieval_series.json`、`agent_series.json`：MCP/Skills、进阶RAG、Agent运行系列。
+- `content/learning_review.json`：Agent进阶路线与概念边界。
 - `content/*.md`：构建生成的GitHub阅读版文章。
 - `scripts/edition.py`：书籍导览、项目图谱和参考书架。
 - `scripts/diagrams.py`：原创SVG概念图。
@@ -60,3 +62,11 @@ Settings → Pages → Source选择GitHub Actions。推送`main`后工作流构�
 ## 许可
 
 原创文字与SVG图采用[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh-hans)，构建代码与样式采用MIT，见[LICENSE](LICENSE)。链接资料归原作者，遵循其各自许可。
+
+## Agent进阶系列（2026-11-05）
+
+**[从一个名词读懂一套机制](https://laihuannran.github.io/ai-knowledge/guide.html)**：8个学习主题连接18篇新增长章节，补齐独立MCP、Skills、GraphRAG、Agentic RAG、Harness与企业案例。ReAct、上下文和记忆在原有章节基础上继续深入。
+
+把概览图作为选题线索，逐项核对标准与产品实现。七层图不是唯一标准；MCP不自动连通全部工具，Skills不等于模型训练或权限授予，上下文也不等于永久保留全部聊天。案例为原创教学设计，未公开用户截图或个人水印信息。
+
+项目图谱新增Microsoft GraphRAG、LightRAG、Graphiti、Mem0、Letta、Agent Skills规范与示例、Neo4j；新条目逐项记录Star快照日期与许可来源，不将关注度当作质量排名。

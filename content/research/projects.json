@@ -2101,5 +2101,413 @@
         "url": "https://kafka.apache.org/documentation/#design"
       }
     ]
+  },
+  {
+    "id": "microsoft-graphrag",
+    "name": "Microsoft GraphRAG",
+    "category": "appframeworks",
+    "repo": "microsoft/graphrag",
+    "github_url": "https://github.com/microsoft/graphrag",
+    "docs_url": "https://microsoft.github.io/graphrag/",
+    "role": "图结构与社区报告驱动的检索系统",
+    "mechanism": "从原文文本单元抽取实体关系，组织社区并生成派生报告；查询时可使用实体邻域或跨社区归纳。",
+    "when_use": "资料中存在跨文档关系、全局主题或实体联系问题，需要研究检索结构如何影响覆盖。",
+    "why_learn": "先比较基础向量检索与Local/Global等查询策略，理解“找几段相似文本”和“归纳全局主题”的差别。",
+    "limits": "索引生成、更新和核验有额外成本；抽取关系与社区摘要不是已证明事实，也不自动完成权限和删除治理。",
+    "alternatives": [
+      "LightRAG",
+      "LlamaIndex"
+    ],
+    "license": {
+      "name": "MIT",
+      "source": "https://github.com/microsoft/graphrag",
+      "note": "按所采用版本与目录核对许可；代码许可不自动覆盖模型、托管服务或第三方资料。"
+    },
+    "stars": {
+      "count": 36555,
+      "label": "36555",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/microsoft/graphrag",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T17:53:24.533729+00:00"
+    },
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-11-02T07:24:01Z",
+      "source": "https://api.github.com/repos/microsoft/graphrag"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方项目与README",
+        "url": "https://github.com/microsoft/graphrag"
+      },
+      {
+        "title": "官方文档",
+        "url": "https://microsoft.github.io/graphrag/"
+      },
+      {
+        "title": "GitHub仓库元数据",
+        "url": "https://api.github.com/repos/microsoft/graphrag"
+      }
+    ]
+  },
+  {
+    "id": "hkuds-lightrag",
+    "name": "LightRAG",
+    "category": "appframeworks",
+    "repo": "HKUDS/LightRAG",
+    "github_url": "https://github.com/HKUDS/LightRAG",
+    "docs_url": "https://github.com/HKUDS/LightRAG",
+    "role": "结合图组织与检索的RAG项目",
+    "mechanism": "把文本、实体和关系组织为可检索结构，并以不同查询方式组合局部和整体信息。",
+    "when_use": "需要对照不同图增强检索实现，分析查询、更新及存储后端取舍。",
+    "why_learn": "与Microsoft GraphRAG比较具体索引产物和查询机制，而不是把两者当成同一套默认流水线。",
+    "limits": "项目名称与演示结果不能证明在自己的语料上更轻或更快；数据权限、索引质量和存储支持仍需独立核验。",
+    "alternatives": [
+      "Microsoft GraphRAG",
+      "Haystack"
+    ],
+    "license": {
+      "name": "MIT",
+      "source": "https://github.com/HKUDS/LightRAG",
+      "note": "按所采用版本与目录核对许可；代码许可不自动覆盖模型、托管服务或第三方资料。"
+    },
+    "stars": {
+      "count": 40529,
+      "label": "40529",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/HKUDS/LightRAG",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T17:53:24.579928+00:00"
+    },
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-11-03T18:06:26Z",
+      "source": "https://api.github.com/repos/HKUDS/LightRAG"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方项目与README",
+        "url": "https://github.com/HKUDS/LightRAG"
+      },
+      {
+        "title": "官方文档",
+        "url": "https://github.com/HKUDS/LightRAG"
+      },
+      {
+        "title": "GitHub仓库元数据",
+        "url": "https://api.github.com/repos/HKUDS/LightRAG"
+      }
+    ]
+  },
+  {
+    "id": "getzep-graphiti",
+    "name": "Graphiti",
+    "category": "data",
+    "repo": "getzep/graphiti",
+    "github_url": "https://github.com/getzep/graphiti",
+    "docs_url": "https://github.com/getzep/graphiti",
+    "role": "面向Agent的时序知识图谱组件",
+    "mechanism": "把事件与事实组织成图关系，并记录时间相关信息，支持跨来源关系检索和更新。",
+    "when_use": "任务需要区分何时发生、何时生效以及事实如何变化，而非只有静态文档相似度。",
+    "why_learn": "通过时间与来源的关联，理解关系更新、记忆冲突和事实有效期的工程问题。",
+    "limits": "写入图中的关系仍可能来自不准确抽取；图数据库和检索服务的运维、消歧与删除策略也有成本。",
+    "alternatives": [
+      "Mem0",
+      "Letta"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/getzep/graphiti",
+      "note": "按所采用版本与目录核对许可；代码许可不自动覆盖模型、托管服务或第三方资料。"
+    },
+    "stars": {
+      "count": 32517,
+      "label": "32517",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/getzep/graphiti",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T17:53:24.502405+00:00"
+    },
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-11-03T20:41:03Z",
+      "source": "https://api.github.com/repos/getzep/graphiti"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方项目与README",
+        "url": "https://github.com/getzep/graphiti"
+      },
+      {
+        "title": "官方文档",
+        "url": "https://github.com/getzep/graphiti"
+      },
+      {
+        "title": "GitHub仓库元数据",
+        "url": "https://api.github.com/repos/getzep/graphiti"
+      }
+    ]
+  },
+  {
+    "id": "mem0ai-mem0",
+    "name": "Mem0",
+    "category": "data",
+    "repo": "mem0ai/mem0",
+    "github_url": "https://github.com/mem0ai/mem0",
+    "docs_url": "https://docs.mem0.ai/",
+    "role": "可跨会话维护的记忆层",
+    "mechanism": "从交互中提取候选记忆，执行写入、更新与召回，并与Agent工作上下文组合。",
+    "when_use": "应用确实需要长期偏好或历史事实，希望将记忆管理与模型调用分层。",
+    "why_learn": "比较记忆提取与原始消息存储：学会区分写什么、何时更新、向谁召回和什么时候忘记。",
+    "limits": "长期保留会放大错误记忆及隐私影响；不能把向量召回命中当作当前用户授权或事实时效的证明。",
+    "alternatives": [
+      "Graphiti",
+      "Letta"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/mem0ai/mem0",
+      "note": "按所采用版本与目录核对许可；代码许可不自动覆盖模型、托管服务或第三方资料。"
+    },
+    "stars": {
+      "count": 68400,
+      "label": "68400",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/mem0ai/mem0",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T17:53:24.525607+00:00"
+    },
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-11-04T10:55:44Z",
+      "source": "https://api.github.com/repos/mem0ai/mem0"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方项目与README",
+        "url": "https://github.com/mem0ai/mem0"
+      },
+      {
+        "title": "官方文档",
+        "url": "https://docs.mem0.ai/"
+      },
+      {
+        "title": "GitHub仓库元数据",
+        "url": "https://api.github.com/repos/mem0ai/mem0"
+      }
+    ]
+  },
+  {
+    "id": "letta-ai-letta",
+    "name": "Letta",
+    "category": "agents",
+    "repo": "letta-ai/letta",
+    "github_url": "https://github.com/letta-ai/letta",
+    "docs_url": "https://docs.letta.com/",
+    "role": "围绕持久状态与记忆组织Agent的平台",
+    "mechanism": "把持久化的Agent状态、工具能力和记忆机制纳入运行环境，使多轮任务能够继续使用选定信息。",
+    "when_use": "需要研究长任务状态和跨会话连续性，且愿意承担运行平台的部署维护。",
+    "why_learn": "用它对照只拼接聊天记录的简单循环，理解上下文内信息与外部持久状态的分工。",
+    "limits": "“记住”并不代表永远准确；应独立验证记忆冲突、权限变更、数据删除和副作用恢复。",
+    "alternatives": [
+      "LangGraph",
+      "Mem0"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/letta-ai/letta",
+      "note": "按所采用版本与目录核对许可；代码许可不自动覆盖模型、托管服务或第三方资料。"
+    },
+    "stars": {
+      "count": 25348,
+      "label": "25348",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/letta-ai/letta",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T17:53:25.153290+00:00"
+    },
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-10-18T22:28:04Z",
+      "source": "https://api.github.com/repos/letta-ai/letta"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方项目与README",
+        "url": "https://github.com/letta-ai/letta"
+      },
+      {
+        "title": "官方文档",
+        "url": "https://docs.letta.com/"
+      },
+      {
+        "title": "GitHub仓库元数据",
+        "url": "https://api.github.com/repos/letta-ai/letta"
+      }
+    ]
+  },
+  {
+    "id": "anthropics-skills",
+    "name": "Anthropic Skills 示例",
+    "category": "protocol",
+    "repo": "anthropics/skills",
+    "github_url": "https://github.com/anthropics/skills",
+    "docs_url": "https://github.com/anthropics/skills",
+    "role": "可复用任务方法与资源的示例仓库",
+    "mechanism": "示例将任务说明、参考材料和可选脚本组织成技能目录，由支持的宿主按需选择加载。",
+    "when_use": "希望研究专业任务如何被拆为触发条件、步骤、模板和验收规则。",
+    "why_learn": "阅读真实技能的组织形式，再对照自己的任务约束；不把安装数量当作自动完成工作的能力。",
+    "limits": "技能的代码与文档需审阅；仓库内不同目录可能采用不同许可，部分文档技能为专用授权，不能将整个仓库统一视为Apache许可。",
+    "alternatives": [
+      "Agent Skills 规范",
+      "MCP Python SDK"
+    ],
+    "license": {
+      "name": "混合许可，按目录核对",
+      "source": "https://github.com/anthropics/skills",
+      "note": "按所采用版本与目录核对许可；代码许可不自动覆盖模型、托管服务或第三方资料。示例仓库存在按技能目录区分的授权，文档技能应另读其LICENSE。"
+    },
+    "stars": {
+      "count": 187355,
+      "label": "187355",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/anthropics/skills",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T17:53:25.176467+00:00"
+    },
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-10-28T19:20:39Z",
+      "source": "https://api.github.com/repos/anthropics/skills"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方项目与README",
+        "url": "https://github.com/anthropics/skills"
+      },
+      {
+        "title": "官方文档",
+        "url": "https://github.com/anthropics/skills"
+      },
+      {
+        "title": "GitHub仓库元数据",
+        "url": "https://api.github.com/repos/anthropics/skills"
+      }
+    ]
+  },
+  {
+    "id": "agentskills-agentskills",
+    "name": "Agent Skills 规范",
+    "category": "protocol",
+    "repo": "agentskills/agentskills",
+    "github_url": "https://github.com/agentskills/agentskills",
+    "docs_url": "https://agentskills.io/",
+    "role": "Agent Skills 格式与集成规范",
+    "mechanism": "定义技能目录、元数据和指令正文等约定，帮助宿主发现任务方法并逐步加载所需材料。",
+    "when_use": "需要理解Skills格式与宿主实现的边界，评估可移植性或阅读第三方技能。",
+    "why_learn": "先读规范再比较不同产品的触发、工具限制和资源加载行为，识别共同格式与产品差异。",
+    "limits": "格式兼容不代表执行环境、授权或效果兼容；实验性字段也不能被当作跨产品强制安全机制。",
+    "alternatives": [
+      "Anthropic Skills 示例",
+      "MCP Python SDK"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/agentskills/agentskills",
+      "note": "按所采用版本与目录核对许可；代码许可不自动覆盖模型、托管服务或第三方资料。"
+    },
+    "stars": {
+      "count": 26936,
+      "label": "26936",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/agentskills/agentskills",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T17:53:25.118787+00:00"
+    },
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-08-09T20:36:04Z",
+      "source": "https://api.github.com/repos/agentskills/agentskills"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方项目与README",
+        "url": "https://github.com/agentskills/agentskills"
+      },
+      {
+        "title": "官方文档",
+        "url": "https://agentskills.io/"
+      },
+      {
+        "title": "GitHub仓库元数据",
+        "url": "https://api.github.com/repos/agentskills/agentskills"
+      }
+    ]
+  },
+  {
+    "id": "neo4j-neo4j",
+    "name": "Neo4j",
+    "category": "data",
+    "repo": "neo4j/neo4j",
+    "github_url": "https://github.com/neo4j/neo4j",
+    "docs_url": "https://neo4j.com/docs/",
+    "role": "保存与查询显式图关系的数据库",
+    "mechanism": "以节点和关系表达对象连接，使用图查询遍历和筛选关联；可作为某些图检索方案的数据后端。",
+    "when_use": "业务问题需要明确关系查询，并能承担图建模、数据质量与数据库维护。",
+    "why_learn": "区分图数据库与GraphRAG：前者管理图数据，后者组织检索与生成；采用图增强方法不一定要求该数据库。",
+    "limits": "数据库不会自动把原文变成正确知识图谱；社区与商业发行的功能和许可范围需要按实际版本核对。",
+    "alternatives": [
+      "pgvector",
+      "Graphiti"
+    ],
+    "license": {
+      "name": "GPL-3.0",
+      "source": "https://github.com/neo4j/neo4j",
+      "note": "按所采用版本与目录核对许可；代码许可不自动覆盖模型、托管服务或第三方资料。"
+    },
+    "stars": {
+      "count": 17393,
+      "label": "17393",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/neo4j/neo4j",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T17:53:25.238198+00:00"
+    },
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-10-23T07:54:45Z",
+      "source": "https://api.github.com/repos/neo4j/neo4j"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方项目与README",
+        "url": "https://github.com/neo4j/neo4j"
+      },
+      {
+        "title": "官方文档",
+        "url": "https://neo4j.com/docs/"
+      },
+      {
+        "title": "GitHub仓库元数据",
+        "url": "https://api.github.com/repos/neo4j/neo4j"
+      }
+    ]
   }
 ]

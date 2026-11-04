@@ -14,9 +14,30 @@
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
+    "url": "https://agentskills.io/client-implementation/adding-skills-support",
+    "status": "200",
+    "final_url": "https://agentskills.io/client-implementation/adding-skills-support",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://agentskills.io/home",
     "status": "200",
     "final_url": "https://agentskills.io/home",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://agentskills.io/skill-creation/evaluating-skills",
+    "status": "200",
+    "final_url": "https://agentskills.io/skill-creation/evaluating-skills",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://agentskills.io/specification",
+    "status": "200",
+    "final_url": "https://agentskills.io/specification",
     "checked_on": "2026-11-05",
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
@@ -287,6 +308,13 @@
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
+    "url": "https://docs.langchain.com/oss/python/deepagents/retrieval",
+    "status": "200",
+    "final_url": "https://docs.langchain.com/oss/python/deepagents/retrieval",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://docs.langchain.com/oss/python/langchain/agents",
     "status": "200",
     "final_url": "https://docs.langchain.com/oss/python/langchain/agents",
@@ -402,6 +430,13 @@
     "url": "https://docs.openwebui.com/",
     "status": "200",
     "final_url": "https://docs.openwebui.com/",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/context_precision/",
+    "status": "200",
+    "final_url": "https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/context_precision/",
     "checked_on": "2026-11-05",
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
@@ -591,6 +626,13 @@
     "url": "https://github.com/microsoft/autogen",
     "status": "000",
     "final_url": "https://github.com/microsoft/autogen",
+    "checked_on": "2026-11-05",
+    "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
+  },
+  {
+    "url": "https://github.com/microsoft/graphrag",
+    "status": "000",
+    "final_url": "https://github.com/microsoft/graphrag",
     "checked_on": "2026-11-05",
     "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
   },
@@ -924,6 +966,34 @@
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
+    "url": "https://microsoft.github.io/graphrag/index/outputs/",
+    "status": "200",
+    "final_url": "https://microsoft.github.io/graphrag/index/outputs/",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://microsoft.github.io/graphrag/index/overview/",
+    "status": "200",
+    "final_url": "https://microsoft.github.io/graphrag/index/overview/",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://microsoft.github.io/graphrag/query/drift_search/",
+    "status": "200",
+    "final_url": "https://microsoft.github.io/graphrag/query/drift_search/",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://microsoft.github.io/graphrag/query/overview/",
+    "status": "200",
+    "final_url": "https://microsoft.github.io/graphrag/query/overview/",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://milvus.io/docs",
     "status": "403",
     "final_url": "https://milvus.io/docs",
@@ -963,6 +1033,48 @@
     "status": "200",
     "final_url": "https://modelcontextprotocol.io/specification/2025-06-18/server/tools",
     "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://modelcontextprotocol.io/specification/2026-07-28",
+    "status": "200",
+    "final_url": "https://modelcontextprotocol.io/specification/2026-07-28",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://modelcontextprotocol.io/specification/2026-07-28/architecture",
+    "status": "200",
+    "final_url": "https://modelcontextprotocol.io/specification/2026-07-28/architecture",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization",
+    "status": "200",
+    "final_url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/transports",
+    "status": "200",
+    "final_url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/transports",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://modelcontextprotocol.io/specification/2026-07-28/server/resources",
+    "status": "200",
+    "final_url": "https://modelcontextprotocol.io/specification/2026-07-28/server/resources",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://modelcontextprotocol.io/specification/2026-07-28/server/tools",
+    "status": "200",
+    "final_url": "https://modelcontextprotocol.io/specification/2026-07-28/server/tools",
+    "checked_on": "2026-11-05",
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
@@ -1041,6 +1153,20 @@
     "final_url": "https://www.anthropic.com/research/building-effective-agents",
     "checked_on": "2026-11-04",
     "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+    "status": "200",
+    "final_url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents",
+    "status": "200",
+    "final_url": "https://www.anthropic.com/research/effective-harnesses-for-long-running-agents",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
     "url": "https://www.anthropic.com/engineering/multi-agent-research-system",

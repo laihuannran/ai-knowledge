@@ -10,10 +10,13 @@ CATEGORY_ORDER = [
 
 def load_articles():
     articles = []
-    for name in ('articles.json', 'expansion.json', 'supplement.json', 'stack_chapters.json', 'deep_chapters.json'):
+    for name in ('articles.json', 'expansion.json', 'supplement.json', 'stack_chapters.json', 'deep_chapters.json', 'protocol_series.json', 'retrieval_series.json', 'agent_series.json'):
         path = ROOT / 'content' / name
         if path.exists():
             articles.extend(json.loads(path.read_text()))
+    for article in articles:
+        if article['category'] == 'AI应用':
+            article['category'] = 'AI 应用'
     order = {name: index for index, name in enumerate(CATEGORY_ORDER)}
     book_path = ROOT / 'content' / 'book.json'
     if book_path.exists():
