@@ -1,0 +1,443 @@
+[
+  {
+    "id": "handsonllm-hands-on-large-language-models",
+    "title": "动手学大语言模型：配套实践",
+    "url": "https://github.com/HandsOnLLM/Hands-On-Large-Language-Models",
+    "kind": "课程或配套代码仓库",
+    "level": "入门至进阶",
+    "language": "以英文为主",
+    "what_to_learn": "从文本表示、语义检索到生成应用，观察概念如何对应到完整实验。",
+    "how_we_use": "关联 RAG 框架篇，参考先解释表示再展示检索应用的教学顺序。 本站内容为原创解释与案例，只链接参考资料，不整篇转载。",
+    "repo": "HandsOnLLM/Hands-On-Large-Language-Models",
+    "license": {
+      "name": "未确认",
+      "source": "https://github.com/HandsOnLLM/Hands-On-Large-Language-Models",
+      "note": "本次未取得可核验的许可证文件；仅链接参考，不默认允许复制教材。"
+    },
+    "stars": {
+      "count": 30060,
+      "label": "30060",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/HandsOnLLM/Hands-On-Large-Language-Models",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362674+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/HandsOnLLM/Hands-On-Large-Language-Models"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/HandsOnLLM/Hands-On-Large-Language-Models"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/HandsOnLLM/Hands-On-Large-Language-Models"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/HandsOnLLM/Hands-On-Large-Language-Models"
+    }
+  },
+  {
+    "id": "rasbt-llms-from-scratch",
+    "title": "从零构建语言模型",
+    "url": "https://github.com/rasbt/LLMs-from-scratch",
+    "kind": "课程或配套代码仓库",
+    "level": "入门至进阶",
+    "language": "以英文为主",
+    "what_to_learn": "从分词、注意力到训练与微调，逐层理解语言模型内部计算。",
+    "how_we_use": "关联本地模型篇，补充推理接口背后的模型结构基础。 本站内容为原创解释与案例，只链接参考资料，不整篇转载。",
+    "repo": "rasbt/LLMs-from-scratch",
+    "license": {
+      "name": "未确认",
+      "source": "https://github.com/rasbt/LLMs-from-scratch",
+      "note": "本次未取得可核验的许可证文件；仅链接参考，不默认允许复制教材。"
+    },
+    "stars": {
+      "count": 107804,
+      "label": "107804",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/rasbt/LLMs-from-scratch",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362692+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/rasbt/LLMs-from-scratch"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/rasbt/LLMs-from-scratch"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/rasbt/LLMs-from-scratch"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/rasbt/LLMs-from-scratch"
+    }
+  },
+  {
+    "id": "mlabonne-llm-course",
+    "title": "大语言模型学习路线",
+    "url": "https://github.com/mlabonne/llm-course",
+    "kind": "课程或配套代码仓库",
+    "level": "入门至进阶",
+    "language": "以英文为主",
+    "what_to_learn": "按基础知识、模型训练及应用工程串联分散学习主题。",
+    "how_we_use": "关联总学习路线，参考主题分层，重新组织本站面向中间件工程师的路径。 本站内容为原创解释与案例，只链接参考资料，不整篇转载。",
+    "repo": "mlabonne/llm-course",
+    "license": {
+      "name": "未确认",
+      "source": "https://github.com/mlabonne/llm-course",
+      "note": "本次未取得可核验的许可证文件；仅链接参考，不默认允许复制教材。"
+    },
+    "stars": {
+      "count": 84897,
+      "label": "84897",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/mlabonne/llm-course",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362705+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/mlabonne/llm-course"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/mlabonne/llm-course"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/mlabonne/llm-course"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/mlabonne/llm-course"
+    }
+  },
+  {
+    "id": "microsoft-ml-for-beginners",
+    "title": "机器学习入门课程",
+    "url": "https://github.com/microsoft/ML-For-Beginners",
+    "kind": "课程或配套代码仓库",
+    "level": "入门至进阶",
+    "language": "以英文为主",
+    "what_to_learn": "以经典机器学习任务建立数据处理、训练和评估的基本概念。",
+    "how_we_use": "关联评估篇，补充数据拆分与指标解释的基础。 本站内容为原创解释与案例，只链接参考资料，不整篇转载。",
+    "repo": "microsoft/ML-For-Beginners",
+    "license": {
+      "name": "未确认",
+      "source": "https://github.com/microsoft/ML-For-Beginners",
+      "note": "本次未取得可核验的许可证文件；仅链接参考，不默认允许复制教材。"
+    },
+    "stars": {
+      "count": 91994,
+      "label": "91994",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/microsoft/ML-For-Beginners",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362715+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/microsoft/ML-For-Beginners"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/microsoft/ML-For-Beginners"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/microsoft/ML-For-Beginners"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/microsoft/ML-For-Beginners"
+    }
+  },
+  {
+    "id": "microsoft-generative-ai-for-beginners",
+    "title": "生成式 AI 入门课程",
+    "url": "https://github.com/microsoft/generative-ai-for-beginners",
+    "kind": "课程或配套代码仓库",
+    "level": "入门至进阶",
+    "language": "以英文为主",
+    "what_to_learn": "围绕提示、聊天、检索和应用构建建立生成式 AI 的基本工程视角。",
+    "how_we_use": "关联应用框架篇，参考从小例子逐步扩展到应用场景的组织方式。 本站内容为原创解释与案例，只链接参考资料，不整篇转载。",
+    "repo": "microsoft/generative-ai-for-beginners",
+    "license": {
+      "name": "未确认",
+      "source": "https://github.com/microsoft/generative-ai-for-beginners",
+      "note": "本次未取得可核验的许可证文件；仅链接参考，不默认允许复制教材。"
+    },
+    "stars": {
+      "count": 122964,
+      "label": "122964",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/microsoft/generative-ai-for-beginners",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362724+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/microsoft/generative-ai-for-beginners"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/microsoft/generative-ai-for-beginners"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/microsoft/generative-ai-for-beginners"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/microsoft/generative-ai-for-beginners"
+    }
+  },
+  {
+    "id": "huggingface-course",
+    "title": "Hugging Face 语言模型课程",
+    "url": "https://github.com/huggingface/course",
+    "kind": "课程或配套代码仓库",
+    "level": "入门至进阶",
+    "language": "以英文为主",
+    "what_to_learn": "学习文本处理、Transformer 模型及相关工具链的基本工作方式。",
+    "how_we_use": "关联模型运行篇，为分词、模型文件与推理流程提供延伸阅读。 本站内容为原创解释与案例，只链接参考资料，不整篇转载。",
+    "repo": "huggingface/course",
+    "license": {
+      "name": "未确认",
+      "source": "https://github.com/huggingface/course",
+      "note": "本次未取得可核验的许可证文件；仅链接参考，不默认允许复制教材。"
+    },
+    "stars": {
+      "count": 4347,
+      "label": "4347",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/huggingface/course",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362742+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/huggingface/course"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/huggingface/course"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/huggingface/course"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/huggingface/course"
+    }
+  },
+  {
+    "id": "huggingface-agents-course",
+    "title": "Hugging Face 代理课程",
+    "url": "https://github.com/huggingface/agents-course",
+    "kind": "课程或配套代码仓库",
+    "level": "入门至进阶",
+    "language": "以英文为主",
+    "what_to_learn": "理解工具调用、代理循环与不同代理框架的实践组织。",
+    "how_we_use": "关联 ReAct 与代理框架篇，对比工具反馈如何进入后续决策。 本站内容为原创解释与案例，只链接参考资料，不整篇转载。",
+    "repo": "huggingface/agents-course",
+    "license": {
+      "name": "未确认",
+      "source": "https://github.com/huggingface/agents-course",
+      "note": "本次未取得可核验的许可证文件；仅链接参考，不默认允许复制教材。"
+    },
+    "stars": {
+      "count": 34460,
+      "label": "34460",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/huggingface/agents-course",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362751+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/huggingface/agents-course"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/huggingface/agents-course"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/huggingface/agents-course"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/huggingface/agents-course"
+    }
+  },
+  {
+    "id": "fullstack-deep-learning-llm-bootcamp",
+    "title": "Full Stack LLM Bootcamp",
+    "url": "https://fullstackdeeplearning.com/llm-bootcamp/",
+    "kind": "官方课程",
+    "level": "入门至进阶",
+    "language": "以英文为主",
+    "what_to_learn": "通过提示工程、增强语言模型、交互设计和 LLMOps 理解模型应用从原型到产品的完整链路。课程为2023年录制，应着重理解工程原则，具体工具与接口需对照当前文档。",
+    "how_we_use": "关联应用架构篇，参考贯通模型到产品的课程结构。 本站内容为原创解释与案例，只链接参考资料，不整篇转载。",
+    "repo": null,
+    "license": {
+      "name": "未确认",
+      "source": "https://fullstackdeeplearning.com/llm-bootcamp/",
+      "note": "仅链接参考；免费访问不等于允许转载教材或视频。"
+    },
+    "stars": {
+      "count": null,
+      "label": "不适用",
+      "as_of": "2026-11-04",
+      "retrieved_at": "2026-11-04T15:51:09.118237+00:00",
+      "source": "https://fullstackdeeplearning.com/llm-bootcamp/",
+      "method": "官方课程页面，不采用GitHub星数"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "Full Stack LLM Bootcamp 官方课程与材料入口",
+        "url": "https://fullstackdeeplearning.com/llm-bootcamp/"
+      }
+    ],
+    "status": {
+      "type": "official_course",
+      "note": "官方页面有效；课程录制于2023年4月，工具与模型能力已演进。",
+      "source": "https://fullstackdeeplearning.com/llm-bootcamp/"
+    }
+  },
+  {
+    "id": "anthropics-courses",
+    "title": "Anthropic 官方课程",
+    "url": "https://github.com/anthropics/courses",
+    "kind": "课程或配套代码仓库",
+    "level": "入门至进阶",
+    "language": "以英文为主",
+    "what_to_learn": "学习提示组织、工具使用及模型应用开发中的具体交互方法。",
+    "how_we_use": "关联 Claude Code 与工具代理篇，对照官方概念解释交互边界。 本站内容为原创解释与案例，只链接参考资料，不整篇转载。",
+    "repo": "anthropics/courses",
+    "license": {
+      "name": "未确认",
+      "source": "https://github.com/anthropics/courses",
+      "note": "本次未取得可核验的许可证文件；仅链接参考，不默认允许复制教材。"
+    },
+    "stars": {
+      "count": 22978,
+      "label": "22978",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/anthropics/courses",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362768+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/anthropics/courses"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/anthropics/courses"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/anthropics/courses"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/anthropics/courses"
+    }
+  },
+  {
+    "id": "openai-openai-cookbook",
+    "title": "OpenAI Cookbook 实践示例",
+    "url": "https://github.com/openai/openai-cookbook",
+    "kind": "课程或配套代码仓库",
+    "level": "入门至进阶",
+    "language": "以英文为主",
+    "what_to_learn": "从按任务组织的示例理解模型 API、工具调用、检索及评估的组合方式。",
+    "how_we_use": "关联 Codex、MCP 和评估篇，以任务为线索提供进一步阅读入口。 本站内容为原创解释与案例，只链接参考资料，不整篇转载。",
+    "repo": "openai/openai-cookbook",
+    "license": {
+      "name": "未确认",
+      "source": "https://github.com/openai/openai-cookbook",
+      "note": "本次未取得可核验的许可证文件；仅链接参考，不默认允许复制教材。"
+    },
+    "stars": {
+      "count": 76948,
+      "label": "76948",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/openai/openai-cookbook",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362778+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/openai/openai-cookbook"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/openai/openai-cookbook"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/openai/openai-cookbook"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/openai/openai-cookbook"
+    }
+  }
+]

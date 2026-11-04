@@ -1,0 +1,2105 @@
+[
+  {
+    "id": "langchain-ai-langchain",
+    "name": "LangChain",
+    "category": "appframeworks",
+    "repo": "langchain-ai/langchain",
+    "github_url": "https://github.com/langchain-ai/langchain",
+    "docs_url": "https://docs.langchain.com/langchain/",
+    "role": "模型、提示、检索器和工具的组件适配层",
+    "why_learn": "学习组件边界以及结构化输出如何接入业务。",
+    "mechanism": "模型适配器、Runnable 与工具接口把调用步骤组合起来，便于替换模型与检索组件。",
+    "when_use": "应用需要整合多个模型提供商和工具时。",
+    "limits": "复杂持久状态和中断恢复需结合 LangGraph；抽象层无法抹平模型参数差异。",
+    "alternatives": [
+      "LangGraph",
+      "LlamaIndex",
+      "Haystack"
+    ],
+    "license": {
+      "name": "MIT",
+      "source": "https://github.com/langchain-ai/langchain",
+      "note": "GitHub 仓库许可元数据仅用于定位；实际使用须核对对应版本的许可全文、目录例外和商标条款。仓库许可不代表托管产品服务条款。"
+    },
+    "stars": {
+      "count": 149005,
+      "label": "149005",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/langchain-ai/langchain",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.361330+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/langchain-ai/langchain"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/langchain-ai/langchain"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/langchain-ai/langchain"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/langchain-ai/langchain"
+    }
+  },
+  {
+    "id": "langchain-ai-langgraph",
+    "name": "LangGraph",
+    "category": "appframeworks",
+    "repo": "langchain-ai/langgraph",
+    "github_url": "https://github.com/langchain-ai/langgraph",
+    "docs_url": "https://docs.langchain.com/oss/python/langgraph/",
+    "role": "需要持久状态的代理和工作流运行框架",
+    "why_learn": "理解代理循环如何成为可暂停、可审计的工作流。",
+    "mechanism": "节点读取状态并返回更新，条件边决定后续步骤，检查点保存可恢复进度。",
+    "when_use": "审批介入、长任务恢复以及多步骤工具协作。",
+    "limits": "恢复节点可能重复外部调用，必须处理副作用幂等和状态升级。",
+    "alternatives": [
+      "LangChain",
+      "LlamaIndex",
+      "Haystack"
+    ],
+    "license": {
+      "name": "MIT",
+      "source": "https://github.com/langchain-ai/langgraph",
+      "note": "GitHub 仓库许可元数据仅用于定位；实际使用须核对对应版本的许可全文、目录例外和商标条款。仓库许可不代表托管产品服务条款。"
+    },
+    "stars": {
+      "count": 44452,
+      "label": "44452",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/langchain-ai/langgraph",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362092+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/langchain-ai/langgraph"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/langchain-ai/langgraph"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/langchain-ai/langgraph"
+      }
+    ],
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-11-04T14:17:46Z",
+      "source": "https://api.github.com/repos/langchain-ai/langgraph"
+    }
+  },
+  {
+    "id": "run-llama-llama_index",
+    "name": "LlamaIndex",
+    "category": "appframeworks",
+    "repo": "run-llama/llama_index",
+    "github_url": "https://github.com/run-llama/llama_index",
+    "docs_url": "https://developers.llamaindex.ai",
+    "role": "面向私有数据的检索应用",
+    "why_learn": "掌握从企业数据到可引用回答的数据路径。",
+    "mechanism": "从连接器加载资料，经节点切分建立索引，再由检索器和查询引擎组织证据。",
+    "when_use": "文档来源复杂，需要快速搭建检索增强问答。",
+    "limits": "默认切分和索引不能保证召回质量；更新、删除和权限传播仍需设计。",
+    "alternatives": [
+      "LangChain",
+      "LangGraph",
+      "Haystack"
+    ],
+    "license": {
+      "name": "MIT",
+      "source": "https://github.com/run-llama/llama_index",
+      "note": "GitHub 仓库许可元数据仅用于定位；实际使用须核对对应版本的许可全文、目录例外和商标条款。仓库许可不代表托管产品服务条款。"
+    },
+    "stars": {
+      "count": 52803,
+      "label": "52803",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/run-llama/llama_index",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362126+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/run-llama/llama_index"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/run-llama/llama_index"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/run-llama/llama_index"
+      }
+    ],
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-11-03T22:27:50Z",
+      "source": "https://api.github.com/repos/run-llama/llama_index"
+    }
+  },
+  {
+    "id": "deepset-ai-haystack",
+    "name": "Haystack",
+    "category": "appframeworks",
+    "repo": "deepset-ai/haystack",
+    "github_url": "https://github.com/deepset-ai/haystack",
+    "docs_url": "https://haystack.deepset.ai",
+    "role": "可组合检索问答流水线",
+    "why_learn": "练习把 RAG 拆成可独立评测和替换的阶段。",
+    "mechanism": "用显式组件端口连接检索、排序、提示和生成步骤，条件路由控制流水线分支。",
+    "when_use": "希望清楚管理检索流水线输入输出与分支关系。",
+    "limits": "组件图增加配置与类型协调工作；仍需单独评测检索和回答质量。",
+    "alternatives": [
+      "LangChain",
+      "LangGraph",
+      "LlamaIndex"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/deepset-ai/haystack",
+      "note": "GitHub 仓库许可元数据仅用于定位；实际使用须核对对应版本的许可全文、目录例外和商标条款。仓库许可不代表托管产品服务条款。"
+    },
+    "stars": {
+      "count": 26926,
+      "label": "26926",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/deepset-ai/haystack",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362155+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/deepset-ai/haystack"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/deepset-ai/haystack"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/deepset-ai/haystack"
+      }
+    ],
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-11-04T14:34:18Z",
+      "source": "https://api.github.com/repos/deepset-ai/haystack"
+    }
+  },
+  {
+    "id": "spring-projects-spring-ai",
+    "name": "Spring AI",
+    "category": "appframeworks",
+    "repo": "spring-projects/spring-ai",
+    "github_url": "https://github.com/spring-projects/spring-ai",
+    "docs_url": "https://spring.io/projects/spring-ai ",
+    "role": "Java Spring 模型应用",
+    "why_learn": "把模型能力接入既有 Java 配置、依赖注入和服务边界。",
+    "mechanism": "通过 ChatClient、模型适配、工具调用及向量存储接口连接 Spring 服务与模型。",
+    "when_use": "团队维护 Spring Boot 后端并希望复用工程基础。",
+    "limits": "模型调用具有延迟与失败不确定性，不能直接照搬普通数据库事务假设。",
+    "alternatives": [
+      "LangChain",
+      "LangGraph",
+      "LlamaIndex"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/spring-projects/spring-ai",
+      "note": "GitHub 仓库许可元数据仅用于定位；实际使用须核对对应版本的许可全文、目录例外和商标条款。仓库许可不代表托管产品服务条款。"
+    },
+    "stars": {
+      "count": 9621,
+      "label": "9621",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/spring-projects/spring-ai",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362170+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/spring-projects/spring-ai"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/spring-projects/spring-ai"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/spring-projects/spring-ai"
+      }
+    ],
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-11-04T12:57:47Z",
+      "source": "https://api.github.com/repos/spring-projects/spring-ai"
+    }
+  },
+  {
+    "id": "langchain4j-langchain4j",
+    "name": "LangChain4j",
+    "category": "appframeworks",
+    "repo": "langchain4j/langchain4j",
+    "github_url": "https://github.com/langchain4j/langchain4j",
+    "docs_url": "https://docs.langchain4j.dev",
+    "role": "Java 模型应用",
+    "why_learn": "理解声明式接口怎样承载提示和结构化结果。",
+    "mechanism": "AI Services 将 Java 接口映射为模型交互，并组合记忆、工具与检索增强组件。",
+    "when_use": "Java 项目需要较轻量的模型集成或 RAG 封装。",
+    "limits": "接口简洁不代表调用确定；工具权限、会话隔离和输出校验必须显式实现。",
+    "alternatives": [
+      "LangChain",
+      "LangGraph",
+      "LlamaIndex"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/langchain4j/langchain4j",
+      "note": "GitHub 仓库许可元数据仅用于定位；实际使用须核对对应版本的许可全文、目录例外和商标条款。仓库许可不代表托管产品服务条款。"
+    },
+    "stars": {
+      "count": 13354,
+      "label": "13354",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/langchain4j/langchain4j",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362193+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/langchain4j/langchain4j"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/langchain4j/langchain4j"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/langchain4j/langchain4j"
+      }
+    ],
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-11-04T14:19:31Z",
+      "source": "https://api.github.com/repos/langchain4j/langchain4j"
+    }
+  },
+  {
+    "id": "crewaiinc-crewai",
+    "name": "CrewAI",
+    "category": "agents",
+    "repo": "crewAIInc/crewAI",
+    "github_url": "https://github.com/crewAIInc/crewAI",
+    "docs_url": "https://crewai.com",
+    "role": "角色协作代理",
+    "why_learn": "比较角色分工与确定性流程各自适合承担的职责。",
+    "mechanism": "以角色代理和任务组织协作，Flows 承接事件与状态驱动的业务控制。",
+    "when_use": "需要把研究、分析、整理等多角色步骤编排成可追踪流程。",
+    "limits": "角色设定不保证协作品质，任务交接内容与循环成本要实际评测。",
+    "alternatives": [
+      "AutoGen",
+      "OpenAI Agents SDK",
+      "Google ADK"
+    ],
+    "license": {
+      "name": "MIT",
+      "source": "https://github.com/crewAIInc/crewAI",
+      "note": "GitHub 仓库许可元数据仅用于定位；实际使用须核对对应版本的许可全文、目录例外和商标条款。仓库许可不代表托管产品服务条款。"
+    },
+    "stars": {
+      "count": 60488,
+      "label": "60488",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/crewAIInc/crewAI",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362208+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/crewAIInc/crewAI"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/crewAIInc/crewAI"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/crewAIInc/crewAI"
+      }
+    ],
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-11-04T13:48:42Z",
+      "source": "https://api.github.com/repos/crewAIInc/crewAI"
+    }
+  },
+  {
+    "id": "microsoft-autogen",
+    "name": "AutoGen（已归档·历史参考）",
+    "category": "agents",
+    "repo": "microsoft/autogen",
+    "github_url": "https://github.com/microsoft/autogen",
+    "docs_url": "https://microsoft.github.io/autogen/",
+    "role": "已归档的多代理研究框架，作为历史参考",
+    "why_learn": "通过 AutoGen 理解已归档的多代理研究框架，作为历史参考。重点实验通过代理消息交互和运行时组织协作，适合比较代理架构演进，并以可重复用例验证边界。",
+    "mechanism": "通过代理消息交互和运行时组织协作，适合比较代理架构演进。",
+    "when_use": "阅读旧系统设计、理解既有项目并制定迁移计划。",
+    "limits": "官方已归档且不再维护；新项目优先研究 Microsoft Agent Framework，并参考官方迁移指南。",
+    "alternatives": [
+      "Microsoft Agent Framework",
+      "CrewAI",
+      "OpenAI Agents SDK",
+      "Google ADK"
+    ],
+    "license": {
+      "name": "MIT（代码）/ CC-BY-4.0（文档）",
+      "source": "https://github.com/microsoft/autogen",
+      "note": "GitHub 顶层许可识别为 CC-BY-4.0，不能据此把所有代码归为文档许可；需核对 LICENSE-CODE 与 LICENSE。"
+    },
+    "stars": {
+      "count": 61699,
+      "label": "61699",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/microsoft/autogen",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362231+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/microsoft/autogen"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/microsoft/autogen"
+      },
+      {
+        "title": "官方归档及迁移说明",
+        "url": "https://github.com/microsoft/autogen/blob/main/README.md"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/microsoft/autogen"
+      },
+      {
+        "title": "AutoGen 官方迁移指南",
+        "url": "https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/microsoft/autogen"
+    }
+  },
+  {
+    "id": "openai-openai-agents-python",
+    "name": "OpenAI Agents SDK",
+    "category": "agents",
+    "repo": "openai/openai-agents-python",
+    "github_url": "https://github.com/openai/openai-agents-python",
+    "docs_url": "https://openai.github.io/openai-agents-python/",
+    "role": "工具型代理应用",
+    "why_learn": "理解工具代理的最小运行结构和交接边界。",
+    "mechanism": "Runner 驱动模型与工具循环，handoff 转移处理职责，trace 记录执行过程。",
+    "when_use": "需要用较少框架层实现工具助手及代理委派。",
+    "limits": "护栏和交接不会自动构成业务授权，工具执行仍需限制可访问数据与动作。",
+    "alternatives": [
+      "CrewAI",
+      "AutoGen",
+      "Google ADK"
+    ],
+    "license": {
+      "name": "MIT",
+      "source": "https://github.com/openai/openai-agents-python",
+      "note": "GitHub 仓库许可元数据仅用于定位；实际使用须核对对应版本的许可全文、目录例外和商标条款。仓库许可不代表托管产品服务条款。"
+    },
+    "stars": {
+      "count": 30491,
+      "label": "30491",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/openai/openai-agents-python",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362257+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/openai/openai-agents-python"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/openai/openai-agents-python"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/openai/openai-agents-python"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/openai/openai-agents-python"
+    }
+  },
+  {
+    "id": "google-adk-python",
+    "name": "Google ADK",
+    "category": "agents",
+    "repo": "google/adk-python",
+    "github_url": "https://github.com/google/adk-python",
+    "docs_url": "https://google.github.io/adk-docs/",
+    "role": "代理应用开发",
+    "why_learn": "区分会话持久化、代理逻辑与运行环境的责任。",
+    "mechanism": "Runner 调度代理事件，Session 保存会话状态，工具及子代理承接具体能力。",
+    "when_use": "需要组织多代理应用，并围绕会话和事件进行调试。",
+    "limits": "持久化服务与部署环境需要自行选择；跨会话状态共享可能引入数据串扰。",
+    "alternatives": [
+      "CrewAI",
+      "AutoGen",
+      "OpenAI Agents SDK"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/google/adk-python",
+      "note": "GitHub 仓库许可元数据仅用于定位；实际使用须核对对应版本的许可全文、目录例外和商标条款。仓库许可不代表托管产品服务条款。"
+    },
+    "stars": {
+      "count": 22104,
+      "label": "22104",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/google/adk-python",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362271+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/google/adk-python"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/google/adk-python"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/google/adk-python"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/google/adk-python"
+    }
+  },
+  {
+    "id": "huggingface-smolagents",
+    "name": "smolagents",
+    "category": "agents",
+    "repo": "huggingface/smolagents",
+    "github_url": "https://github.com/huggingface/smolagents",
+    "docs_url": "https://huggingface.co/docs/smolagents",
+    "role": "轻量代理实验",
+    "why_learn": "理解代码代理为何能灵活组合工具，以及隔离为何关键。",
+    "mechanism": "代理生成代码调用工具，执行器运行代码并把结果反馈给下一轮决策。",
+    "when_use": "探索数据处理、计算和多工具组合的轻量代理。",
+    "limits": "生成代码具有真实执行能力，必须选择合适沙箱并限制网络、文件和依赖权限。",
+    "alternatives": [
+      "CrewAI",
+      "AutoGen",
+      "OpenAI Agents SDK"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/huggingface/smolagents",
+      "note": "GitHub 仓库许可元数据仅用于定位；实际使用须核对对应版本的许可全文、目录例外和商标条款。仓库许可不代表托管产品服务条款。"
+    },
+    "stars": {
+      "count": 30210,
+      "label": "30210",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/huggingface/smolagents",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362287+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/huggingface/smolagents"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/huggingface/smolagents"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/huggingface/smolagents"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/huggingface/smolagents"
+    }
+  },
+  {
+    "id": "langgenius-dify",
+    "name": "Dify",
+    "category": "lowcode",
+    "repo": "langgenius/dify",
+    "github_url": "https://github.com/langgenius/dify",
+    "docs_url": "https://dify.ai",
+    "role": "可视化 AI 应用平台",
+    "why_learn": "学习可视化应用从原型到发布的管理路径。",
+    "mechanism": "在应用平台中组合工作流、提示、知识库和模型连接，并提供调用入口。",
+    "when_use": "业务团队需要共同维护问答应用和可视化流程。",
+    "limits": "平台管理无法取代知识更新与评测；多租户和品牌使用还涉及附加许可条件。",
+    "alternatives": [
+      "n8n",
+      "Flowise"
+    ],
+    "license": {
+      "name": "Dify Open Source License",
+      "source": "https://github.com/langgenius/dify",
+      "note": "基于 Apache-2.0 且附多租户与品牌条件；实际用途须核对当前 LICENSE。"
+    },
+    "stars": {
+      "count": 160396,
+      "label": "160396",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/langgenius/dify",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362312+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/langgenius/dify"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/langgenius/dify"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/langgenius/dify"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/langgenius/dify"
+    }
+  },
+  {
+    "id": "n8n-io-n8n",
+    "name": "n8n",
+    "category": "lowcode",
+    "repo": "n8n-io/n8n",
+    "github_url": "https://github.com/n8n-io/n8n",
+    "docs_url": "https://n8n.io",
+    "role": "业务自动化编排",
+    "why_learn": "把代理能力放回确定性的业务集成链路。",
+    "mechanism": "触发器启动节点流程，将 SaaS、HTTP、数据库和模型步骤连接为自动化任务。",
+    "when_use": "模型结果需要驱动工单、通知、数据同步等外部系统。",
+    "limits": "重试可能重复发送或写入；凭据、幂等键及失败补偿必须围绕业务动作设计。",
+    "alternatives": [
+      "Dify",
+      "Flowise"
+    ],
+    "license": {
+      "name": "Sustainable Use License / n8n Enterprise License",
+      "source": "https://github.com/n8n-io/n8n",
+      "note": "源码可见许可包含用途限制，企业目录另有许可；不是统一的 MIT 或 Apache 授权。"
+    },
+    "stars": {
+      "count": 209541,
+      "label": "209541",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/n8n-io/n8n",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362325+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/n8n-io/n8n"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/n8n-io/n8n"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/n8n-io/n8n"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/n8n-io/n8n"
+    }
+  },
+  {
+    "id": "flowiseai-flowise",
+    "name": "Flowise",
+    "category": "lowcode",
+    "repo": "FlowiseAI/Flowise",
+    "github_url": "https://github.com/FlowiseAI/Flowise",
+    "docs_url": "https://flowiseai.com",
+    "role": "可视化模型应用编排",
+    "why_learn": "直观看到提示、检索、记忆与工具的依赖关系。",
+    "mechanism": "以节点图组织模型链与代理流程，界面配置转化为可调用的应用运行路径。",
+    "when_use": "团队需要快速验证对话和代理流程，再决定工程化边界。",
+    "limits": "复杂图的版本差异和隐式配置容易增加排障成本；企业目录授权需分别核对。",
+    "alternatives": [
+      "Dify",
+      "n8n"
+    ],
+    "license": {
+      "name": "Apache-2.0 及企业功能例外",
+      "source": "https://github.com/FlowiseAI/Flowise",
+      "note": "需核对仓库 LICENSE 与 enterprise 目录专用许可；不能把企业功能按社区代码许可使用。"
+    },
+    "stars": {
+      "count": 55547,
+      "label": "55547",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/FlowiseAI/Flowise",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362336+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/FlowiseAI/Flowise"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/FlowiseAI/Flowise"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/FlowiseAI/Flowise"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/FlowiseAI/Flowise"
+    }
+  },
+  {
+    "id": "openai-codex",
+    "name": "Codex CLI",
+    "category": "codingassistants",
+    "repo": "openai/codex",
+    "github_url": "https://github.com/openai/codex",
+    "docs_url": "https://github.com/openai/codex#readme",
+    "role": "终端编码代理",
+    "why_learn": "学习编码代理如何依据测试和执行反馈迭代修改。",
+    "mechanism": "读取仓库上下文，经模型规划调用命令与编辑工具，在终端展示进度和变更。",
+    "when_use": "需要在已有代码库定位问题、实现改动和验证结果。",
+    "limits": "命令执行权限与仓库上下文决定风险边界，代理产生的补丁仍需评审。",
+    "alternatives": [
+      "Claude Code"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/openai/codex",
+      "note": "GitHub 仓库许可元数据仅用于定位；实际使用须核对对应版本的许可全文、目录例外和商标条款。仓库许可不代表托管产品服务条款。"
+    },
+    "stars": {
+      "count": 133116,
+      "label": "133116",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/openai/codex",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362346+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/openai/codex"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/openai/codex"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/openai/codex"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/openai/codex"
+    }
+  },
+  {
+    "id": "anthropics-claude-code",
+    "name": "Claude Code",
+    "category": "codingassistants",
+    "repo": "anthropics/claude-code",
+    "github_url": "https://github.com/anthropics/claude-code",
+    "docs_url": "https://code.claude.com/docs/en/overview",
+    "role": "编码代理产品的公开仓库",
+    "why_learn": "比较不同编码代理对上下文与工具反馈的组织方式。",
+    "mechanism": "围绕代码库交互调用开发工具，借助项目指令、会话上下文和扩展能力完成编码任务。",
+    "when_use": "日常代码理解、修改、调试和开发流程协作。",
+    "limits": "这是商业产品；公开仓库不代表产品本体开源，功能及使用条件应查产品文档。",
+    "alternatives": [
+      "Codex CLI"
+    ],
+    "license": {
+      "name": "商业产品条款；公开仓库不构成开源授权",
+      "source": "https://github.com/anthropics/claude-code",
+      "note": "公开 issue、插件或示例的权限不代表 Claude Code 产品本体可开源再分发。"
+    },
+    "stars": {
+      "count": 154508,
+      "label": "154508",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/anthropics/claude-code",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362355+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/anthropics/claude-code"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/anthropics/claude-code"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/anthropics/claude-code"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/anthropics/claude-code"
+    }
+  },
+  {
+    "id": "open-webui-open-webui",
+    "name": "Open WebUI",
+    "category": "client",
+    "repo": "open-webui/open-webui",
+    "github_url": "https://github.com/open-webui/open-webui",
+    "docs_url": "https://openwebui.com",
+    "role": "自托管模型交互界面",
+    "why_learn": "理解模型运行服务与面向用户的交互层如何分离。",
+    "mechanism": "用自托管 Web 界面连接模型端点，管理用户、会话与知识相关交互。",
+    "when_use": "需要为本地或远程模型提供统一聊天入口。",
+    "limits": "部署界面不等于完成多租户隔离；上传文件、工具和外部端点都需独立管控。",
+    "alternatives": [
+      "LibreChat"
+    ],
+    "license": {
+      "name": "Open WebUI License（含品牌条件）",
+      "source": "https://github.com/open-webui/open-webui",
+      "note": "与早期 BSD/MIT 版本不同；当前品牌保留要求及例外以 LICENSE 为准。"
+    },
+    "stars": {
+      "count": 157749,
+      "label": "157749",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/open-webui/open-webui",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362368+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/open-webui/open-webui"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/open-webui/open-webui"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/open-webui/open-webui"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/open-webui/open-webui"
+    }
+  },
+  {
+    "id": "danny-avila-librechat",
+    "name": "LibreChat",
+    "category": "client",
+    "repo": "danny-avila/LibreChat",
+    "github_url": "https://github.com/danny-avila/LibreChat",
+    "docs_url": "https://librechat.ai/",
+    "role": "多模型聊天界面",
+    "why_learn": "观察多提供商聊天产品的账户和交互结构。",
+    "mechanism": "在统一聊天应用中适配多个模型提供商，管理会话、用户配置与扩展能力。",
+    "when_use": "组织需要在一个入口使用不同模型服务。",
+    "limits": "提供商功能不完全一致，迁移会话或配置时要检查工具和附件兼容性。",
+    "alternatives": [
+      "Open WebUI"
+    ],
+    "license": {
+      "name": "MIT",
+      "source": "https://github.com/danny-avila/LibreChat",
+      "note": "GitHub 仓库许可元数据仅用于定位；实际使用须核对对应版本的许可全文、目录例外和商标条款。仓库许可不代表托管产品服务条款。"
+    },
+    "stars": {
+      "count": 46727,
+      "label": "46727",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/danny-avila/LibreChat",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362377+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/danny-avila/LibreChat"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/danny-avila/LibreChat"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/danny-avila/LibreChat"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/danny-avila/LibreChat"
+    }
+  },
+  {
+    "id": "ollama-ollama",
+    "name": "Ollama",
+    "category": "runtime",
+    "repo": "ollama/ollama",
+    "github_url": "https://github.com/ollama/ollama",
+    "docs_url": "https://ollama.com",
+    "role": "本地模型运行",
+    "why_learn": "建立从模型下载、加载到应用调用的最短实验路径。",
+    "mechanism": "管理本地模型文件及运行实例，通过本地 API 暴露生成和嵌入能力。",
+    "when_use": "个人电脑或受控服务器需要方便地运行本地模型。",
+    "limits": "可运行并不代表性能足够；模型大小、量化方式与显存共同限制吞吐。",
+    "alternatives": [
+      "llama.cpp"
+    ],
+    "license": {
+      "name": "MIT",
+      "source": "https://github.com/ollama/ollama",
+      "note": "GitHub 仓库许可元数据仅用于定位；实际使用须核对对应版本的许可全文、目录例外和商标条款。仓库许可不代表托管产品服务条款。"
+    },
+    "stars": {
+      "count": 185890,
+      "label": "185890",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/ollama/ollama",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362387+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/ollama/ollama"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/ollama/ollama"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/ollama/ollama"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/ollama/ollama"
+    }
+  },
+  {
+    "id": "ggml-org-llama.cpp",
+    "name": "llama.cpp",
+    "category": "runtime",
+    "repo": "ggml-org/llama.cpp",
+    "github_url": "https://github.com/ggml-org/llama.cpp",
+    "docs_url": "https://llama.app",
+    "role": "本地推理引擎",
+    "why_learn": "理解模型文件、量化精度和硬件执行之间的联系。",
+    "mechanism": "通过 GGUF 权重与量化计算，在 CPU、GPU 等后端执行模型推理。",
+    "when_use": "需要灵活适配本地硬件、嵌入式推理或细致控制运行参数。",
+    "limits": "量化和硬件卸载会改变速度与质量，不能只按参数量估算部署可行性。",
+    "alternatives": [
+      "Ollama"
+    ],
+    "license": {
+      "name": "MIT",
+      "source": "https://github.com/ggml-org/llama.cpp",
+      "note": "GitHub 仓库许可元数据仅用于定位；实际使用须核对对应版本的许可全文、目录例外和商标条款。仓库许可不代表托管产品服务条款。"
+    },
+    "stars": {
+      "count": 133355,
+      "label": "133355",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/ggml-org/llama.cpp",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362396+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/ggml-org/llama.cpp"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/ggml-org/llama.cpp"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/ggml-org/llama.cpp"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/ggml-org/llama.cpp"
+    }
+  },
+  {
+    "id": "vllm-project-vllm",
+    "name": "vLLM",
+    "category": "serving",
+    "repo": "vllm-project/vllm",
+    "github_url": "https://github.com/vllm-project/vllm",
+    "docs_url": "https://vllm.ai",
+    "role": "模型推理服务",
+    "why_learn": "理解请求调度如何影响推理服务效率。",
+    "mechanism": "以分页 KV 缓存管理和连续批处理提高并发生成时的显存利用与吞吐。",
+    "when_use": "服务端需要同时承载多用户生成请求。",
+    "limits": "吞吐优化不等于低尾延迟，长上下文和不同请求长度需混合压测。",
+    "alternatives": [
+      "SGLang",
+      "llm-d"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/vllm-project/vllm",
+      "note": "GitHub 仓库许可元数据仅用于定位；实际使用须核对对应版本的许可全文、目录例外和商标条款。仓库许可不代表托管产品服务条款。"
+    },
+    "stars": {
+      "count": 96297,
+      "label": "96297",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/vllm-project/vllm",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362413+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/vllm-project/vllm"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/vllm-project/vllm"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/vllm-project/vllm"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/vllm-project/vllm"
+    }
+  },
+  {
+    "id": "sgl-project-sglang",
+    "name": "SGLang",
+    "category": "serving",
+    "repo": "sgl-project/sglang",
+    "github_url": "https://github.com/sgl-project/sglang",
+    "docs_url": "https://sglang.io",
+    "role": "模型推理服务",
+    "why_learn": "分析重复提示场景如何通过缓存降低计算。",
+    "mechanism": "围绕推理运行时和前缀复用组织执行，RadixAttention 缓存共享前缀的计算结果。",
+    "when_use": "大量请求共享系统提示或多轮上下文前缀。",
+    "limits": "缓存收益依赖请求分布与命中率，不能直接套用公开基准到自有负载。",
+    "alternatives": [
+      "vLLM",
+      "llm-d"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/sgl-project/sglang",
+      "note": "GitHub 仓库许可元数据仅用于定位；实际使用须核对对应版本的许可全文、目录例外和商标条款。仓库许可不代表托管产品服务条款。"
+    },
+    "stars": {
+      "count": 38452,
+      "label": "38452",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/sgl-project/sglang",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362424+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/sgl-project/sglang"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/sgl-project/sglang"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/sgl-project/sglang"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/sgl-project/sglang"
+    }
+  },
+  {
+    "id": "llm-d-llm-d",
+    "name": "llm-d",
+    "category": "serving",
+    "repo": "llm-d/llm-d",
+    "github_url": "https://github.com/llm-d/llm-d",
+    "docs_url": "https://www.llm-d.ai",
+    "role": "分布式推理服务",
+    "why_learn": "把单机推理效率与集群级请求分配区分开来。",
+    "mechanism": "在 Kubernetes 上组合推理服务、流量路由与调度组件，协调分布式推理资源。",
+    "when_use": "推理规模增长到多副本、多节点和集群运维阶段。",
+    "limits": "组件与基础设施较多，需要具备 Kubernetes、网络和推理服务排障能力。",
+    "alternatives": [
+      "vLLM",
+      "SGLang"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/llm-d/llm-d",
+      "note": "GitHub 仓库许可元数据仅用于定位；实际使用须核对对应版本的许可全文、目录例外和商标条款。仓库许可不代表托管产品服务条款。"
+    },
+    "stars": {
+      "count": 5140,
+      "label": "5140",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/llm-d/llm-d",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362432+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/llm-d/llm-d"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/llm-d/llm-d"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/llm-d/llm-d"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/llm-d/llm-d"
+    }
+  },
+  {
+    "id": "berriai-litellm",
+    "name": "LiteLLM",
+    "category": "gateway",
+    "repo": "BerriAI/litellm",
+    "github_url": "https://github.com/BerriAI/litellm",
+    "docs_url": "https://docs.litellm.ai/docs/",
+    "role": "模型调用网关",
+    "why_learn": "学习模型网关怎样承接供应商切换和调用治理。",
+    "mechanism": "将不同模型服务映射为统一调用接口，并通过代理组织路由、预算和访问控制。",
+    "when_use": "多团队共享模型端点，需要集中管理凭据与费用记录。",
+    "limits": "统一接口仍有参数语义差异；故障回退和重试可能增加账单或重复工具结果。",
+    "alternatives": [
+      "Envoy AI Gateway"
+    ],
+    "license": {
+      "name": "MIT 及企业目录专用许可",
+      "source": "https://github.com/BerriAI/litellm",
+      "note": "社区代码与 enterprise 功能适用范围不同；需查看被集成目录的许可。"
+    },
+    "stars": {
+      "count": 62685,
+      "label": "62685",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/BerriAI/litellm",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362476+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/BerriAI/litellm"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/BerriAI/litellm"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/BerriAI/litellm"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/BerriAI/litellm"
+    }
+  },
+  {
+    "id": "envoyproxy-ai-gateway",
+    "name": "Envoy AI Gateway",
+    "category": "gateway",
+    "repo": "envoyproxy/ai-gateway",
+    "github_url": "https://github.com/envoyproxy/ai-gateway",
+    "docs_url": "https://theagentrouter.ai/",
+    "role": "基础设施层 AI 网关",
+    "why_learn": "理解基础设施网关与应用 SDK 在治理层的分工。",
+    "mechanism": "基于 Envoy 与网关资源配置，在网络入口处理模型请求的路由和策略。",
+    "when_use": "已有 Kubernetes 与 Envoy 技术体系，需要统一模型流量入口。",
+    "limits": "网关无法决定回答质量；部署还依赖控制面、证书与网关资源配置。",
+    "alternatives": [
+      "LiteLLM"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/envoyproxy/ai-gateway",
+      "note": "GitHub 仓库许可元数据仅用于定位；实际使用须核对对应版本的许可全文、目录例外和商标条款。仓库许可不代表托管产品服务条款。"
+    },
+    "stars": {
+      "count": 2346,
+      "label": "2346",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/envoyproxy/ai-gateway",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362487+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/envoyproxy/ai-gateway"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/envoyproxy/ai-gateway"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/envoyproxy/ai-gateway"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/envoyproxy/ai-gateway"
+    }
+  },
+  {
+    "id": "pgvector-pgvector",
+    "name": "pgvector",
+    "category": "data",
+    "repo": "pgvector/pgvector",
+    "github_url": "https://github.com/pgvector/pgvector",
+    "docs_url": "https://github.com/pgvector/pgvector#readme",
+    "role": "在 PostgreSQL 内保存并查询向量的扩展",
+    "why_learn": "理解向量检索如何与 SQL、过滤和事务共存。",
+    "mechanism": "扩展 PostgreSQL 的向量类型与距离算子，利用 HNSW、IVFFlat 等索引搜索近邻。",
+    "when_use": "已有 PostgreSQL 数据，希望减少新增数据库运维成本。",
+    "limits": "过滤与近似索引相互影响，召回率和查询计划需要联合验证。",
+    "alternatives": [
+      "Milvus",
+      "Qdrant",
+      "Elasticsearch"
+    ],
+    "license": {
+      "name": "PostgreSQL License",
+      "source": "https://github.com/pgvector/pgvector",
+      "note": "这是 PostgreSQL License，不应因许可证检测未给出 SPDX 而归为无许可。"
+    },
+    "stars": {
+      "count": 23580,
+      "label": "23580",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/pgvector/pgvector",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362504+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/pgvector/pgvector"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/pgvector/pgvector"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/pgvector/pgvector"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/pgvector/pgvector"
+    }
+  },
+  {
+    "id": "milvus-io-milvus",
+    "name": "Milvus",
+    "category": "data",
+    "repo": "milvus-io/milvus",
+    "github_url": "https://github.com/milvus-io/milvus",
+    "docs_url": "https://milvus.io",
+    "role": "向量数据库",
+    "why_learn": "理解向量数据库的数据导入、索引与服务扩展。",
+    "mechanism": "将向量存储、索引构建和查询组织成专门的数据库服务，支持大规模相似度检索。",
+    "when_use": "向量规模和吞吐要求超出轻量数据库扩展方案。",
+    "limits": "分布式部署带来额外组件，索引构建、存储和运维成本需一起计算。",
+    "alternatives": [
+      "pgvector",
+      "Qdrant",
+      "Elasticsearch"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/milvus-io/milvus",
+      "note": "GitHub 仓库许可元数据仅用于定位；实际使用须核对对应版本的许可全文、目录例外和商标条款。仓库许可不代表托管产品服务条款。"
+    },
+    "stars": {
+      "count": 46591,
+      "label": "46591",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/milvus-io/milvus",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362515+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/milvus-io/milvus"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/milvus-io/milvus"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/milvus-io/milvus"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/milvus-io/milvus"
+    }
+  },
+  {
+    "id": "qdrant-qdrant",
+    "name": "Qdrant",
+    "category": "data",
+    "repo": "qdrant/qdrant",
+    "github_url": "https://github.com/qdrant/qdrant",
+    "docs_url": "https://qdrant.tech",
+    "role": "向量检索服务",
+    "why_learn": "学习业务元数据如何约束语义检索候选。",
+    "mechanism": "结合向量近邻检索与 payload 过滤，利用集合和索引组织检索服务。",
+    "when_use": "需要独立向量服务，并经常按用户、类别或时间过滤。",
+    "limits": "过滤字段索引与向量索引都影响性能；租户隔离仍需围绕集合与权限设计。",
+    "alternatives": [
+      "pgvector",
+      "Milvus",
+      "Elasticsearch"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/qdrant/qdrant",
+      "note": "GitHub 仓库许可元数据仅用于定位；实际使用须核对对应版本的许可全文、目录例外和商标条款。仓库许可不代表托管产品服务条款。"
+    },
+    "stars": {
+      "count": 35424,
+      "label": "35424",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/qdrant/qdrant",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362526+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/qdrant/qdrant"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/qdrant/qdrant"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/qdrant/qdrant"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/qdrant/qdrant"
+    }
+  },
+  {
+    "id": "elastic-elasticsearch",
+    "name": "Elasticsearch",
+    "category": "data",
+    "repo": "elastic/elasticsearch",
+    "github_url": "https://github.com/elastic/elasticsearch",
+    "docs_url": "https://www.elastic.co/products/elasticsearch",
+    "role": "把关键词、过滤和向量结合的混合检索底座",
+    "why_learn": "理解精确关键词和语义召回的互补关系。",
+    "mechanism": "倒排索引负责词项匹配，向量搜索补充语义近邻，再融合与重排结果。",
+    "when_use": "已有搜索资产，需要混合检索、过滤与聚合。",
+    "limits": "分词、映射和向量索引会影响结果；相关性调优不能只替换嵌入模型。",
+    "alternatives": [
+      "pgvector",
+      "Milvus",
+      "Qdrant"
+    ],
+    "license": {
+      "name": "AGPL-3.0 / SSPL-1.0 / Elastic License 2.0，范围依文件",
+      "source": "https://github.com/elastic/elasticsearch",
+      "note": "部分免费源码可在三种许可中选择；分发版本和商业功能范围不同，须按文件头与 LICENSE 核验。"
+    },
+    "stars": {
+      "count": 78485,
+      "label": "78485",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/elastic/elasticsearch",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362539+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/elastic/elasticsearch"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/elastic/elasticsearch"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/elastic/elasticsearch"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/elastic/elasticsearch"
+    }
+  },
+  {
+    "id": "redis-redis",
+    "name": "Redis",
+    "category": "data",
+    "repo": "redis/redis",
+    "github_url": "https://github.com/redis/redis",
+    "docs_url": "http://redis.io",
+    "role": "AI 链路中的低延迟缓存、会话状态及短期协调存储",
+    "why_learn": "理解 AI 链路中的低延迟状态层，与持久知识库及任务队列区分。",
+    "mechanism": "利用内存数据结构、TTL 和原子操作保存缓存、会话状态及计数信息。",
+    "when_use": "模型响应缓存、速率限制、临时会话和高频状态读取。",
+    "limits": "缓存键需包含模型与权限范围；失效策略不当会返回陈旧答案或跨用户结果。",
+    "alternatives": [
+      "pgvector",
+      "Milvus",
+      "Qdrant"
+    ],
+    "license": {
+      "name": "AGPLv3 / RSALv2 / SSPLv1（当前代码，按版本核验）",
+      "source": "https://github.com/redis/redis",
+      "note": "Redis 历史版本许可发生过变化；不能把旧 BSD 条款直接套用于当前版本。"
+    },
+    "stars": {
+      "count": 77174,
+      "label": "77174",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/redis/redis",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362548+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/redis/redis"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/redis/redis"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/redis/redis"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/redis/redis"
+    }
+  },
+  {
+    "id": "langfuse-langfuse",
+    "name": "Langfuse",
+    "category": "eval",
+    "repo": "langfuse/langfuse",
+    "github_url": "https://github.com/langfuse/langfuse",
+    "docs_url": "https://langfuse.com",
+    "role": "模型应用可观测性",
+    "why_learn": "将单次故障定位连接到持续质量改进。",
+    "mechanism": "以 traces 和 spans 记录模型链路，用数据集、评分与实验比较提示和应用版本。",
+    "when_use": "需要追踪代理步骤、管理提示并比较回答表现。",
+    "limits": "追踪内容可能包含敏感提示和工具结果，需要脱敏及保留策略。",
+    "alternatives": [
+      "MLflow",
+      "Ragas",
+      "DeepEval"
+    ],
+    "license": {
+      "name": "MIT 及 enterprise 目录专用许可",
+      "source": "https://github.com/langfuse/langfuse",
+      "note": "核心与企业目录适用不同许可；自托管并不代表每项企业功能都可自由使用。"
+    },
+    "stars": {
+      "count": 36994,
+      "label": "36994",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/langfuse/langfuse",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362559+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/langfuse/langfuse"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/langfuse/langfuse"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/langfuse/langfuse"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/langfuse/langfuse"
+    }
+  },
+  {
+    "id": "mlflow-mlflow",
+    "name": "MLflow",
+    "category": "eval",
+    "repo": "mlflow/mlflow",
+    "github_url": "https://github.com/mlflow/mlflow",
+    "docs_url": "https://mlflow.org",
+    "role": "实验与模型应用生命周期管理",
+    "why_learn": "理解实验可重复性与模型生命周期管理。",
+    "mechanism": "记录实验参数、指标与产物，组织模型版本、注册管理及生成式应用追踪评估。",
+    "when_use": "团队同时管理训练实验、模型版本和模型应用评估。",
+    "limits": "注册模型并不意味着部署完成；产物存储、权限和服务环境需单独治理。",
+    "alternatives": [
+      "Langfuse",
+      "Ragas",
+      "DeepEval"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/mlflow/mlflow",
+      "note": "GitHub 仓库许可元数据仅用于定位；实际使用须核对对应版本的许可全文、目录例外和商标条款。仓库许可不代表托管产品服务条款。"
+    },
+    "stars": {
+      "count": 28656,
+      "label": "28656",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/mlflow/mlflow",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362587+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/mlflow/mlflow"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/mlflow/mlflow"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/mlflow/mlflow"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/mlflow/mlflow"
+    }
+  },
+  {
+    "id": "explodinggradients-ragas",
+    "name": "Ragas",
+    "category": "eval",
+    "repo": "explodinggradients/ragas",
+    "github_url": "https://github.com/explodinggradients/ragas",
+    "docs_url": "https://docs.ragas.io",
+    "role": "检索生成评估",
+    "why_learn": "把 RAG 失败拆分为证据不足和回答偏离证据。",
+    "mechanism": "通过上下文相关性、忠实性等指标分析检索与回答，并支持评估数据组织。",
+    "when_use": "需要比较检索策略或生成配置对问答质量的影响。",
+    "limits": "模型裁判受提示和模型选择影响，分数需要结合人工抽样解释。",
+    "alternatives": [
+      "Langfuse",
+      "MLflow",
+      "DeepEval"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/explodinggradients/ragas",
+      "note": "GitHub 仓库许可元数据仅用于定位；实际使用须核对对应版本的许可全文、目录例外和商标条款。仓库许可不代表托管产品服务条款。"
+    },
+    "stars": {
+      "count": 16235,
+      "label": "16235",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/explodinggradients/ragas",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362597+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/explodinggradients/ragas"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/explodinggradients/ragas"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/explodinggradients/ragas"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/explodinggradients/ragas"
+    }
+  },
+  {
+    "id": "confident-ai-deepeval",
+    "name": "DeepEval",
+    "category": "eval",
+    "repo": "confident-ai/deepeval",
+    "github_url": "https://github.com/confident-ai/deepeval",
+    "docs_url": "https://deepeval.com",
+    "role": "模型应用测试",
+    "why_learn": "把模型质量要求转成可持续回归的检查项。",
+    "mechanism": "将输入、实际输出与期望信息组织为测试用例，以指标和断言评估模型应用。",
+    "when_use": "发布前需要检查问答、代理或对话行为是否退化。",
+    "limits": "阈值与模型裁判并非客观真值，需要针对业务样本校准。",
+    "alternatives": [
+      "Langfuse",
+      "MLflow",
+      "Ragas"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/confident-ai/deepeval",
+      "note": "GitHub 仓库许可元数据仅用于定位；实际使用须核对对应版本的许可全文、目录例外和商标条款。仓库许可不代表托管产品服务条款。"
+    },
+    "stars": {
+      "count": 19290,
+      "label": "19290",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/confident-ai/deepeval",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362613+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/confident-ai/deepeval"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/confident-ai/deepeval"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/confident-ai/deepeval"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/confident-ai/deepeval"
+    }
+  },
+  {
+    "id": "eleutherai-lm-evaluation-harness",
+    "name": "lm-evaluation-harness",
+    "category": "eval",
+    "repo": "EleutherAI/lm-evaluation-harness",
+    "github_url": "https://github.com/EleutherAI/lm-evaluation-harness",
+    "docs_url": "https://www.eleuther.ai",
+    "role": "语言模型基准评测",
+    "why_learn": "学习公平比较模型时如何固定数据、提示和评分口径。",
+    "mechanism": "以统一任务定义、数据处理与模型适配运行语言模型基准测试。",
+    "when_use": "研究模型能力或验证自定义模型后端。",
+    "limits": "公开基准不代表真实业务表现，污染、提示格式和推理配置都可能影响成绩。",
+    "alternatives": [
+      "Langfuse",
+      "MLflow",
+      "Ragas"
+    ],
+    "license": {
+      "name": "MIT",
+      "source": "https://github.com/EleutherAI/lm-evaluation-harness",
+      "note": "GitHub 仓库许可元数据仅用于定位；实际使用须核对对应版本的许可全文、目录例外和商标条款。仓库许可不代表托管产品服务条款。"
+    },
+    "stars": {
+      "count": 14398,
+      "label": "14398",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/EleutherAI/lm-evaluation-harness",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362622+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/EleutherAI/lm-evaluation-harness"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/EleutherAI/lm-evaluation-harness"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/EleutherAI/lm-evaluation-harness"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/EleutherAI/lm-evaluation-harness"
+    }
+  },
+  {
+    "id": "facebook-react",
+    "name": "React",
+    "category": "frontend",
+    "repo": "facebook/react",
+    "github_url": "https://github.com/facebook/react",
+    "docs_url": "https://react.dev",
+    "role": "应用交互界面",
+    "why_learn": "把流式答案、工具状态和人工确认设计为清晰交互。",
+    "mechanism": "通过组件、状态与声明式渲染构建交互界面，将应用数据变化映射到用户视图。",
+    "when_use": "需要构建模型应用的聊天、检索或管理前端。",
+    "limits": "React 不处理模型调用安全；流式更新、取消与异常状态仍需设计。",
+    "alternatives": [
+      "Vercel AI SDK"
+    ],
+    "license": {
+      "name": "MIT",
+      "source": "https://github.com/facebook/react",
+      "note": "GitHub 仓库许可元数据仅用于定位；实际使用须核对对应版本的许可全文、目录例外和商标条款。仓库许可不代表托管产品服务条款。"
+    },
+    "stars": {
+      "count": 251916,
+      "label": "251916",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/facebook/react",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362636+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/facebook/react"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/facebook/react"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/facebook/react"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/facebook/react"
+    }
+  },
+  {
+    "id": "vercel-ai",
+    "name": "Vercel AI SDK",
+    "category": "frontend",
+    "repo": "vercel/ai",
+    "github_url": "https://github.com/vercel/ai",
+    "docs_url": "https://ai-sdk.dev",
+    "role": "模型应用前端与服务端集成",
+    "why_learn": "理解流式文本、结构化结果和工具调用如何进入界面。",
+    "mechanism": "封装模型提供商和流式生成接口，将服务端模型事件连接到前端会话状态。",
+    "when_use": "使用 JavaScript 或 TypeScript 构建交互式模型应用。",
+    "limits": "服务端运行环境与提供商能力影响行为；密钥和工具执行应留在受控服务端。",
+    "alternatives": [
+      "React"
+    ],
+    "license": {
+      "name": "Apache-2.0（SDK）；第三方组件另计",
+      "source": "https://github.com/vercel/ai",
+      "note": "仓库可能含多许可文件；模型服务、提供商条款和 SDK 许可相互独立。"
+    },
+    "stars": {
+      "count": 27734,
+      "label": "27734",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/vercel/ai",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362645+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/vercel/ai"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/vercel/ai"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/vercel/ai"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/vercel/ai"
+    }
+  },
+  {
+    "id": "modelcontextprotocol-python-sdk",
+    "name": "MCP Python SDK",
+    "category": "protocol",
+    "repo": "modelcontextprotocol/python-sdk",
+    "github_url": "https://github.com/modelcontextprotocol/python-sdk",
+    "docs_url": "https://py.sdk.modelcontextprotocol.io/",
+    "role": "模型应用连接工具与资源的协议 SDK",
+    "why_learn": "学习可复用工具连接层与代理业务逻辑的边界。",
+    "mechanism": "客户端与服务端协商能力，通过协议发现工具、读取资源和执行结构化调用。",
+    "when_use": "多个模型客户端需要共享同一套工具服务。",
+    "limits": "MCP 不是代理间任务协议，也不会自动授予工具权限；身份与授权需另建。",
+    "alternatives": [
+      "A2A"
+    ],
+    "license": {
+      "name": "MIT",
+      "source": "https://github.com/modelcontextprotocol/python-sdk",
+      "note": "GitHub 仓库许可元数据仅用于定位；实际使用须核对对应版本的许可全文、目录例外和商标条款。仓库许可不代表托管产品服务条款。"
+    },
+    "stars": {
+      "count": 24754,
+      "label": "24754",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/modelcontextprotocol/python-sdk",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362655+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/modelcontextprotocol/python-sdk"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/modelcontextprotocol/python-sdk"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/modelcontextprotocol/python-sdk"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/modelcontextprotocol/python-sdk"
+    }
+  },
+  {
+    "id": "a2aproject-a2a",
+    "name": "A2A",
+    "category": "protocol",
+    "repo": "a2aproject/A2A",
+    "github_url": "https://github.com/a2aproject/A2A",
+    "docs_url": "https://a2a-protocol.org/",
+    "role": "独立代理之间描述能力和交换任务的互操作协议",
+    "why_learn": "区分代理间委派与 MCP 的工具、资源访问。",
+    "mechanism": "通过代理能力描述和任务生命周期交换消息，让独立代理服务协作。",
+    "when_use": "跨团队或跨框架代理需要传递任务并跟踪结果。",
+    "limits": "互操作协议不能保证对方代理可靠；任务取消、超时和信任仍需约定。",
+    "alternatives": [
+      "MCP Python SDK"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/a2aproject/A2A",
+      "note": "GitHub 仓库许可元数据仅用于定位；实际使用须核对对应版本的许可全文、目录例外和商标条款。仓库许可不代表托管产品服务条款。"
+    },
+    "stars": {
+      "count": 26413,
+      "label": "26413",
+      "as_of": "2026-11-04",
+      "source": "https://api.github.com/repos/a2aproject/A2A",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T14:40:50.362665+00:00"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库与 README",
+        "url": "https://github.com/a2aproject/A2A"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/a2aproject/A2A"
+      },
+      {
+        "title": "官方许可证入口",
+        "url": "https://github.com/a2aproject/A2A"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/a2aproject/A2A"
+    }
+  },
+  {
+    "id": "microsoft-agent-framework",
+    "name": "Microsoft Agent Framework",
+    "category": "agents",
+    "repo": "microsoft/agent-framework",
+    "github_url": "https://github.com/microsoft/agent-framework",
+    "docs_url": "https://learn.microsoft.com/en-us/agent-framework/",
+    "role": "Microsoft 面向代理与工作流的开发框架，也是 AutoGen 官方迁移目标",
+    "why_learn": "研究 AutoGen 向后继框架迁移时的概念映射。",
+    "mechanism": "组合代理执行、工具与工作流能力，提供 Microsoft 代理体系的开发入口。",
+    "when_use": "Microsoft 技术团队构建新代理，或迁移既有 AutoGen 系统。",
+    "limits": "不是替换依赖名即可迁移；消息、状态和工具行为都要重新核验。",
+    "alternatives": [
+      "LangGraph",
+      "OpenAI Agents SDK",
+      "Google ADK"
+    ],
+    "license": {
+      "name": "未确认",
+      "source": "https://github.com/microsoft/agent-framework/blob/main/LICENSE",
+      "note": "以对应版本 LICENSE 和第三方依赖声明为准；模型服务条款独立。"
+    },
+    "stars": {
+      "count": null,
+      "label": "未获取",
+      "as_of": "2026-11-04",
+      "retrieved_at": "2026-11-04T14:41:31.830633+00:00",
+      "source": "https://api.github.com/repos/microsoft/agent-framework",
+      "method": "GitHub REST repos.stargazers_count"
+    },
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/microsoft/agent-framework"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库",
+        "url": "https://github.com/microsoft/agent-framework"
+      },
+      {
+        "title": "AutoGen 官方迁移指南",
+        "url": "https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/"
+      }
+    ]
+  },
+  {
+    "id": "apache-kafka",
+    "name": "Apache Kafka",
+    "category": "messaging",
+    "repo": "apache/kafka",
+    "github_url": "https://github.com/apache/kafka",
+    "docs_url": "https://kafka.apache.org/documentation/",
+    "role": "AI 异步链路中的持久事件日志与消息基础设施",
+    "mechanism": "将事件写入分区日志，通过消费组分配读取工作；消费者记录偏移量以支持恢复和重放。",
+    "why_learn": "理解消息流与代理状态机的分工：Kafka 负责事件输送，LangGraph 决定任务下一步。",
+    "when_use": "文档索引更新、批量嵌入生成、推理任务解耦及工具执行结果的异步传递。",
+    "limits": "分区内有序不等于全局有序；模型和外部工具副作用仍需幂等处理，不能只依赖消息投递语义。",
+    "alternatives": [
+      "Apache Pulsar",
+      "RabbitMQ",
+      "Redis Streams"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/apache/kafka/blob/trunk/LICENSE",
+      "note": "项目代码及随附第三方内容的 NOTICE 和许可声明须同时保留。"
+    },
+    "stars": {
+      "count": 34123,
+      "label": "34123",
+      "as_of": "2026-11-04",
+      "retrieved_at": "2026-11-04T15:25:20.016281+00:00",
+      "source": "https://api.github.com/repos/apache/kafka",
+      "method": "GitHub REST repos.stargazers_count；未返回字段则不推算"
+    },
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-11-04T13:39:27Z",
+      "source": "https://api.github.com/repos/apache/kafka"
+    },
+    "verified_on": "2026-11-04",
+    "sources": [
+      {
+        "title": "官方仓库",
+        "url": "https://github.com/apache/kafka"
+      },
+      {
+        "title": "官方设计文档",
+        "url": "https://kafka.apache.org/documentation/#design"
+      }
+    ]
+  }
+]

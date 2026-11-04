@@ -5,6 +5,7 @@ from html.parser import HTMLParser
 from urllib.parse import unquote, urlsplit
 
 from catalog import ROOT, load_articles
+from edition import read_json
 
 D = ROOT / 'dist'
 ARTICLES = load_articles()
@@ -144,13 +145,50 @@ for path in svg_paths:
     ns = {'s': 'http://www.w3.org/2000/svg'}
     if root.find('s:title', ns) is None or root.find('s:desc', ns) is None:
         errors.append(f'Missing accessible diagram description: {path}')
-if len(docs) != len(ARTICLES) + 4 or len(svg_paths) != len(ARTICLES):
+expected_diagrams = sum(1 + len(a.get('diagrams', [])) for a in ARTICLES)
+if len(docs) != len(ARTICLES) + 7 or len(svg_paths) != expected_diagrams:
     errors.append('Generated page/diagram inventory differs from content inventory')
-if docs[(D / 'index.html').resolve()].cards != len(ARTICLES):
-    errors.append('Homepage article inventory differs from content')
+if docs[(D / 'library.html').resolve()].cards != len(ARTICLES):
+    errors.append('Article library inventory differs from content')
 terms = {term for a in ARTICLES for term in a['tags']}
 if docs[(D / 'glossary.html').resolve()].term_entries != len(terms):
     errors.append('Glossary inventory differs from content')
+book = read_json('content/book.json', {'parts': []})
+covered = [slug for part in book['parts'] for chapter in part['chapters'] for slug in chapter['slugs']]
+if len(covered) != len(set(covered)) or set(covered) != slugs:
+    errors.append('Book contents must cover every article exactly once')
+for article in ARTICLES:
+    if article.get('level') == '深入':
+        if len(article['sections']) < 8 or sum(len(s['text']) for s in article['sections']) < 1400:
+            errors.append(f'Deep chapter lacks substantive sections: {article["slug"]}')
+        if len(article.get('diagrams', [])) < 2 or not article.get('comparison'):
+            errors.append(f'Deep chapter lacks supporting diagrams/comparison: {article["slug"]}')
+    for detail in article.get('diagrams', []):
+        if len(detail['nodes']) != 4 or not detail.get('title') or not detail.get('caption'):
+            errors.append(f'Invalid detail diagram: {article["slug"]}')
+        if detail.get('diagram_type') not in {'flow', 'comparison', 'branch', 'cycle', 'timeline'}:
+            errors.append(f'Unknown detail diagram type: {article["slug"]}')
+projects = read_json('content/research/projects.json', [])
+resources = read_json('content/research/resources.json', [])
+if len(projects) < 30 or len(resources) < 8:
+    errors.append('Insufficient researched project/resource coverage')
+for collection in (projects, resources):
+    identifiers = [item['id'] for item in collection]
+    if len(identifiers) != len(set(identifiers)):
+        errors.append('Duplicate research item id')
+    for item in collection:
+        star = item['stars']
+        if star['count'] is not None and (not isinstance(star['count'], int) or star['count'] < 0):
+            errors.append(f'Invalid star count: {item["id"]}')
+        if not star['source'].startswith('https://') or not star.get('as_of') or not star.get('method'):
+            errors.append(f'Missing star provenance: {item["id"]}')
+        if not item['license'].get('name') or not item['license'].get('source'):
+            errors.append(f'Missing license provenance: {item["id"]}')
+for item in projects:
+    for field in ('role','mechanism','why_learn','when_use','limits','alternatives'):
+        if not item.get(field):
+            errors.append(f'Project missing {field}: {item["id"]}')
+
 if errors:
     raise SystemExit('\n'.join(errors))
 print(f'PASS: {len(ARTICLES)} articles; {len(docs)} HTML pages; {len(svg_paths)} SVG diagrams; '

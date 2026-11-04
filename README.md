@@ -1,33 +1,39 @@
-# AI 慢慢懂 · 图解知识库
+# AI 慢慢懂 · 图解教程书
 
-写给零基础、希望随时翻阅 AI 知识的读者。不要求编程，不设学习进度。
+面向零基础读者，把 AI 概念、模型机制、应用开发、主流技术栈和推理平台组织成一本可逐章阅读的中文教程。不要求编程，不设打卡进度。
 
-**[进入阅读站](https://laihuannran.github.io/ai-knowledge/)** · [知识地图](https://laihuannran.github.io/ai-knowledge/map.html) · [术语速查](https://laihuannran.github.io/ai-knowledge/glossary.html)
+**[开始阅读](https://laihuannran.github.io/ai-knowledge/)** · **[全书目录](https://laihuannran.github.io/ai-knowledge/map.html)** · **[技术栈图谱](https://laihuannran.github.io/ai-knowledge/stack.html)** · [参考书架](https://laihuannran.github.io/ai-knowledge/resources.html) · [全文检索](https://laihuannran.github.io/ai-knowledge/library.html)
 
-10 个专题、60 篇原创讲解、60 张 SVG 概念图、17 张比较表、219 个术语入口。每篇包括生活类比、图解、概念解释、场景、误区、自测解释与官方资料。
+## 书籍版（2026-11-05）
 
-## 阅读目录
+12篇、31章、86节。其中26篇为新增深入章节，每篇8–11个正文小节，结合具体机制、连贯案例、比较表与多张原创概念图。其余短文保留作为概念入口。合计138张SVG图、43张比较表与292个术语入口。
 
-1. AI 基础：AI 地图、训练与推理、Token/上下文/幻觉、损失梯度、向量与概率。
-2. 模型能力：Transformer/Attention/MoE、QKV与位置、采样解码、模型交付方式。
-3. 训练与对齐：数据质量、SFT、LoRA/QLoRA、偏好优化与蒸馏。
-4. AI 应用：提示词、RAG、文档解析、混合检索/RRF、重排、向量索引、证据与拒答。
-5. 智能体：Agent、MCP/API/Skill、记忆、计划、工具可靠性、多智能体协作。
-6. 接入平台：网关、路由、配额预算、重试熔断、缓存路由、流式事件。
-7. 推理设施：GPU/量化、KV Cache、PD分离、批处理、推测解码、并行与性能瓶颈。
-8. 评测运行：评测集、检索指标、裁判校准、A/B、可观测性、灰度回归与回滚。
-9. 多模态：视觉/OCR、ASR/TTS、扩散图像生成、视频理解。
-10. 行业技术栈：产品职责、代表项目、云端/本地/混合方案的判断依据。
+1. **先建立AI的世界地图**：概念边界、够用的数学直觉。
+2. **模型怎样读懂和生成**：Transformer、QKV、MoE与一次完整计算。
+3. **模型怎样被训练出来**：数据、SFT、LoRA、偏好、蒸馏与生命周期。
+4. **让回答有资料可依**：资料入库、混合检索、索引、重排、证据与拒答。
+5. **从回答到执行任务**：ReAct、规划、状态、记忆、可靠执行和协作。
+6. **主流应用框架怎么选**：LangChain/LangGraph系列、Agent/RAG框架、低代码与Java生态。
+7. **工具协议与桌面Agent**：MCP/A2A/Skills、Codex、Claude Desktop/Code、本地工具链。
+8. **请求怎样进入模型平台**：网关、配额预算、流式事件、路由与可靠性。
+9. **模型怎样高效运行**：GPU、缓存、批处理、并行、PD系列。
+10. **怎样知道系统真的变好**：评测集、裁判校准、线上实验、运行与发布。
+11. **文字之外的AI**：视觉、声音、视频与完整多模态链路。
+12. **把技术栈装成一套系统**：Java组件类比、场景组合和架构取舍。
 
-也可在 [content](content) 中直接阅读 Markdown 文章。模型路由、RAG、PD 等技术按概念说明，不承诺特定厂商性能或固定版本能力。示意图是简化模型，案例数字是教学假设。
+## 技术栈与资料研究
 
-## 来源与时效
+`content/research/projects.json`记录41个项目，覆盖LangChain、LangGraph、LlamaIndex、Haystack、Spring AI、LangChain4j、主流Agent框架、Dify/n8n/Flowise、Codex、Claude Code、Ollama/llama.cpp、vLLM/SGLang、LiteLLM、向量与检索数据库、Redis/Kafka、评测工具和React/AI SDK。每项说明职责、机制、适用场景、限制、对照项目、许可与来源。
 
-各篇文末附官方文档或项目链接；初始整理日期为 2026-11-04。`content/source-checks.json` 记录链接 HTTP 检查结果，可达不代表对页面所有内容作出背书。文字为原创综合解释，不是官方文档翻译或转载。此项目没有定时采集任务，内容更新通过后续提交完成。
+GitHub Star来自2026-11-04的实时元数据快照，附来源、方法及抓取时间；无法获取明确保留空值。关注度不是品质排名。AutoGen已按官方状态标注为归档历史参考，另列接替项目。产品、源码仓库、模型权重和托管服务的授权边界分开记录。
 
-## 本地构建（维护者可选，读者无需操作）
+`content/research/resources.json`包含10项学习资源，包括可核验的GitHub课程及官方课程入口。课程代码许可不自动授权复制书籍文字或图片；本站以原文链接、中文导读和原创教学整合为主，不整篇搬运不明许可内容。
 
-仅依赖 Python 3 标准库：
+## 阅读与维护
+
+网站有可搜索、展开/收起的分篇目录；长文有本章阅读顺序、前置知识与相关章节。原有60篇URL保留。全文检索包含正文和比较表；图表可在手机容器内左右滑动。
+
+仅依赖Python 3标准库：
 
 ```sh
 python3 scripts/build.py
@@ -35,19 +41,22 @@ python3 scripts/check.py
 python3 -m http.server 8765 --directory dist
 ```
 
-打开 `http://localhost:8765`。`content/articles.json`、`content/expansion.json`、`content/supplement.json` 是正文数据源，`scripts/build.py` 生成网页、Markdown 和 SVG；`assets` 存放样式及搜索逻辑。`seed_content.py` 仅用于重建初始数据，日常编辑请直接修改 JSON，避免覆盖已有更新。
+- `content/book.json`：完整篇章结构与阅读顺序。
+- `content/articles.json`、`expansion.json`、`supplement.json`：既有概念文章。
+- `content/stack_chapters.json`、`deep_chapters.json`：新增长章节。
+- `content/*.md`：构建生成的GitHub阅读版文章。
+- `scripts/edition.py`：书籍导览、项目图谱和参考书架。
+- `scripts/diagrams.py`：原创SVG概念图。
+- `assets/`：样式和浏览器搜索交互。
 
-## GitHub Pages
+编辑结构化内容后运行构建，勿手工修改生成的`dist`或Markdown。`seed_content.py`仅用于首批原始数据重建，不应用来覆盖后续编辑。`check_sources.py`记录HTTP可达情况；网络失败不自动等于链接失效，人工概念核验另行记录。
 
-仓库 Settings → Pages → Build and deployment 的 Source 选择 **GitHub Actions**。推送 `main` 后，工作流构建并部署 `dist`。所有站内链接采用相对地址，支持 `/ai-knowledge/` 项目路径。`dist` 一并保留便于直接查看和迁移。
+## 发布与边界
+
+Settings → Pages → Source选择GitHub Actions。推送`main`后工作流构建并发布`dist`。所有站内链接支持项目路径。当前没有设置自动采集或定时生成文章。
+
+这是一份逐步深化的教程，不宣称包含全部AI知识；入门图示有意简化，假设数字不代表实测性能或厂商报价。具体产品能力和许可应以所选版本的原始资料为准。
 
 ## 许可
 
-原创文字与 SVG 示意图： [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh-hans)。
-构建代码和页面样式：MIT，见 [LICENSE](LICENSE)。第三方资料归原作者，遵循其各自许可。
-
-## 第二批扩充（2026-11-04）
-
-从20篇扩充至60篇，新增训练与对齐、多模态两专题；原有20篇入口保持不变。每篇可沿前置阅读、相关主题和上一篇/下一篇继续阅读。搜索包含正文、术语与比较表。图示按概念使用流程、分支、反馈循环、并列比较或时间阶段，窄屏可在图表容器内左右滑动。
-
-目前是持续完善的知识库，不声称已覆盖全部AI知识。高阶数学证明、完整训练操作、厂商配置教程和实时行情不属于当前的无需编程阅读目标。
+原创文字与SVG图采用[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh-hans)，构建代码与样式采用MIT，见[LICENSE](LICENSE)。链接资料归原作者，遵循其各自许可。
