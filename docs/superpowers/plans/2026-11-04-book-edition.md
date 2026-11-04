@@ -10,4 +10,7 @@
 - [x] 书籍结构：content/book.json 定义篇章系列与阅读顺序，覆盖全部文章，各章标记深度。首页变为封面和总目录入口，新增 stack.html/resources.html/library.html。
 - [x] 构建：加载新增内容，支持长文分段和额外图、技术栈比较页、资料页、深度标记、每篇所属篇章与系列导航，保留原链接。
 - [x] 验证：全站链接及SVG、数量与目录覆盖、项目与来源数据、长文实际深度；浏览器检查桌面/手机目录、搜索、图表。
-- [ ] 两阶段审稿、修正发现问题，构建可重复；提交推送，检查Actions和线上新增内容。
+- [x] 两阶段审稿、修正发现问题，构建可重复；提交推送，检查Actions和线上新增内容。
+
+发布结果：2026-11-05，GitHub Actions #3 build/deploy成功，线上封面、目录、技术栈、参考书架、Codex/LangGraph/架构长文及附图验证通过。
+https://github.com/laihuannran/ai-knowledge/actions/runs/41869653890

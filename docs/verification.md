@@ -42,3 +42,6 @@
 - 代码审稿修复合并分类快捷入口的遗漏，动态数量从实际数据生成。
 
 研究说明：学习资源只链接导读并原创整合，不把项目代码许可视为书籍文字图片的转载授权。Star不作为质量排名。
+
+书籍版已发布：GitHub Actions #3成功（commit f3cf80f），线上封面12篇目录、41项目图谱、课程书架及新增长文检查通过，LangGraph主图与两张附图在线字节与本地构建完全一致。
+https://github.com/laihuannran/ai-knowledge/actions/runs/41869653890
