@@ -4,9 +4,15 @@
 
 专题：智能体 · 整理于 2026-11-04
 
+## 前置阅读
+
+- [提示词：把需求说明白，比背咒语更有用](prompt.md)
+
 ## 先用一个类比理解
 
 固定审批流程像按线路行驶的公交；Agent 像可以根据情况调整路线的助手，但仍需要预算、权限和停车规则。
+
+类比只帮助建立直觉，不等同于完整机制。
 
 ## 一图看懂
 
@@ -42,8 +48,15 @@
 
 </details>
 
+## 关联阅读
+
+- [智能体记忆：上下文、笔记与长期存储](agent-memory.md)
+- [计划与停止：智能体怎样避免一直忙下去](agent-planning.md)
+- [工具可靠性：接口成功为何仍可能办错事](agent-tool-reliability.md)
+- [多智能体协作：分工收益与协调成本](multi-agent-coordination.md)
+
 ## 原始资料
 
 - [Anthropic · Building effective agents](https://www.anthropic.com/engineering/building-effective-agents)
 
-原创入门讲解；类比和示意图经过简化。工具功能以对应版本官方文档为准。
+原创讲解；图示和类比经过简化，数字示例不代表实测。工具功能以对应版本官方资料为准。

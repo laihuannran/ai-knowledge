@@ -7,6 +7,83 @@
     "note": "HTTP reachability only; manually reviewed core references separately."
   },
   {
+    "url": "https://arxiv.org/abs/1706.03762",
+    "status": "200",
+    "final_url": "https://arxiv.org/abs/1706.03762",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://arxiv.org/abs/2104.09864",
+    "status": "200",
+    "final_url": "https://arxiv.org/abs/2104.09864",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://arxiv.org/abs/2211.17192",
+    "status": "200",
+    "final_url": "https://arxiv.org/abs/2211.17192",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://arxiv.org/abs/2305.14314",
+    "status": "200",
+    "final_url": "https://arxiv.org/abs/2305.14314",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://arxiv.org/abs/2306.05685",
+    "status": "200",
+    "final_url": "https://arxiv.org/abs/2306.05685",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://arxiv.org/abs/2406.18665",
+    "status": "200",
+    "final_url": "https://arxiv.org/abs/2406.18665",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/",
+    "status": "200",
+    "final_url": "https://builder.aws.com/content/3EumjoZascWd1oZiEgL8ORlv3qE/timeouts-retries-and-backoff-with-jitter",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events",
+    "status": "200",
+    "final_url": "https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://developers.google.com/machine-learning/crash-course/linear-regression/gradient-descent",
+    "status": "200",
+    "final_url": "https://developers.google.com/machine-learning/crash-course/linear-regression/gradient-descent",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://developers.google.com/machine-learning/crash-course/neural-networks/multi-class",
+    "status": "200",
+    "final_url": "https://developers.google.com/machine-learning/crash-course/neural-networks/multi-class",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://developers.google.com/machine-learning/crash-course/overfitting/dividing-datasets",
+    "status": "200",
+    "final_url": "https://developers.google.com/machine-learning/crash-course/overfitting/dividing-datasets",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://developers.openai.com/api/docs/guides/evaluation-best-practices",
     "status": "200",
     "final_url": "https://developers.openai.com/api/docs/guides/evaluation-best-practices",
@@ -28,11 +105,25 @@
     "note": "HTTP reachability only; manually reviewed core references separately."
   },
   {
+    "url": "https://docs.langchain.com/oss/python/concepts/memory",
+    "status": "200",
+    "final_url": "https://docs.langchain.com/oss/python/concepts/memory",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://docs.langchain.com/oss/python/langchain/retrieval",
     "status": "200",
     "final_url": "https://docs.langchain.com/oss/python/deepagents/retrieval",
     "checked_on": "2026-11-04",
     "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://docs.langchain.com/oss/python/langgraph/memory",
+    "status": "200",
+    "final_url": "https://docs.langchain.com/oss/python/concepts/memory",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
     "url": "https://docs.litellm.ai/docs/",
@@ -42,6 +133,20 @@
     "note": "HTTP reachability only; manually reviewed core references separately."
   },
   {
+    "url": "https://docs.litellm.ai/docs/caching/all_caches",
+    "status": "200",
+    "final_url": "https://docs.litellm.ai/docs/caching/all_caches",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://docs.litellm.ai/docs/proxy/users",
+    "status": "200",
+    "final_url": "https://docs.litellm.ai/docs/proxy/users",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://docs.litellm.ai/docs/routing",
     "status": "200",
     "final_url": "https://docs.litellm.ai/docs/routing",
@@ -49,11 +154,32 @@
     "note": "HTTP reachability only; manually reviewed core references separately."
   },
   {
+    "url": "https://docs.nvidia.com/deeplearning/performance/dl-performance-gpu-background/index.html",
+    "status": "200",
+    "final_url": "https://docs.nvidia.com/deeplearning/performance/dl-performance-gpu-background/index.html",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/faithfulness/",
+    "status": "200",
+    "final_url": "https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/faithfulness/",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://docs.sglang.ai/",
     "status": "200",
     "final_url": "https://docs.sglang.io/",
     "checked_on": "2026-11-04",
     "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://docs.vllm.ai/en/latest/configuration/optimization/",
+    "status": "200",
+    "final_url": "https://docs.vllm.ai/en/latest/configuration/optimization/",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
     "url": "https://docs.vllm.ai/en/latest/design/metrics/",
@@ -82,6 +208,20 @@
     "final_url": "https://docs.vllm.ai/en/latest/features/disagg_prefill/",
     "checked_on": "2026-11-04",
     "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://docs.vllm.ai/en/latest/features/spec_decode/",
+    "status": "200",
+    "final_url": "https://docs.vllm.ai/en/latest/features/spec_decode/",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://docs.vllm.ai/en/latest/serving/expert_parallel_deployment/",
+    "status": "200",
+    "final_url": "https://docs.vllm.ai/en/latest/serving/expert_parallel_deployment/",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
     "url": "https://docs.vllm.ai/en/latest/serving/parallelism_scaling/",
@@ -126,11 +266,25 @@
     "note": "This execution environment could not reach the URL within timeout. Not classified as a broken source. Some core Hugging Face references were independently readable through web browsing."
   },
   {
+    "url": "https://huggingface.co/docs/diffusers/en/using-diffusers/conditional_image_generation",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/diffusers/en/using-diffusers/conditional_image_generation",
+    "checked_on": "2026-11-04",
+    "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
+  },
+  {
     "url": "https://huggingface.co/docs/hub/model-cards",
     "status": "000",
     "final_url": "https://huggingface.co/docs/hub/model-cards",
     "checked_on": "2026-11-04",
     "note": "This execution environment could not reach the URL within timeout. Not classified as a broken source. Some core Hugging Face references were independently readable through web browsing."
+  },
+  {
+    "url": "https://huggingface.co/docs/peft/en/developer_guides/lora",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/peft/en/developer_guides/lora",
+    "checked_on": "2026-11-04",
+    "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
   },
   {
     "url": "https://huggingface.co/docs/peft/index",
@@ -161,11 +315,53 @@
     "note": "This execution environment could not reach the URL within timeout. Not classified as a broken source. Some core Hugging Face references were independently readable through web browsing."
   },
   {
+    "url": "https://huggingface.co/docs/transformers/en/tasks/asr",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/transformers/en/tasks/asr",
+    "checked_on": "2026-11-04",
+    "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
+  },
+  {
+    "url": "https://huggingface.co/docs/transformers/en/tasks/document_question_answering",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/transformers/en/tasks/document_question_answering",
+    "checked_on": "2026-11-04",
+    "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
+  },
+  {
+    "url": "https://huggingface.co/docs/transformers/en/tasks/text-to-speech",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/transformers/en/tasks/text-to-speech",
+    "checked_on": "2026-11-04",
+    "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
+  },
+  {
+    "url": "https://huggingface.co/docs/transformers/en/tasks/video_text_to_text",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/transformers/en/tasks/video_text_to_text",
+    "checked_on": "2026-11-04",
+    "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
+  },
+  {
     "url": "https://huggingface.co/docs/transformers/llm_tutorial",
     "status": "000",
     "final_url": "https://huggingface.co/docs/transformers/llm_tutorial",
     "checked_on": "2026-11-04",
     "note": "This execution environment could not reach the URL within timeout. Not classified as a broken source. Some core Hugging Face references were independently readable through web browsing."
+  },
+  {
+    "url": "https://huggingface.co/docs/transformers/main/en/generation_strategies",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/transformers/main/en/generation_strategies",
+    "checked_on": "2026-11-04",
+    "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
+  },
+  {
+    "url": "https://huggingface.co/docs/transformers/main_classes/text_generation",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/transformers/main_classes/text_generation",
+    "checked_on": "2026-11-04",
+    "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
   },
   {
     "url": "https://huggingface.co/docs/transformers/model_doc/mixtral",
@@ -182,6 +378,41 @@
     "note": "This execution environment could not reach the URL within timeout. Not classified as a broken source. Some core Hugging Face references were independently readable through web browsing."
   },
   {
+    "url": "https://huggingface.co/docs/trl/en/distillation_trainer",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/trl/en/distillation_trainer",
+    "checked_on": "2026-11-04",
+    "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
+  },
+  {
+    "url": "https://huggingface.co/docs/trl/en/dpo_trainer",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/trl/en/dpo_trainer",
+    "checked_on": "2026-11-04",
+    "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
+  },
+  {
+    "url": "https://huggingface.co/docs/trl/en/grpo_trainer",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/trl/en/grpo_trainer",
+    "checked_on": "2026-11-04",
+    "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
+  },
+  {
+    "url": "https://huggingface.co/docs/trl/en/reward_trainer",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/trl/en/reward_trainer",
+    "checked_on": "2026-11-04",
+    "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
+  },
+  {
+    "url": "https://huggingface.co/docs/trl/en/sft_trainer",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/trl/en/sft_trainer",
+    "checked_on": "2026-11-04",
+    "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
+  },
+  {
     "url": "https://huggingface.co/learn/llm-course/chapter1/1",
     "status": "000",
     "final_url": "https://huggingface.co/learn/llm-course/chapter1/1",
@@ -196,11 +427,25 @@
     "note": "This execution environment could not reach the URL within timeout. Not classified as a broken source. Some core Hugging Face references were independently readable through web browsing."
   },
   {
+    "url": "https://huggingface.co/learn/llm-course/en/chapter5/5",
+    "status": "000",
+    "final_url": "https://huggingface.co/learn/llm-course/en/chapter5/5",
+    "checked_on": "2026-11-04",
+    "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
+  },
+  {
     "url": "https://kubernetes.io/docs/concepts/overview/",
     "status": "200",
     "final_url": "https://kubernetes.io/docs/concepts/overview/",
     "checked_on": "2026-11-04",
     "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/",
+    "status": "200",
+    "final_url": "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
     "url": "https://langfuse.com/docs",
@@ -210,11 +455,46 @@
     "note": "HTTP reachability only; manually reviewed core references separately."
   },
   {
+    "url": "https://langfuse.com/docs/evaluation/overview",
+    "status": "200",
+    "final_url": "https://langfuse.com/docs/evaluation/overview",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide",
+    "status": "200",
+    "final_url": "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker",
+    "status": "200",
+    "final_url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/azure/search/vector-search-how-to-chunk-documents",
+    "status": "200",
+    "final_url": "https://learn.microsoft.com/en-us/azure/search/vector-search-how-to-chunk-documents",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://milvus.io/docs",
     "status": "403",
     "final_url": "https://milvus.io/docs",
     "checked_on": "2026-11-04",
     "note": "Server denied this automated request; link validity could not be established by curl."
+  },
+  {
+    "url": "https://milvus.io/docs/index-explained.md",
+    "status": "403",
+    "final_url": "https://milvus.io/docs/index-explained.md",
+    "checked_on": "2026-11-04",
+    "note": "Non-200 automatic request; review separately before declaring a broken source."
   },
   {
     "url": "https://mlflow.org/docs/latest/",
@@ -224,11 +504,25 @@
     "note": "HTTP reachability only; manually reviewed core references separately."
   },
   {
+    "url": "https://mlflow.org/docs/latest/ml/model-registry/",
+    "status": "200",
+    "final_url": "https://mlflow.org/docs/latest/ml/model-registry/",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://modelcontextprotocol.io/docs/getting-started/intro",
     "status": "200",
     "final_url": "https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro",
     "checked_on": "2026-11-04",
     "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://modelcontextprotocol.io/specification/2025-06-18/server/tools",
+    "status": "200",
+    "final_url": "https://modelcontextprotocol.io/specification/2025-06-18/server/tools",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
     "url": "https://opentelemetry.io/docs/what-is-opentelemetry/",
@@ -245,6 +539,13 @@
     "note": "HTTP reachability only; manually reviewed core references separately."
   },
   {
+    "url": "https://platform.claude.com/docs/en/build-with-claude/streaming",
+    "status": "200",
+    "final_url": "https://platform.claude.com/docs/en/build-with-claude/streaming",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://prometheus.io/docs/practices/histograms/",
     "status": "200",
     "final_url": "https://prometheus.io/docs/practices/histograms/",
@@ -257,6 +558,55 @@
     "final_url": "https://www.anthropic.com/research/building-effective-agents",
     "checked_on": "2026-11-04",
     "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+    "status": "200",
+    "final_url": "https://www.anthropic.com/research/multi-agent-research-system",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://www.elastic.co/docs/reference/elasticsearch/rest-apis/reciprocal-rank-fusion",
+    "status": "200",
+    "final_url": "https://www.elastic.co/docs/reference/elasticsearch/rest-apis/reciprocal-rank-fusion",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://www.elastic.co/docs/reference/elasticsearch/rest-apis/search-rank-eval",
+    "status": "200",
+    "final_url": "https://www.elastic.co/docs/reference/elasticsearch/rest-apis/search-rank-eval",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://www.microsoft.com/en-us/research/group/experimentation-platform-exp/",
+    "status": "200",
+    "final_url": "https://www.microsoft.com/en-us/research/group/experimentation-platform-exp/",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://www.sbert.net/docs/sentence_transformer/usage/semantic_textual_similarity.html",
+    "status": "200",
+    "final_url": "https://www.sbert.net/docs/sentence_transformer/usage/semantic_textual_similarity.html",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://www.sbert.net/docs/sentence_transformer/usage/usage.html",
+    "status": "200",
+    "final_url": "https://www.sbert.net/docs/sentence_transformer/usage/usage.html",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://www.sbert.net/examples/cross_encoder/applications/README.html",
+    "status": "200",
+    "final_url": "https://www.sbert.net/examples/cross_encoder/applications/README.html",
+    "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
     "url": "https://www.sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html",

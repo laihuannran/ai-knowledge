@@ -4,9 +4,15 @@
 
 专题：智能体 · 整理于 2026-11-04
 
+## 前置阅读
+
+- [Agent 和工作流：从回答问题到执行任务](agent.md)
+
 ## 先用一个类比理解
 
 API 像某台设备的操作面板；MCP 像统一接头；Skill 像操作手册。接头和手册都不会自动赋予使用设备的权限。
+
+类比只帮助建立直觉，不等同于完整机制。
 
 ## 一图看懂
 
@@ -42,9 +48,15 @@ MCP 不保证工具可信，也不代表接上就能访问全部数据。外部�
 
 </details>
 
+## 关联阅读
+
+- [工具可靠性：接口成功为何仍可能办错事](agent-tool-reliability.md)
+- [智能体记忆：上下文、笔记与长期存储](agent-memory.md)
+- [多智能体协作：分工收益与协调成本](multi-agent-coordination.md)
+
 ## 原始资料
 
 - [MCP · 协议介绍](https://modelcontextprotocol.io/docs/getting-started/intro)
 - [Agent Skills · 概览](https://agentskills.io/what-are-skills)
 
-原创入门讲解；类比和示意图经过简化。工具功能以对应版本官方文档为准。
+原创讲解；图示和类比经过简化，数字示例不代表实测。工具功能以对应版本官方资料为准。

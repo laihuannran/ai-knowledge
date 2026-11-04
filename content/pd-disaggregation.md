@@ -4,9 +4,15 @@
 
 专题：推理设施 · 整理于 2026-11-04
 
+## 前置阅读
+
+- [Prefill、Decode 与 KV Cache：一次回答的内部旅程](prefill-decode.md)
+
 ## 先用一个类比理解
 
 餐厅把备菜和出餐分工，能分别安排人手，也会增加传菜与协调。若传菜太慢，分工未必比一体完成更好。
+
+类比只帮助建立直觉，不等同于完整机制。
 
 ## 一图看懂
 
@@ -42,8 +48,14 @@ PD 分离不是训练和推理分离，也不是自动把一个大模型切成�
 
 </details>
 
+## 关联阅读
+
+- [PD 分离的下一层：KV 传输和容量配比](pd-kv-capacity.md)
+- [TP、PP、DP、EP：多张卡究竟分了什么](parallelism-types.md)
+- [TTFT、吞吐、P95 和成本：一张性能报告怎么看？](latency-cost.md)
+
 ## 原始资料
 
 - [vLLM · Disaggregated Prefilling](https://docs.vllm.ai/en/latest/features/disagg_prefill/)
 
-原创入门讲解；类比和示意图经过简化。工具功能以对应版本官方文档为准。
+原创讲解；图示和类比经过简化，数字示例不代表实测。工具功能以对应版本官方资料为准。

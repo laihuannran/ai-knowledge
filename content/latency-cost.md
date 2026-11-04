@@ -4,9 +4,15 @@
 
 专题：评测运行 · 整理于 2026-11-04
 
+## 前置阅读
+
+- [Prefill、Decode 与 KV Cache：一次回答的内部旅程](prefill-decode.md)
+
 ## 先用一个类比理解
 
 餐馆从下单到第一道菜像 TTFT，上菜间隔像 Token 间隔，全部吃齐像端到端延迟，每小时服务多少桌像吞吐。这个类比不代表每个 Token 是同等大小的信息。
+
+类比只帮助建立直觉，不等同于完整机制。
 
 ## 一图看懂
 
@@ -42,9 +48,15 @@ P95 表示所测样本中约 95% 的值不超过该位置对应值；不是最�
 
 </details>
 
+## 关联阅读
+
+- [配额、预算与计量：三个不同的控制面](gateway-budgets.md)
+- [模型路由：质量、成本与失败代价怎么比](routing-evaluation.md)
+- [PD 分离的下一层：KV 传输和容量配比](pd-kv-capacity.md)
+
 ## 原始资料
 
 - [vLLM · 指标设计](https://docs.vllm.ai/en/latest/design/metrics/)
 - [Prometheus · Histograms and summaries](https://prometheus.io/docs/practices/histograms/)
 
-原创入门讲解；类比和示意图经过简化。工具功能以对应版本官方文档为准。
+原创讲解；图示和类比经过简化，数字示例不代表实测。工具功能以对应版本官方资料为准。

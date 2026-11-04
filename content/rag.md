@@ -4,9 +4,15 @@
 
 专题：AI 应用 · 整理于 2026-11-04
 
+## 前置阅读
+
+- [Token、上下文和幻觉：为什么它会忘，也会编？](tokens-context.md)
+
 ## 先用一个类比理解
 
 像开卷考试：先找到相关书页，再根据书页回答。找到的页不对、书过期、看错内容，都可能导致答案出错。
+
+类比只帮助建立直觉，不等同于完整机制。
 
 ## 一图看懂
 
@@ -42,9 +48,16 @@ RAG 通常不修改权重；它也不是把整个数据库一次性塞进模型�
 
 </details>
 
+## 关联阅读
+
+- [解析与切块：知识库先要读对文档](rag-parsing.md)
+- [混合检索与 RRF：让关键词和语义互补](hybrid-rrf.md)
+- [重排：候选找到了，为什么还要再排一次](reranking.md)
+- [Recall、MRR 与 nDCG：检索到底好在哪](retrieval-metrics.md)
+
 ## 原始资料
 
 - [LangChain · Retrieval 概念](https://docs.langchain.com/oss/python/langchain/retrieval)
 - [Sentence Transformers · 检索与重排](https://www.sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html)
 
-原创入门讲解；类比和示意图经过简化。工具功能以对应版本官方文档为准。
+原创讲解；图示和类比经过简化，数字示例不代表实测。工具功能以对应版本官方资料为准。

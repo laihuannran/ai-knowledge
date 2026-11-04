@@ -4,9 +4,16 @@
 
 专题：AI 应用 · 整理于 2026-11-04
 
+## 前置阅读
+
+- [训练、微调与推理：学习和使用是两回事](training-inference.md)
+- [RAG：让模型先查资料，再组织答案](rag.md)
+
 ## 先用一个类比理解
 
 写清工作要求是提示词；给参考手册是 RAG；用大量例子培训固定风格是微调。它们可以组合，但不能互相包办。
+
+类比只帮助建立直觉，不等同于完整机制。
 
 ## 一图看懂
 
@@ -42,9 +49,15 @@
 
 </details>
 
+## 关联阅读
+
+- [SFT：用示范回答教会任务形式](sft-behavior.md)
+- [LoRA 与 QLoRA：少改参数也能学习](lora-qlora.md)
+- [训练数据质量：先修教材再加课时](data-quality.md)
+
 ## 原始资料
 
 - [Hugging Face · PEFT 文档](https://huggingface.co/docs/peft/index)
 - [LangChain · Retrieval](https://docs.langchain.com/oss/python/langchain/retrieval)
 
-原创入门讲解；类比和示意图经过简化。工具功能以对应版本官方文档为准。
+原创讲解；图示和类比经过简化，数字示例不代表实测。工具功能以对应版本官方资料为准。

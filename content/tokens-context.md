@@ -4,9 +4,15 @@
 
 专题：AI 基础 · 整理于 2026-11-04
 
+## 前置阅读
+
+- [AI、机器学习、大模型，到底是什么关系？](ai-map.md)
+
 ## 先用一个类比理解
 
 把上下文想成一张有限大小的工作桌。你能放上对话、资料和工具结果；桌子很大，也不代表每一张纸都能被准确利用。
+
+类比只帮助建立直觉，不等同于完整机制。
 
 ## 一图看懂
 
@@ -42,9 +48,15 @@ Tokenizer 把文本转成编号序列。一个词可能对应多个 Token，不�
 
 </details>
 
+## 关联阅读
+
+- [温度、Top-p 与解码：答案为什么会变](sampling-decoding.md)
+- [智能体记忆：上下文、笔记与长期存储](agent-memory.md)
+- [Prefill、Decode 与 KV Cache：一次回答的内部旅程](prefill-decode.md)
+
 ## 原始资料
 
 - [Hugging Face · Tokenizers](https://huggingface.co/docs/tokenizers/index)
 - [Transformers · 文本生成](https://huggingface.co/docs/transformers/llm_tutorial)
 
-原创入门讲解；类比和示意图经过简化。工具功能以对应版本官方文档为准。
+原创讲解；图示和类比经过简化，数字示例不代表实测。工具功能以对应版本官方资料为准。

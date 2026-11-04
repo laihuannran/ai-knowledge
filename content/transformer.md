@@ -4,9 +4,15 @@
 
 专题：模型能力 · 整理于 2026-11-04
 
+## 前置阅读
+
+- [Token、上下文和幻觉：为什么它会忘，也会编？](tokens-context.md)
+
 ## 先用一个类比理解
 
 读“苹果发布了新手机”时，你会根据“发布”和“手机”判断苹果是公司。Attention 的类比是按当前需要给上下文信息分配不同权重，但它不是人类注意力的完整模拟。
+
+类比只帮助建立直觉，不等同于完整机制。
 
 ## 一图看懂
 
@@ -42,9 +48,15 @@ MoE 的专家能直接理解成多个独立 Agent 吗？
 
 </details>
 
+## 关联阅读
+
+- [Q、K、V 与位置：注意力如何读上下文](attention-qkv.md)
+- [TP、PP、DP、EP：多张卡究竟分了什么](parallelism-types.md)
+- [Prefill、Decode 与 KV Cache：一次回答的内部旅程](prefill-decode.md)
+
 ## 原始资料
 
 - [Hugging Face · Transformers 模型说明](https://huggingface.co/docs/transformers/model_doc/mixtral)
 - [Hugging Face · Transformer 如何工作](https://huggingface.co/learn/llm-course/chapter1/4)
 
-原创入门讲解；类比和示意图经过简化。工具功能以对应版本官方文档为准。
+原创讲解；图示和类比经过简化，数字示例不代表实测。工具功能以对应版本官方资料为准。

@@ -4,9 +4,16 @@
 
 专题：评测运行 · 整理于 2026-11-04
 
+## 前置阅读
+
+- [Agent 和工作流：从回答问题到执行任务](agent.md)
+- [大模型评测：不要只问排行榜第一是谁](evaluation.md)
+
 ## 先用一个类比理解
 
 一份快递需要物流节点记录才能查到卡在哪里。AI 系统也要区分检索没找到、模型误读、工具报错与结果展示错误。
+
+类比只帮助建立直觉，不等同于完整机制。
 
 ## 一图看懂
 
@@ -42,9 +49,15 @@
 
 </details>
 
+## 关联阅读
+
+- [工具可靠性：接口成功为何仍可能办错事](agent-tool-reliability.md)
+- [重试与熔断：故障时怎样避免越救越忙](retry-circuit.md)
+- [线上 A/B：离线高分之后还要看什么](online-ab.md)
+
 ## 原始资料
 
 - [OpenTelemetry · 可观测性入门](https://opentelemetry.io/docs/what-is-opentelemetry/)
 - [OWASP · LLM Prompt Injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/)
 
-原创入门讲解；类比和示意图经过简化。工具功能以对应版本官方文档为准。
+原创讲解；图示和类比经过简化，数字示例不代表实测。工具功能以对应版本官方资料为准。

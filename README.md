@@ -4,18 +4,20 @@
 
 **[进入阅读站](https://laihuannran.github.io/ai-knowledge/)** · [知识地图](https://laihuannran.github.io/ai-knowledge/map.html) · [术语速查](https://laihuannran.github.io/ai-knowledge/glossary.html)
 
-八个专题、20 篇原创入门讲解、20 张 SVG 概念图、71 个术语入口。每篇包括生活类比、图解、概念解释、场景、误区、自测解释与官方资料。
+10 个专题、60 篇原创讲解、60 张 SVG 概念图、17 张比较表、219 个术语入口。每篇包括生活类比、图解、概念解释、场景、误区、自测解释与官方资料。
 
 ## 阅读目录
 
-1. AI 基础：AI 地图、训练与推理、Token/上下文/幻觉。
-2. 模型能力：Transformer/Attention/MoE、多模态与模型交付方式。
-3. AI 应用：提示词、RAG、RAG 与微调的选择。
-4. 智能体：Agent 与工作流、MCP/API/Skill。
-5. 接入平台：推理网关、智能路由与负载均衡。
-6. 推理设施：GPU 与量化、KV Cache、PD 分离、推理引擎与集群。
-7. 评测运行：大模型评测、性能与成本、可观测性与安全。
-8. 行业技术栈：产品职责、代表项目、选型问题。
+1. AI 基础：AI 地图、训练与推理、Token/上下文/幻觉、损失梯度、向量与概率。
+2. 模型能力：Transformer/Attention/MoE、QKV与位置、采样解码、模型交付方式。
+3. 训练与对齐：数据质量、SFT、LoRA/QLoRA、偏好优化与蒸馏。
+4. AI 应用：提示词、RAG、文档解析、混合检索/RRF、重排、向量索引、证据与拒答。
+5. 智能体：Agent、MCP/API/Skill、记忆、计划、工具可靠性、多智能体协作。
+6. 接入平台：网关、路由、配额预算、重试熔断、缓存路由、流式事件。
+7. 推理设施：GPU/量化、KV Cache、PD分离、批处理、推测解码、并行与性能瓶颈。
+8. 评测运行：评测集、检索指标、裁判校准、A/B、可观测性、灰度回归与回滚。
+9. 多模态：视觉/OCR、ASR/TTS、扩散图像生成、视频理解。
+10. 行业技术栈：产品职责、代表项目、云端/本地/混合方案的判断依据。
 
 也可在 [content](content) 中直接阅读 Markdown 文章。模型路由、RAG、PD 等技术按概念说明，不承诺特定厂商性能或固定版本能力。示意图是简化模型，案例数字是教学假设。
 
@@ -33,7 +35,7 @@ python3 scripts/check.py
 python3 -m http.server 8765 --directory dist
 ```
 
-打开 `http://localhost:8765`。`content/articles.json` 是正文数据源，`scripts/build.py` 生成网页、Markdown 和 SVG；`assets` 存放样式及搜索逻辑。`seed_content.py` 仅用于重建初始数据，日常编辑请直接修改 JSON，避免覆盖已有更新。
+打开 `http://localhost:8765`。`content/articles.json`、`content/expansion.json`、`content/supplement.json` 是正文数据源，`scripts/build.py` 生成网页、Markdown 和 SVG；`assets` 存放样式及搜索逻辑。`seed_content.py` 仅用于重建初始数据，日常编辑请直接修改 JSON，避免覆盖已有更新。
 
 ## GitHub Pages
 
@@ -43,3 +45,9 @@ python3 -m http.server 8765 --directory dist
 
 原创文字与 SVG 示意图： [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh-hans)。
 构建代码和页面样式：MIT，见 [LICENSE](LICENSE)。第三方资料归原作者，遵循其各自许可。
+
+## 第二批扩充（2026-11-04）
+
+从20篇扩充至60篇，新增训练与对齐、多模态两专题；原有20篇入口保持不变。每篇可沿前置阅读、相关主题和上一篇/下一篇继续阅读。搜索包含正文、术语与比较表。图示按概念使用流程、分支、反馈循环、并列比较或时间阶段，窄屏可在图表容器内左右滑动。
+
+目前是持续完善的知识库，不声称已覆盖全部AI知识。高阶数学证明、完整训练操作、厂商配置教程和实时行情不属于当前的无需编程阅读目标。

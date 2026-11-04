@@ -4,9 +4,16 @@
 
 专题：推理设施 · 整理于 2026-11-04
 
+## 前置阅读
+
+- [训练、微调与推理：学习和使用是两回事](training-inference.md)
+- [Token、上下文和幻觉：为什么它会忘，也会编？](tokens-context.md)
+
 ## 先用一个类比理解
 
 显存像厨房台面：食材箱是权重，正在制作的订单是 KV Cache，锅具和操作空间也是必需的。只量食材箱大小，无法保证厨房运转。
+
+类比只帮助建立直觉，不等同于完整机制。
 
 ## 一图看懂
 
@@ -42,9 +49,15 @@ GPU 适合大规模并行数值计算，但服务性能还受显存带宽、通�
 
 </details>
 
+## 关联阅读
+
+- [LoRA 与 QLoRA：少改参数也能学习](lora-qlora.md)
+- [TP、PP、DP、EP：多张卡究竟分了什么](parallelism-types.md)
+- [连续批处理与分块预填充：让不同请求一起走](batching-prefill.md)
+
 ## 原始资料
 
 - [Transformers · 量化概览](https://huggingface.co/docs/transformers/quantization/overview)
 - [vLLM · Paged Attention](https://docs.vllm.ai/en/latest/design/paged_attention/)
 
-原创入门讲解；类比和示意图经过简化。工具功能以对应版本官方文档为准。
+原创讲解；图示和类比经过简化，数字示例不代表实测。工具功能以对应版本官方资料为准。

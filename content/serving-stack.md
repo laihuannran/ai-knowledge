@@ -4,9 +4,16 @@
 
 专题：推理设施 · 整理于 2026-11-04
 
+## 前置阅读
+
+- [GPU、显存和量化：模型为什么装不下？](gpu-memory.md)
+- [Prefill、Decode 与 KV Cache：一次回答的内部旅程](prefill-decode.md)
+
 ## 先用一个类比理解
 
 推理引擎像厨房内部的排单系统；Kubernetes 像管理多家厨房开关门和资源的运营平台。运营平台不能自动改好每一道菜的制作算法。
+
+类比只帮助建立直觉，不等同于完整机制。
 
 ## 一图看懂
 
@@ -42,10 +49,16 @@ Kubernetes 会直接替模型完成 Token 生成吗？
 
 </details>
 
+## 关联阅读
+
+- [连续批处理与分块预填充：让不同请求一起走](batching-prefill.md)
+- [TP、PP、DP、EP：多张卡究竟分了什么](parallelism-types.md)
+- [推测解码：先起草，再由目标模型验收](speculative-decoding.md)
+
 ## 原始资料
 
 - [vLLM · 官方项目](https://github.com/vllm-project/vllm)
 - [Kubernetes · 概念](https://kubernetes.io/docs/concepts/overview/)
 - [vLLM · 并行与扩展](https://docs.vllm.ai/en/latest/serving/parallelism_scaling/)
 
-原创入门讲解；类比和示意图经过简化。工具功能以对应版本官方文档为准。
+原创讲解；图示和类比经过简化，数字示例不代表实测。工具功能以对应版本官方资料为准。

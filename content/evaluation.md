@@ -4,9 +4,15 @@
 
 专题：评测运行 · 整理于 2026-11-04
 
+## 前置阅读
+
+- [AI、机器学习、大模型，到底是什么关系？](ai-map.md)
+
 ## 先用一个类比理解
 
 挑司机不能只考交规选择题，还要看你常走的路、雨天驾驶与服务要求。通用榜单像统一笔试，业务评测像真实路测。
+
+类比只帮助建立直觉，不等同于完整机制。
 
 ## 一图看懂
 
@@ -42,9 +48,16 @@
 
 </details>
 
+## 关联阅读
+
+- [评测集怎么分：避免把背过的题当能力](eval-splits.md)
+- [模型裁判：先校准评分，再相信排行榜](judge-calibration.md)
+- [线上 A/B：离线高分之后还要看什么](online-ab.md)
+- [Recall、MRR 与 nDCG：检索到底好在哪](retrieval-metrics.md)
+
 ## 原始资料
 
 - [OpenAI · 评测实践](https://developers.openai.com/api/docs/guides/evaluation-best-practices)
 - [EleutherAI · LM Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness)
 
-原创入门讲解；类比和示意图经过简化。工具功能以对应版本官方文档为准。
+原创讲解；图示和类比经过简化，数字示例不代表实测。工具功能以对应版本官方资料为准。

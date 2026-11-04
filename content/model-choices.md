@@ -4,9 +4,15 @@
 
 专题：模型能力 · 整理于 2026-11-04
 
+## 前置阅读
+
+- [AI、机器学习、大模型，到底是什么关系？](ai-map.md)
+
 ## 先用一个类比理解
 
 买车时，动力类型、座位数、品牌和是否能自己维修，是不同问题。模型的“多模态”“推理”“开放权重”也不是互斥选项。
+
+类比只帮助建立直觉，不等同于完整机制。
 
 ## 一图看懂
 
@@ -42,9 +48,15 @@
 
 </details>
 
+## 关联阅读
+
+- [视觉理解与 OCR：看见文字不等于读懂表格](vision-ocr.md)
+- [ASR 与 TTS：从声音到文字，再到声音](speech-asr-tts.md)
+- [云端还是本地：从一项业务试点做选择](cloud-local-case.md)
+
 ## 原始资料
 
 - [Hugging Face · 模型卡](https://huggingface.co/docs/hub/model-cards)
 - [Transformers · 多模态聊天](https://huggingface.co/docs/transformers/chat_templating_multimodal)
 
-原创入门讲解；类比和示意图经过简化。工具功能以对应版本官方文档为准。
+原创讲解；图示和类比经过简化，数字示例不代表实测。工具功能以对应版本官方资料为准。

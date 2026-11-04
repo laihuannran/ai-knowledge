@@ -4,9 +4,16 @@
 
 专题：推理设施 · 整理于 2026-11-04
 
+## 前置阅读
+
+- [Transformer、Attention 和 MoE：不看公式也能理解](transformer.md)
+- [GPU、显存和量化：模型为什么装不下？](gpu-memory.md)
+
 ## 先用一个类比理解
 
 像先读完题目做笔记，再逐句写答案。笔记帮助避免每写一句都从头重复部分计算，但笔记会占空间，也不能代替原理上的完整计算。
+
+类比只帮助建立直觉，不等同于完整机制。
 
 ## 一图看懂
 
@@ -42,9 +49,15 @@ KV Cache 不是知识库，也不是一份永久聊天记录。缓存复用还�
 
 </details>
 
+## 关联阅读
+
+- [缓存感知路由：把请求送到有共同前缀的地方](cache-routing.md)
+- [连续批处理与分块预填充：让不同请求一起走](batching-prefill.md)
+- [PD 分离：把读题和写答案交给不同实例](pd-disaggregation.md)
+
 ## 原始资料
 
 - [vLLM · 前缀缓存](https://docs.vllm.ai/en/latest/features/automatic_prefix_caching/)
 - [vLLM · Paged Attention](https://docs.vllm.ai/en/latest/design/paged_attention/)
 
-原创入门讲解；类比和示意图经过简化。工具功能以对应版本官方文档为准。
+原创讲解；图示和类比经过简化，数字示例不代表实测。工具功能以对应版本官方资料为准。

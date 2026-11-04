@@ -4,9 +4,15 @@
 
 专题：AI 基础 · 整理于 2026-11-04
 
+## 前置阅读
+
+- [AI、机器学习、大模型，到底是什么关系？](ai-map.md)
+
 ## 先用一个类比理解
 
 训练像学做菜，推理像按已经学到的本领做一顿饭。给厨师一张当日订单，不等于重新培训厨师。
+
+类比只帮助建立直觉，不等同于完整机制。
 
 ## 一图看懂
 
@@ -42,9 +48,15 @@
 
 </details>
 
+## 关联阅读
+
+- [损失和梯度：模型怎样知道该往哪改](loss-gradient.md)
+- [SFT：用示范回答教会任务形式](sft-behavior.md)
+- [提示词、RAG、微调：到底该选哪个？](rag-finetune.md)
+
 ## 原始资料
 
 - [PEFT · LoRA](https://huggingface.co/docs/peft/main/en/conceptual_guides/lora)
 - [Transformers · 文本生成](https://huggingface.co/docs/transformers/llm_tutorial)
 
-原创入门讲解；类比和示意图经过简化。工具功能以对应版本官方文档为准。
+原创讲解；图示和类比经过简化，数字示例不代表实测。工具功能以对应版本官方资料为准。
