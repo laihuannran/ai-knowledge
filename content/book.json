@@ -20,6 +20,15 @@
           ]
         },
         {
+          "id": "foundations-ml",
+          "title": "机器学习的任务与泛化",
+          "summary": "把分类、回归、聚类与大模型放回任务地图，再判断离线成绩能否代表真实效果。",
+          "slugs": [
+            "ml-task-map",
+            "generalization-leakage"
+          ]
+        },
+        {
           "id": "foundations-2",
           "title": "够用的数学直觉",
           "summary": "向量、概率、梯度怎样参与学习和生成。",
@@ -27,6 +36,14 @@
             "vectors-cosine",
             "probability-softmax",
             "loss-gradient"
+          ]
+        },
+        {
+          "id": "foundations-neural",
+          "title": "神经网络怎样学习",
+          "summary": "用直觉串起表示、预测、损失、反向传播与参数更新。",
+          "slugs": [
+            "neural-learning"
           ]
         }
       ]
@@ -55,6 +72,14 @@
             "model-choices",
             "sampling-decoding"
           ]
+        },
+        {
+          "id": "models-reasoning",
+          "title": "推理与测试时计算",
+          "summary": "区分训练所得能力、推理预算、候选搜索与外部验证。",
+          "slugs": [
+            "reasoning-test-time"
+          ]
         }
       ]
     },
@@ -70,6 +95,8 @@
           "summary": "先理解训练材料与任务行为。",
           "slugs": [
             "data-quality",
+            "data-production",
+            "synthetic-data",
             "sft-behavior"
           ]
         },
@@ -84,11 +111,30 @@
           ]
         },
         {
+          "id": "training-rl",
+          "title": "奖励、策略与偏好优化",
+          "summary": "从强化学习反馈走向 PPO、DPO、GRPO 的机制与适用条件。",
+          "slugs": [
+            "rl-reward-policy",
+            "dpo-grpo"
+          ]
+        },
+        {
           "id": "training-3",
           "title": "串起训练生命周期",
           "summary": "将数据隔离、优化、验收与发布放进一条链。",
           "slugs": [
             "deep-training-lifecycle"
+          ]
+        },
+        {
+          "id": "training-stack",
+          "title": "训练框架、规模化与压缩",
+          "summary": "理解计算框架、模型库、训练算法与低比特优化之间的边界。",
+          "slugs": [
+            "training-framework-stack",
+            "distributed-training",
+            "model-compression"
           ]
         }
       ]
@@ -321,6 +367,15 @@
           "slugs": [
             "stack-local-clients"
           ]
+        },
+        {
+          "id": "tools-browser",
+          "title": "浏览器与电脑操作 Agent",
+          "summary": "从页面观察到动作执行与业务验证，理解动态页面、会话与恢复。",
+          "slugs": [
+            "browser-computer-agents",
+            "browser-action-reliability"
+          ]
         }
       ]
     },
@@ -442,6 +497,16 @@
             "speech-asr-tts",
             "image-diffusion",
             "video-understanding"
+          ]
+        },
+        {
+          "id": "multimodal-generation",
+          "title": "可控生成与实时语音",
+          "summary": "让图像、视频和语音进入可控的生成与交互流程。",
+          "slugs": [
+            "image-generation-control",
+            "video-generation-consistency",
+            "realtime-voice-agent"
           ]
         },
         {

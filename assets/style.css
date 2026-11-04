@@ -14,3 +14,6 @@
 
 /* Six concept cards keep balanced columns across reading widths. */
 @media(min-width:761px){.guide-role-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+.guide-agent-details{margin-top:18px}.guide-agent-details>summary{cursor:pointer;color:var(--green);font-size:14px}.guide-agent-details[open]>summary{margin-bottom:22px}
+@media(max-width:760px){.guide-role-grid b{font-size:20px;line-height:1.5}}

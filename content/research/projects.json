@@ -2608,5 +2608,617 @@
       "pushed_at": "2026-11-02T06:35:07Z",
       "source": "https://api.github.com/repos/algorithmicsuperintelligence/openevolve"
     }
+  },
+  {
+    "id": "scikit-learn-scikit-learn",
+    "name": "scikit-learn",
+    "category": "ml",
+    "repo": "scikit-learn/scikit-learn",
+    "github_url": "https://github.com/scikit-learn/scikit-learn",
+    "docs_url": "https://scikit-learn.org/stable/",
+    "role": "传统机器学习的建模与验证工具箱",
+    "why_learn": "认识分类、回归、聚类和模型选择，建立大模型之外的任务版图。",
+    "mechanism": "统一的估计器与数据处理流水线组织特征变换、拟合、预测及交叉验证。",
+    "when_use": "结构化数据预测、聚类分析与低成本基线比较。",
+    "limits": "不是通用大语言模型训练框架；数据泄漏与指标选择仍由使用者处理。",
+    "alternatives": [
+      "PyTorch",
+      "任务专用统计模型"
+    ],
+    "license": {
+      "name": "BSD-3-Clause",
+      "source": "https://github.com/scikit-learn/scikit-learn",
+      "note": "许可依据 GitHub 元数据定位，实际使用核对对应版本 LICENSE 及目录例外；模型、数据、插件和托管服务另有许可或条款。"
+    },
+    "stars": {
+      "count": 68007,
+      "label": "68007",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/scikit-learn/scikit-learn",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T18:38:36.588886+00:00"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库",
+        "url": "https://github.com/scikit-learn/scikit-learn"
+      },
+      {
+        "title": "官方文档",
+        "url": "https://scikit-learn.org/stable/"
+      },
+      {
+        "title": "GitHub 元数据",
+        "url": "https://api.github.com/repos/scikit-learn/scikit-learn"
+      }
+    ],
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-11-04T18:30:07Z",
+      "source": "https://api.github.com/repos/scikit-learn/scikit-learn"
+    }
+  },
+  {
+    "id": "pytorch-pytorch",
+    "name": "PyTorch",
+    "category": "training",
+    "repo": "pytorch/pytorch",
+    "github_url": "https://github.com/pytorch/pytorch",
+    "docs_url": "https://docs.pytorch.org/docs/stable/index.html",
+    "role": "张量计算、自动微分与神经网络运行底座",
+    "why_learn": "看懂模型库与训练算法下面的计算基础。",
+    "mechanism": "张量算子、自动求导和神经网络模块支持前向计算、反向传播与参数更新。",
+    "when_use": "需要构建、训练或执行神经网络时。",
+    "limits": "不自动提供适合业务的数据、模型结构与验收标准；硬件和算子支持需逐版本核对。",
+    "alternatives": [
+      "JAX",
+      "TensorFlow"
+    ],
+    "license": {
+      "name": "需核对许可文件",
+      "source": "https://github.com/pytorch/pytorch",
+      "note": "许可依据 GitHub 元数据定位，实际使用核对对应版本 LICENSE 及目录例外；模型、数据、插件和托管服务另有许可或条款。"
+    },
+    "stars": {
+      "count": 105126,
+      "label": "105126",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/pytorch/pytorch",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T18:38:36.651834+00:00"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库",
+        "url": "https://github.com/pytorch/pytorch"
+      },
+      {
+        "title": "官方文档",
+        "url": "https://docs.pytorch.org/docs/stable/index.html"
+      },
+      {
+        "title": "GitHub 元数据",
+        "url": "https://api.github.com/repos/pytorch/pytorch"
+      }
+    ],
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-11-04T18:38:34Z",
+      "source": "https://api.github.com/repos/pytorch/pytorch"
+    }
+  },
+  {
+    "id": "huggingface-transformers",
+    "name": "Transformers",
+    "category": "training",
+    "repo": "huggingface/transformers",
+    "github_url": "https://github.com/huggingface/transformers",
+    "docs_url": "https://huggingface.co/docs/transformers/index",
+    "role": "预训练模型定义与训练推理接口层",
+    "why_learn": "区分模型实现库与应用编排框架。",
+    "mechanism": "组织模型结构、配置、预处理器及训练推理接口，适配文本、视觉和音频等模型。",
+    "when_use": "研究预训练模型加载、微调与推理链路。",
+    "limits": "不同模型有不同能力和支持条件；库的许可不覆盖全部模型权重与数据许可。",
+    "alternatives": [
+      "模型原始实现",
+      "专用推理引擎"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/huggingface/transformers",
+      "note": "许可依据 GitHub 元数据定位，实际使用核对对应版本 LICENSE 及目录例外；模型、数据、插件和托管服务另有许可或条款。"
+    },
+    "stars": {
+      "count": 168538,
+      "label": "168538",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/huggingface/transformers",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T18:38:36.629703+00:00"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库",
+        "url": "https://github.com/huggingface/transformers"
+      },
+      {
+        "title": "官方文档",
+        "url": "https://huggingface.co/docs/transformers/index"
+      },
+      {
+        "title": "GitHub 元数据",
+        "url": "https://api.github.com/repos/huggingface/transformers"
+      }
+    ],
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-11-04T18:37:07Z",
+      "source": "https://api.github.com/repos/huggingface/transformers"
+    }
+  },
+  {
+    "id": "huggingface-peft",
+    "name": "PEFT",
+    "category": "training",
+    "repo": "huggingface/peft",
+    "github_url": "https://github.com/huggingface/peft",
+    "docs_url": "https://huggingface.co/docs/peft/index",
+    "role": "参数高效微调方法库",
+    "why_learn": "理解 LoRA 等方法如何嵌入训练链路。",
+    "mechanism": "将适配器或受限可训练参数接入基础模型，管理相应配置与检查点。",
+    "when_use": "希望降低微调的可训练参数和训练状态开销。",
+    "limits": "参数少不等于无需基础模型显存；兼容性、合并方式及效果都需验证。",
+    "alternatives": [
+      "全参数微调",
+      "提示与检索增强"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/huggingface/peft",
+      "note": "许可依据 GitHub 元数据定位，实际使用核对对应版本 LICENSE 及目录例外；模型、数据、插件和托管服务另有许可或条款。"
+    },
+    "stars": {
+      "count": 21874,
+      "label": "21874",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/huggingface/peft",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T18:38:36.600631+00:00"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库",
+        "url": "https://github.com/huggingface/peft"
+      },
+      {
+        "title": "官方文档",
+        "url": "https://huggingface.co/docs/peft/index"
+      },
+      {
+        "title": "GitHub 元数据",
+        "url": "https://api.github.com/repos/huggingface/peft"
+      }
+    ],
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-11-04T12:43:47Z",
+      "source": "https://api.github.com/repos/huggingface/peft"
+    }
+  },
+  {
+    "id": "huggingface-trl",
+    "name": "TRL",
+    "category": "training",
+    "repo": "huggingface/trl",
+    "github_url": "https://github.com/huggingface/trl",
+    "docs_url": "https://huggingface.co/docs/trl/index",
+    "role": "语言模型后训练与奖励优化训练器",
+    "why_learn": "对照 SFT、DPO、GRPO 的输入数据与反馈机制。",
+    "mechanism": "基于 Transformers 组织不同训练器，接入示范、偏好或生成奖励反馈。",
+    "when_use": "研究监督微调、偏好优化与强化学习后训练。",
+    "limits": "训练器不会替代可靠奖励与数据设计；支持算法和接口随版本变化。",
+    "alternatives": [
+      "原论文训练实现",
+      "其他后训练框架"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/huggingface/trl",
+      "note": "许可依据 GitHub 元数据定位，实际使用核对对应版本 LICENSE 及目录例外；模型、数据、插件和托管服务另有许可或条款。"
+    },
+    "stars": {
+      "count": 19668,
+      "label": "19668",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/huggingface/trl",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T18:38:36.731243+00:00"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库",
+        "url": "https://github.com/huggingface/trl"
+      },
+      {
+        "title": "官方文档",
+        "url": "https://huggingface.co/docs/trl/index"
+      },
+      {
+        "title": "GitHub 元数据",
+        "url": "https://api.github.com/repos/huggingface/trl"
+      }
+    ],
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-11-04T17:24:35Z",
+      "source": "https://api.github.com/repos/huggingface/trl"
+    }
+  },
+  {
+    "id": "huggingface-datasets",
+    "name": "Datasets",
+    "category": "data",
+    "repo": "huggingface/datasets",
+    "github_url": "https://github.com/huggingface/datasets",
+    "docs_url": "https://huggingface.co/docs/datasets/index",
+    "role": "机器学习数据集加载、处理与流式读取",
+    "why_learn": "把数据集、数据处理和训练框架的职责分开。",
+    "mechanism": "通过数据集抽象组织读取、转换、缓存与流式访问。",
+    "when_use": "处理模型训练与评估的数据材料。",
+    "limits": "数据集可加载不代表有使用授权；质量、版本和数据泄漏需要独立治理。",
+    "alternatives": [
+      "自定义数据流水线",
+      "Ray Data"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/huggingface/datasets",
+      "note": "许可依据 GitHub 元数据定位，实际使用核对对应版本 LICENSE 及目录例外；模型、数据、插件和托管服务另有许可或条款。"
+    },
+    "stars": {
+      "count": 22114,
+      "label": "22114",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/huggingface/datasets",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T18:38:36.618162+00:00"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库",
+        "url": "https://github.com/huggingface/datasets"
+      },
+      {
+        "title": "官方文档",
+        "url": "https://huggingface.co/docs/datasets/index"
+      },
+      {
+        "title": "GitHub 元数据",
+        "url": "https://api.github.com/repos/huggingface/datasets"
+      }
+    ],
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-11-04T17:57:45Z",
+      "source": "https://api.github.com/repos/huggingface/datasets"
+    }
+  },
+  {
+    "id": "pytorch-torchtitan",
+    "name": "TorchTitan",
+    "category": "training",
+    "repo": "pytorch/torchtitan",
+    "github_url": "https://github.com/pytorch/torchtitan",
+    "docs_url": "https://github.com/pytorch/torchtitan",
+    "role": "PyTorch 原生的大规模模型训练参考平台",
+    "why_learn": "观察多种并行方式如何组成可运行训练配方。",
+    "mechanism": "整合数据、张量、流水线等并行机制和训练配置，提供模型训练参考实现。",
+    "when_use": "研究大规模训练的系统结构和性能取舍。",
+    "limits": "参考配方需要对应硬件与软件环境，不是任意机器均可直接复现的性能承诺。",
+    "alternatives": [
+      "DeepSpeed",
+      "其他分布式训练实现"
+    ],
+    "license": {
+      "name": "BSD-3-Clause",
+      "source": "https://github.com/pytorch/torchtitan",
+      "note": "许可依据 GitHub 元数据定位，实际使用核对对应版本 LICENSE 及目录例外；模型、数据、插件和托管服务另有许可或条款。"
+    },
+    "stars": {
+      "count": 5877,
+      "label": "5877",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/pytorch/torchtitan",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T18:38:37.366399+00:00"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库",
+        "url": "https://github.com/pytorch/torchtitan"
+      },
+      {
+        "title": "官方文档",
+        "url": "https://github.com/pytorch/torchtitan"
+      },
+      {
+        "title": "GitHub 元数据",
+        "url": "https://api.github.com/repos/pytorch/torchtitan"
+      }
+    ],
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-11-04T18:32:40Z",
+      "source": "https://api.github.com/repos/pytorch/torchtitan"
+    }
+  },
+  {
+    "id": "pytorch-ao",
+    "name": "TorchAO",
+    "category": "training",
+    "repo": "pytorch/ao",
+    "github_url": "https://github.com/pytorch/ao",
+    "docs_url": "https://docs.pytorch.org/ao/stable/",
+    "role": "PyTorch 模型量化与优化工具",
+    "why_learn": "区分低比特表示、训练适应和部署性能。",
+    "mechanism": "提供训练后量化与量化感知训练等组件，并与模型和部署生态集成。",
+    "when_use": "评估低比特模型的内存、质量与运行效率。",
+    "limits": "速度取决于硬件、精度格式、内核与负载；低比特不能直接推导固定加速倍数。",
+    "alternatives": [
+      "专用量化实现",
+      "目标引擎量化方案"
+    ],
+    "license": {
+      "name": "需核对许可文件",
+      "source": "https://github.com/pytorch/ao",
+      "note": "许可依据 GitHub 元数据定位，实际使用核对对应版本 LICENSE 及目录例外；模型、数据、插件和托管服务另有许可或条款。"
+    },
+    "stars": {
+      "count": 3020,
+      "label": "3020",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/pytorch/ao",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T18:38:37.273890+00:00"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库",
+        "url": "https://github.com/pytorch/ao"
+      },
+      {
+        "title": "官方文档",
+        "url": "https://docs.pytorch.org/ao/stable/"
+      },
+      {
+        "title": "GitHub 元数据",
+        "url": "https://api.github.com/repos/pytorch/ao"
+      }
+    ],
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-11-04T18:27:38Z",
+      "source": "https://api.github.com/repos/pytorch/ao"
+    }
+  },
+  {
+    "id": "browser-use-browser-use",
+    "name": "Browser Use",
+    "category": "browser",
+    "repo": "browser-use/browser-use",
+    "github_url": "https://github.com/browser-use/browser-use",
+    "docs_url": "https://docs.browser-use.com/",
+    "role": "浏览器 Agent 与页面操作工具链",
+    "why_learn": "理解页面观察、动作选择和执行结果反馈。",
+    "mechanism": "将模型决策与浏览器状态、动作及历史记录组合成任务执行流程。",
+    "when_use": "任务主要通过网页交互完成且需要动态判断。",
+    "limits": "开源库与云浏览器、模型推理是不同服务；动作成功不保证业务成功，重放仍需检查页面变化和副作用。",
+    "alternatives": [
+      "业务 API",
+      "Playwright 固定流程"
+    ],
+    "license": {
+      "name": "MIT",
+      "source": "https://github.com/browser-use/browser-use",
+      "note": "许可依据 GitHub 元数据定位，实际使用核对对应版本 LICENSE 及目录例外；模型、数据、插件和托管服务另有许可或条款。"
+    },
+    "stars": {
+      "count": 120025,
+      "label": "120025",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/browser-use/browser-use",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T18:38:37.264534+00:00"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库",
+        "url": "https://github.com/browser-use/browser-use"
+      },
+      {
+        "title": "官方文档",
+        "url": "https://docs.browser-use.com/"
+      },
+      {
+        "title": "GitHub 元数据",
+        "url": "https://api.github.com/repos/browser-use/browser-use"
+      }
+    ],
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-11-02T01:31:56Z",
+      "source": "https://api.github.com/repos/browser-use/browser-use"
+    }
+  },
+  {
+    "id": "huggingface-diffusers",
+    "name": "Diffusers",
+    "category": "generative",
+    "repo": "huggingface/diffusers",
+    "github_url": "https://github.com/huggingface/diffusers",
+    "docs_url": "https://huggingface.co/docs/diffusers/main/en/index",
+    "role": "扩散生成模型与可组合生成流水线",
+    "why_learn": "认识去噪模型、调度器与条件控制的组合关系。",
+    "mechanism": "提供预训练生成流水线、模型组件与采样调度器，支持多种媒体生成任务。",
+    "when_use": "研究图像、视频和音频生成及条件控制。",
+    "limits": "各模型能力和算力需求不同；代码许可不代表权重、素材和生成内容拥有相同许可。",
+    "alternatives": [
+      "ComfyUI",
+      "模型专用实现"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/huggingface/diffusers",
+      "note": "许可依据 GitHub 元数据定位，实际使用核对对应版本 LICENSE 及目录例外；模型、数据、插件和托管服务另有许可或条款。"
+    },
+    "stars": {
+      "count": 34863,
+      "label": "34863",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/huggingface/diffusers",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T18:38:37.250870+00:00"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库",
+        "url": "https://github.com/huggingface/diffusers"
+      },
+      {
+        "title": "官方文档",
+        "url": "https://huggingface.co/docs/diffusers/main/en/index"
+      },
+      {
+        "title": "GitHub 元数据",
+        "url": "https://api.github.com/repos/huggingface/diffusers"
+      }
+    ],
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-11-04T12:45:49Z",
+      "source": "https://api.github.com/repos/huggingface/diffusers"
+    }
+  },
+  {
+    "id": "Comfy-Org-ComfyUI",
+    "name": "ComfyUI",
+    "category": "generative",
+    "repo": "Comfy-Org/ComfyUI",
+    "github_url": "https://github.com/Comfy-Org/ComfyUI",
+    "docs_url": "https://docs.comfy.org/",
+    "role": "以节点图组织和复用生成工作流",
+    "why_learn": "把模型、条件、采样与后处理变成可观察的工作流。",
+    "mechanism": "节点连接表达数据依赖，执行引擎按图运行生成与处理步骤。",
+    "when_use": "希望可视化组织图像、视频等生成流程。",
+    "limits": "它是工作流系统而不是单个模型；自定义节点、模型与服务需要分别核验来源、兼容性和许可。",
+    "alternatives": [
+      "Diffusers",
+      "模型专用界面"
+    ],
+    "license": {
+      "name": "GPL-3.0",
+      "source": "https://github.com/Comfy-Org/ComfyUI",
+      "note": "许可依据 GitHub 元数据定位，实际使用核对对应版本 LICENSE 及目录例外；模型、数据、插件和托管服务另有许可或条款。"
+    },
+    "stars": {
+      "count": 145012,
+      "label": "145012",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/Comfy-Org/ComfyUI",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T18:38:37.292133+00:00"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库",
+        "url": "https://github.com/Comfy-Org/ComfyUI"
+      },
+      {
+        "title": "官方文档",
+        "url": "https://docs.comfy.org/"
+      },
+      {
+        "title": "GitHub 元数据",
+        "url": "https://api.github.com/repos/Comfy-Org/ComfyUI"
+      }
+    ],
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-11-04T17:33:23Z",
+      "source": "https://api.github.com/repos/Comfy-Org/ComfyUI"
+    }
+  },
+  {
+    "id": "livekit-agents",
+    "name": "LiveKit Agents",
+    "category": "realtime",
+    "repo": "livekit/agents",
+    "github_url": "https://github.com/livekit/agents",
+    "docs_url": "https://docs.livekit.io/agents/",
+    "role": "实时语音与多模态交互 Agent 框架",
+    "why_learn": "理解媒体会话、识别、生成、轮次与打断的协作。",
+    "mechanism": "组合实时媒体连接和 STT、LLM、TTS 或实时模型接口，组织会话与任务执行。",
+    "when_use": "构建需要实时对话和工具调用的语音应用。",
+    "limits": "端到端体验依赖网络、回声处理、轮次检测与模型；框架开源不代表外部模型与托管服务免费。",
+    "alternatives": [
+      "自建实时媒体栈",
+      "其他语音 Agent 框架"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://github.com/livekit/agents",
+      "note": "许可依据 GitHub 元数据定位，实际使用核对对应版本 LICENSE 及目录例外；模型、数据、插件和托管服务另有许可或条款。"
+    },
+    "stars": {
+      "count": 15086,
+      "label": "15086",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/livekit/agents",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-04T18:38:37.867337+00:00"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库",
+        "url": "https://github.com/livekit/agents"
+      },
+      {
+        "title": "官方文档",
+        "url": "https://docs.livekit.io/agents/"
+      },
+      {
+        "title": "GitHub 元数据",
+        "url": "https://api.github.com/repos/livekit/agents"
+      }
+    ],
+    "status": {
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-11-04T17:54:06Z",
+      "source": "https://api.github.com/repos/livekit/agents"
+    }
   }
 ]

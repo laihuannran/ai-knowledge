@@ -2,6 +2,96 @@
   "date": "2026-11-05",
   "themes": [
     {
+      "id": "ml-foundations",
+      "title": "AI 基础：任务、泛化与神经网络",
+      "status": "补齐基础版图",
+      "question": "AI 为什么不等于大语言模型，怎样判断模型真的学会了？",
+      "summary": "先认识预测、分类、聚类等任务，再理解数据切分和神经网络的学习循环。",
+      "correction": "模型在旧数据上表现好，不代表能处理新任务；语言输出流畅，也不能代替数值预测与任务评估。",
+      "existing": [
+        "ai-map",
+        "training-inference",
+        "loss-gradient"
+      ],
+      "lessons": [
+        "ml-task-map",
+        "generalization-leakage",
+        "neural-learning"
+      ]
+    },
+    {
+      "id": "reasoning-rl",
+      "title": "推理与强化学习：能力怎样形成与使用",
+      "status": "补齐训练与推理机制",
+      "question": "增加思考时间与训练模型，究竟改变了什么？",
+      "summary": "理解测试时计算、奖励信号、策略更新，以及 DPO 与 GRPO 的不同反馈链路。",
+      "correction": "写出更长推理过程不保证正确；DPO、PPO 与 GRPO 也不是只换名称的同一种训练流程。",
+      "existing": [
+        "probability-softmax",
+        "preference-alignment"
+      ],
+      "lessons": [
+        "reasoning-test-time",
+        "rl-reward-policy",
+        "dpo-grpo"
+      ]
+    },
+    {
+      "id": "data-training",
+      "title": "数据与训练技术栈：从材料到可运行模型",
+      "status": "补齐模型生产链",
+      "question": "有数据、有 GPU、有框架，为什么仍然不等于训好了模型？",
+      "summary": "沿数据血缘、合成过滤、框架分工、并行训练与模型压缩理解完整链路。",
+      "correction": "合成数据数量多不等于知识更丰富；低比特与分片可能节省内存，但真实性能取决于硬件、算子和任务。",
+      "existing": [
+        "data-quality",
+        "lora-qlora",
+        "gpu-memory"
+      ],
+      "lessons": [
+        "data-production",
+        "synthetic-data",
+        "training-framework-stack",
+        "distributed-training",
+        "model-compression"
+      ]
+    },
+    {
+      "id": "browser-agents",
+      "title": "浏览器 Agent：从看见页面到确认业务结果",
+      "status": "补齐电脑操作系列",
+      "question": "按钮点到了，为什么任务仍然可能没有完成？",
+      "summary": "区分 API、页面结构与视觉操作，处理定位、等待、会话、重复提交和断线恢复。",
+      "correction": "页面事件成功不等于业务写入成功；浏览器权限与登录状态也不自动成为用户对所有操作的授权。",
+      "existing": [
+        "agent",
+        "agent-tool-reliability",
+        "harness-runtime"
+      ],
+      "lessons": [
+        "browser-computer-agents",
+        "browser-action-reliability"
+      ]
+    },
+    {
+      "id": "generative-multimodal",
+      "title": "多模态生成：图像控制、视频一致性与实时语音",
+      "status": "深化已有多模态基础",
+      "question": "能生成一张图、一段声音，怎样才能形成可用产品？",
+      "summary": "从条件控制、时序一致性、轮次检测和打断机制认识生成与实时交互。",
+      "correction": "参考图、随机种子和生成提示都不是绝对一致性保证；听见声音、识别文本和确认业务动作属于不同环节。",
+      "existing": [
+        "image-diffusion",
+        "video-understanding",
+        "speech-asr-tts"
+      ],
+      "lessons": [
+        "image-generation-control",
+        "video-generation-consistency",
+        "realtime-voice-agent"
+      ]
+    },
+    {
       "id": "mcp",
       "title": "MCP：从接通工具到请求契约",
       "status": "深化已有主题",
@@ -170,6 +260,31 @@
     }
   ],
   "questions": [
+    {
+      "question": "训练分数很高，为何还可能无法用于下一天？",
+      "answer": "需要检查预测时点、测试隔离与分布变化；历史表中的事后字段可能泄漏答案，反复根据留出结果调参也会削弱独立性。",
+      "slug": "generalization-leakage"
+    },
+    {
+      "question": "调整提示词与更新模型参数有什么不同？",
+      "answer": "提示词改变当前输入条件，训练更新改变参数；两者都可能改变输出，但其成本、可复用性和验证方式不同。",
+      "slug": "neural-learning"
+    },
+    {
+      "question": "为什么压缩到更低位宽后，模型可能更慢？",
+      "answer": "低位表示需要匹配硬件与计算内核，量化元数据、转换、KV缓存和临时空间也影响性能；文件大小不能代替真实部署测量。",
+      "slug": "model-compression"
+    },
+    {
+      "question": "网页提示提交成功，为什么还要继续核对？",
+      "answer": "它可能只说明请求被接收。任务验收仍要确认目标对象、业务状态和交付产物，超时重试之前尤其要排查已有副作用。",
+      "slug": "browser-action-reliability"
+    },
+    {
+      "question": "语音助手停止发声，后台旧任务也一定停止了吗？",
+      "answer": "不一定。播放、生成和业务工具是不同状态，需要分别协调取消与恢复，已经发生的写入不能靠静音撤销。",
+      "slug": "realtime-voice-agent"
+    },
     {
       "question": "Agent 怎样判断调用哪个工具？",
       "answer": "先识别实体、动作与约束，再从当前允许的工具中选择；参数结构、对象权限和真实返回仍需应用验证。",

@@ -98,6 +98,13 @@
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
+    "url": "https://arxiv.org/abs/1707.06347",
+    "status": "200",
+    "final_url": "https://arxiv.org/abs/1707.06347",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://arxiv.org/abs/2005.11401",
     "status": "200",
     "final_url": "https://arxiv.org/abs/2005.11401",
@@ -119,6 +126,13 @@
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
+    "url": "https://arxiv.org/abs/2210.17323",
+    "status": "200",
+    "final_url": "https://arxiv.org/abs/2210.17323",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://arxiv.org/abs/2211.09110",
     "status": "200",
     "final_url": "https://arxiv.org/abs/2211.09110",
@@ -130,6 +144,13 @@
     "status": "200",
     "final_url": "https://arxiv.org/abs/2211.17192",
     "checked_on": "2026-11-04",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://arxiv.org/abs/2212.10560",
+    "status": "200",
+    "final_url": "https://arxiv.org/abs/2212.10560",
+    "checked_on": "2026-11-05",
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
@@ -147,9 +168,23 @@
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
+    "url": "https://arxiv.org/abs/2305.17493",
+    "status": "200",
+    "final_url": "https://arxiv.org/abs/2305.17493",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://arxiv.org/abs/2305.18290",
     "status": "200",
     "final_url": "https://arxiv.org/abs/2305.18290",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://arxiv.org/abs/2306.00978",
+    "status": "200",
+    "final_url": "https://arxiv.org/abs/2306.00978",
     "checked_on": "2026-11-05",
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
@@ -171,6 +206,20 @@
     "url": "https://arxiv.org/abs/2401.09670",
     "status": "200",
     "final_url": "https://arxiv.org/abs/2401.09670",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://arxiv.org/abs/2402.02750",
+    "status": "200",
+    "final_url": "https://arxiv.org/abs/2402.02750",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://arxiv.org/abs/2402.03300",
+    "status": "200",
+    "final_url": "https://arxiv.org/abs/2402.03300",
     "checked_on": "2026-11-05",
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
@@ -448,6 +497,20 @@
     "note": "HTTP reachability only; manually reviewed core references separately."
   },
   {
+    "url": "https://docs.livekit.io/agents/logic/sessions/",
+    "status": "200",
+    "final_url": "https://docs.livekit.io/agents/logic/sessions/",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://docs.livekit.io/agents/logic/turns/",
+    "status": "200",
+    "final_url": "https://docs.livekit.io/agents/logic/turns/",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://docs.n8n.io/",
     "status": "200",
     "final_url": "https://docs.n8n.io/",
@@ -472,6 +535,55 @@
     "url": "https://docs.openwebui.com/",
     "status": "200",
     "final_url": "https://docs.openwebui.com/",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://docs.pytorch.org/ao/stable/index.html",
+    "status": "200",
+    "final_url": "https://docs.pytorch.org/ao/stable/index.html",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://docs.pytorch.org/docs/stable/autograd.html",
+    "status": "200",
+    "final_url": "https://docs.pytorch.org/docs/stable/autograd.html",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://docs.pytorch.org/docs/stable/checkpoint.html",
+    "status": "200",
+    "final_url": "https://docs.pytorch.org/docs/stable/checkpoint.html",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://docs.pytorch.org/docs/stable/distributed.checkpoint.html",
+    "status": "200",
+    "final_url": "https://docs.pytorch.org/docs/stable/distributed.checkpoint.html",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://docs.pytorch.org/tutorials/beginner/basics/autogradqs_tutorial.html",
+    "status": "200",
+    "final_url": "https://docs.pytorch.org/tutorials/beginner/basics/autogradqs_tutorial.html",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html",
+    "status": "200",
+    "final_url": "https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://docs.pytorch.org/tutorials/intermediate/FSDP_tutorial.html",
+    "status": "200",
+    "final_url": "https://docs.pytorch.org/tutorials/intermediate/FSDP_tutorial.html",
     "checked_on": "2026-11-05",
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
@@ -588,6 +700,13 @@
     "note": "HTTP reachability only; manually reviewed core references separately."
   },
   {
+    "url": "https://github.com/Comfy-Org/ComfyUI",
+    "status": "200",
+    "final_url": "https://github.com/Comfy-Org/ComfyUI",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://github.com/EleutherAI/lm-evaluation-harness",
     "status": "200",
     "final_url": "https://github.com/EleutherAI/lm-evaluation-harness",
@@ -626,6 +745,13 @@
     "url": "https://github.com/algorithmicsuperintelligence/openevolve",
     "status": "200",
     "final_url": "https://github.com/algorithmicsuperintelligence/openevolve",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/browser-use/browser-use",
+    "status": "200",
+    "final_url": "https://github.com/browser-use/browser-use",
     "checked_on": "2026-11-05",
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
@@ -691,6 +817,13 @@
     "final_url": "https://github.com/microsoft/graphrag",
     "checked_on": "2026-11-05",
     "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
+  },
+  {
+    "url": "https://github.com/mit-han-lab/llm-awq",
+    "status": "200",
+    "final_url": "https://github.com/mit-han-lab/llm-awq",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
     "url": "https://github.com/n8n-io/n8n",
@@ -770,10 +903,45 @@
     "note": "This execution environment could not reach the URL within timeout. Not classified as a broken source. Some core Hugging Face references were independently readable through web browsing."
   },
   {
+    "url": "https://huggingface.co/docs/datasets/about_dataset_features",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/datasets/about_dataset_features",
+    "checked_on": "2026-11-05",
+    "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
+  },
+  {
+    "url": "https://huggingface.co/docs/diffusers",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/diffusers",
+    "checked_on": "2026-11-05",
+    "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
+  },
+  {
+    "url": "https://huggingface.co/docs/diffusers/api/pipelines/controlnet",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/diffusers/api/pipelines/controlnet",
+    "checked_on": "2026-11-05",
+    "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
+  },
+  {
     "url": "https://huggingface.co/docs/diffusers/en/using-diffusers/conditional_image_generation",
     "status": "000",
     "final_url": "https://huggingface.co/docs/diffusers/en/using-diffusers/conditional_image_generation",
     "checked_on": "2026-11-04",
+    "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
+  },
+  {
+    "url": "https://huggingface.co/docs/diffusers/using-diffusers/text-img2vid",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/diffusers/using-diffusers/text-img2vid",
+    "checked_on": "2026-11-05",
+    "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
+  },
+  {
+    "url": "https://huggingface.co/docs/hub/datasets-cards",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/hub/datasets-cards",
+    "checked_on": "2026-11-05",
     "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
   },
   {
@@ -882,6 +1050,13 @@
     "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
   },
   {
+    "url": "https://huggingface.co/docs/transformers/main_classes/trainer",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/transformers/main_classes/trainer",
+    "checked_on": "2026-11-05",
+    "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
+  },
+  {
     "url": "https://huggingface.co/docs/transformers/model_doc/mixtral",
     "status": "000",
     "final_url": "https://huggingface.co/docs/transformers/model_doc/mixtral",
@@ -894,6 +1069,13 @@
     "final_url": "https://huggingface.co/docs/transformers/quantization/overview",
     "checked_on": "2026-11-04",
     "note": "This execution environment could not reach the URL within timeout. Not classified as a broken source. Some core Hugging Face references were independently readable through web browsing."
+  },
+  {
+    "url": "https://huggingface.co/docs/trl/dpo_trainer",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/trl/dpo_trainer",
+    "checked_on": "2026-11-05",
+    "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
   },
   {
     "url": "https://huggingface.co/docs/trl/en/distillation_trainer",
@@ -928,6 +1110,20 @@
     "status": "000",
     "final_url": "https://huggingface.co/docs/trl/en/sft_trainer",
     "checked_on": "2026-11-04",
+    "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
+  },
+  {
+    "url": "https://huggingface.co/docs/trl/grpo_trainer",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/trl/grpo_trainer",
+    "checked_on": "2026-11-05",
+    "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
+  },
+  {
+    "url": "https://huggingface.co/docs/trl/index",
+    "status": "000",
+    "final_url": "https://huggingface.co/docs/trl/index",
+    "checked_on": "2026-11-05",
     "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
   },
   {
@@ -1176,6 +1372,20 @@
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
+    "url": "https://playwright.dev/docs/actionability",
+    "status": "200",
+    "final_url": "https://playwright.dev/docs/actionability",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://playwright.dev/docs/locators",
+    "status": "200",
+    "final_url": "https://playwright.dev/docs/locators",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://prometheus.io/docs/practices/histograms/",
     "status": "200",
     "final_url": "https://prometheus.io/docs/practices/histograms/",
@@ -1193,6 +1403,34 @@
     "url": "https://redis.io/docs/latest/",
     "status": "200",
     "final_url": "https://redis.io/docs/latest/",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://scikit-learn.org/stable/common_pitfalls.html",
+    "status": "200",
+    "final_url": "https://scikit-learn.org/stable/common_pitfalls.html",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://scikit-learn.org/stable/modules/cross_validation.html",
+    "status": "200",
+    "final_url": "https://scikit-learn.org/stable/modules/cross_validation.html",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://scikit-learn.org/stable/supervised_learning.html",
+    "status": "200",
+    "final_url": "https://scikit-learn.org/stable/supervised_learning.html",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://scikit-learn.org/stable/unsupervised_learning.html",
+    "status": "200",
+    "final_url": "https://scikit-learn.org/stable/unsupervised_learning.html",
     "checked_on": "2026-11-05",
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
@@ -1242,6 +1480,13 @@
     "url": "https://www.anthropic.com/institute/recursive-self-improvement",
     "status": "200",
     "final_url": "https://www.anthropic.com/institute/recursive-self-improvement",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://www.deepspeed.ai/tutorials/zero/",
+    "status": "200",
+    "final_url": "https://www.deepspeed.ai/tutorials/zero/",
     "checked_on": "2026-11-05",
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
