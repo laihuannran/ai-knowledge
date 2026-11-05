@@ -6,7 +6,8 @@
 
 ## 前置阅读
 
-- [vLLM、批处理、并行与 Kubernetes 各管什么？](serving-stack.md)
+- [Dify、n8n 与 Flowise：画出来的流程并不是同一种系统](stack-lowcode.md)
+- [Spring AI 与 LangChain4j：AI 应用怎样接上熟悉的 Java 后端](stack-java-ai.md)
 
 ## 先用一个类比理解
 

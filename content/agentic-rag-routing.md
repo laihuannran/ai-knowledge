@@ -7,6 +7,7 @@
 ## 前置阅读
 
 - [RAG：让模型先查资料，再组织答案](rag.md)
+- [Agent 和工作流：从回答问题到执行任务](agent.md)
 - [Recall、MRR 与 nDCG：检索到底好在哪](retrieval-metrics.md)
 - [让每个结论都有边界：RAG 的证据责任](deep-rag-evidence.md)
 

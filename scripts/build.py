@@ -42,7 +42,7 @@ def page(title, body, sub=False):
 </head><body><a class="skip" href="#main">跳到正文</a>
 <aside class="sidebar" id="site-sidebar"><a class="brand" href="{p}index.html"><span class="brand-symbol">知</span><span>AI 慢慢懂<small>HUANRAN’S FIELD NOTES</small></span></a>
 <p class="sidebar-intro">把陌生的技术，<br>变成能理解的知识。</p>
-<nav aria-label="主导航"><a href="{p}index.html">教程首页 <span>↗</span></a><a href="{p}map.html">全书目录 <span>{len(BOOK.parts)} 篇</span></a><a href="{p}guide.html">专题学习路线 <span>↗</span></a><a href="{p}api.html">模型 API 对照 <span>↗</span></a><a href="{p}stack.html">技术栈图谱 <span>{len(BOOK.projects)}</span></a><a href="{p}library.html">文章检索 <span>{N}</span></a><a href="{p}resources.html">参考书架 <span>↗</span></a></nav>
+<nav aria-label="主导航"><a href="{p}index.html">教程首页 <span>↗</span></a><a href="{p}map.html">全书目录 <span>{len(BOOK.parts)} 篇</span></a><a href="{p}guide.html">小白与专题路线 <span>↗</span></a><a href="{p}api.html">模型 API 对照 <span>↗</span></a><a href="{p}stack.html">技术栈图谱 <span>{len(BOOK.projects)}</span></a><a href="{p}library.html">文章检索 <span>{N}</span></a><a href="{p}resources.html">参考书架 <span>↗</span></a></nav>
 {BOOK.sidebar(p)}
 <div class="side-note"><span class="tiny-label">阅读方式</span><p>不赶进度，不写代码。<br>从一个好奇的问题开始。</p></div>
 <a class="github" href="{REPO}">GitHub 源码 ↗</a><small class="sidebar-bottom">书籍版 · {BOOK.book["date"]}<br>中文图解 · 随时翻阅</small></aside>
@@ -77,7 +77,7 @@ library = f'''<header class="page-heading"><p class="eyebrow">SEARCH THE WHOLE B
 (D / 'map.html').write_text(page('全书目录', BOOK.contents()))
 (D / 'stack.html').write_text(page('技术栈图谱', BOOK.stack()))
 (D / 'resources.html').write_text(page('参考书架', BOOK.resources_page()))
-(D / 'guide.html').write_text(page('专题学习路线', BOOK.learning_guide()))
+(D / 'guide.html').write_text(page('小白与专题路线', BOOK.learning_guide()))
 (D / 'api.html').write_text(page('模型 API 与协议对照', BOOK.api_reference()))
 
 
@@ -136,7 +136,7 @@ for i, a in enumerate(A):
 <header class="article-header"><p class="eyebrow">FIELD NOTE {i+1:02d} / {E(a['category'])} / {E(('机制与案例' if a.get('level') == '深入' else '概念入门'))}</p><h1>{E(a['title'])}</h1>
 <p class="article-lead">{E(a['summary'])}</p><div class="article-meta">整理于 {a['date']} · {E(a['requires'])}</div>
 <div class="tag-row">{''.join(f'<span>{E(t)}</span>' for t in a['tags'])}</div></header>
-<div class="article-layout"><article class="prose">{chunks}<nav class="prev-next" aria-label="文章翻页">{prev}{nxt}</nav></article>
+<div class="article-layout"><article class="prose">{chunks}{BOOK.beginner_navigation(a['slug'])}<p class="full-order-label">按完整目录逐篇阅读</p><nav class="prev-next" aria-label="完整目录文章翻页">{prev}{nxt}</nav></article>
 <aside class="toc"><span class="tiny-label">这篇怎么读</span>{toc}<a class="back-top" href="#main">↑ 回到顶部</a></aside></div>'''
     (D / 'articles' / f'{a["slug"]}.html').write_text(page(a['title'], content, True))
 

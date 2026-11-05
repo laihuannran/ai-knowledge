@@ -87,10 +87,10 @@
       "RAG",
       "工程验收"
     ],
-    "requires": "建议先读 RAG 与检索评估",
+    "requires": "建议先读：解析与切块、引用、证据与拒答",
     "prerequisites": [
-      "rag",
-      "retrieval-metrics"
+      "rag-parsing",
+      "rag-evidence"
     ],
     "related": [
       "wiki-embedding-stack",
@@ -222,10 +222,11 @@
       "RAG",
       "工程验收"
     ],
-    "requires": "建议先读 RAG 与检索评估",
+    "requires": "建议先读：向量、维度与余弦、混合检索与 RRF、重排",
     "prerequisites": [
-      "rag",
-      "retrieval-metrics"
+      "vectors-cosine",
+      "hybrid-rrf",
+      "reranking"
     ],
     "related": [
       "wiki-document-stack",
@@ -357,10 +358,10 @@
       "RAG",
       "工程验收"
     ],
-    "requires": "建议先读 RAG 与检索评估",
+    "requires": "建议先读：ANN、HNSW 与索引、混合检索与 RRF",
     "prerequisites": [
-      "rag",
-      "retrieval-metrics"
+      "vector-index",
+      "hybrid-rrf"
     ],
     "related": [
       "wiki-document-stack",

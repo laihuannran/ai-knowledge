@@ -78,6 +78,8 @@ class BookEdition:
         self.by_slug = {a['slug']: a for a in articles}
         self.book = read_json('content/book.json', {'parts': []})
         self.parts = self.book['parts']
+        self.beginner_groups = self.book.get('beginner_route', [])
+        self.beginner_slugs = [slug for group in self.beginner_groups for slug in group['slugs']]
         self.learning_review = read_json('content/learning_review.json', {'themes': [], 'questions': [], 'sources': []})
         self.series_count = len({slug for t in self.learning_review['themes'] for slug in t['lessons']})
         self.projects = read_json('content/research/projects.json', [])
@@ -113,18 +115,52 @@ class BookEdition:
         for i, slug in enumerate(chapter['slugs']):
             a = self.by_slug[slug]
             level = a.get('level', '入门')
-            tag = '机制与案例' if level == '深入' else '概念入门'
+            tag = '小白主线' if slug in self.beginner_slugs else ('机制与案例' if level == '深入' else '概念入门')
             content_len = sum(len(s['text']) for s in a['sections'])
             mins = max(3, math.ceil(content_len / 240))
             summary = '' if compact else f'<p>{E(a["summary"])}</p>'
             items.append(f'''<li data-book-search="{E(a['title']+' '+a['summary']+' '+' '.join(a['tags']))}"><span class="toc-index">{i+1:02d}</span><div><a href="articles/{slug}.html">{E(a['title'])}</a>{summary}</div><span class="depth-badge {'deep' if level=='深入' else ''}">{tag}<small>{mins} 分钟</small></span></li>''')
         return '<ol class="chapter-reading">' + ''.join(items) + '</ol>'
 
+    def reading_stages(self):
+        by_id = {part['id']: part for part in self.parts}
+        cards = []
+        for index, stage in enumerate(self.book.get('stages', [])):
+            links = ' · '.join(f'<a href="map.html#{E(key)}">{E(by_id[key]["title"])}</a>' for key in stage['parts'])
+            cards.append(f'<section><small>阶段 {index+1:02d}</small><h3>{E(stage["title"])}</h3><p>{E(stage["goal"])}</p><div>{links}</div></section>')
+        return '<section class="reading-stages" aria-label="从浅到深的四个学习阶段">' + ''.join(cards) + '</section>'
+
+    def beginner_route(self, compact=False):
+        count = len(self.beginner_slugs)
+        out = f'<section class="beginner-route guide-intro" id="beginner-route"><p class="eyebrow">START HERE / ZERO CODING REQUIRED</p><h2>第一次读，沿这 {count} 节小白主线走。</h2><p>先建立能串起来的概念，不要求编程或打卡。主线会跳过各主题的深入细节；读完以后，再沿完整目录逐层补充。每次读一节也可以，文末有连续阅读入口。</p>'
+        if compact:
+            out += '<p>' + ' → '.join(E(group['title']) for group in self.beginner_groups) + '</p><a class="primary-link" href="guide.html#beginner-route">查看逐节阅读顺序 →</a>'
+        else:
+            offset = 0
+            for group in self.beginner_groups:
+                lessons = ''.join(f'<li><span>{offset+i+1:02d}</span><div><a data-beginner-lesson="{E(slug)}" href="articles/{slug}.html">{E(self.by_slug[slug]["title"])}</a></div></li>' for i,slug in enumerate(group['slugs']))
+                out += f'<section id="{E(group["id"])}" class="beginner-group"><h3>{E(group["title"])}</h3><p>{E(group["goal"])}</p><ol class="learning-lessons">{lessons}</ol></section>'
+                offset += len(group['slugs'])
+            out += '<p>读完主线：先扩展多模态和感兴趣的应用，再进入模型内部与工程深入。训练和 RSI 可以最后读。</p><a class="primary-link" href="map.html">按完整目录继续深入 →</a>'
+        return out + '</section>'
+
+    def beginner_navigation(self, slug):
+        if slug not in self.beginner_slugs:
+            return ''
+        index = self.beginner_slugs.index(slug)
+        if index+1 < len(self.beginner_slugs):
+            following = self.beginner_slugs[index+1]
+            action = f'<a data-beginner-next="{E(following)}" href="{following}.html">主线下一节 →<br><b>{E(self.by_slug[following]["title"])}</b></a>'
+        else:
+            action = '<a href="../map.html#multimodal">主线读完了，继续扩展应用 →</a>'
+        return f'<nav class="beginner-navigation" aria-label="小白主线连续阅读"><div><small>小白主线 · 第 {index+1} / {len(self.beginner_slugs)} 节</small><p>沿概念关系继续，深入细节可以稍后再读。</p><a href="../guide.html#beginner-route">返回主线目录</a></div>{action}</nav>'
+
     def home(self):
         chapters = sum(len(p['chapters']) for p in self.parts)
         cover = '''<div class="book-display" aria-label="AI慢慢懂图解教程封面"><div class="book-cover"><div class="cover-kicker">A FIELD GUIDE TO ARTIFICIAL INTELLIGENCE</div><h2>AI<br>慢慢懂</h2><div class="cover-line"></div><p>从概念，到系统。<br>从模型，到技术栈。</p><span class="cover-mark">图解教程 · 书籍版</span><small>HUANRAN’S LEARNING LIBRARY / 2026</small></div><div class="book-caption">一本可以按顺序读，也可以带着问题翻的书。</div></div>'''
-        hero = f'''<section class="book-hero"><div><p class="eyebrow">THE AI LEARNING LIBRARY / BOOK EDITION</p><h1>把 AI，<br>学成<span>一套知识。</span></h1><p class="book-lead">先看懂概念，再走进机制、案例与主流技术栈。<br>无需先会编程，沿着篇章，一层一层读懂。</p><div class="hero-actions"><a class="primary-link" href="map.html">打开全书目录 <span>→</span></a><a class="quiet-link" href="articles/ai-map.html">从第一节开始 ↗</a></div><div class="book-stats"><span><b>{len(self.parts):02d}</b>篇</span><span><b>{chapters}</b>章</span><span><b>{self.deep_count}</b>篇深入讲解</span></div></div>{cover}</section>'''
-        routes = '''<section class="entry-routes"><a href="map.html#foundations"><small>01 / BUILD A MENTAL MODEL</small><h3>先听懂 AI 在说什么</h3><p>概念、模型、训练与应用的关系。</p><span>从基础篇进入 →</span></a><a href="stack.html"><small>02 / KNOW THE TOOLBOX</small><h3>认识优秀技术栈</h3><p>LangChain、LangGraph、Agent 与工具链。</p><span>打开技术栈图谱 →</span></a><a href="map.html#inference"><small>03 / UNDERSTAND THE SYSTEM</small><h3>看懂推理与平台</h3><p>网关、路由、KV Cache、PD 与评测。</p><span>从系统机制进入 →</span></a></section>'''
+        hero = f'''<section class="book-hero"><div><p class="eyebrow">THE AI LEARNING LIBRARY / BOOK EDITION</p><h1>把 AI，<br>学成<span>一套知识。</span></h1><p class="book-lead">先学会提问、查资料与理解 Agent，再深入模型和系统。<br>无需先会编程，跟着 {len(self.beginner_slugs)} 节主线，一层一层读懂。</p><div class="hero-actions"><a class="primary-link" href="guide.html#beginner-route">按小白主线开始 <span>→</span></a><a class="quiet-link" href="map.html">展开完整目录 ↗</a></div><div class="book-stats"><span><b>{len(self.parts):02d}</b>篇</span><span><b>{chapters}</b>章</span><span><b>{self.deep_count}</b>篇深入讲解</span></div></div>{cover}</section>'''
+        routes = '<section class="entry-routes"><a href="guide.html#beginner-route"><small>READ IN ORDER</small><h3>沿小白主线读</h3><p>按概念关系，逐节建立理解。</p><span>查看主线目录 →</span></a><a href="map.html"><small>GO DEEPER</small><h3>沿完整目录深入</h3><p>回到感兴趣的主题，继续读机制与案例。</p><span>展开全书目录 →</span></a><a href="stack.html"><small>LOOK UP A TOOL</small><h3>按工具查阅</h3><p>已经遇到具体项目时，查职责、机制与取舍。</p><span>打开技术栈图谱 →</span></a></section>'
+
         toc = '<section class="book-overview"><div class="section-head"><div><p class="eyebrow">CONTENTS / FROM THE FIRST PRINCIPLE TO THE STACK</p><h2>这本书，怎样展开？</h2></div><a class="quiet-link" href="map.html">展开完整目录 →</a></div><div class="part-grid">'
         for i,p in enumerate(self.parts):
             count = sum(len(c['slugs']) for c in p['chapters'])
@@ -133,11 +169,10 @@ class BookEdition:
         toc += '</div></section>'
         stack = f'''<section class="stack-teaser"><p class="eyebrow">A MAP OF THE AI ECOSYSTEM</p><h2>不只认识名词，<br>还要知道工具放在哪里。</h2><p>研究 {len(self.projects)} 个项目，按机器学习、训练、Agent、生成、数据、网关、推理与评测分类。<br>每项都解释职责、机制、适用场景、限制和许可；GitHub 关注度附采集日期。</p><div class="stack-name-row"><span>LangChain</span><span>LangGraph</span><span>Spring AI</span><span>Codex</span><span>vLLM</span><span>Redis</span></div><a class="primary-link" href="stack.html">查看技术栈与比较 <span>→</span></a></section>'''
         note = f'''<section class="reading-note"><span>这是一份怎样的教程？</span><p>{len(self.articles)} 节内容区分概念入门与机制案例。长章节沿着同一条任务链解释细节，配原创图表和原始资料。已有短文作为查阅入口，核心专题继续向深入系列展开。</p><a href="resources.html">查看参考书架与资料来源 →</a></section>'''
-        guide = f'<section class="learning-callout"><div><small>NEW SERIES / 把陌生名词连成机制</small><h2>认识原理之后，工具链怎样接起来？</h2><p>对照 ai_wiki 补入文档解析、向量表示、微调工作台、GPU 平台与评测工具，沿九篇深入教程理解具体分工。</p></div><a href="articles/wiki-curation-map.html">查看新增工具链导览 →</a></section>'
-        return hero + guide + routes + toc + stack + note
+        return hero + self.beginner_route(compact=True) + self.reading_stages() + routes + toc + stack + note
 
     def contents(self):
-        out = f'''<header class="page-heading"><p class="eyebrow">TABLE OF CONTENTS / READ LIKE A BOOK</p><h1>从第一篇，<br>读到一套完整架构。</h1><p>{len(self.parts)} 篇 · {sum(len(p['chapters']) for p in self.parts)} 章 · {len(self.articles)} 节。概念入门建立直觉，机制与案例帮助深入理解。</p></header><div class="contents-tools"><label class="search"><span>⌕</span><input id="book-search" type="search" placeholder="在目录中找 A2A、RSI、RAG、PD…" aria-label="搜索全书目录"></label><button id="expand-toc" type="button">展开全部篇章</button><button id="collapse-toc" type="button">收起全部篇章</button></div><p id="book-results" class="result-count" aria-live="polite">所有章节按理解顺序排列</p><div class="book-contents">'''
+        out = f'''<header class="page-heading"><p class="eyebrow">TABLE OF CONTENTS / READ LIKE A BOOK</p><h1>从第一篇，<br>读到一套完整架构。</h1><p>{len(self.parts)} 篇 · {sum(len(p['chapters']) for p in self.parts)} 章 · {len(self.articles)} 节。先走小白主线，再在同一主题下补机制与案例；完整目录中每篇前置知识均位于更早位置。</p></header>''' + self.beginner_route(compact=True) + self.reading_stages() + '''<div class="contents-tools"><label class="search"><span>⌕</span><input id="book-search" type="search" placeholder="在目录中找 A2A、RSI、RAG、PD…" aria-label="搜索全书目录"></label><button id="expand-toc" type="button">展开全部篇章</button><button id="collapse-toc" type="button">收起全部篇章</button></div><p id="book-results" class="result-count" aria-live="polite">按知识前置关系排列 · “小白主线”标记可先读</p><div class="book-contents">'''
         for i,p in enumerate(self.parts):
             chapters = ''
             for j,c in enumerate(p['chapters']):
@@ -172,7 +207,9 @@ class BookEdition:
 
     def learning_guide(self):
         review = self.learning_review
-        out = '''<header class="page-heading"><p class="eyebrow">AI FIELD GUIDE / FROM FOUNDATIONS TO SYSTEMS</p><h1>从一个名词，<br>读懂一套机制。</h1><p>从机器学习、推理训练、数据与框架，到浏览器、多模态和 Agent，按问题进入深入系列。</p></header><section class="guide-intro"><h2>从哪里开始读</h2><div class="guide-role-grid"><a href="#learn-ml-foundations"><b>任务与学习</b><span>先认识模型解决什么问题</span></a><a href="#learn-data-training"><b>数据与训练</b><span>再理解模型怎样生产出来</span></a><a href="#learn-reasoning-rl"><b>推理与奖励</b><span>区分训练能力与推理预算</span></a><a href="#learn-browser-agents"><b>页面与动作</b><span>理解交互执行和业务验证</span></a><a href="#learn-generative-multimodal"><b>图像与声音</b><span>认识可控生成与实时交互</span></a><a href="#learn-context-memory"><b>上下文记忆</b><span>衔接当前输入与跨会话经验</span></a></div><p>零基础先读任务与学习，再按兴趣进入其他系列。每个系列给出已有基础与阅读顺序，无需一次读完。</p></section><details class="guide-intro guide-agent-details"><summary>想先看 Agent 组件怎样分工？</summary><h2>进入 Agent 后，分清这些职责</h2><div class="guide-role-grid"><a href="articles/agentic-rag-routing.html"><b>RAG</b><span>查找并组织回答依据</span></a><a href="articles/mcp-session-lifecycle.html"><b>MCP</b><span>连接有明确契约的能力</span></a><a href="articles/skills-loading.html"><b>Skills</b><span>组织可复用的任务方法</span></a><a href="articles/harness-runtime.html"><b>Harness</b><span>承载上下文与执行闭环</span></a><a href="articles/a2a-discovery.html"><b>A2A</b><span>协作代理之间的任务交付</span></a><a href="articles/rsi-concepts.html"><b>RSI</b><span>研究改进能力如何再改进</span></a></div><p>ReAct 是组织行动与观察的模式；上下文是当前可用信息，长期记忆需要另行管理。分层图有助于认识职责，但不是每个 Agent 都必须堆齐所有组件。</p><p>还不熟悉基础概念？先读 <a href="articles/tokens-context.html">Token 与上下文</a>、<a href="articles/prompt.html">提示词</a> 和 <a href="articles/agent.html">Agent 入门</a>，再进入下面的系列。</p></details><nav class="guide-jumps" aria-label="进阶系列快速定位">'''
+        out = '<header class="page-heading"><p class="eyebrow">READ IN ORDER / THEN GO DEEPER</p><h1>先走一条主线，<br>再把知识逐层展开。</h1><p>零基础从下方主线开始；读过概念以后，再按完整目录或专题继续深入。无需先学训练、数学和部署。</p></header>'
+        out += self.beginner_route() + self.reading_stages()
+        out += '<section class="guide-intro"><h2>主线之后，按问题深入专题</h2><p>下面的专题按全书首次出现的位置排列，各专题内部也按目录顺序阅读。一个专题可能跨越应用与工程阶段；先读每篇标注的前置知识，不必一口气读完全部系列。</p><a href="map.html">查看完整章节与前置关系 →</a></section><nav class="guide-jumps" aria-label="进阶系列快速定位">'
         out += ''.join(f'<a href="#learn-{E(t["id"])}">{E(t["title"].split("：")[0])}</a>' for t in review['themes'])
         out += '</nav><div class="learning-series">'
         for index, topic in enumerate(review['themes']):

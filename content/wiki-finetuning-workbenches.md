@@ -6,7 +6,9 @@
 
 ## 前置阅读
 
+- [训练框架分工：PyTorch、Transformers、PEFT 与 TRL](training-framework-stack.md)
 - [训练数据生产：从原始材料到可追溯版本](data-production.md)
+- [LoRA 与 QLoRA：少改参数也能学习](lora-qlora.md)
 
 ## 先用一个类比理解
 

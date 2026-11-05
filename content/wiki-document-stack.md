@@ -6,8 +6,8 @@
 
 ## 前置阅读
 
-- [RAG：让模型先查资料，再组织答案](rag.md)
-- [Recall、MRR 与 nDCG：检索到底好在哪](retrieval-metrics.md)
+- [解析与切块：知识库先要读对文档](rag-parsing.md)
+- [引用、证据与拒答：知识库助手怎样才算有依据？](rag-evidence.md)
 
 ## 先用一个类比理解
 

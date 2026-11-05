@@ -6,6 +6,7 @@
 
 ## 前置阅读
 
+- [分布式训练：把显存、计算与通信拆开看](distributed-training.md)
 - [训练数据生产：从原始材料到可追溯版本](data-production.md)
 
 ## 先用一个类比理解

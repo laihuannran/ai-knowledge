@@ -6,9 +6,11 @@
     "summary": "理解微调工作台如何连接数据模板、底层训练库、导出与验收。",
     "analogy": "像一座工厂：工位、运输与检验各有责任，不能用一个工具名字代替整条生产链。",
     "prerequisites": [
-      "data-production"
+      "training-framework-stack",
+      "data-production",
+      "lora-qlora"
     ],
-    "requires": "建议先读：训练数据生产",
+    "requires": "建议先读：训练框架分工、训练数据生产、LoRA 与 QLoRA",
     "nodes": [
       "明确目标与约束",
       "固定输入与配置",
@@ -173,9 +175,10 @@
     "summary": "把 ZeRO 和参数高效微调分开理解，用状态分片解释显存与通信的交换。",
     "analogy": "像一座工厂：工位、运输与检验各有责任，不能用一个工具名字代替整条生产链。",
     "prerequisites": [
+      "distributed-training",
       "data-production"
     ],
-    "requires": "建议先读：训练数据生产",
+    "requires": "建议先读：分布式训练、训练数据生产",
     "nodes": [
       "明确目标与约束",
       "固定输入与配置",
@@ -327,9 +330,10 @@
     "summary": "区分模型能力、运行性能和在线服务负载，并控制污染与公平比较条件。",
     "analogy": "像一座工厂：工位、运输与检验各有责任，不能用一个工具名字代替整条生产链。",
     "prerequisites": [
-      "data-production"
+      "deep-eval-design",
+      "latency-cost"
     ],
-    "requires": "建议先读：训练数据生产",
+    "requires": "建议先读：一份能够指导决策的评测集怎样建立、TTFT、吞吐、P95 和成本",
     "nodes": [
       "明确目标与约束",
       "固定输入与配置",

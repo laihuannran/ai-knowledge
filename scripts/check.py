@@ -157,6 +157,35 @@ book = read_json('content/book.json', {'parts': []})
 covered = [slug for part in book['parts'] for chapter in part['chapters'] for slug in chapter['slugs']]
 if len(covered) != len(set(covered)) or set(covered) != slugs:
     errors.append('Book contents must cover every article exactly once')
+positions = {slug: index for index, slug in enumerate(covered)}
+for article in ARTICLES:
+    for target in article.get('prerequisites', []):
+        if target in positions and positions[target] >= positions.get(article['slug'], -1):
+            errors.append(f'Prerequisite appears after lesson: {article["slug"]} -> {target}')
+
+# The short route is a deliberate subsequence, not the first pages of each topic.
+route = [slug for group in book.get('beginner_route', []) for slug in group['slugs']]
+if not route or len(route) != len(set(route)) or any(slug not in slugs for slug in route):
+    errors.append('Beginner route must contain unique, existing lessons')
+elif route != sorted(route, key=positions.get):
+    errors.append('Beginner route must follow the full book order')
+else:
+    earlier = set()
+    for index, slug in enumerate(route):
+        missing = set(by_slug[slug].get('prerequisites', [])) - earlier
+        if missing:
+            errors.append(f'Beginner route misses prior concepts: {slug} -> {sorted(missing)}')
+        earlier.add(slug)
+        path = D / 'articles' / f'{slug}.html'
+        text = path.read_text() if path.exists() else ''
+        if index+1 < len(route) and f'data-beginner-next="{route[index+1]}"' not in text:
+            errors.append(f'Beginner next navigation differs from route: {slug}')
+    guide = (D / 'guide.html').read_text()
+    if re.findall(r'data-beginner-lesson="([^"]+)"', guide) != route:
+        errors.append('Rendered beginner guide differs from route')
+stage_parts = [part for stage in book.get('stages', []) for part in stage['parts']]
+if stage_parts != [part['id'] for part in book['parts']]:
+    errors.append('Reading stages must cover all book parts in order')
 for article in ARTICLES:
     if article.get('level') == '深入':
         if len(article['sections']) < 8 or sum(len(s['text']) for s in article['sections']) < 1400:

@@ -6,8 +6,8 @@
 
 ## 前置阅读
 
-- [RAG：让模型先查资料，再组织答案](rag.md)
-- [Recall、MRR 与 nDCG：检索到底好在哪](retrieval-metrics.md)
+- [ANN、HNSW 与索引：为什么快了却可能漏结果？](vector-index.md)
+- [混合检索与 RRF：让关键词和语义互补](hybrid-rrf.md)
 
 ## 先用一个类比理解
 

@@ -7,6 +7,7 @@
 ## 前置阅读
 
 - [vLLM、批处理、并行与 Kubernetes 各管什么？](serving-stack.md)
+- [TTFT、吞吐、P95 和成本：一张性能报告怎么看？](latency-cost.md)
 
 ## 先用一个类比理解
 

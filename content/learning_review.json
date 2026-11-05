@@ -2,55 +2,6 @@
   "date": "2026-11-05",
   "themes": [
     {
-      "id": "wiki-toolchains",
-      "title": "从原理走到具体工具链",
-      "status": "对照 ai_wiki 补齐工具层",
-      "question": "知道 RAG 和微调原理后，实际项目里还会用到哪些工具？",
-      "summary": "先读差异导览，再按文档检索、模型训练、部署交互与评测进入九篇具体栈教程。",
-      "correction": "工作台、模型库、索引库、数据库、推理引擎与资源平台处在不同层次。收录新名字不等于补齐一门学科；候选条目不等于已完成教程。",
-      "existing": [
-        "industry-stack",
-        "training-framework-stack",
-        "deep-rag-retrieval"
-      ],
-      "lessons": [
-        "wiki-curation-map",
-        "wiki-document-stack",
-        "wiki-embedding-stack",
-        "wiki-vector-stack",
-        "wiki-finetuning-workbenches",
-        "wiki-deepspeed-stack",
-        "wiki-serving-engines",
-        "wiki-gpu-platform",
-        "wiki-ai-interface-stack",
-        "wiki-evaluation-workbenches"
-      ]
-    },
-    {
-      "id": "model-apis",
-      "title": "模型 API：请求、事件与兼容适配",
-      "status": "补齐独立协议系列",
-      "question": "换一个地址和模型名，为什么仍然不能兼容？",
-      "summary": "从接口地图进入 OpenAI、Anthropic、Gemini、Bedrock 与 Kiro，再理解流式转换和兼容验收。",
-      "correction": "这些名称处于不同层次：Messages在此指Anthropic接口；Kiro是产品，ACP不是模型REST格式；OpenAI-compatible也不代表所有参数、工具、多模态和状态能力都等价。",
-      "existing": [
-        "protocol-landscape",
-        "gateway",
-        "streaming-events"
-      ],
-      "lessons": [
-        "api-protocol-map",
-        "api-openai-chat",
-        "api-openai-responses",
-        "api-claude-messages",
-        "api-gemini-native",
-        "api-bedrock-families",
-        "api-kiro-boundaries",
-        "api-stream-translation",
-        "api-compatibility-testing"
-      ]
-    },
-    {
       "id": "ml-foundations",
       "title": "AI 基础：任务、泛化与神经网络",
       "status": "补齐基础版图",
@@ -69,75 +20,98 @@
       ]
     },
     {
-      "id": "reasoning-rl",
-      "title": "推理与强化学习：能力怎样形成与使用",
-      "status": "补齐训练与推理机制",
-      "question": "增加思考时间与训练模型，究竟改变了什么？",
-      "summary": "理解测试时计算、奖励信号、策略更新，以及 DPO 与 GRPO 的不同反馈链路。",
-      "correction": "写出更长推理过程不保证正确；DPO、PPO 与 GRPO 也不是只换名称的同一种训练流程。",
+      "id": "wiki-toolchains",
+      "title": "从原理走到具体工具链",
+      "status": "对照 ai_wiki 补齐工具层",
+      "question": "知道 RAG 和微调原理后，实际项目里还会用到哪些工具？",
+      "summary": "先读差异导览，再按文档检索、模型训练、部署交互与评测进入九篇具体栈教程。",
+      "correction": "工作台、模型库、索引库、数据库、推理引擎与资源平台处在不同层次。收录新名字不等于补齐一门学科；候选条目不等于已完成教程。",
       "existing": [
-        "probability-softmax",
-        "preference-alignment"
+        "deep-rag-retrieval",
+        "industry-stack",
+        "training-framework-stack"
       ],
       "lessons": [
-        "reasoning-test-time",
-        "rl-reward-policy",
-        "dpo-grpo"
+        "wiki-document-stack",
+        "wiki-embedding-stack",
+        "wiki-vector-stack",
+        "wiki-ai-interface-stack",
+        "wiki-serving-engines",
+        "wiki-gpu-platform",
+        "wiki-evaluation-workbenches",
+        "wiki-finetuning-workbenches",
+        "wiki-deepspeed-stack",
+        "wiki-curation-map"
       ]
     },
     {
-      "id": "data-training",
-      "title": "数据与训练技术栈：从材料到可运行模型",
-      "status": "补齐模型生产链",
-      "question": "有数据、有 GPU、有框架，为什么仍然不等于训好了模型？",
-      "summary": "沿数据血缘、合成过滤、框架分工、并行训练与模型压缩理解完整链路。",
-      "correction": "合成数据数量多不等于知识更丰富；低比特与分片可能节省内存，但真实性能取决于硬件、算子和任务。",
+      "id": "graphrag",
+      "title": "GraphRAG：从文本片段到关系与社区",
+      "status": "补齐新主题",
+      "question": "向量RAG已经能找资料，为什么还要图？",
+      "summary": "理解实体、关系、来源、社区报告，以及Local/Global/DRIFT等查询的适用问题。",
+      "correction": "Microsoft GraphRAG是具体实现；图增强检索是一类方法。建图不保证事实真实，也不保证比普通检索更省资源。",
       "existing": [
-        "data-quality",
-        "lora-qlora",
-        "gpu-memory"
+        "rag",
+        "deep-rag-retrieval"
       ],
       "lessons": [
-        "data-production",
-        "synthetic-data",
-        "training-framework-stack",
-        "distributed-training",
-        "model-compression"
+        "graphrag-indexing",
+        "graphrag-querying"
       ]
     },
     {
-      "id": "browser-agents",
-      "title": "浏览器 Agent：从看见页面到确认业务结果",
-      "status": "补齐电脑操作系列",
-      "question": "按钮点到了，为什么任务仍然可能没有完成？",
-      "summary": "区分 API、页面结构与视觉操作，处理定位、等待、会话、重复提交和断线恢复。",
-      "correction": "页面事件成功不等于业务写入成功；浏览器权限与登录状态也不自动成为用户对所有操作的授权。",
+      "id": "react-patterns",
+      "title": "ReAct、意图识别与设计模式",
+      "status": "深化已有主题",
+      "question": "模型怎样决定下一步，又怎样知道该停？",
+      "summary": "把观察、行动、反馈与任务约束连接起来，比较规划、路由、并行和评价修订。",
+      "correction": "ReAct是组织推理与行动的模式，与React前端框架不同；模式没有统一的固定总数，反思也不等于自动训练模型。",
       "existing": [
-        "agent",
-        "agent-tool-reliability",
-        "harness-runtime"
+        "stack-react-pattern",
+        "agent-planning"
       ],
       "lessons": [
-        "browser-computer-agents",
-        "browser-action-reliability"
+        "agent-intent-planning",
+        "agent-design-patterns"
       ]
     },
     {
-      "id": "generative-multimodal",
-      "title": "多模态生成：图像控制、视频一致性与实时语音",
-      "status": "深化已有多模态基础",
-      "question": "能生成一张图、一段声音，怎样才能形成可用产品？",
-      "summary": "从条件控制、时序一致性、轮次检测和打断机制认识生成与实时交互。",
-      "correction": "参考图、随机种子和生成提示都不是绝对一致性保证；听见声音、识别文本和确认业务动作属于不同环节。",
+      "id": "memory-systems",
+      "title": "记忆系统：短期状态与跨会话长期记忆",
+      "status": "补齐独立机制系列",
+      "question": "数据已经保存，为什么下一次仍可能记错、忘记或用错？",
+      "summary": "先理解线程状态与检查点，再沿长期记忆的写入、召回、纠错与删除建立完整机制。",
+      "correction": "短期与长期在此按会话或任务作用域区分，而非RAM与磁盘；跨会话可用也不等于跨用户共享，长期记忆不等于权重更新。",
       "existing": [
-        "image-diffusion",
-        "video-understanding",
-        "speech-asr-tts"
+        "agent-memory",
+        "deep-agent-state",
+        "context-engineering"
       ],
       "lessons": [
-        "image-generation-control",
-        "video-generation-consistency",
-        "realtime-voice-agent"
+        "short-term-memory",
+        "long-term-memory-write",
+        "long-term-memory-recall",
+        "memory-lifecycle"
+      ]
+    },
+    {
+      "id": "context-memory",
+      "title": "Context：上下文组装、压缩与有效利用",
+      "status": "深化已有主题",
+      "question": "聊天记录还在，为什么模型仍然忘了限制？",
+      "summary": "从一轮输入的组装，走向长任务压缩、按需读取与长上下文评测。",
+      "correction": "窗口容量是上限，不是模型有效利用全部材料的保证；上下文压缩会丢失细节，缓存命中也不等于记住用户。",
+      "existing": [
+        "tokens-context",
+        "agent-memory",
+        "deep-agent-state"
+      ],
+      "lessons": [
+        "context-engineering",
+        "context-assembly",
+        "context-compaction",
+        "context-evaluation"
       ]
     },
     {
@@ -174,19 +148,38 @@
       ]
     },
     {
-      "id": "graphrag",
-      "title": "GraphRAG：从文本片段到关系与社区",
-      "status": "补齐新主题",
-      "question": "向量RAG已经能找资料，为什么还要图？",
-      "summary": "理解实体、关系、来源、社区报告，以及Local/Global/DRIFT等查询的适用问题。",
-      "correction": "Microsoft GraphRAG是具体实现；图增强检索是一类方法。建图不保证事实真实，也不保证比普通检索更省资源。",
+      "id": "browser-agents",
+      "title": "浏览器 Agent：从看见页面到确认业务结果",
+      "status": "补齐电脑操作系列",
+      "question": "按钮点到了，为什么任务仍然可能没有完成？",
+      "summary": "区分 API、页面结构与视觉操作，处理定位、等待、会话、重复提交和断线恢复。",
+      "correction": "页面事件成功不等于业务写入成功；浏览器权限与登录状态也不自动成为用户对所有操作的授权。",
       "existing": [
-        "rag",
-        "deep-rag-retrieval"
+        "agent",
+        "agent-tool-reliability",
+        "harness-runtime"
       ],
       "lessons": [
-        "graphrag-indexing",
-        "graphrag-querying"
+        "browser-computer-agents",
+        "browser-action-reliability"
+      ]
+    },
+    {
+      "id": "a2a",
+      "title": "协议与 A2A：从能力发现到跨代理交付",
+      "status": "补齐独立系列",
+      "question": "MCP 已经能调工具，为什么还需要 A2A？",
+      "summary": "从协议层次开始，理解独立代理之间的发现、异步任务、交付产物与授权边界。",
+      "correction": "A2A 标准化代理间协作消息，不替你实现规划、业务语义或自动授予下游权限；AgentCard 中的 skill 也不等于 Agent Skills 的 SKILL.md。",
+      "existing": [
+        "mcp",
+        "stack-protocols"
+      ],
+      "lessons": [
+        "protocol-landscape",
+        "a2a-discovery",
+        "a2a-task-lifecycle",
+        "a2a-trust-boundaries"
       ]
     },
     {
@@ -207,57 +200,82 @@
       ]
     },
     {
-      "id": "context-memory",
-      "title": "Context：上下文组装、压缩与有效利用",
-      "status": "深化已有主题",
-      "question": "聊天记录还在，为什么模型仍然忘了限制？",
-      "summary": "从一轮输入的组装，走向长任务压缩、按需读取与长上下文评测。",
-      "correction": "窗口容量是上限，不是模型有效利用全部材料的保证；上下文压缩会丢失细节，缓存命中也不等于记住用户。",
+      "id": "generative-multimodal",
+      "title": "多模态生成：图像控制、视频一致性与实时语音",
+      "status": "深化已有多模态基础",
+      "question": "能生成一张图、一段声音，怎样才能形成可用产品？",
+      "summary": "从条件控制、时序一致性、轮次检测和打断机制认识生成与实时交互。",
+      "correction": "参考图、随机种子和生成提示都不是绝对一致性保证；听见声音、识别文本和确认业务动作属于不同环节。",
       "existing": [
-        "tokens-context",
-        "agent-memory",
-        "deep-agent-state"
+        "speech-asr-tts",
+        "image-diffusion",
+        "video-understanding"
       ],
       "lessons": [
-        "context-engineering",
-        "context-assembly",
-        "context-compaction",
-        "context-evaluation"
+        "image-generation-control",
+        "video-generation-consistency",
+        "realtime-voice-agent"
       ]
     },
     {
-      "id": "memory-systems",
-      "title": "记忆系统：短期状态与跨会话长期记忆",
-      "status": "补齐独立机制系列",
-      "question": "数据已经保存，为什么下一次仍可能记错、忘记或用错？",
-      "summary": "先理解线程状态与检查点，再沿长期记忆的写入、召回、纠错与删除建立完整机制。",
-      "correction": "短期与长期在此按会话或任务作用域区分，而非RAM与磁盘；跨会话可用也不等于跨用户共享，长期记忆不等于权重更新。",
+      "id": "reasoning-rl",
+      "title": "推理与强化学习：能力怎样形成与使用",
+      "status": "补齐训练与推理机制",
+      "question": "增加思考时间与训练模型，究竟改变了什么？",
+      "summary": "理解测试时计算、奖励信号、策略更新，以及 DPO 与 GRPO 的不同反馈链路。",
+      "correction": "写出更长推理过程不保证正确；DPO、PPO 与 GRPO 也不是只换名称的同一种训练流程。",
       "existing": [
-        "agent-memory",
-        "deep-agent-state",
-        "context-engineering"
+        "probability-softmax",
+        "preference-alignment"
       ],
       "lessons": [
-        "short-term-memory",
-        "long-term-memory-write",
-        "long-term-memory-recall",
-        "memory-lifecycle"
+        "reasoning-test-time",
+        "rl-reward-policy",
+        "dpo-grpo"
       ]
     },
     {
-      "id": "react-patterns",
-      "title": "ReAct、意图识别与设计模式",
-      "status": "深化已有主题",
-      "question": "模型怎样决定下一步，又怎样知道该停？",
-      "summary": "把观察、行动、反馈与任务约束连接起来，比较规划、路由、并行和评价修订。",
-      "correction": "ReAct是组织推理与行动的模式，与React前端框架不同；模式没有统一的固定总数，反思也不等于自动训练模型。",
+      "id": "model-apis",
+      "title": "模型 API：请求、事件与兼容适配",
+      "status": "补齐独立协议系列",
+      "question": "换一个地址和模型名，为什么仍然不能兼容？",
+      "summary": "从接口地图进入 OpenAI、Anthropic、Gemini、Bedrock 与 Kiro，再理解流式转换和兼容验收。",
+      "correction": "这些名称处于不同层次：Messages在此指Anthropic接口；Kiro是产品，ACP不是模型REST格式；OpenAI-compatible也不代表所有参数、工具、多模态和状态能力都等价。",
       "existing": [
-        "stack-react-pattern",
-        "agent-planning"
+        "protocol-landscape",
+        "gateway",
+        "streaming-events"
       ],
       "lessons": [
-        "agent-design-patterns",
-        "agent-intent-planning"
+        "api-protocol-map",
+        "api-openai-chat",
+        "api-openai-responses",
+        "api-claude-messages",
+        "api-gemini-native",
+        "api-bedrock-families",
+        "api-kiro-boundaries",
+        "api-stream-translation",
+        "api-compatibility-testing"
+      ]
+    },
+    {
+      "id": "data-training",
+      "title": "数据与训练技术栈：从材料到可运行模型",
+      "status": "补齐模型生产链",
+      "question": "有数据、有 GPU、有框架，为什么仍然不等于训好了模型？",
+      "summary": "沿数据血缘、合成过滤、框架分工、并行训练与模型压缩理解完整链路。",
+      "correction": "合成数据数量多不等于知识更丰富；低比特与分片可能节省内存，但真实性能取决于硬件、算子和任务。",
+      "existing": [
+        "data-quality",
+        "gpu-memory",
+        "lora-qlora"
+      ],
+      "lessons": [
+        "data-production",
+        "synthetic-data",
+        "training-framework-stack",
+        "distributed-training",
+        "model-compression"
       ]
     },
     {
@@ -284,30 +302,12 @@
       "summary": "用客户复盘案例串起CRM、表格、文档、核验、可审阅草稿和授权交付。",
       "correction": "七层图适合帮助分工，但不是所有Agent都必须照搬的标准；增加组件数量不自动增加业务价值。",
       "existing": [
-        "deep-stack-architecture",
         "deep-eval-design",
-        "deep-eval-production"
+        "deep-eval-production",
+        "deep-stack-architecture"
       ],
       "lessons": [
         "enterprise-agent-case"
-      ]
-    },
-    {
-      "id": "a2a",
-      "title": "协议与 A2A：从能力发现到跨代理交付",
-      "status": "补齐独立系列",
-      "question": "MCP 已经能调工具，为什么还需要 A2A？",
-      "summary": "从协议层次开始，理解独立代理之间的发现、异步任务、交付产物与授权边界。",
-      "correction": "A2A 标准化代理间协作消息，不替你实现规划、业务语义或自动授予下游权限；AgentCard 中的 skill 也不等于 Agent Skills 的 SKILL.md。",
-      "existing": [
-        "stack-protocols",
-        "mcp"
-      ],
-      "lessons": [
-        "protocol-landscape",
-        "a2a-discovery",
-        "a2a-task-lifecycle",
-        "a2a-trust-boundaries"
       ]
     },
     {

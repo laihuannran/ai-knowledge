@@ -53,9 +53,10 @@
     "date": "2026-11-05",
     "level": "深入",
     "prerequisites": [
-      "serving-stack"
+      "serving-stack",
+      "latency-cost"
     ],
-    "requires": "建议先读：serving-stack",
+    "requires": "建议先读：vLLM、批处理、并行与 Kubernetes 各管什么？、TTFT、吞吐、P95 和成本",
     "related": [
       "serving-stack"
     ],
@@ -184,9 +185,10 @@
     "date": "2026-11-05",
     "level": "深入",
     "prerequisites": [
-      "gpu-memory"
+      "serving-stack",
+      "parallelism-types"
     ],
-    "requires": "建议先读：gpu-memory",
+    "requires": "建议先读：vLLM、批处理、并行与 Kubernetes 各管什么？、TP、PP、DP、EP",
     "related": [
       "gpu-memory"
     ],
@@ -316,9 +318,10 @@
     "date": "2026-11-05",
     "level": "深入",
     "prerequisites": [
-      "serving-stack"
+      "stack-lowcode",
+      "stack-java-ai"
     ],
-    "requires": "建议先读：serving-stack",
+    "requires": "建议先读：Dify、n8n 与 Flowise、Spring AI 与 LangChain4j",
     "related": [
       "serving-stack"
     ],

@@ -330,9 +330,10 @@
       "Agentic RAG",
       "证据核验"
     ],
-    "requires": "建议先读：RAG、检索评估与证据边界",
+    "requires": "建议先读：RAG、Agent 和工作流、Recall、MRR 与 nDCG、让每个结论都有边界",
     "prerequisites": [
       "rag",
+      "agent",
       "retrieval-metrics",
       "deep-rag-evidence"
     ],
@@ -465,9 +466,10 @@
       "Deep Research",
       "证据核验"
     ],
-    "requires": "建议先读：RAG、检索评估与证据边界",
+    "requires": "建议先读：RAG、Agent 和工作流、Recall、MRR 与 nDCG、让每个结论都有边界",
     "prerequisites": [
       "rag",
+      "agent",
       "retrieval-metrics",
       "deep-rag-evidence"
     ],

@@ -6,7 +6,8 @@
 
 ## 前置阅读
 
-- [训练数据生产：从原始材料到可追溯版本](data-production.md)
+- [一份能够指导决策的评测集怎样建立](deep-eval-design.md)
+- [TTFT、吞吐、P95 和成本：一张性能报告怎么看？](latency-cost.md)
 
 ## 先用一个类比理解
 

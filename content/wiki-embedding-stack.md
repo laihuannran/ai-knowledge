@@ -6,8 +6,9 @@
 
 ## 前置阅读
 
-- [RAG：让模型先查资料，再组织答案](rag.md)
-- [Recall、MRR 与 nDCG：检索到底好在哪](retrieval-metrics.md)
+- [向量、维度与余弦：相似的意思怎样变成距离？](vectors-cosine.md)
+- [混合检索与 RRF：让关键词和语义互补](hybrid-rrf.md)
+- [重排：候选找到了，为什么还要再排一次](reranking.md)
 
 ## 先用一个类比理解
 

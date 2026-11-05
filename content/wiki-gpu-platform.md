@@ -6,7 +6,8 @@
 
 ## 前置阅读
 
-- [GPU、显存和量化：模型为什么装不下？](gpu-memory.md)
+- [vLLM、批处理、并行与 Kubernetes 各管什么？](serving-stack.md)
+- [TP、PP、DP、EP：多张卡究竟分了什么](parallelism-types.md)
 
 ## 先用一个类比理解
 
