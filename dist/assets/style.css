@@ -32,3 +32,6 @@
 .beginner-navigation p{font-size:14px;margin:10px 0}.beginner-navigation a{font-size:15px;overflow-wrap:anywhere}
 .beginner-navigation>a{align-self:center}.full-order-label{font-size:13px;color:#6d8061;margin-top:32px}
 @media(max-width:650px){.reading-stages,.beginner-navigation{grid-template-columns:1fr}.reading-stages>section{padding:20px}.beginner-navigation{gap:18px;padding:20px}.beginner-group h3{font-size:21px}}
+
+.takeaway{padding:22px 24px;border-left:4px solid #6b8b58;background:#edf2e6;color:#234d3d;font-size:18px;line-height:1.9}
+.prose .example p{margin:0 0 12px}.prose .example p:last-child{margin-bottom:0}

@@ -46,9 +46,17 @@ for a in ARTICLES:
         errors.append(f'Duplicate slug: {slug}')
     slugs.add(slug)
     for field in ('title', 'category', 'summary', 'analogy', 'nodes', 'sections', 'example',
-                  'pitfall', 'question', 'answer', 'sources', 'tags', 'requires', 'date'):
+                  'pitfall', 'question', 'answer', 'sources', 'tags', 'requires', 'date', 'plain_intro', 'takeaway'):
         if not a.get(field):
             errors.append(f'Missing {field}: {slug}')
+    if not isinstance(a.get('plain_intro'), str) or len(a.get('plain_intro', '')) < 30:
+        errors.append(f'Missing plain-language explanation: {slug}')
+    if not isinstance(a.get('takeaway'), str) or len(a.get('takeaway', '')) < 10:
+        errors.append(f'Missing concrete takeaway: {slug}')
+    body_paragraphs = [paragraph.strip() for section in a['sections']
+                       for paragraph in section['text'].split('\n\n') if len(paragraph.strip()) > 45]
+    if len(body_paragraphs) != len(set(body_paragraphs)):
+        errors.append(f'Repeated substantive paragraph: {slug}')
     if len(a['nodes']) != 4:
         errors.append(f'Expected four diagram nodes: {slug}')
     if len(a['sections']) < 3:
@@ -78,6 +86,12 @@ for a in ARTICLES:
         for target in a.get(field, []):
             if target not in slugs or target == a['slug']:
                 errors.append(f'Invalid {field} target: {a["slug"]} -> {target}')
+
+# A generic opening copied across lessons does not explain the specific topic.
+for field in ('plain_intro', 'takeaway'):
+    values = [a.get(field) for a in ARTICLES if a.get(field)]
+    if len(values) != len(set(values)):
+        errors.append(f'Duplicate lesson-specific explanation: {field}')
 
 # A prerequisite cycle gives readers no starting point; related links may cycle.
 by_slug = {a['slug']: a for a in ARTICLES}

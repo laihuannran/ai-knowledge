@@ -52,6 +52,7 @@ def page(title, body, sub=False):
 
 def search_text(a):
     parts = [a['title'], a['summary'], a['category'], *a['tags'], a['analogy'],
+             a.get('plain_intro', ''), a.get('takeaway', ''),
              a['example'], a['pitfall'], a['question'], a['answer'],
              *[s['title'] + ' ' + s['text'] for s in a['sections']]]
     table = a.get('comparison', {})
@@ -93,13 +94,16 @@ def comparison_html(table):
 
 for i, a in enumerate(A):
     (D / 'diagrams' / f'{a["slug"]}.svg').write_text(diagram(a, i + 1))
-    sections = []
+    sections = [
+        ('先说这篇在讲什么', paragraphs(a.get('plain_intro', a['summary']))),
+        ('先看一个具体例子', f'<div class="example">{paragraphs(a["example"])}</div>'),
+    ]
     prerequisites = a.get('prerequisites', [])
     if prerequisites:
-        sections.append(('先读哪些知识', '<ul>' + article_links(prerequisites) + '</ul>'))
+        sections.append(('遇到陌生概念，可以先读', '<details><summary>展开前置阅读建议</summary><ul>' + article_links(prerequisites) + '</ul></details>'))
     sections += [
-        ('先用一个类比理解', f'<div class="analogy">{E(a["analogy"])}</div><p class="muted">类比只帮助建立直觉，不等同于技术的完整机制。</p>'),
-        ('一图看懂', f'<figure><img src="../diagrams/{a["slug"]}.svg" alt="{E("；".join(a["nodes"]))}" width="840" loading="lazy"><figcaption>原创概念示意 · 简化表示，窄屏可左右滑动</figcaption></figure>'),
+        ('打个比方，帮助理解', f'<div class="analogy">{E(a["analogy"])}</div><p class="muted">这是帮助理解的比方，实际过程以正文说明为准。</p>'),
+        ('一图看懂', f'<figure><img src="../diagrams/{a["slug"]}.svg" alt="{E("；".join(a["nodes"]))}" width="840" loading="lazy"><figcaption>先看整体关系，下面会逐步解释图上的词。窄屏可左右滑动</figcaption></figure>'),
     ]
     extra_diagrams = a.get('diagrams', [])
     for si, section in enumerate(a['sections']):
@@ -114,7 +118,7 @@ for i, a in enumerate(A):
     if a.get('comparison'):
         sections.append(('放在一起对比', comparison_html(a['comparison'])))
     sections += [
-        ('放进真实场景', f'<div class="example"><span class="tiny-label">SCENARIO</span><p>{E(a["example"])}</p></div>'),
+        ('读完先记住这一句', f'<div class="takeaway">{E(a.get("takeaway", a["summary"]))}</div>'),
         ('别踩这个误区', f'<div class="pitfall">{E(a["pitfall"])}</div>'),
         ('想一想', f'<details><summary>{E(a["question"])}</summary><p>{E(a["answer"])}</p></details>'),
     ]
@@ -140,9 +144,9 @@ for i, a in enumerate(A):
 <aside class="toc"><span class="tiny-label">这篇怎么读</span>{toc}<a class="back-top" href="#main">↑ 回到顶部</a></aside></div>'''
     (D / 'articles' / f'{a["slug"]}.html').write_text(page(a['title'], content, True))
 
-    md = f'# {a["title"]}\n\n> {a["summary"]}\n\n专题：{a["category"]} · 整理于 {a["date"]}\n\n'
+    md = f'# {a["title"]}\n\n> {a["summary"]}\n\n专题：{a["category"]} · 整理于 {a["date"]}\n\n## 先说这篇在讲什么\n\n{a.get("plain_intro", a["summary"])}\n\n## 先看一个具体例子\n\n{a["example"]}\n\n'
     if prerequisites:
-        md += '## 前置阅读\n\n' + '\n'.join(f'- [{BY_SLUG[s]["title"]}]({s}.md)' for s in prerequisites) + '\n\n'
+        md += '## 遇到陌生概念，可以先读\n\n<details><summary>展开前置阅读建议</summary>\n\n' + '\n'.join(f'- [{BY_SLUG[s]["title"]}]({s}.md)' for s in prerequisites) + '\n\n</details>\n\n'
     md += f'## 先用一个类比理解\n\n{a["analogy"]}\n\n类比只帮助建立直觉，不等同于完整机制。\n\n## 一图看懂\n\n![{a["summary"]}](../dist/diagrams/{a["slug"]}.svg)\n\n'
     md += '\n\n'.join(f'## {s["title"]}\n\n{s["text"]}' for s in a['sections'])
     for di, detail in enumerate(a.get('diagrams', [])):
@@ -152,7 +156,7 @@ for i, a in enumerate(A):
         md += '\n\n## 放在一起对比\n\n| ' + ' | '.join(table['headers']) + ' |\n'
         md += '| ' + ' | '.join('---' for _ in table['headers']) + ' |\n'
         md += '\n'.join('| ' + ' | '.join(v.replace('|', '\\|') for v in row) + ' |' for row in table['rows'])
-    md += f'\n\n## 真实场景\n\n{a["example"]}\n\n## 常见误区\n\n{a["pitfall"]}\n\n## 想一想\n\n{a["question"]}\n\n<details><summary>查看解释</summary>\n\n{a["answer"]}\n\n</details>\n\n## 关联阅读\n\n'
+    md += f'\n\n## 读完先记住这一句\n\n{a.get("takeaway", a["summary"])}\n\n## 常见误区\n\n{a["pitfall"]}\n\n## 想一想\n\n{a["question"]}\n\n<details><summary>查看解释</summary>\n\n{a["answer"]}\n\n</details>\n\n## 关联阅读\n\n'
     md += '\n'.join(f'- [{BY_SLUG[s]["title"]}]({s}.md)' for s in related)
     md += '\n\n## 原始资料\n\n' + '\n'.join(f'- [{s["title"]}]({s["url"]})' for s in a['sources'])
     md += '\n\n原创讲解；图示和类比经过简化，数字示例不代表实测。工具功能以对应版本官方资料为准。\n'
