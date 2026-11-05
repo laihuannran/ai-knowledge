@@ -439,5 +439,41 @@
       "pushed_at": null,
       "source": "https://api.github.com/repos/openai/openai-cookbook"
     }
+  },
+  {
+    "id": "charliedream1-ai-wiki",
+    "title": "AI 驯龙笔记：ai_wiki",
+    "url": "https://github.com/charliedream1/ai_wiki",
+    "kind": "工程问题与资料索引",
+    "level": "入门至研究线索",
+    "language": "中文为主",
+    "what_to_learn": "沿文档解析、表示模型、微调、推理服务及 Agent 资料发现具体工具与工程问题。条目版本与深度不一，应继续追溯官方资料。",
+    "how_we_use": "固定提交75529711fdc892b88cb772a727bd63bcd8ce021c作差异审查，补入18项工具及9篇深入教程，另有差异导览；已有覆盖不重复开篇，候选领域明确列出。本站原创重写，不复制截图或整篇摘录。",
+    "repo": "charliedream1/ai_wiki",
+    "license": {
+      "name": "README 标示 Apache-2.0，独立许可文件未核实",
+      "source": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/README.md",
+      "note": "固定提交根目录未见独立LICENSE文件；第三方文章和图像各有授权范围，仅链接导读。"
+    },
+    "stars": {
+      "count": null,
+      "label": "未获取",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/charliedream1/ai_wiki",
+      "method": "GitHub REST repos.stargazers_count；本次限流未取得"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "固定审查提交",
+        "url": "https://github.com/charliedream1/ai_wiki/tree/75529711fdc892b88cb772a727bd63bcd8ce021c"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/charliedream1/ai_wiki"
+    }
   }
 ]

@@ -2,6 +2,31 @@
   "date": "2026-11-05",
   "themes": [
     {
+      "id": "wiki-toolchains",
+      "title": "从原理走到具体工具链",
+      "status": "对照 ai_wiki 补齐工具层",
+      "question": "知道 RAG 和微调原理后，实际项目里还会用到哪些工具？",
+      "summary": "先读差异导览，再按文档检索、模型训练、部署交互与评测进入九篇具体栈教程。",
+      "correction": "工作台、模型库、索引库、数据库、推理引擎与资源平台处在不同层次。收录新名字不等于补齐一门学科；候选条目不等于已完成教程。",
+      "existing": [
+        "industry-stack",
+        "training-framework-stack",
+        "deep-rag-retrieval"
+      ],
+      "lessons": [
+        "wiki-curation-map",
+        "wiki-document-stack",
+        "wiki-embedding-stack",
+        "wiki-vector-stack",
+        "wiki-finetuning-workbenches",
+        "wiki-deepspeed-stack",
+        "wiki-serving-engines",
+        "wiki-gpu-platform",
+        "wiki-ai-interface-stack",
+        "wiki-evaluation-workbenches"
+      ]
+    },
+    {
       "id": "model-apis",
       "title": "模型 API：请求、事件与兼容适配",
       "status": "补齐独立协议系列",

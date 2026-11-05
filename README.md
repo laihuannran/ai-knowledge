@@ -6,7 +6,7 @@
 
 ## 书籍版（2026-11-05）
 
-14篇、53章、143节。其中83篇为新增深入章节，每篇8–11个正文小节，结合具体机制、连贯案例、比较表与多张原创概念图。其余短文保留作为概念入口。合计309张SVG图、100张比较表与496个术语入口。
+14篇、59章、153节。其中93篇为新增深入章节，每篇8–11个正文小节，结合具体机制、连贯案例、比较表与多张原创概念图。其余短文保留作为概念入口。合计339张SVG图、110张比较表与522个术语入口。
 
 1. **先建立AI的世界地图**：任务版图、泛化与泄漏、够用的数学、神经网络学习。
 2. **模型怎样读懂和生成**：Transformer、QKV、MoE、推理模型与测试时计算。
@@ -25,17 +25,19 @@
 
 ## 技术栈与资料研究
 
-`content/research/projects.json`记录63个项目，覆盖LangChain、LangGraph、LlamaIndex、Haystack、Spring AI、LangChain4j、主流Agent框架、Dify/n8n/Flowise、Codex、Claude Code、Ollama/llama.cpp、vLLM/SGLang、LiteLLM、向量与检索数据库、Redis/Kafka、评测工具和React/AI SDK，新增scikit-learn、PyTorch、Transformers、PEFT、TRL、Datasets、TorchTitan、TorchAO、Browser Use、Diffusers、ComfyUI与LiveKit Agents。每项说明职责、机制、适用场景、限制、对照项目、许可与来源。
+`content/research/projects.json`记录81个项目，覆盖LangChain、LangGraph、LlamaIndex、Haystack、Spring AI、LangChain4j、主流Agent框架、Dify/n8n/Flowise、Codex、Claude Code、Ollama/llama.cpp、vLLM/SGLang、LiteLLM、向量与检索数据库、Redis/Kafka、评测工具和React/AI SDK，新增scikit-learn、PyTorch、Transformers、PEFT、TRL、Datasets、TorchTitan、TorchAO、Browser Use、Diffusers、ComfyUI与LiveKit Agents。每项说明职责、机制、适用场景、限制、对照项目、许可与来源。
 
 GitHub Star来自2026-11-04至2026-11-05的元数据快照（逐项标明日期），附来源、方法及抓取时间；无法获取明确保留空值。关注度不是品质排名。AutoGen已按官方状态标注为归档历史参考，另列接替项目。产品、源码仓库、模型权重和托管服务的授权边界分开记录。
 
-`content/research/resources.json`包含10项学习资源，包括可核验的GitHub课程及官方课程入口。课程代码许可不自动授权复制书籍文字或图片；本站以原文链接、中文导读和原创教学整合为主，不整篇搬运不明许可内容。
+`content/research/resources.json`包含11项学习资源，包括可核验的GitHub课程及官方课程入口。课程代码许可不自动授权复制书籍文字或图片；本站以原文链接、中文导读和原创教学整合为主，不整篇搬运不明许可内容。
 
 模型API对照页使用 `content/api_protocols.json` 记录9种接入形态，区分模型接口、云端接口族与Kiro代理接线，按输入、输出、流式、工具、状态、鉴权和限制查阅；附Azure OpenAI、DeepSeek和Model Studio等官方扩展入口。这是文档研究与教学整理，不是线上兼容性认证。
 
+本次对照 [ai_wiki](https://github.com/charliedream1/ai_wiki) 补入18项具体工具与9篇深入教程，另加[差异导览](https://laihuannran.github.io/ai-knowledge/articles/wiki-curation-map.html)。覆盖文档解析、BGE/嵌入、FAISS/Chroma、微调工作台、DeepSpeed、TensorRT-LLM、GPUStack、界面服务和评测工作台。发现位置、已有覆盖与候选领域记录在 [差异审查](docs/ai-wiki-audit.md)。新项目Star因API限流保留空值；18项许可证另从官方文本核对，MinerU附加条款单独标明。
+
 ## 阅读与维护
 
-网站有可搜索、展开/收起的分篇目录；长文有本章阅读顺序、前置知识与相关章节。原有全部134篇URL保留。全文检索包含正文和比较表；图表可在手机容器内左右滑动。
+网站有可搜索、展开/收起的分篇目录；长文有本章阅读顺序、前置知识与相关章节。原有全部143篇URL保留。全文检索包含正文和比较表；图表可在手机容器内左右滑动。
 
 仅依赖Python 3标准库：
 
@@ -45,6 +47,7 @@ python3 scripts/check.py
 python3 -m http.server 8765 --directory dist
 ```
 
+- `content/wiki_curation.json`、`wiki_retrieval_series.json`、`wiki_training_series.json`、`wiki_serving_series.json`：ai_wiki差异导览与九篇具体工具链教程。
 - `content/book.json`：完整篇章结构与阅读顺序。
 - `content/articles.json`、`expansion.json`、`supplement.json`：既有概念文章。
 - `content/stack_chapters.json`、`deep_chapters.json`：书籍版长章节。

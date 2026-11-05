@@ -136,6 +136,15 @@
             "distributed-training",
             "model-compression"
           ]
+        },
+        {
+          "id": "training-workbenches",
+          "title": "微调工作台与训练状态分摊",
+          "summary": "把训练组件落到常见工作台，再看 DeepSpeed 如何处理显存与通信。",
+          "slugs": [
+            "wiki-finetuning-workbenches",
+            "wiki-deepspeed-stack"
+          ]
         }
       ]
     },
@@ -201,6 +210,16 @@
             "agentic-rag-routing",
             "deep-research-evidence",
             "rag-debug-playbook"
+          ]
+        },
+        {
+          "id": "rag-toolchains",
+          "title": "文档、表示与向量库的具体工具链",
+          "summary": "沿一份文档走过解析、编码、索引与检索，比较具体工具承担的职责。",
+          "slugs": [
+            "wiki-document-stack",
+            "wiki-embedding-stack",
+            "wiki-vector-stack"
           ]
         }
       ]
@@ -314,6 +333,14 @@
           "slugs": [
             "stack-lowcode",
             "stack-java-ai"
+          ]
+        },
+        {
+          "id": "frameworks-interface",
+          "title": "从演示界面到应用服务",
+          "summary": "FastAPI、Gradio、Streamlit 与产品前端怎样分工。",
+          "slugs": [
+            "wiki-ai-interface-stack"
           ]
         }
       ]
@@ -498,6 +525,15 @@
             "pd-kv-capacity",
             "deep-pd-trace"
           ]
+        },
+        {
+          "id": "inference-tools",
+          "title": "推理引擎与 GPU 资源平台",
+          "summary": "比较模型执行和资源管理，理解性能结论需要什么条件。",
+          "slugs": [
+            "wiki-serving-engines",
+            "wiki-gpu-platform"
+          ]
         }
       ]
     },
@@ -529,6 +565,14 @@
             "online-ab",
             "release-regression",
             "deep-eval-production"
+          ]
+        },
+        {
+          "id": "evaluation-workbenches",
+          "title": "能力评测与性能工作台",
+          "summary": "用具体评测系统组织任务、负载、指标和可重复结果。",
+          "slugs": [
+            "wiki-evaluation-workbenches"
           ]
         }
       ]
@@ -576,6 +620,14 @@
       "subtitle": "从 Java 类比到 AI 架构",
       "description": "认识优秀项目的职责，并以质量、约束和总成本选择合适组合。",
       "chapters": [
+        {
+          "id": "architecture-curation",
+          "title": "从外部资料发现技术栈空白",
+          "summary": "对照 ai_wiki，区分已有覆盖、工具链补充和待核验的领域。",
+          "slugs": [
+            "wiki-curation-map"
+          ]
+        },
         {
           "id": "architecture-1",
           "title": "生态全景与部署选择",

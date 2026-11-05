@@ -46,6 +46,14 @@ PROJECT_CHAPTERS = {
     'TorchTitan': 'distributed-training', 'TorchAO': 'model-compression',
     'Browser Use': 'browser-computer-agents', 'Diffusers': 'image-generation-control',
     'ComfyUI': 'image-generation-control', 'LiveKit Agents': 'realtime-voice-agent',
+    'MinerU': 'wiki-document-stack', 'Docling': 'wiki-document-stack', 'RAGFlow': 'wiki-document-stack',
+    'Sentence Transformers': 'wiki-embedding-stack', 'FlagEmbedding': 'wiki-embedding-stack',
+    'FlagEmbedding（BGE）': 'wiki-embedding-stack', 'FAISS': 'wiki-vector-stack', 'Chroma': 'wiki-vector-stack',
+    'LLaMA-Factory': 'wiki-finetuning-workbenches', 'Unsloth': 'wiki-finetuning-workbenches',
+    'MS-SWIFT': 'wiki-finetuning-workbenches', 'DeepSpeed': 'wiki-deepspeed-stack',
+    'OpenCompass': 'wiki-evaluation-workbenches', 'EvalScope': 'wiki-evaluation-workbenches',
+    'TensorRT-LLM': 'wiki-serving-engines', 'GPUStack': 'wiki-gpu-platform',
+    'FastAPI': 'wiki-ai-interface-stack', 'Gradio': 'wiki-ai-interface-stack', 'Streamlit': 'wiki-ai-interface-stack',
 }
 
 
@@ -125,7 +133,7 @@ class BookEdition:
         toc += '</div></section>'
         stack = f'''<section class="stack-teaser"><p class="eyebrow">A MAP OF THE AI ECOSYSTEM</p><h2>不只认识名词，<br>还要知道工具放在哪里。</h2><p>研究 {len(self.projects)} 个项目，按机器学习、训练、Agent、生成、数据、网关、推理与评测分类。<br>每项都解释职责、机制、适用场景、限制和许可；GitHub 关注度附采集日期。</p><div class="stack-name-row"><span>LangChain</span><span>LangGraph</span><span>Spring AI</span><span>Codex</span><span>vLLM</span><span>Redis</span></div><a class="primary-link" href="stack.html">查看技术栈与比较 <span>→</span></a></section>'''
         note = f'''<section class="reading-note"><span>这是一份怎样的教程？</span><p>{len(self.articles)} 节内容区分概念入门与机制案例。长章节沿着同一条任务链解释细节，配原创图表和原始资料。已有短文作为查阅入口，核心专题继续向深入系列展开。</p><a href="resources.html">查看参考书架与资料来源 →</a></section>'''
-        guide = f'<section class="learning-callout"><div><small>NEW SERIES / 把陌生名词连成机制</small><h2>各家模型 API，究竟兼容到哪一层？</h2><p>Chat Completions、Responses、Messages、Gemini、Bedrock 与 Kiro：先查对照页，再读九篇深入章节。</p></div><a href="api.html">打开模型 API 对照 →</a></section>'
+        guide = f'<section class="learning-callout"><div><small>NEW SERIES / 把陌生名词连成机制</small><h2>认识原理之后，工具链怎样接起来？</h2><p>对照 ai_wiki 补入文档解析、向量表示、微调工作台、GPU 平台与评测工具，沿九篇深入教程理解具体分工。</p></div><a href="articles/wiki-curation-map.html">查看新增工具链导览 →</a></section>'
         return hero + guide + routes + toc + stack + note
 
     def contents(self):

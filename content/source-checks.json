@@ -364,6 +364,13 @@
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
+    "url": "https://deepspeed.readthedocs.io/en/latest/zero3.html",
+    "status": "200",
+    "final_url": "https://deepspeed.readthedocs.io/en/latest/zero3.html",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events",
     "status": "200",
     "final_url": "https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events",
@@ -549,6 +556,13 @@
     "url": "https://docs.flowiseai.com/",
     "status": "200",
     "final_url": "https://docs.flowiseai.com/",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://docs.gpustack.ai/latest/",
+    "status": "200",
+    "final_url": "https://docs.gpustack.ai/latest/",
     "checked_on": "2026-11-05",
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
@@ -756,6 +770,13 @@
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
+    "url": "https://docs.pytorch.org/docs/stable/fsdp.html",
+    "status": "200",
+    "final_url": "https://docs.pytorch.org/docs/stable/fsdp.html",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://docs.pytorch.org/tutorials/beginner/basics/autogradqs_tutorial.html",
     "status": "200",
     "final_url": "https://docs.pytorch.org/tutorials/beginner/basics/autogradqs_tutorial.html",
@@ -808,6 +829,13 @@
     "url": "https://docs.spring.io/spring-security/reference/",
     "status": "200",
     "final_url": "https://docs.spring.io/spring-security/reference/",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://docs.streamlit.io/develop/concepts/architecture/session-state",
+    "status": "200",
+    "final_url": "https://docs.streamlit.io/develop/concepts/architecture/session-state",
     "checked_on": "2026-11-05",
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
@@ -882,11 +910,25 @@
     "note": "HTTP reachability only; manually reviewed core references separately."
   },
   {
+    "url": "https://fastapi.tiangolo.com/deployment/server-workers/",
+    "status": "200",
+    "final_url": "https://fastapi.tiangolo.com/deployment/server-workers/",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
     "status": "200",
     "final_url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
     "checked_on": "2026-11-04",
     "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://github.com/ANative-Lab/EvoAgentX",
+    "status": "200",
+    "final_url": "https://github.com/ANative-Lab/EvoAgentX",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
     "url": "https://github.com/Comfy-Org/ComfyUI",
@@ -901,6 +943,13 @@
     "final_url": "https://github.com/EleutherAI/lm-evaluation-harness",
     "checked_on": "2026-11-04",
     "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://github.com/FlagOpen/FlagEmbedding",
+    "status": "200",
+    "final_url": "https://github.com/FlagOpen/FlagEmbedding",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
     "url": "https://github.com/FlowiseAI/Flowise",
@@ -945,11 +994,207 @@
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
+    "url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/06_%E5%90%91%E9%87%8F%E6%95%B0%E6%8D%AE%E5%BA%93/02_%E8%BD%BB%E9%87%8F%E7%BA%A7/03_chroma/01_%E7%94%A8%E6%B3%95/01_%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95.md",
+    "status": "200",
+    "final_url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/06_%E5%90%91%E9%87%8F%E6%95%B0%E6%8D%AE%E5%BA%93/02_%E8%BD%BB%E9%87%8F%E7%BA%A7/03_chroma/01_%E7%94%A8%E6%B3%95/01_%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95.md",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/06_%E5%90%91%E9%87%8F%E6%95%B0%E6%8D%AE%E5%BA%93/10_faiss.md",
+    "status": "200",
+    "final_url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/06_%E5%90%91%E9%87%8F%E6%95%B0%E6%8D%AE%E5%BA%93/10_faiss.md",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/20_%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB/04_OCR/03_%E8%BD%ACmarkdown/06_MinerU.md",
+    "status": "200",
+    "final_url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/20_%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB/04_OCR/03_%E8%BD%ACmarkdown/06_MinerU.md",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/21_NLP%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86/04_%E5%B7%A5%E5%85%B7%E5%8C%85/03_sentence_transformers/README.md",
+    "status": "200",
+    "final_url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/21_NLP%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86/04_%E5%B7%A5%E5%85%B7%E5%8C%85/03_sentence_transformers/README.md",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/21_NLP%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86/10_%E5%90%91%E9%87%8F%E6%A8%A1%E5%9E%8B/04_%E6%A8%A1%E5%9E%8B/01_%E5%BC%80%E6%BA%90%E6%A8%A1%E5%9E%8B/02_bge%E7%B3%BB%E5%88%97/01_bge_m3.md",
+    "status": "200",
+    "final_url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/21_NLP%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86/10_%E5%90%91%E9%87%8F%E6%A8%A1%E5%9E%8B/04_%E6%A8%A1%E5%9E%8B/01_%E5%BC%80%E6%BA%90%E6%A8%A1%E5%9E%8B/02_bge%E7%B3%BB%E5%88%97/01_bge_m3.md",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/31_LLM/05_%E8%AE%AD%E7%BB%83/19_%E9%9B%86%E7%BE%A4%E7%AE%A1%E7%90%86/01_GPUStack.md",
+    "status": "200",
+    "final_url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/31_LLM/05_%E8%AE%AD%E7%BB%83/19_%E9%9B%86%E7%BE%A4%E7%AE%A1%E7%90%86/01_GPUStack.md",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/31_LLM/05_训练/03_常用工具/02_deepspeed/01_文档.md",
+    "status": "200",
+    "final_url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/31_LLM/05_训练/03_常用工具/02_deepspeed/01_文档.md",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/31_LLM/05_训练/04_优秀项目/02_SFT/01_LLama_factory.md",
+    "status": "200",
+    "final_url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/31_LLM/05_训练/04_优秀项目/02_SFT/01_LLama_factory.md",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/31_LLM/05_训练/04_优秀项目/05_通用/03_swift/01_megatron_swift.md",
+    "status": "200",
+    "final_url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/31_LLM/05_训练/04_优秀项目/05_通用/03_swift/01_megatron_swift.md",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/31_LLM/05_训练/11_加速/02_unsloth.md",
+    "status": "200",
+    "final_url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/31_LLM/05_训练/11_加速/02_unsloth.md",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/31_LLM/05_训练/16_长上下文/00_开源工具/02_swift/01_megatron_swift.md",
+    "status": "200",
+    "final_url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/31_LLM/05_训练/16_长上下文/00_开源工具/02_swift/01_megatron_swift.md",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/31_LLM/07_评估/03_评测工具/01_opencompass.md",
+    "status": "200",
+    "final_url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/31_LLM/07_评估/03_评测工具/01_opencompass.md",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/31_LLM/07_评估/03_评测工具/03_eval-scope/README.md",
+    "status": "200",
+    "final_url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/31_LLM/07_评估/03_评测工具/03_eval-scope/README.md",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/31_LLM/09_%E6%9C%8D%E5%8A%A1%E5%92%8C%E9%83%A8%E7%BD%B2%E5%B7%A5%E5%85%B7/01_%E7%BD%91%E9%A1%B5%E5%B7%A5%E5%85%B7/01_gradio/01_%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2%E6%B1%89%E5%8C%96_%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91.md",
+    "status": "200",
+    "final_url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/31_LLM/09_%E6%9C%8D%E5%8A%A1%E5%92%8C%E9%83%A8%E7%BD%B2%E5%B7%A5%E5%85%B7/01_%E7%BD%91%E9%A1%B5%E5%B7%A5%E5%85%B7/01_gradio/01_%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2%E6%B1%89%E5%8C%96_%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91.md",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/31_LLM/09_%E6%9C%8D%E5%8A%A1%E5%92%8C%E9%83%A8%E7%BD%B2%E5%B7%A5%E5%85%B7/01_%E7%BD%91%E9%A1%B5%E5%B7%A5%E5%85%B7/01_tools.md",
+    "status": "200",
+    "final_url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/31_LLM/09_%E6%9C%8D%E5%8A%A1%E5%92%8C%E9%83%A8%E7%BD%B2%E5%B7%A5%E5%85%B7/01_%E7%BD%91%E9%A1%B5%E5%B7%A5%E5%85%B7/01_tools.md",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/31_LLM/09_%E6%9C%8D%E5%8A%A1%E5%92%8C%E9%83%A8%E7%BD%B2%E5%B7%A5%E5%85%B7/01_%E7%BD%91%E9%A1%B5%E5%B7%A5%E5%85%B7/02_streamlit/01_%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2.md",
+    "status": "200",
+    "final_url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/31_LLM/09_%E6%9C%8D%E5%8A%A1%E5%92%8C%E9%83%A8%E7%BD%B2%E5%B7%A5%E5%85%B7/01_%E7%BD%91%E9%A1%B5%E5%B7%A5%E5%85%B7/02_streamlit/01_%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2.md",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/31_LLM/09_%E6%9C%8D%E5%8A%A1%E5%92%8C%E9%83%A8%E7%BD%B2%E5%B7%A5%E5%85%B7/02_%E6%8E%A5%E5%8F%A3%E5%B7%A5%E5%85%B7/01_Restful_API/03_uvicorn/01_%E9%97%AE%E9%A2%98/01_%E5%A4%9A%E5%AE%9E%E4%BE%8B%E6%8A%A5%E9%94%99.md",
+    "status": "200",
+    "final_url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/31_LLM/09_%E6%9C%8D%E5%8A%A1%E5%92%8C%E9%83%A8%E7%BD%B2%E5%B7%A5%E5%85%B7/02_%E6%8E%A5%E5%8F%A3%E5%B7%A5%E5%85%B7/01_Restful_API/03_uvicorn/01_%E9%97%AE%E9%A2%98/01_%E5%A4%9A%E5%AE%9E%E4%BE%8B%E6%8A%A5%E9%94%99.md",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/31_LLM/09_%E6%9C%8D%E5%8A%A1%E5%92%8C%E9%83%A8%E7%BD%B2%E5%B7%A5%E5%85%B7/02_%E6%8E%A5%E5%8F%A3%E5%B7%A5%E5%85%B7/03_fastapi/err/01_%E5%A4%9A%E5%AE%9E%E4%BE%8B%E6%8A%A5%E9%94%99.md",
+    "status": "200",
+    "final_url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/31_LLM/09_%E6%9C%8D%E5%8A%A1%E5%92%8C%E9%83%A8%E7%BD%B2%E5%B7%A5%E5%85%B7/02_%E6%8E%A5%E5%8F%A3%E5%B7%A5%E5%85%B7/03_fastapi/err/01_%E5%A4%9A%E5%AE%9E%E4%BE%8B%E6%8A%A5%E9%94%99.md",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/31_LLM/09_%E6%9C%8D%E5%8A%A1%E5%92%8C%E9%83%A8%E7%BD%B2%E5%B7%A5%E5%85%B7/05_%E6%A8%A1%E5%9E%8B%E9%83%A8%E7%BD%B2/02_%E5%B7%A5%E5%85%B7/02_TensorRT_LLM/01_TensorRT_LLM.md",
+    "status": "200",
+    "final_url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/31_LLM/09_%E6%9C%8D%E5%8A%A1%E5%92%8C%E9%83%A8%E7%BD%B2%E5%B7%A5%E5%85%B7/05_%E6%A8%A1%E5%9E%8B%E9%83%A8%E7%BD%B2/02_%E5%B7%A5%E5%85%B7/02_TensorRT_LLM/01_TensorRT_LLM.md",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/35_RAG/06_%E6%96%87%E6%A1%A3%E8%A7%A3%E6%9E%90/01_%E6%96%87%E6%A1%A3%E8%A7%A3%E6%9E%90/09_%E5%90%84%E7%B1%BB%E8%BD%AC%E6%8D%A2%E6%94%AF%E6%8C%81/03_docling.md",
+    "status": "200",
+    "final_url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/35_RAG/06_%E6%96%87%E6%A1%A3%E8%A7%A3%E6%9E%90/01_%E6%96%87%E6%A1%A3%E8%A7%A3%E6%9E%90/09_%E5%90%84%E7%B1%BB%E8%BD%AC%E6%8D%A2%E6%94%AF%E6%8C%81/03_docling.md",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/35_RAG/18_%E4%BC%98%E7%A7%80%E6%A1%86%E6%9E%B6%E5%88%86%E6%9E%90/01_ragflow.md",
+    "status": "200",
+    "final_url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/35_RAG/18_%E4%BC%98%E7%A7%80%E6%A1%86%E6%9E%B6%E5%88%86%E6%9E%90/01_ragflow.md",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/36_Agent/02_%E5%8E%9F%E7%90%86_%E5%85%B3%E9%94%AE%E7%BB%84%E4%BB%B6/06_%E8%AE%B0%E5%BF%86/03_MemOS.md",
+    "status": "200",
+    "final_url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/36_Agent/02_%E5%8E%9F%E7%90%86_%E5%85%B3%E9%94%AE%E7%BB%84%E4%BB%B6/06_%E8%AE%B0%E5%BF%86/03_MemOS.md",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/36_Agent/02_%E5%8E%9F%E7%90%86_%E5%85%B3%E9%94%AE%E7%BB%84%E4%BB%B6/06_%E8%AE%B0%E5%BF%86/07_Cognee.md",
+    "status": "200",
+    "final_url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/36_Agent/02_%E5%8E%9F%E7%90%86_%E5%85%B3%E9%94%AE%E7%BB%84%E4%BB%B6/06_%E8%AE%B0%E5%BF%86/07_Cognee.md",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/36_Agent/02_%E5%8E%9F%E7%90%86_%E5%85%B3%E9%94%AE%E7%BB%84%E4%BB%B6/08_%E8%87%AA%E6%88%91%E8%BF%9B%E5%8C%96/02_EvoAgentX.md",
+    "status": "200",
+    "final_url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/36_Agent/02_%E5%8E%9F%E7%90%86_%E5%85%B3%E9%94%AE%E7%BB%84%E4%BB%B6/08_%E8%87%AA%E6%88%91%E8%BF%9B%E5%8C%96/02_EvoAgentX.md",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/README.md",
+    "status": "200",
+    "final_url": "https://github.com/charliedream1/ai_wiki/blob/75529711fdc892b88cb772a727bd63bcd8ce021c/README.md",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/chroma-core/chroma",
+    "status": "200",
+    "final_url": "https://github.com/chroma-core/chroma",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://github.com/deepset-ai/haystack",
     "status": "000",
     "final_url": "https://github.com/deepset-ai/haystack",
     "checked_on": "2026-11-05",
     "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
+  },
+  {
+    "url": "https://github.com/docling-project/docling",
+    "status": "200",
+    "final_url": "https://github.com/docling-project/docling",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/facebookresearch/faiss",
+    "status": "200",
+    "final_url": "https://github.com/facebookresearch/faiss",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
     "url": "https://github.com/facebookresearch/faiss/wiki/Faiss-indexes",
@@ -964,6 +1209,34 @@
     "final_url": "https://github.com/ggml-org/llama.cpp",
     "checked_on": "2026-11-05",
     "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
+  },
+  {
+    "url": "https://github.com/gpustack/gpustack",
+    "status": "200",
+    "final_url": "https://github.com/gpustack/gpustack",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/hiyouga/LLaMA-Factory",
+    "status": "200",
+    "final_url": "https://github.com/hiyouga/LlamaFactory",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/huggingface/sentence-transformers",
+    "status": "200",
+    "final_url": "https://github.com/huggingface/sentence-transformers",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/infiniflow/ragflow",
+    "status": "200",
+    "final_url": "https://github.com/infiniflow/ragflow",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
     "url": "https://github.com/langchain-ai/langchain",
@@ -1015,11 +1288,32 @@
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
+    "url": "https://github.com/modelscope/evalscope",
+    "status": "200",
+    "final_url": "https://github.com/modelscope/evalscope",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://github.com/modelscope/ms-swift",
+    "status": "200",
+    "final_url": "https://github.com/modelscope/ms-swift",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://github.com/n8n-io/n8n",
     "status": "000",
     "final_url": "https://github.com/n8n-io/n8n",
     "checked_on": "2026-11-05",
     "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
+  },
+  {
+    "url": "https://github.com/open-compass/opencompass",
+    "status": "200",
+    "final_url": "https://github.com/open-compass/opencompass",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
     "url": "https://github.com/open-telemetry/semantic-conventions-genai/blob/main/docs/gen-ai/gen-ai-spans.md",
@@ -1043,11 +1337,25 @@
     "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
   },
   {
+    "url": "https://github.com/opendatalab/MinerU",
+    "status": "200",
+    "final_url": "https://github.com/opendatalab/MinerU",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://github.com/pgvector/pgvector",
     "status": "200",
     "final_url": "https://github.com/pgvector/pgvector",
     "checked_on": "2026-11-04",
     "note": "HTTP reachability only; manually reviewed core references separately."
+  },
+  {
+    "url": "https://github.com/pytorch/torchtitan",
+    "status": "200",
+    "final_url": "https://github.com/pytorch/torchtitan",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
     "url": "https://github.com/run-llama/llama_index",
@@ -1062,6 +1370,13 @@
     "final_url": "https://github.com/spring-projects/spring-ai",
     "checked_on": "2026-11-05",
     "note": "Execution network could not reach this URL; validity remains unconfirmed by curl."
+  },
+  {
+    "url": "https://github.com/unslothai/unsloth",
+    "status": "200",
+    "final_url": "https://github.com/unslothai/unsloth",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
     "url": "https://github.com/vllm-project/vllm",
@@ -1582,6 +1897,13 @@
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
   {
+    "url": "https://nvidia.github.io/TensorRT-LLM/",
+    "status": "200",
+    "final_url": "https://nvidia.github.io/TensorRT-LLM/",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://openai.github.io/openai-agents-python/",
     "status": "200",
     "final_url": "https://openai.github.io/openai-agents-python/",
@@ -1659,9 +1981,23 @@
     "note": "HTTP reachability only; manually reviewed core references separately."
   },
   {
+    "url": "https://raw.githubusercontent.com/opendatalab/MinerU/master/LICENSE.md",
+    "status": "200",
+    "final_url": "https://raw.githubusercontent.com/opendatalab/MinerU/master/LICENSE.md",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
     "url": "https://react-lm.github.io/",
     "status": "200",
     "final_url": "https://react-lm.github.io/",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://react.dev/learn",
+    "status": "200",
+    "final_url": "https://react.dev/learn",
     "checked_on": "2026-11-05",
     "note": "HTTP reachability only; not a review of every claim on this page."
   },
@@ -1809,6 +2145,13 @@
     "url": "https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/other_features/global_rate_limiting",
     "status": "200",
     "final_url": "https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/other_features/global_rate_limiting",
+    "checked_on": "2026-11-05",
+    "note": "HTTP reachability only; not a review of every claim on this page."
+  },
+  {
+    "url": "https://www.gradio.app/guides/queuing",
+    "status": "200",
+    "final_url": "https://gradio.app/guides/queuing",
     "checked_on": "2026-11-05",
     "note": "HTTP reachability only; not a review of every claim on this page."
   },

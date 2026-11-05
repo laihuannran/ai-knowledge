@@ -3228,5 +3228,929 @@
       "pushed_at": "2026-11-04T17:54:06Z",
       "source": "https://api.github.com/repos/livekit/agents"
     }
+  },
+  {
+    "id": "opendatalab-mineru",
+    "name": "MinerU",
+    "category": "data",
+    "repo": "opendatalab/MinerU",
+    "github_url": "https://github.com/opendatalab/MinerU",
+    "docs_url": "https://github.com/opendatalab/MinerU",
+    "role": "复杂文档内容解析",
+    "why_learn": "理解MinerU在检索链路中的独立职责和验收边界。",
+    "mechanism": "文档版面分析、文字识别及内容提取组成转换流程，输出供下游索引使用的文本、表格及资源。",
+    "when_use": "需要解析复杂PDF时。",
+    "limits": "不同解析后端、格式与页面结构表现不同；提取成功不保证坐标或表格关系正确。",
+    "alternatives": [
+      "Docling",
+      "Marker",
+      "Unstructured"
+    ],
+    "license": {
+      "name": "Apache-2.0 基础及附加条款",
+      "source": "https://raw.githubusercontent.com/opendatalab/MinerU/master/LICENSE.md",
+      "note": "当前官方LICENSE在Apache-2.0基础上含商业规模门槛、在线服务标识等附加条款，不能仅按纯Apache-2.0理解；模型及依赖授权另行核对。"
+    },
+    "stars": {
+      "count": null,
+      "label": "未核验",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/opendatalab/MinerU",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-05T03:28:24.300269+00:00"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库",
+        "url": "https://github.com/opendatalab/MinerU"
+      },
+      {
+        "title": "官方仓库元数据",
+        "url": "https://api.github.com/repos/opendatalab/MinerU"
+      },
+      {
+        "title": "官方许可文本（2026-11-05读取）",
+        "url": "https://raw.githubusercontent.com/opendatalab/MinerU/master/LICENSE.md"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/opendatalab/MinerU"
+    }
+  },
+  {
+    "id": "docling-project-docling",
+    "name": "Docling",
+    "category": "data",
+    "repo": "docling-project/docling",
+    "github_url": "https://github.com/docling-project/docling",
+    "docs_url": "https://github.com/docling-project/docling",
+    "role": "结构化文档转换",
+    "why_learn": "理解docling在检索链路中的独立职责和验收边界。",
+    "mechanism": "将多种文档转换为统一DoclingDocument表示，再导出Markdown或结构化数据；保留页面与内容层次供后续处理。",
+    "when_use": "需要保留文档结构时。",
+    "limits": "导出纯文本会丢失部分结构；复杂布局和表格仍须人工样本验证。",
+    "alternatives": [
+      "MinerU",
+      "Unstructured",
+      "Apache Tika"
+    ],
+    "license": {
+      "name": "MIT",
+      "source": "https://raw.githubusercontent.com/docling-project/docling/main/LICENSE",
+      "note": "已读取官方许可文件；此标记对应仓库代码。模型权重、数据集、依赖及托管服务的条款需分别核对，按实际版本查看全文。"
+    },
+    "stars": {
+      "count": null,
+      "label": "未核验",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/docling-project/docling",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-05T03:28:24.300409+00:00"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库",
+        "url": "https://github.com/docling-project/docling"
+      },
+      {
+        "title": "官方仓库元数据",
+        "url": "https://api.github.com/repos/docling-project/docling"
+      },
+      {
+        "title": "官方许可文本（2026-11-05读取）",
+        "url": "https://raw.githubusercontent.com/docling-project/docling/main/LICENSE"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/docling-project/docling"
+    }
+  },
+  {
+    "id": "infiniflow-ragflow",
+    "name": "RAGFlow",
+    "category": "appframeworks",
+    "repo": "infiniflow/ragflow",
+    "github_url": "https://github.com/infiniflow/ragflow",
+    "docs_url": "https://github.com/infiniflow/ragflow",
+    "role": "文档理解与RAG应用",
+    "why_learn": "理解ragflow在检索链路中的独立职责和验收边界。",
+    "mechanism": "围绕知识库组织文档导入、解析、分块、检索和问答流程，通过应用层接口管理完整RAG链路。",
+    "when_use": "需要构建知识库问答时。",
+    "limits": "依赖部署配置和所选检索后端；框架不能自动保证答案正确与权限策略完整。",
+    "alternatives": [
+      "Dify",
+      "AnythingLLM",
+      "MaxKB"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://raw.githubusercontent.com/infiniflow/ragflow/main/LICENSE",
+      "note": "已读取官方许可文件；此标记对应仓库代码。模型权重、数据集、依赖及托管服务的条款需分别核对，按实际版本查看全文。"
+    },
+    "stars": {
+      "count": null,
+      "label": "未核验",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/infiniflow/ragflow",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-05T03:28:24.300437+00:00"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库",
+        "url": "https://github.com/infiniflow/ragflow"
+      },
+      {
+        "title": "官方仓库元数据",
+        "url": "https://api.github.com/repos/infiniflow/ragflow"
+      },
+      {
+        "title": "官方许可文本（2026-11-05读取）",
+        "url": "https://raw.githubusercontent.com/infiniflow/ragflow/main/LICENSE"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/infiniflow/ragflow"
+    }
+  },
+  {
+    "id": "huggingface-sentence-transformers",
+    "name": "Sentence Transformers",
+    "category": "ml",
+    "repo": "huggingface/sentence-transformers",
+    "github_url": "https://github.com/huggingface/sentence-transformers",
+    "docs_url": "https://github.com/huggingface/sentence-transformers",
+    "role": "文本嵌入与重排框架",
+    "why_learn": "理解sentence-transformers在检索链路中的独立职责和验收边界。",
+    "mechanism": "SentenceTransformer按模型约定编码句子或段落；CrossEncoder对文本组合进行联合计算，支持重排等任务。",
+    "when_use": "需要计算文本语义表示时。",
+    "limits": "嵌入与重排模型不能混用输出；输入长度、前缀和池化取决于所选模型。",
+    "alternatives": [
+      "FlagEmbedding",
+      "Transformers",
+      "Infinity"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://raw.githubusercontent.com/huggingface/sentence-transformers/main/LICENSE",
+      "note": "已读取官方许可文件；此标记对应仓库代码。模型权重、数据集、依赖及托管服务的条款需分别核对，按实际版本查看全文。"
+    },
+    "stars": {
+      "count": null,
+      "label": "未核验",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/huggingface/sentence-transformers",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-05T03:28:24.300455+00:00"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库",
+        "url": "https://github.com/huggingface/sentence-transformers"
+      },
+      {
+        "title": "官方仓库元数据",
+        "url": "https://api.github.com/repos/huggingface/sentence-transformers"
+      },
+      {
+        "title": "官方许可文本（2026-11-05读取）",
+        "url": "https://raw.githubusercontent.com/huggingface/sentence-transformers/main/LICENSE"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/huggingface/sentence-transformers"
+    }
+  },
+  {
+    "id": "flagopen-flagembedding",
+    "name": "FlagEmbedding（BGE）",
+    "category": "ml",
+    "repo": "FlagOpen/FlagEmbedding",
+    "github_url": "https://github.com/FlagOpen/FlagEmbedding",
+    "docs_url": "https://github.com/FlagOpen/FlagEmbedding",
+    "role": "BGE模型使用与训练入口",
+    "why_learn": "理解FlagEmbedding在检索链路中的独立职责和验收边界。",
+    "mechanism": "提供BGE嵌入及重排模型的训练推理入口；BGE-M3支持稠密、稀疏和多向量检索表示。",
+    "when_use": "需要评估BGE检索模型时。",
+    "limits": "各类表示需要对应搜索后端；具体模型的查询约定和资源需求必须单独核对。",
+    "alternatives": [
+      "Sentence Transformers",
+      "Transformers",
+      "Jina Embeddings"
+    ],
+    "license": {
+      "name": "MIT",
+      "source": "https://raw.githubusercontent.com/FlagOpen/FlagEmbedding/master/LICENSE",
+      "note": "已读取官方许可文件；此标记对应仓库代码。模型权重、数据集、依赖及托管服务的条款需分别核对，按实际版本查看全文。"
+    },
+    "stars": {
+      "count": null,
+      "label": "未核验",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/FlagOpen/FlagEmbedding",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-05T03:28:24.300475+00:00"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库",
+        "url": "https://github.com/FlagOpen/FlagEmbedding"
+      },
+      {
+        "title": "官方仓库元数据",
+        "url": "https://api.github.com/repos/FlagOpen/FlagEmbedding"
+      },
+      {
+        "title": "官方许可文本（2026-11-05读取）",
+        "url": "https://raw.githubusercontent.com/FlagOpen/FlagEmbedding/master/LICENSE"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/FlagOpen/FlagEmbedding"
+    }
+  },
+  {
+    "id": "facebookresearch-faiss",
+    "name": "FAISS",
+    "category": "data",
+    "repo": "facebookresearch/faiss",
+    "github_url": "https://github.com/facebookresearch/faiss",
+    "docs_url": "https://github.com/facebookresearch/faiss",
+    "role": "向量相似搜索库",
+    "why_learn": "理解faiss在检索链路中的独立职责和验收边界。",
+    "mechanism": "通过精确或近似向量索引执行相似搜索，支持不同距离及索引算法，并可序列化索引产物。",
+    "when_use": "需要管理应用内向量索引时。",
+    "limits": "属于库而非完整文档数据库；元数据治理、并发服务、权限和恢复由集成系统承担。",
+    "alternatives": [
+      "hnswlib",
+      "ScaNN",
+      "Annoy"
+    ],
+    "license": {
+      "name": "MIT",
+      "source": "https://raw.githubusercontent.com/facebookresearch/faiss/main/LICENSE",
+      "note": "已读取官方许可文件；此标记对应仓库代码。模型权重、数据集、依赖及托管服务的条款需分别核对，按实际版本查看全文。"
+    },
+    "stars": {
+      "count": null,
+      "label": "未核验",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/facebookresearch/faiss",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-05T03:28:24.300493+00:00"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库",
+        "url": "https://github.com/facebookresearch/faiss"
+      },
+      {
+        "title": "官方仓库元数据",
+        "url": "https://api.github.com/repos/facebookresearch/faiss"
+      },
+      {
+        "title": "官方许可文本（2026-11-05读取）",
+        "url": "https://raw.githubusercontent.com/facebookresearch/faiss/main/LICENSE"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/facebookresearch/faiss"
+    }
+  },
+  {
+    "id": "chroma-core-chroma",
+    "name": "Chroma",
+    "category": "data",
+    "repo": "chroma-core/chroma",
+    "github_url": "https://github.com/chroma-core/chroma",
+    "docs_url": "https://github.com/chroma-core/chroma",
+    "role": "向量记录与集合数据库",
+    "why_learn": "理解chroma在检索链路中的独立职责和验收边界。",
+    "mechanism": "以集合组织稳定ID、向量、文档和元数据，通过添加、更新、删除和查询接口服务应用。",
+    "when_use": "需要管理向量集合与元数据时。",
+    "limits": "持久化与服务部署的行为需按版本确认；备份、权限和派生缓存仍需应用设计。",
+    "alternatives": [
+      "Qdrant",
+      "Weaviate",
+      "Milvus"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://raw.githubusercontent.com/chroma-core/chroma/main/LICENSE",
+      "note": "已读取官方许可文件；此标记对应仓库代码。模型权重、数据集、依赖及托管服务的条款需分别核对，按实际版本查看全文。"
+    },
+    "stars": {
+      "count": null,
+      "label": "未核验",
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/chroma-core/chroma",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-05T03:28:24.300510+00:00"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库",
+        "url": "https://github.com/chroma-core/chroma"
+      },
+      {
+        "title": "官方仓库元数据",
+        "url": "https://api.github.com/repos/chroma-core/chroma"
+      },
+      {
+        "title": "官方许可文本（2026-11-05读取）",
+        "url": "https://raw.githubusercontent.com/chroma-core/chroma/main/LICENSE"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/chroma-core/chroma"
+    }
+  },
+  {
+    "id": "hiyouga-llama-factory",
+    "name": "LLaMA-Factory",
+    "category": "training",
+    "repo": "hiyouga/LLaMA-Factory",
+    "github_url": "https://github.com/hiyouga/LLaMA-Factory",
+    "docs_url": "https://github.com/hiyouga/LLaMA-Factory",
+    "role": "统一微调入口",
+    "why_learn": "理解统一微调入口的职责边界、输入产物与验证条件。",
+    "mechanism": "配置、模板和训练方法统一组织",
+    "when_use": "需要可追溯地组织训练实验。",
+    "limits": "模板、损失屏蔽与模型支持需逐项核对；界面成功启动不证明样本语义正确。",
+    "alternatives": [
+      "MS-SWIFT",
+      "Axolotl"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://raw.githubusercontent.com/hiyouga/LLaMA-Factory/main/LICENSE",
+      "note": "已读取官方许可文件；此标记对应仓库代码。模型权重、数据集、依赖及托管服务的条款需分别核对，按实际版本查看全文。"
+    },
+    "stars": {
+      "count": null,
+      "label": null,
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/hiyouga/LLaMA-Factory",
+      "method": "GitHub REST repos.stargazers_count；403限流时保留null",
+      "retrieved_at": null
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库",
+        "url": "https://github.com/hiyouga/LLaMA-Factory"
+      },
+      {
+        "title": "GitHub 仓库元数据（可能限流）",
+        "url": "https://api.github.com/repos/hiyouga/LLaMA-Factory"
+      },
+      {
+        "title": "官方许可文本（2026-11-05读取）",
+        "url": "https://raw.githubusercontent.com/hiyouga/LLaMA-Factory/main/LICENSE"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/hiyouga/LLaMA-Factory"
+    }
+  },
+  {
+    "id": "unslothai-unsloth",
+    "name": "Unsloth",
+    "category": "training",
+    "repo": "unslothai/unsloth",
+    "github_url": "https://github.com/unslothai/unsloth",
+    "docs_url": "https://github.com/unslothai/unsloth",
+    "role": "训练效率优化",
+    "why_learn": "理解训练效率优化的职责边界、输入产物与验证条件。",
+    "mechanism": "通过训练实现优化改善受支持工作负载的显存与速度",
+    "when_use": "需要可追溯地组织训练实验。",
+    "limits": "优化路径依赖模型与硬件支持；速度和显存收益不能跨负载直接迁移。",
+    "alternatives": [
+      "LLaMA-Factory",
+      "Axolotl"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://raw.githubusercontent.com/unslothai/unsloth/main/LICENSE",
+      "note": "已读取官方许可文件；此标记对应仓库代码。模型权重、数据集、依赖及托管服务的条款需分别核对，按实际版本查看全文。"
+    },
+    "stars": {
+      "count": null,
+      "label": null,
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/unslothai/unsloth",
+      "method": "GitHub REST repos.stargazers_count；403限流时保留null",
+      "retrieved_at": null
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库",
+        "url": "https://github.com/unslothai/unsloth"
+      },
+      {
+        "title": "GitHub 仓库元数据（可能限流）",
+        "url": "https://api.github.com/repos/unslothai/unsloth"
+      },
+      {
+        "title": "官方许可文本（2026-11-05读取）",
+        "url": "https://raw.githubusercontent.com/unslothai/unsloth/main/LICENSE"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/unslothai/unsloth"
+    }
+  },
+  {
+    "id": "modelscope-ms-swift",
+    "name": "MS-SWIFT",
+    "category": "training",
+    "repo": "modelscope/ms-swift",
+    "github_url": "https://github.com/modelscope/ms-swift",
+    "docs_url": "https://github.com/modelscope/ms-swift",
+    "role": "模型训练工程入口",
+    "why_learn": "理解模型训练工程入口的职责边界、输入产物与验证条件。",
+    "mechanism": "组织模型适配、数据与训练并行能力",
+    "when_use": "需要可追溯地组织训练实验。",
+    "limits": "Megatron路径涉及并行拓扑及权重格式转换，检查点不能默认与普通HF产物互换。",
+    "alternatives": [
+      "LLaMA-Factory",
+      "Axolotl"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://raw.githubusercontent.com/modelscope/ms-swift/main/LICENSE",
+      "note": "已读取官方许可文件；此标记对应仓库代码。模型权重、数据集、依赖及托管服务的条款需分别核对，按实际版本查看全文。"
+    },
+    "stars": {
+      "count": null,
+      "label": null,
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/modelscope/ms-swift",
+      "method": "GitHub REST repos.stargazers_count；403限流时保留null",
+      "retrieved_at": null
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库",
+        "url": "https://github.com/modelscope/ms-swift"
+      },
+      {
+        "title": "GitHub 仓库元数据（可能限流）",
+        "url": "https://api.github.com/repos/modelscope/ms-swift"
+      },
+      {
+        "title": "官方许可文本（2026-11-05读取）",
+        "url": "https://raw.githubusercontent.com/modelscope/ms-swift/main/LICENSE"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/modelscope/ms-swift"
+    }
+  },
+  {
+    "id": "deepspeedai-deepspeed",
+    "name": "DeepSpeed",
+    "category": "training",
+    "repo": "deepspeedai/DeepSpeed",
+    "github_url": "https://github.com/deepspeedai/DeepSpeed",
+    "docs_url": "https://github.com/deepspeedai/DeepSpeed",
+    "role": "分布式训练运行时",
+    "why_learn": "理解分布式训练运行时的职责边界、输入产物与验证条件。",
+    "mechanism": "ZeRO分片与卸载协调状态和通信",
+    "when_use": "需要可追溯地组织训练实验。",
+    "limits": "分片增加通信；卸载可能受主机内存和传输限制，不能直接降低所有激活开销。",
+    "alternatives": [
+      "PyTorch FSDP"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://raw.githubusercontent.com/deepspeedai/DeepSpeed/master/LICENSE",
+      "note": "已读取官方许可文件；此标记对应仓库代码。模型权重、数据集、依赖及托管服务的条款需分别核对，按实际版本查看全文。"
+    },
+    "stars": {
+      "count": null,
+      "label": null,
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/deepspeedai/DeepSpeed",
+      "method": "GitHub REST repos.stargazers_count；403限流时保留null",
+      "retrieved_at": null
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库",
+        "url": "https://github.com/deepspeedai/DeepSpeed"
+      },
+      {
+        "title": "GitHub 仓库元数据（可能限流）",
+        "url": "https://api.github.com/repos/deepspeedai/DeepSpeed"
+      },
+      {
+        "title": "官方许可文本（2026-11-05读取）",
+        "url": "https://raw.githubusercontent.com/deepspeedai/DeepSpeed/master/LICENSE"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/deepspeedai/DeepSpeed"
+    }
+  },
+  {
+    "id": "open-compass-opencompass",
+    "name": "OpenCompass",
+    "category": "eval",
+    "repo": "open-compass/opencompass",
+    "github_url": "https://github.com/open-compass/opencompass",
+    "docs_url": "https://github.com/open-compass/opencompass",
+    "role": "模型能力评测工作台",
+    "why_learn": "理解模型能力评测工作台的职责边界、输入产物与验证条件。",
+    "mechanism": "模型、数据集和评估器配置形成可复查实验",
+    "when_use": "需要可追溯地组织评估实验。",
+    "limits": "提示方式、少样本示例与解析器会改变得分，公开榜单不能代替业务留出集。",
+    "alternatives": [
+      "EvalScope",
+      "lm-evaluation-harness"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://raw.githubusercontent.com/open-compass/opencompass/main/LICENSE",
+      "note": "已读取官方许可文件；此标记对应仓库代码。模型权重、数据集、依赖及托管服务的条款需分别核对，按实际版本查看全文。"
+    },
+    "stars": {
+      "count": null,
+      "label": null,
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/open-compass/opencompass",
+      "method": "GitHub REST repos.stargazers_count；403限流时保留null",
+      "retrieved_at": null
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库",
+        "url": "https://github.com/open-compass/opencompass"
+      },
+      {
+        "title": "GitHub 仓库元数据（可能限流）",
+        "url": "https://api.github.com/repos/open-compass/opencompass"
+      },
+      {
+        "title": "官方许可文本（2026-11-05读取）",
+        "url": "https://raw.githubusercontent.com/open-compass/opencompass/main/LICENSE"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/open-compass/opencompass"
+    }
+  },
+  {
+    "id": "modelscope-evalscope",
+    "name": "EvalScope",
+    "category": "eval",
+    "repo": "modelscope/evalscope",
+    "github_url": "https://github.com/modelscope/evalscope",
+    "docs_url": "https://github.com/modelscope/evalscope",
+    "role": "评估与性能基准工作台",
+    "why_learn": "理解评估与性能基准工作台的职责边界、输入产物与验证条件。",
+    "mechanism": "组织能力评估和性能测试流程",
+    "when_use": "需要可追溯地组织评估实验。",
+    "limits": "压测依赖到达过程、实际长度、缓存及客户端能力，不能只比较单个吞吐数字。",
+    "alternatives": [
+      "OpenCompass",
+      "lm-evaluation-harness"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://raw.githubusercontent.com/modelscope/evalscope/main/LICENSE",
+      "note": "已读取官方许可文件；此标记对应仓库代码。模型权重、数据集、依赖及托管服务的条款需分别核对，按实际版本查看全文。"
+    },
+    "stars": {
+      "count": null,
+      "label": null,
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/modelscope/evalscope",
+      "method": "GitHub REST repos.stargazers_count；403限流时保留null",
+      "retrieved_at": null
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库",
+        "url": "https://github.com/modelscope/evalscope"
+      },
+      {
+        "title": "GitHub 仓库元数据（可能限流）",
+        "url": "https://api.github.com/repos/modelscope/evalscope"
+      },
+      {
+        "title": "官方许可文本（2026-11-05读取）",
+        "url": "https://raw.githubusercontent.com/modelscope/evalscope/main/LICENSE"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/modelscope/evalscope"
+    }
+  },
+  {
+    "id": "nvidia-tensorrt-llm",
+    "name": "TensorRT-LLM",
+    "category": "serving",
+    "repo": "NVIDIA/TensorRT-LLM",
+    "github_url": "https://github.com/NVIDIA/TensorRT-LLM",
+    "docs_url": "https://nvidia.github.io/TensorRT-LLM/",
+    "role": "NVIDIA GPU 大模型推理优化与服务引擎",
+    "why_learn": "理解NVIDIA GPU 大模型推理优化与服务引擎的职责与部署边界。",
+    "mechanism": "硬件优化内核、KV 缓存、批处理与低精度执行协作减少推理成本。",
+    "when_use": "团队需要NVIDIA GPU 大模型推理优化与服务引擎时。",
+    "limits": "主要面向 NVIDIA GPU；功能支持需对应硬件和模型版本。",
+    "alternatives": [
+      "vLLM",
+      "SGLang"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://raw.githubusercontent.com/NVIDIA/TensorRT-LLM/main/LICENSE",
+      "note": "官方文件说明主体采用Apache-2.0，并列出包含的第三方代码与不同许可；实际使用应核对文件头、依赖与模型权重。"
+    },
+    "stars": {
+      "count": null,
+      "label": null,
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/NVIDIA/TensorRT-LLM",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-05T03:31:22.920334+00:00"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库元数据",
+        "url": "https://api.github.com/repos/NVIDIA/TensorRT-LLM"
+      },
+      {
+        "title": "官方文档",
+        "url": "https://nvidia.github.io/TensorRT-LLM/"
+      },
+      {
+        "title": "官方许可文本（2026-11-05读取）",
+        "url": "https://raw.githubusercontent.com/NVIDIA/TensorRT-LLM/main/LICENSE"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/NVIDIA/TensorRT-LLM"
+    }
+  },
+  {
+    "id": "gpustack-gpustack",
+    "name": "GPUStack",
+    "category": "serving",
+    "repo": "gpustack/gpustack",
+    "github_url": "https://github.com/gpustack/gpustack",
+    "docs_url": "https://docs.gpustack.ai/latest/",
+    "role": "算力管理、模型部署与访问平台",
+    "why_learn": "理解算力管理、模型部署与访问平台的职责与部署边界。",
+    "mechanism": "控制面协调工作节点资源和模型部署，由推理后端执行模型。",
+    "when_use": "团队需要算力管理、模型部署与访问平台时。",
+    "limits": "纳管设备不等于任意后端可用；高可用还需检查故障域。",
+    "alternatives": [
+      "KubeAI",
+      "BentoML"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://raw.githubusercontent.com/gpustack/gpustack/main/LICENSE",
+      "note": "已读取官方许可文件；此标记对应仓库代码。模型权重、数据集、依赖及托管服务的条款需分别核对，按实际版本查看全文。"
+    },
+    "stars": {
+      "count": null,
+      "label": null,
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/gpustack/gpustack",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-05T03:31:23.989653+00:00"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库元数据",
+        "url": "https://api.github.com/repos/gpustack/gpustack"
+      },
+      {
+        "title": "官方文档",
+        "url": "https://docs.gpustack.ai/latest/"
+      },
+      {
+        "title": "官方许可文本（2026-11-05读取）",
+        "url": "https://raw.githubusercontent.com/gpustack/gpustack/main/LICENSE"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/gpustack/gpustack"
+    }
+  },
+  {
+    "id": "fastapi-fastapi",
+    "name": "FastAPI",
+    "category": "appframeworks",
+    "repo": "fastapi/fastapi",
+    "github_url": "https://github.com/fastapi/fastapi",
+    "docs_url": "https://fastapi.tiangolo.com/deployment/server-workers/",
+    "role": "Python HTTP 服务与请求合同",
+    "why_learn": "理解Python HTTP 服务与请求合同的职责与部署边界。",
+    "mechanism": "基于 ASGI 的路由、类型校验及依赖注入组织 HTTP 请求。",
+    "when_use": "团队需要Python HTTP 服务与请求合同时。",
+    "limits": "多进程不会自动共享模型内存，也不提供 GPU 推理内核。",
+    "alternatives": [
+      "Flask",
+      "Django"
+    ],
+    "license": {
+      "name": "MIT",
+      "source": "https://raw.githubusercontent.com/fastapi/fastapi/master/LICENSE",
+      "note": "已读取官方许可文件；此标记对应仓库代码。模型权重、数据集、依赖及托管服务的条款需分别核对，按实际版本查看全文。"
+    },
+    "stars": {
+      "count": null,
+      "label": null,
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/fastapi/fastapi",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-05T03:31:25.134992+00:00"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库元数据",
+        "url": "https://api.github.com/repos/fastapi/fastapi"
+      },
+      {
+        "title": "官方文档",
+        "url": "https://fastapi.tiangolo.com/deployment/server-workers/"
+      },
+      {
+        "title": "官方许可文本（2026-11-05读取）",
+        "url": "https://raw.githubusercontent.com/fastapi/fastapi/master/LICENSE"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/fastapi/fastapi"
+    }
+  },
+  {
+    "id": "gradio-app-gradio",
+    "name": "Gradio",
+    "category": "frontend",
+    "repo": "gradio-app/gradio",
+    "github_url": "https://github.com/gradio-app/gradio",
+    "docs_url": "https://www.gradio.app/guides/queuing",
+    "role": "Python 模型演示界面与事件队列",
+    "why_learn": "理解Python 模型演示界面与事件队列的职责与部署边界。",
+    "mechanism": "用组件、事件监听和队列把 Python 模型函数连接为交互界面。",
+    "when_use": "团队需要Python 模型演示界面与事件队列时。",
+    "limits": "事件并发和文件生命周期需要设计，不能替代业务授权。",
+    "alternatives": [
+      "Streamlit",
+      "Panel"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://raw.githubusercontent.com/gradio-app/gradio/main/LICENSE",
+      "note": "已读取官方许可文件；此标记对应仓库代码。模型权重、数据集、依赖及托管服务的条款需分别核对，按实际版本查看全文。"
+    },
+    "stars": {
+      "count": null,
+      "label": null,
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/gradio-app/gradio",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-05T03:31:27.871334+00:00"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库元数据",
+        "url": "https://api.github.com/repos/gradio-app/gradio"
+      },
+      {
+        "title": "官方文档",
+        "url": "https://www.gradio.app/guides/queuing"
+      },
+      {
+        "title": "官方许可文本（2026-11-05读取）",
+        "url": "https://raw.githubusercontent.com/gradio-app/gradio/main/LICENSE"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/gradio-app/gradio"
+    }
+  },
+  {
+    "id": "streamlit-streamlit",
+    "name": "Streamlit",
+    "category": "frontend",
+    "repo": "streamlit/streamlit",
+    "github_url": "https://github.com/streamlit/streamlit",
+    "docs_url": "https://docs.streamlit.io/develop/concepts/architecture/session-state",
+    "role": "Python 交互数据应用与会话界面",
+    "why_learn": "理解Python 交互数据应用与会话界面的职责与部署边界。",
+    "mechanism": "通过脚本重运行、会话状态和缓存形成数据应用交互。",
+    "when_use": "团队需要Python 交互数据应用与会话界面时。",
+    "limits": "会话状态不等于持久数据库，共享缓存必须检查数据隔离。",
+    "alternatives": [
+      "Gradio",
+      "Dash"
+    ],
+    "license": {
+      "name": "Apache-2.0",
+      "source": "https://raw.githubusercontent.com/streamlit/streamlit/master/LICENSE",
+      "note": "已读取官方许可文件；此标记对应仓库代码。模型权重、数据集、依赖及托管服务的条款需分别核对，按实际版本查看全文。"
+    },
+    "stars": {
+      "count": null,
+      "label": null,
+      "as_of": "2026-11-05",
+      "source": "https://api.github.com/repos/streamlit/streamlit",
+      "method": "GitHub REST repos.stargazers_count",
+      "retrieved_at": "2026-11-05T03:31:31.983909+00:00"
+    },
+    "verified_on": "2026-11-05",
+    "sources": [
+      {
+        "title": "官方仓库元数据",
+        "url": "https://api.github.com/repos/streamlit/streamlit"
+      },
+      {
+        "title": "官方文档",
+        "url": "https://docs.streamlit.io/develop/concepts/architecture/session-state"
+      },
+      {
+        "title": "官方许可文本（2026-11-05读取）",
+        "url": "https://raw.githubusercontent.com/streamlit/streamlit/master/LICENSE"
+      }
+    ],
+    "status": {
+      "archived": null,
+      "disabled": null,
+      "pushed_at": null,
+      "source": "https://api.github.com/repos/streamlit/streamlit"
+    }
   }
 ]
