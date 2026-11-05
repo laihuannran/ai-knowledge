@@ -166,3 +166,9 @@ https://github.com/laihuannran/ai-knowledge/actions/runs/41963357664
 - 专题列表及内部课次按完整目录排序；不再把最新新增系列固定放在零基础入口最前。
 - 构建及检查通过153文章、162HTML、339SVG、522术语；增加前置位置、路线闭合、渲染课次、主线next与阶段精确覆盖检查。只读审查无重要或阻断问题。
 - 浏览器1440桌面导览确认28入口和4阶段；390手机导览、文章导航与目录无整页横溢出。主线与完整目录next指向正确，目录PD搜索正常，浏览器无error日志。
+
+发布提交 `228fadc`，Pages Actions #10 成功，总耗时28秒（build 12秒，deploy 10秒）：
+
+https://github.com/laihuannran/ai-knowledge/actions/runs/41965036795
+
+线上全部162个HTML、2个CSS/JS资源和5张代表图，共169个文件逐字节核对一致。其中data-quality首次请求未匹配，单独重取后与本地完全一致。线上手机评测篇主线next与完整目录next分别指向vectors-cosine和eval-splits，390宽无整页横溢出，版本化样式已加载。
