@@ -17,6 +17,6 @@
 - [x] 合并 18 项到 `content/research/projects.json`，补 `scripts/edition.py` 项目章节映射与首页入口；把 ai_wiki 加入参考书架并说明许可证核验范围。
 - [x] 执行 `python3 scripts/build.py` 与 `python3 scripts/check.py`，核对 153 篇文章的结构、链接、图表与目录精确覆盖，审查新正文无重复填充。
 - [x] 桌面及手机抽查导览、项目搜索、长文与图表；核对来源可达性。
-- [ ] 提交并推送 `HEAD:main`，确认 Pages Actions 成功及生产页面与本地成品相符，记录到 `docs/verification.md`。
+- [x] 提交并推送 `HEAD:main`，确认 Pages Actions 成功及生产页面与本地成品相符，记录到 `docs/verification.md`。
 
 不要求读者编程，不复制未核明许可的第三方图文，不把 Star 当质量评分，不额外扩建网站框架。

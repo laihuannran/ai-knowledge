@@ -148,3 +148,9 @@ https://github.com/laihuannran/ai-knowledge/actions/runs/41902379313
 - 只读审查无blocking/important问题。构建与结构验证通过153文章、162HTML、339SVG、522术语；目录精确覆盖、项目18项章节映射均正常。
 - 浏览器桌面1440导览显示10个新章节入口；手机390差异导览无整页横溢出，3张图全部加载，宽图独立滑动。项目搜索Docling正确显示相关2项目并指向解析篇。
 - 来源自动检查结果见 `content/source-checks.json`，不把HTTP可达性当作工具性能或线上兼容认证。未实跑模型、付费API或第三方仓库代码。
+
+发布提交 `84f7835`，Pages Actions #9 成功，总耗时28秒（build 11秒，deploy 9秒）：
+
+https://github.com/laihuannran/ai-knowledge/actions/runs/41963357664
+
+线上10篇新文章、30张新图、9个通用页面、2个资源文件和3篇旧文，共54个文件逐字节匹配本地成品。线上390宽手机文档解析篇3图均加载、无整页横溢出，新增许可范围段落已可见。来源检查317条，240个HTTP200、66个未取得网络结果、11个403，无404。
